@@ -1,0 +1,27 @@
+# Prism/Minecraft runtime state. Keep the instance metadata in git, but keep
+# the game directory disposable.
+/minecraft/*
+!/minecraft/.gitkeep
+
+# Local source checkouts and built mod jars.
+/local-mods/
+/mod-sources/
+*.jar
+*.mrpack
+*.zip
+
+# Build and tool caches.
+/.gradle/
+/build/
+/.packwizserver/
+
+# Codex/app-local workspace state.
+/.agents/
+/.codex/
+
+# Logs and editor noise.
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

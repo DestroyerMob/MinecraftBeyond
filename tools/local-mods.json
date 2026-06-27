@@ -1,0 +1,52 @@
+{
+  "minecraftVersion": "1.21.1",
+  "neoforgeVersion": "21.1.234",
+  "mods": [
+    {
+      "name": "Ecology",
+      "repository": "https://github.com/DestroyerMob/ecology.git",
+      "branch": "main",
+      "sourceFolder": "ecology",
+      "modId": "ecology",
+      "jarGlob": "ecology-*.jar",
+      "notes": "NeoForge 21.1.234"
+    },
+    {
+      "name": "MoreWeapons",
+      "repository": "https://github.com/DestroyerMob/MoreWeapons.git",
+      "branch": "1.21.1-neoforge",
+      "sourceFolder": "MoreWeapons",
+      "modId": "mobsmoreweapons",
+      "jarGlob": "mobsmoreweapons-*.jar",
+      "notes": "Use the 1.21.1-neoforge branch, not the default master branch."
+    },
+    {
+      "name": "Better Enchanting",
+      "repository": "https://github.com/DestroyerMob/BetterEnchants.git",
+      "branch": "main",
+      "sourceFolder": "BetterEnchants",
+      "modId": "betterenchanting",
+      "jarGlob": "betterenchanting-*.jar",
+      "notes": "NeoForge 21.1.228"
+    },
+    {
+      "name": "Auric",
+      "repository": "https://github.com/DestroyerMob/Auric.git",
+      "branch": "main",
+      "sourceFolder": "Auric",
+      "modId": "auric",
+      "jarGlob": "auric-*.jar",
+      "notes": "Early development"
+    },
+    {
+      "name": "Mobs Tool Forging",
+      "repository": "https://github.com/DestroyerMob/MobsToolForging.git",
+      "branch": "main",
+      "sourceFolder": "MobsToolForging",
+      "modId": "mobstoolforging",
+      "jarGlob": "mobstoolforging-*.jar",
+      "notes": "NeoForge 21.1.233"
+    }
+  ]
+}
+
