@@ -10,8 +10,11 @@ import os
 import platform
 import re
 import shutil
+import socket
 import subprocess
 import sys
+import time
+import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Sequence
@@ -25,6 +28,12 @@ INDEX_TOML = PACK_DIR / "index.toml"
 LOCAL_MODS_JSON = TOOLS_DIR / "local-mods.json"
 DEV_ENV_LOCAL = TOOLS_DIR / "dev-env.local.json"
 DEFAULT_SOURCE_ROOT = Path.home() / "Documents" / "minecraft-mod-sources"
+PACKWIZ_INSTALLER_BOOTSTRAP_URL = (
+    "https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/"
+    "packwiz-installer-bootstrap.jar"
+)
+PACKWIZ_INSTALLER_BOOTSTRAP = TOOLS_DIR / "bin" / "packwiz-installer-bootstrap.jar"
+PACKWIZ_INSTALLER_MAIN = TOOLS_DIR / "bin" / "packwiz-installer.jar"
 
 
 class ToolError(RuntimeError):
@@ -129,6 +138,48 @@ def run(
         raise ToolError(message)
 
     return completed
+
+
+def download_file(url: str, destination: Path, *, dry_run: bool = False) -> None:
+    if dry_run:
+        print(f"DRY RUN: download {url} -> {destination}")
+        return
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary = destination.with_suffix(destination.suffix + ".tmp")
+    try:
+        with urllib.request.urlopen(url, timeout=60) as response:
+            with temporary.open("wb") as handle:
+                shutil.copyfileobj(response, handle)
+        temporary.replace(destination)
+    except Exception as exc:
+        if temporary.exists():
+            temporary.unlink()
+        raise ToolError(f"Failed to download {url}: {exc}") from exc
+
+
+def find_free_local_port() -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.bind(("127.0.0.1", 0))
+        return int(sock.getsockname()[1])
+
+
+def wait_for_http(url: str, process: subprocess.Popen[bytes], timeout_seconds: float = 15.0) -> None:
+    deadline = time.monotonic() + timeout_seconds
+    last_error: Exception | None = None
+    while time.monotonic() < deadline:
+        if process.poll() is not None:
+            raise ToolError(f"packwiz serve exited early with code {process.returncode}")
+        try:
+            with urllib.request.urlopen(url, timeout=1) as response:
+                if response.status < 500:
+                    return
+        except Exception as exc:
+            last_error = exc
+        time.sleep(0.25)
+
+    detail = f": {last_error}" if last_error else ""
+    raise ToolError(f"Timed out waiting for packwiz serve at {url}{detail}")
 
 
 def command_output(command: Sequence[str], cwd: Path = REPO_ROOT) -> str:
@@ -820,6 +871,101 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_update_prism_mods(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
+    packwiz = resolve_packwiz(dev_env, args.packwiz)
+    if not packwiz:
+        raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
+
+    java = resolve_java(dev_env, args.java_home)
+    if not java:
+        raise ToolError("Java was not found. Install Java 21 or set MINECRAFT_BEYOND_JAVA_HOME/JAVA_HOME.")
+
+    pack_dir = expand_path(args.pack_dir or PACK_DIR)
+    assert pack_dir is not None
+    pack_toml = pack_dir / "pack.toml"
+    if not pack_toml.exists():
+        raise ToolError(f"pack.toml not found at {pack_toml}")
+
+    prism_mods = setting(
+        args.mods_dir,
+        ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
+        dev_env,
+        "modsDir",
+        REPO_ROOT / "minecraft" / "mods",
+    )
+    minecraft_dir = expand_path(args.minecraft_dir) if args.minecraft_dir else (prism_mods.parent if prism_mods else None)
+    if minecraft_dir is None:
+        raise ToolError("Could not resolve the Prism minecraft directory.")
+
+    bootstrap = setting(
+        args.installer,
+        ("MINECRAFT_BEYOND_PACKWIZ_INSTALLER_BOOTSTRAP",),
+        dev_env,
+        "packwizInstallerBootstrap",
+        PACKWIZ_INSTALLER_BOOTSTRAP,
+    )
+    main_jar = setting(
+        args.main_jar,
+        ("MINECRAFT_BEYOND_PACKWIZ_INSTALLER_MAIN",),
+        dev_env,
+        "packwizInstallerMain",
+        PACKWIZ_INSTALLER_MAIN,
+    )
+    assert bootstrap is not None
+    assert main_jar is not None
+
+    if not bootstrap.exists():
+        if args.no_download:
+            raise ToolError(f"packwiz installer bootstrap was not found at {bootstrap}")
+        print(f"Downloading packwiz installer bootstrap to {bootstrap}", flush=True)
+        download_file(args.bootstrap_url, bootstrap, dry_run=args.dry_run)
+
+    port = args.port or find_free_local_port()
+    pack_url = f"http://127.0.0.1:{port}/pack.toml"
+    installer_command = [
+        java,
+        "-jar",
+        bootstrap,
+        "--bootstrap-main-jar",
+        main_jar,
+        "-g",
+        pack_url,
+    ]
+
+    if args.dry_run:
+        print(f"DRY RUN: ensure Prism minecraft dir exists: {minecraft_dir}")
+        print(f"DRY RUN: ({pack_dir}) {packwiz} serve --port {port}")
+        print(f"DRY RUN: ({minecraft_dir}) {' '.join(str(part) for part in installer_command)}")
+        return 0
+
+    minecraft_dir.mkdir(parents=True, exist_ok=True)
+    (minecraft_dir / "mods").mkdir(parents=True, exist_ok=True)
+
+    print(f"Serving local packwiz metadata from {pack_dir}", flush=True)
+    server = subprocess.Popen(
+        [str(packwiz), "serve", "--port", str(port)],
+        cwd=str(pack_dir),
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    try:
+        wait_for_http(pack_url, server)
+        print(f"Updating Prism instance at {minecraft_dir}", flush=True)
+        run(installer_command, cwd=minecraft_dir)
+    finally:
+        if server.poll() is None:
+            server.terminate()
+            try:
+                server.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                server.kill()
+                server.wait(timeout=5)
+
+    print("Prism mods updated from packwiz metadata.")
+    return 0
+
+
 def command_refresh(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
     packwiz = resolve_packwiz(dev_env, args.packwiz)
@@ -911,6 +1057,20 @@ def build_parser() -> argparse.ArgumentParser:
     prism.add_argument("--keep-unmatched-staged-jars", action="store_true")
     prism.add_argument("--dry-run", action="store_true")
     prism.set_defaults(func=command_import_prism_mods)
+
+    update_prism = subparsers.add_parser("update-prism-mods", help="Apply packwiz metadata to the Prism minecraft folder.")
+    update_prism.add_argument("--minecraft-dir", help="Prism minecraft folder. Defaults to the parent of modsDir.")
+    update_prism.add_argument("--mods-dir", help="Prism mods folder, used to derive minecraft-dir when minecraft-dir is omitted.")
+    update_prism.add_argument("--pack-dir")
+    update_prism.add_argument("--packwiz")
+    update_prism.add_argument("--java-home")
+    update_prism.add_argument("--installer", help="Path to packwiz-installer-bootstrap.jar.")
+    update_prism.add_argument("--main-jar", help="Path where the bootstrapper stores packwiz-installer.jar.")
+    update_prism.add_argument("--bootstrap-url", default=PACKWIZ_INSTALLER_BOOTSTRAP_URL)
+    update_prism.add_argument("--no-download", action="store_true", help="Fail instead of downloading the bootstrap jar if it is missing.")
+    update_prism.add_argument("--port", type=int, help="Local port for the temporary packwiz server.")
+    update_prism.add_argument("--dry-run", action="store_true")
+    update_prism.set_defaults(func=command_update_prism_mods)
 
     refresh = subparsers.add_parser("refresh", help="Run packwiz refresh for the pack.")
     refresh.add_argument("--pack-dir")

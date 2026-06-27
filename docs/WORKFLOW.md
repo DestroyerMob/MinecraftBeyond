@@ -114,6 +114,22 @@ git commit -m "Add <mod name>"
 
 Use one change per mod group. That makes it much easier to bisect crashes and roll back a compatibility problem.
 
+### Updating Prism From Packwiz
+
+After pulling pack metadata from git, update the local Prism `minecraft/mods/` folder from packwiz:
+
+```bash
+./scripts/modpack update-prism-mods
+```
+
+On Windows:
+
+```powershell
+.\scripts\modpack.ps1 update-prism-mods
+```
+
+The command serves the local `pack/pack.toml` with packwiz and runs `packwiz-installer-bootstrap` against the Prism `minecraft/` directory. The bootstrap jar and downloaded installer jar live under ignored `tools/bin/`, so each machine can recreate them locally. This handles packwiz-managed third-party mods; unpublished local mods still come from `./scripts/modpack update-local-mods`.
+
 ## Local Unpublished Mods
 
 Use two lanes:

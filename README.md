@@ -92,6 +92,20 @@ After downloading CurseForge mods through Prism, import the downloaded jars into
 ./scripts/modpack import-prism-mods
 ```
 
+After pulling packwiz metadata from git, apply it back into the local Prism instance:
+
+```bash
+./scripts/modpack update-prism-mods
+```
+
+On Windows, the equivalent command is:
+
+```powershell
+.\scripts\modpack.ps1 update-prism-mods
+```
+
+This command starts a temporary local packwiz server, downloads `packwiz-installer-bootstrap.jar` into ignored `tools/bin/` if needed, and updates `minecraft/mods/` from `pack/pack.toml`.
+
 Clone or pull all local mod source repositories:
 
 ```bash
