@@ -1,0 +1,6 @@
+{
+  "sourceRoot": "~/Documents/minecraft-mod-sources",
+  "modsDir": "minecraft/mods",
+  "packwiz": "tools/bin/packwiz",
+  "javaHome": ""
+}

@@ -6,6 +6,7 @@
 # Local source checkouts and built mod jars.
 /local-mods/
 /mod-sources/
+/tools/dev-env.local.json
 *.jar
 *.mrpack
 *.zip
@@ -15,6 +16,7 @@
 /build/
 /.packwizserver/
 /tools/bin/
+__pycache__/
 
 # Codex/app-local workspace state.
 /.agents/

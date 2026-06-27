@@ -15,18 +15,57 @@ Current target:
 - `pack/` is the future packwiz pack root. Third-party mods, configs, resource packs, default options, and export metadata should live there.
 - `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`.
 - `tools/local-mods.json` records the unpublished local mods and their expected branches/jar names.
-- `scripts/` contains local setup helpers for checking the workspace and syncing locally built mod jars into the Prism instance.
+- `tools/modpack.py` is the cross-platform workspace command used by macOS, Linux, and Windows.
+- `tools/dev-env.example.json` is the template for optional machine-local paths.
+- `scripts/` contains portable wrappers plus the original PowerShell helpers.
+
+## Local Environment
+
+Use the portable `modpack` wrapper as the main entry point:
+
+```bash
+./scripts/modpack doctor
+```
+
+On Windows, use either wrapper:
+
+```powershell
+.\scripts\modpack.ps1 doctor
+```
+
+```cmd
+scripts\modpack.cmd doctor
+```
+
+For machine-specific paths, generate the local config and edit it locally:
+
+```bash
+./scripts/modpack init-env
+```
+
+`tools/dev-env.local.json` is ignored by git. It can set:
+
+- `sourceRoot`: where unpublished mod source repositories live.
+- `modsDir`: the Prism mods folder to sync local jars into.
+- `packwiz`: a repo-local or system packwiz executable.
+- `javaHome`: a Java 21 installation.
+
+Environment variables override the local config:
+
+- `MINECRAFT_MOD_SOURCE_ROOT`
+- `MINECRAFT_BEYOND_PRISM_MODS_DIR`
+- `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
+- `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
 
 ## Packwiz Setup
 
 Install Go once, then install packwiz into the repo-local tool folder:
 
-```powershell
-scoop install go
-.\scripts\Install-Packwiz.ps1
+```bash
+./scripts/modpack install-packwiz
 ```
 
-The scripts prefer `tools/bin/packwiz.exe` and fall back to `packwiz` on PATH.
+The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.exe)`, then `packwiz` on PATH.
 
 ## Local Mods
 
@@ -42,26 +81,48 @@ The scripts prefer `tools/bin/packwiz.exe` and fall back to `packwiz` on PATH.
 
 Check the local workspace:
 
-```powershell
-.\scripts\Test-ModpackWorkspace.ps1
+```bash
+./scripts/modpack doctor
 ```
 
 After downloading CurseForge mods through Prism, import the downloaded jars into packwiz metadata:
 
-```powershell
-.\scripts\Import-PrismMods.ps1
+```bash
+./scripts/modpack import-prism-mods
 ```
 
 Clone or pull all local mod source repositories:
 
-```powershell
-.\scripts\Update-LocalModRepos.ps1
+```bash
+./scripts/modpack update-repos
+```
+
+Check whether the pack repo and all configured local mod repos are clean and synced:
+
+```bash
+./scripts/modpack sync-status --fetch
 ```
 
 Pull the local mod repos, build them, and sync their jars into the local Prism instance:
 
-```powershell
-.\scripts\Update-PackLocalMods.ps1
+```bash
+./scripts/modpack update-local-mods
 ```
 
 The update script copies jars into `minecraft/mods/`, which is ignored by git. The pack repo should track metadata and config, not generated jars.
+
+## Keeping Remotes Current
+
+There are separate repositories involved here:
+
+- Pack changes live in this repo, `DestroyerMob/MinecraftBeyond`.
+- Local mod source changes live in each mod's own repo, such as `DestroyerMob/MoreWeapons`.
+- Built `*-local.jar` files in `minecraft/mods/` are local runtime output and should not be committed.
+
+Before and after a work session, run:
+
+```bash
+./scripts/modpack sync-status --fetch
+```
+
+If a local mod changed, commit and push that mod repo first. Then commit and push the pack repo, mentioning the mod commit or release when the pack depends on it.
