@@ -14,6 +14,7 @@
 /.gradle/
 /build/
 /.packwizserver/
+/tools/bin/
 
 # Codex/app-local workspace state.
 /.agents/

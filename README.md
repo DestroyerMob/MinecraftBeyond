@@ -17,6 +17,17 @@ Current target:
 - `tools/local-mods.json` records the unpublished local mods and their expected branches/jar names.
 - `scripts/` contains local setup helpers for checking the workspace and syncing locally built mod jars into the Prism instance.
 
+## Packwiz Setup
+
+Install Go once, then install packwiz into the repo-local tool folder:
+
+```powershell
+scoop install go
+.\scripts\Install-Packwiz.ps1
+```
+
+The scripts prefer `tools/bin/packwiz.exe` and fall back to `packwiz` on PATH.
+
 ## Local Mods
 
 | Mod | Repo | Branch | Notes |

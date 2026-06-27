@@ -7,6 +7,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+. (Join-Path $PSScriptRoot "Resolve-Packwiz.ps1")
 
 function Resolve-LocalPath {
     param([string]$Path)
@@ -44,6 +45,13 @@ if (-not $prismJars -or $prismJars.Count -eq 0) {
 
 Write-Host "Preparing to import $($prismJars.Count) Prism mod jar(s) through packwiz CurseForge detection."
 
+if (-not $DryRun) {
+    $packwiz = Resolve-Packwiz
+    if (-not $packwiz) {
+        throw "packwiz was not found. Run .\scripts\Install-Packwiz.ps1 or add packwiz to PATH before importing Prism-downloaded mods."
+    }
+}
+
 if (-not $DryRun -and -not (Test-Path $packModsPath)) {
     New-Item -ItemType Directory -Path $packModsPath | Out-Null
 }
@@ -69,15 +77,10 @@ if ($DryRun) {
     return
 }
 
-$packwiz = Get-Command "packwiz" -ErrorAction SilentlyContinue
-if (-not $packwiz) {
-    throw "packwiz is not on PATH. Install packwiz before importing Prism-downloaded mods."
-}
-
 Push-Location $packDirPath
 try {
     Write-Host "Running packwiz cf detect..."
-    & $packwiz.Source cf detect
+    & $packwiz cf detect
     if ($LASTEXITCODE -ne 0) {
         throw "packwiz cf detect failed with exit code $LASTEXITCODE"
     }
@@ -102,7 +105,7 @@ try {
     }
 
     Write-Host "Refreshing packwiz index..."
-    & $packwiz.Source refresh
+    & $packwiz refresh
     if ($LASTEXITCODE -ne 0) {
         throw "packwiz refresh failed with exit code $LASTEXITCODE"
     }

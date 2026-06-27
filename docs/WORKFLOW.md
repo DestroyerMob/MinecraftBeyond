@@ -8,6 +8,7 @@ This repo should act as the source of truth for the modpack, while each unpublis
 - Prism Launcher for local playtesting.
 - Java 21 for Minecraft 1.21.1 and NeoForge development.
 - packwiz for a git-friendly modpack manifest and exports.
+- Go for installing the repo-local packwiz binary with `scripts\Install-Packwiz.ps1`.
 - Gradle wrappers from each local mod repository for reproducible local builds.
 - GitHub Actions later, once the pack shape settles, to validate the pack and optionally build local mod artifacts.
 
@@ -15,6 +16,7 @@ This repo should act as the source of truth for the modpack, while each unpublis
 
 - Commit pack metadata, configs, scripts, docs, and Prism instance metadata.
 - Do not commit downloaded mod jars, generated runtime files, logs, worlds, screenshots, or local cache folders.
+- Do not commit `tools/bin/`; recreate packwiz locally with `scripts\Install-Packwiz.ps1`.
 - Keep unpublished mod source outside this repo, normally in a folder such as `$HOME\Documents\minecraft-mod-sources`.
 - Treat `minecraft/` as disposable runtime state. If something in there should be part of the pack, move it into `pack/` and let packwiz manage it.
 
@@ -76,11 +78,12 @@ Existing dirty source checkouts are skipped by default so unfinished work is not
 On each machine:
 
 1. Clone this pack repo into the Prism `instances` folder, or create a Prism instance that points at this folder.
-2. Install Java 21 and packwiz.
-3. Run `.\scripts\Update-LocalModRepos.ps1` to clone the local mod repos into a shared source folder such as `C:\Users\<you>\Documents\minecraft-mod-sources`.
-4. Set `MINECRAFT_MOD_SOURCE_ROOT` to that folder, or pass `-SourceRoot` to the sync script.
-5. Run `.\scripts\Test-ModpackWorkspace.ps1`.
-6. Run `.\scripts\Update-PackLocalMods.ps1`.
+2. Install Java 21 and Go.
+3. Run `.\scripts\Install-Packwiz.ps1` to create `tools\bin\packwiz.exe`.
+4. Run `.\scripts\Update-LocalModRepos.ps1` to clone the local mod repos into a shared source folder such as `C:\Users\<you>\Documents\minecraft-mod-sources`.
+5. Set `MINECRAFT_MOD_SOURCE_ROOT` to that folder, or pass `-SourceRoot` to the sync script.
+6. Run `.\scripts\Test-ModpackWorkspace.ps1`.
+7. Run `.\scripts\Update-PackLocalMods.ps1`.
 
 For local mods that are private or require authentication, make sure both machines have GitHub credentials that can read the repos before relying on automation.
 
