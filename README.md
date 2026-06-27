@@ -76,6 +76,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently on NeoForge 21.1.228. |
 | Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, early development. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently on NeoForge 21.1.233. |
+| Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, early scaffold for per-world quality/mod/config profiles. |
 
 ## First Commands
 

@@ -46,7 +46,15 @@
       "modId": "mobstoolforging",
       "jarGlob": "mobstoolforging-*.jar",
       "notes": "NeoForge 21.1.233"
+    },
+    {
+      "name": "Mod Quality Picker",
+      "repository": "https://github.com/DestroyerMob/ModQualityPicker.git",
+      "branch": "main",
+      "sourceFolder": "ModQualityPicker",
+      "modId": "modqualitypicker",
+      "jarGlob": "modqualitypicker-*.jar",
+      "notes": "NeoForge 21.1.234, early scaffold"
     }
   ]
 }
-
