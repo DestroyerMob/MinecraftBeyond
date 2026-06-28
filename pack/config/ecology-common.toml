@@ -1,0 +1,134 @@
+#Master switch for Ecology's advanced bee AI, colony simulation, hive data, and bee relocation items. Disabled by default so vanilla bee behavior is unchanged unless a pack opts in.
+enableBeeSystem = false
+#When false, Ecology only initializes bee memory and leaves vanilla bee AI intact.
+replaceVanillaBeeGoals = false
+#Enables Ecology colony simulation from vanilla hive ticks.
+enableHiveColonyTicking = false
+#When true, visible bees die from Ecology lifespan rules in entity tick.
+enableBeeLifespanDeath = false
+#Enables live drone mating AI.
+enableDroneMatingGoal = false
+#Enables live queen migration AI.
+enableQueenMigrationGoal = false
+#Enables the beekeeper knife, brood comb, captured worker bee, nest sealing, and hive day simulator interactions. Requires enableBeeSystem and enableHiveColonyTicking.
+enableBeeRelocationItems = false
+#Logs diagnostic Ecology bee initialization and hive tick events.
+debugBeeSystemLogging = false
+#When true, villager iron golem spawning builds the iron golem structure before the golem appears.
+enableVillagerGolemConstruction = true
+#Logs diagnostic village iron golem construction events.
+debugVillagerGolemConstruction = false
+#Worker bee lifespan in Minecraft days.
+# Default: 7
+# Range: 1 ~ 365
+workerLifespanDays = 7
+#Drone bee lifespan in Minecraft days.
+# Default: 14
+# Range: 1 ~ 365
+droneLifespanDays = 14
+#Queen bee lifespan in Minecraft days.
+# Default: 21
+# Range: 1 ~ 365
+queenLifespanDays = 21
+#Minecraft days a queen must age before her hive can trigger a mating flight.
+# Default: 2
+# Range: 0 ~ 365
+queenMatingMaturityDays = 2
+#Maximum founder-lineage overlap allowed for mating. 1.0 permits exact-family matings; lower values reject closer related colonies.
+# Default: 0.75
+# Range: 0.0 ~ 1.0
+maxMatingLineageOverlap = 0.75
+#Brood failure multiplier from inbreeding. A value of 1.0 means F=0.5 gives a 50% brood success penalty.
+# Default: 1.0
+# Range: 0.0 ~ 1.0
+inbreedingBroodPenalty = 1.0
+# Default: 5
+# Range: 1 ~ 32
+maxWorkersPerHive = 5
+# Default: 3
+# Range: 0 ~ 32
+maxDronesPerHive = 3
+#Ecology currently tracks one queen per hive.
+# Default: 1
+# Range: 1 ~ 1
+maxQueensPerHive = 1
+#Maximum bees an Ecology hive or nest can physically store.
+# Default: 5
+# Range: 1 ~ 32
+beehiveCapacity = 5
+#Minimum ticks before newly stored nectarless bees can leave a hive. Vanilla uses 600 ticks.
+# Default: 100
+# Range: 1 ~ 24000
+freshHiveReleaseTicks = 100
+#Extra ticks after the next Minecraft day starts before a worker that completed its route may leave the hive.
+# Default: 100
+# Range: 0 ~ 24000
+dailyCompleteReleasePaddingTicks = 100
+#Development helper only. When false, empty hives never generate free Ecology colonies.
+autoSeedEmptyHives = false
+#Maximum flower/crop pairs a worker bee attempts each day.
+# Default: 8
+# Range: 1 ~ 32
+maxRoutePairs = 8
+#Workers raise a replacement queen when the current queen has this many Minecraft days left.
+# Default: 3
+# Range: 1 ~ 21
+queenReplacementDays = 3
+#Maximum colony days to simulate when a hive chunk loads after being unloaded.
+# Default: 3
+# Range: 1 ~ 30
+colonyCatchupDays = 3
+#Horizontal radius for live bee searches. A value of 2 means a 5x5 area.
+# Default: 2
+# Range: 1 ~ 8
+beeLocalSearchHorizontalRadius = 2
+#Vertical radius for live bee searches. This is taller than the horizontal range so tree-nest bees can see ground flowers.
+# Default: 5
+# Range: 0 ~ 8
+beeLocalSearchVerticalRadius = 5
+#Local search areas a worker can fail to find the next route target in before returning home.
+# Default: 8
+# Range: 1 ~ 64
+maxRouteSearchMisses = 8
+#Ticks a worker searches for its next flower before returning home.
+# Default: 1200
+# Range: 20 ~ 6000
+workerFlowerSearchTicks = 1200
+#Ticks a worker searches for a crop after gathering pollen before returning home.
+# Default: 600
+# Range: 20 ~ 6000
+workerCropSearchTicks = 600
+#Ticks a worker may spend travelling to a flower or crop target before returning home.
+# Default: 600
+# Range: 20 ~ 6000
+workerTravelTargetTicks = 600
+#Maximum block distance a worker may roam from its home hive before returning.
+# Default: 50
+# Range: 4 ~ 256
+workerMaxDistanceFromHive = 50
+#Worker flower detection range. Vanilla bee pollination searches within five blocks.
+# Default: 5
+# Range: 1 ~ 32
+flowerSearchRange = 5
+#Crop search range used after each flower.
+# Default: 5
+# Range: 1 ~ 32
+cropSearchRange = 5
+# Default: 20
+# Range: 1 ~ 128
+hiveSearchRange = 20
+# Default: 48
+# Range: 8 ~ 256
+migrationSearchRange = 48
+#Horizontal player distance from a worker route that makes that bee defensive.
+# Default: 3.0
+# Range: 0.5 ~ 16.0
+pathHorizontalTriggerRange = 3.0
+#Vertical player distance from a worker route that makes that bee defensive.
+# Default: 2.0
+# Range: 0.5 ~ 16.0
+pathVerticalTriggerRange = 2.0
+#Ticks a player must remain in a worker route before that bee becomes aggressive.
+# Default: 60
+# Range: 1 ~ 600
+routeAgitationAttackTicks = 60

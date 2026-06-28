@@ -5,6 +5,10 @@ file = "config/dragonfight.json"
 hash = "86d26252a2d5f2cc6b2981686f2f3c039aa3c32c8e2c674444b1c0d3f631b092"
 
 [[files]]
+file = "config/ecology-common.toml"
+hash = "45fee48fa35f0aeb4a56f842bfec5fa556f4d5d4c42dd0834fc8152c0bddd95a"
+
+[[files]]
 file = "config/mobsmoreweapons-common.toml"
 hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
 
