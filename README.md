@@ -95,12 +95,16 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 | Mod | Repo | Branch | Notes |
 | --- | --- | --- | --- |
-| Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
-| MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | Default branch is old Forge 1.20.1; use this branch for the pack. |
-| Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently on NeoForge 21.1.228. |
-| Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, early development. |
-| Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently on NeoForge 21.1.233. |
-| Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, early scaffold for per-world quality/mod/config profiles. |
+| Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Advanced bee simulation is config-gated and off by default. |
+| MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Default branch is old Forge 1.20.1; use this branch for the pack. Includes Mobs Tool Forging and Better Enchanting bridge data. |
+| Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Includes explicit Apotheosis/Apothic Enchanting support. |
+| Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
+| Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
+| Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early scaffold for per-world quality/mod/config profiles. |
+
+## Mod Integrations
+
+- Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
 
 ## First Commands
 

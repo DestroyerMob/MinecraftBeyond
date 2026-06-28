@@ -225,9 +225,5 @@ For a playable snapshot:
 ## Compatibility Notes
 
 - The Prism instance currently uses NeoForge 21.1.234.
-- Ecology already targets NeoForge 21.1.234.
-- Better Enchanting, Auric, and MoreWeapons currently target NeoForge 21.1.228.
-- Mobs Tool Forging currently targets NeoForge 21.1.233.
+- All local mod repositories currently target NeoForge 21.1.234.
 - MoreWeapons must use the `1.21.1-neoforge` branch for this pack.
-
-The minor NeoForge differences should be reviewed during the first test launch. If anything behaves oddly, align all local mod Gradle properties to 21.1.234 before deeper debugging.
