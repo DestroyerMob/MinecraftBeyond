@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "entries": [
+    "minecraft_beyond:mineshaft_forging_supplies",
+    "minecraft_beyond:convert_vanilla_tools_after_affixes"
+  ]
+}

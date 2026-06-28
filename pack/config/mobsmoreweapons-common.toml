@@ -1,0 +1,6 @@
+[ranged_combat]
+	#When true, player-fired bow arrows have no random spread until the bow has been held at full draw for longer than bow_strain_grace_ticks.
+	player_bow_accuracy_fix = true
+	#Ticks after full draw before bows regain vanilla random spread. 20 ticks = 1 second.
+	#Range: 0 ~ 72000
+	bow_strain_grace_ticks = 60

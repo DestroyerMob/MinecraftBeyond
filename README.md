@@ -57,6 +57,30 @@ Environment variables override the local config:
 - `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
 - `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
 
+## Modpack Command Reference
+
+Run commands through the portable wrapper:
+
+```bash
+./scripts/modpack <command> [options]
+```
+
+On Windows, use `.\scripts\modpack.ps1 <command>` or `scripts\modpack.cmd <command>`.
+Every command supports `--help`.
+
+| Command | Purpose | Useful options |
+| --- | --- | --- |
+| `doctor` | Check tools, Java, packwiz metadata, repo state, Prism mods, and local mod sources. | `--strict`, `--source-root`, `--mods-dir`, `--packwiz`, `--java-home` |
+| `install-packwiz` | Install packwiz into ignored `tools/bin/` using Go. | `--install-dir`, `--module` |
+| `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--packwiz`, `--java-home`, `--force` |
+| `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
+| `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
+| `sync-local-mods` | Copy built local mod jars into the Prism mods folder. | `--source-root`, `--mods-dir`, `--build`, `--dry-run` |
+| `update-local-mods` | Pull local mod repos, build them, and sync their jars into Prism. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--dry-run` |
+| `import-prism-mods` | Import Prism-downloaded jars through packwiz CurseForge detection, then refresh the index. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--include-local`, `--keep-unmatched-staged-jars`, `--dry-run` |
+| `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--dry-run` |
+| `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
+
 ## Packwiz Setup
 
 Install Go once, then install packwiz into the repo-local tool folder:
