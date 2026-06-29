@@ -2,12 +2,16 @@
 # the game directory disposable.
 /minecraft/*
 !/minecraft/.gitkeep
+!/minecraft/mods/
+/minecraft/mods/*
+!/minecraft/mods/*-local.jar
 
 # Local source checkouts and built mod jars.
 /local-mods/
 /mod-sources/
 /tools/dev-env.local.json
 *.jar
+!/minecraft/mods/*-local.jar
 *.mrpack
 *.zip
 
