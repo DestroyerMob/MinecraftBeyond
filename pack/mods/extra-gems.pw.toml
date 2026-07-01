@@ -1,0 +1,13 @@
+name = "ExtraGems"
+filename = "ExtraGems-1.21-(v.3.0.5-NEO).jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e836c1caeac16683ed58856aefeeaa619e4b65c8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5675095
+project-id = 279180

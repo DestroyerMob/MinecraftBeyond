@@ -6,7 +6,7 @@ hash = "86d26252a2d5f2cc6b2981686f2f3c039aa3c32c8e2c674444b1c0d3f631b092"
 
 [[files]]
 file = "config/ecology-common.toml"
-hash = "45fee48fa35f0aeb4a56f842bfec5fa556f4d5d4c42dd0834fc8152c0bddd95a"
+hash = "589c05339094108aa08e84290c7f84cc3d9d1609c904e57a0ee04821fec0ddb0"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
@@ -203,6 +203,11 @@ hash = "81105a1a363873f3675a861d228abcf0f2a8356f1a17850c06f6d6c47e454634"
 metafile = true
 
 [[files]]
+file = "mods/continuity.pw.toml"
+hash = "9920b3cadb064073516f8d678e09c0d13a146bc3058725d036323852e5e18f15"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "42ffb6f5835250003da6ca3667ff751709ea295faee43b49c365b0f6c1e8f4d8"
 metafile = true
@@ -308,6 +313,11 @@ hash = "b4b08d948a7cb2725e0703b54d2534a432a8d4a6dc97b4f49d04c164c6bc7515"
 metafile = true
 
 [[files]]
+file = "mods/extra-gems.pw.toml"
+hash = "127027fa273a9d04699fa150ac7883b97f82d00675b327df66bf3992eec40117"
+metafile = true
+
+[[files]]
 file = "mods/extreme-sound-muffler.pw.toml"
 hash = "6d51c8adfc6782f216a150dedda2ea64969a639f4e21401eb5c5b5ac8c9ab28f"
 metafile = true
@@ -345,6 +355,11 @@ metafile = true
 [[files]]
 file = "mods/ferritecore.pw.toml"
 hash = "dff824171060c79b327a4880c2f0546c727a041a489ef3af643ec2dcd9cd0c48"
+metafile = true
+
+[[files]]
+file = "mods/forgified-fabric-api.pw.toml"
+hash = "e20b20d55b74dc8b3e9c2ff353b9f8788b3221b647cb32845fb53781a0b4684b"
 metafile = true
 
 [[files]]
@@ -553,6 +568,11 @@ hash = "4357774fa2bb92e3d6b75a475c41c4cc314e98af696bf591c47ff2621ad5ecac"
 metafile = true
 
 [[files]]
+file = "mods/particle-rain.pw.toml"
+hash = "2253cddf1e9a3778a893e47442378fdeea5b5604bc131b61acfcd25d1e690613"
+metafile = true
+
+[[files]]
 file = "mods/particular-reforged.pw.toml"
 hash = "93420f736d02cebba15a00f256e4ce370e7adaae9301c83260c973df145203aa"
 metafile = true
@@ -624,7 +644,7 @@ metafile = true
 
 [[files]]
 file = "mods/selene.pw.toml"
-hash = "15fad66b297e3901d626bc8a164d39af95fe3d4b45c3543c41392a6579cfbbef"
+hash = "d318efaa5190d251642c7a6de7f327a35d32a587bc72ec2c180603e72563c9e7"
 metafile = true
 
 [[files]]
@@ -635,6 +655,11 @@ metafile = true
 [[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "c923ae43d9a62ea023a5641b5f144dbe8ea85715f162eb924159b8b719af1da6"
+metafile = true
+
+[[files]]
+file = "mods/sinytra-connector.pw.toml"
+hash = "eff7ebd7bc65ef5d3ba8ac731bc3fb2fd9697566f53dcedbfc55d0b4bb55d60d"
 metafile = true
 
 [[files]]
@@ -700,6 +725,11 @@ metafile = true
 [[files]]
 file = "mods/too-fast.pw.toml"
 hash = "652bc2a41a85b48d4b4e8103b4be578326b42afad1cdcfb8257a114dd713f1bb"
+metafile = true
+
+[[files]]
+file = "mods/tooltip-overhaul.pw.toml"
+hash = "228b88c47247ad543e82543a467ca4c3754288773609a6b98fc3e7a152c112f3"
 metafile = true
 
 [[files]]

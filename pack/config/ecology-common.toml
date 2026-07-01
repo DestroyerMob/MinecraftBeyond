@@ -1,23 +1,108 @@
+#High-level Ecology behavior preset. CUSTOM uses the individual switches below.
+#VANILLA_SAFE keeps Ecology passive. LIGHT_ECOLOGY enables colony data and beekeeper relocation without replacing vanilla bee AI.
+#FULL_SIMULATION enables the complete bee simulation and village construction. DEBUG_TESTING is full simulation plus noisy diagnostics and auto-seeded hives.
+#Allowed Values: CUSTOM, VANILLA_SAFE, LIGHT_ECOLOGY, FULL_SIMULATION, DEBUG_TESTING
+gameplayPreset = "FULL_SIMULATION"
 #Master switch for Ecology's advanced bee AI, colony simulation, hive data, and bee relocation items. Disabled by default so vanilla bee behavior is unchanged unless a pack opts in.
-enableBeeSystem = false
+enableBeeSystem = true
 #When false, Ecology only initializes bee memory and leaves vanilla bee AI intact.
-replaceVanillaBeeGoals = false
+replaceVanillaBeeGoals = true
 #Enables Ecology colony simulation from vanilla hive ticks.
-enableHiveColonyTicking = false
+enableHiveColonyTicking = true
 #When true, visible bees die from Ecology lifespan rules in entity tick.
-enableBeeLifespanDeath = false
+enableBeeLifespanDeath = true
 #Enables live drone mating AI.
-enableDroneMatingGoal = false
+enableDroneMatingGoal = true
 #Enables live queen migration AI.
-enableQueenMigrationGoal = false
+enableQueenMigrationGoal = true
 #Enables the beekeeper knife, brood comb, captured worker bee, nest sealing, and hive day simulator interactions. Requires enableBeeSystem and enableHiveColonyTicking.
-enableBeeRelocationItems = false
+enableBeeRelocationItems = true
+#Enables colony health scoring for Jade, beekeeper journals, and systems that react to hive condition.
+enableHiveHealth = true
+#Lets healthy colonies occasionally grow a crop by an extra stage when a worker delivers pollen.
+enableHealthyPollinationBonus = true
+#Maximum extra crop-growth chance from a healthy or thriving colony.
+# Default: 0.35
+# Range: 0.0 ~ 1.0
+healthyPollinationBonusChance = 0.35
+#Enables colony traits that influence health, route productivity, brood success, temperament, and swarming.
+enableColonyTraits = true
+#Lets healthy crowded colonies create daughter colonies in nearby empty hives.
+enableSwarming = true
+#Daily chance for a swarm-ready colony to create a daughter colony when an empty hive is nearby.
+# Default: 0.18
+# Range: 0.0 ~ 1.0
+swarmingChance = 0.18
+#Minimum Minecraft days between successful swarms from the same colony.
+# Default: 3
+# Range: 1 ~ 30
+swarmCooldownDays = 3
 #Logs diagnostic Ecology bee initialization and hive tick events.
 debugBeeSystemLogging = false
 #When true, villager iron golem spawning builds the iron golem structure before the golem appears.
 enableVillagerGolemConstruction = true
 #Logs diagnostic village iron golem construction events.
 debugVillagerGolemConstruction = false
+#Enables village ecology scoring, Village Ledger reports, and village-health effects on golem construction.
+enableVillageEcology = true
+#Lets villagers occasionally perform small upkeep tasks such as replanting empty farmland, repairing path gaps, and adding garden flowers.
+enableVillageMaintenance = true
+#Horizontal radius used by village ecology surveys.
+# Default: 32
+# Range: 8 ~ 96
+villageEcologyRadius = 32
+#Per-villager tick interval for attempting small village maintenance.
+# Default: 1200
+# Range: 200 ~ 12000
+villageMaintenanceIntervalTicks = 1200
+#Chance that a villager performs a maintenance action when its interval triggers.
+# Default: 0.2
+# Range: 0.0 ~ 1.0
+villageMaintenanceChance = 0.2
+#Lets Ecology assign professions to jobless adult villagers based on parent professions, village needs, and a small random chance.
+enableVillageVocations = true
+#Enables a lightweight village supply ledger that affects villager trade capacity and can catch up while villages are unloaded.
+enableVillageSupplies = true
+#Minimum game ticks between per-village supply catch-up attempts from active villagers.
+# Default: 600
+# Range: 100 ~ 12000
+villageSupplyUpdateIntervalTicks = 600
+#Minimum game ticks between full village supply surveys. Higher values reduce scans; lower values react faster to building changes.
+# Default: 2400
+# Range: 300 ~ 24000
+villageSupplySurveyIntervalTicks = 2400
+#Maximum Minecraft days of village supply progress to simulate after a village has been unloaded.
+# Default: 3
+# Range: 1 ~ 14
+villageSupplyCatchupDays = 3
+#Tracks whether trading villagers can reach homes and meeting space. Confined villagers lose Ecology market benefits and gain price penalties.
+enableVillageWelfare = true
+#Per-villager interval for checking whether a villager appears confined.
+# Default: 1800
+# Range: 600 ~ 12000
+villageWelfareCheckIntervalTicks = 1800
+#Consecutive failed welfare checks before Ecology treats a villager as confined.
+# Default: 3
+# Range: 1 ~ 10
+villageWelfareGraceChecks = 3
+#Maximum special price increase applied to confined villagers' offers.
+# Default: 16
+# Range: 0 ~ 64
+villageWelfareMaxPricePenalty = 16
+#Lets players assign villager market stall positions with the Village Ledger. Assigned villagers walk to their stall during work hours when pathing allows.
+enableVillageMarketStalls = true
+#Per-villager interval for nudging assigned villagers toward their market stall during work hours.
+# Default: 160
+# Range: 40 ~ 1200
+villageMarketStallWalkIntervalTicks = 160
+#Lets players assign tradeboards and stock inventories to non-confined villagers for player-supplied custom trades.
+enableVillagePlayerTrades = true
+#Maximum active tradeboard offers generated for one villager. A 15x15 tradeboard can hold more definitions, but only this many stocked offers are exposed at once.
+# Default: 64
+# Range: 1 ~ 225
+villagePlayerTradeMaxOffers = 64
+#Assigns each village one trade currency. Ruby and sapphire villages only spawn when another mod/datapack supplies items through Ecology's village currency tags.
+enableVillageCurrencies = true
 #Worker bee lifespan in Minecraft days.
 # Default: 7
 # Range: 1 ~ 365
