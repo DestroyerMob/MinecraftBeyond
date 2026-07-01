@@ -1,16 +1,44 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/better-advanced-tooltips-client.toml"
+hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
+
+[[files]]
 file = "config/dragonfight.json"
 hash = "86d26252a2d5f2cc6b2981686f2f3c039aa3c32c8e2c674444b1c0d3f631b092"
 
 [[files]]
+file = "config/durabilitytooltip-common.toml"
+hash = "ce175be150956967699405d6d5466a4e648baa52c8aeeb49850145a6a160d865"
+
+[[files]]
 file = "config/ecology-common.toml"
-hash = "589c05339094108aa08e84290c7f84cc3d9d1609c904e57a0ee04821fec0ddb0"
+hash = "2c1d25033c9be290cb2957a196092cc79dd4217edc12f86ba1d611cf2cccf4ff"
+
+[[files]]
+file = "config/enchdesc.json"
+hash = "650f05dcb6db5a42acffde5fb9a5716e7943d3b6975525e4707748db7c512df7"
+
+[[files]]
+file = "config/itemborders.toml"
+hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
 hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
+
+[[files]]
+file = "config/mobstoolforging-common.toml"
+hash = "54d7e3f9e0ca5bb00ffcd6862b55ef5ad2794237ee6a76c3f27ecb115e74897a"
+
+[[files]]
+file = "config/tooltipoverhaul/custom_frames.json"
+hash = "5fe285a83924db98f45f7daabbf77e1df8ad177f3fa0893d76525c6a685a7c87"
+
+[[files]]
+file = "config/tooltipoverhaul/tooltipoverhaul.toml"
+hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
 
 [[files]]
 file = "kubejs/data/minecraft_beyond/loot_modifiers/convert_vanilla_tools_after_affixes.json"
@@ -495,11 +523,6 @@ metafile = true
 [[files]]
 file = "mods/kubejs.pw.toml"
 hash = "018fd970193f808f8c28f873d8b8c69ac9ba134712c7db27fc8d639cb226c9a6"
-metafile = true
-
-[[files]]
-file = "mods/legendary-tooltips.pw.toml"
-hash = "90884d8e75897120ad7e7a6fc4ad3ab2a08bcf050286a98cac27c7412e043a68"
 metafile = true
 
 [[files]]

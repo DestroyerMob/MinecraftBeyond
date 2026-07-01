@@ -89,6 +89,54 @@ villageWelfareGraceChecks = 3
 # Default: 16
 # Range: 0 ~ 64
 villageWelfareMaxPricePenalty = 16
+#Tracks villager households, parentage, home ownership, household savings, and adult children moving into empty homes.
+enableVillageHouseholds = true
+#Per-villager interval for light household syncing and adult-child move-out checks.
+# Default: 1200
+# Range: 300 ~ 12000
+villageHouseholdUpdateIntervalTicks = 1200
+#Household savings spent when an adult child moves into an empty home.
+# Default: 32
+# Range: 0 ~ 500
+villageHouseholdMoveOutSavings = 32
+#Savings level at which a crowded household is reported as ready to fund a home expansion.
+# Default: 72
+# Range: 0 ~ 1000
+villageHouseholdExpansionReadySavings = 72
+#Lets households with enough savings fund houses on player-approved plots marked with the Village Ledger and a banner.
+enableVillageHouseConstruction = true
+#Household savings spent when starting a player-approved house construction.
+# Default: 72
+# Range: 0 ~ 1000
+villageHouseConstructionSavingsCost = 72
+#Household savings spent when adding beds to an existing generated village home.
+# Default: 24
+# Range: 0 ~ 500
+villageHomeUpgradeSavingsCost = 24
+#Maximum beds Ecology may add during one existing-home upgrade.
+# Default: 2
+# Range: 1 ~ 8
+villageHomeUpgradeMaxBeds = 2
+#Legacy pacing value kept for existing configs. Vanilla template homes are placed as complete structures.
+# Default: 8
+# Range: 1 ~ 64
+villageHouseConstructionBlocksPerStep = 8
+#Maximum width or depth of a player-approved house construction plot.
+# Default: 15
+# Range: 7 ~ 32
+villageHousePlotMaxSize = 15
+#Base weight for small vanilla village house templates.
+# Default: 42
+# Range: 0 ~ 1000
+villageHouseSmallWeight = 42
+#Base weight for medium vanilla village house templates.
+# Default: 36
+# Range: 0 ~ 1000
+villageHouseMediumWeight = 36
+#Base weight for larger vanilla village house templates.
+# Default: 22
+# Range: 0 ~ 1000
+villageHouseLargeWeight = 22
 #Lets players assign villager market stall positions with the Village Ledger. Assigned villagers walk to their stall during work hours when pathing allows.
 enableVillageMarketStalls = true
 #Per-villager interval for nudging assigned villagers toward their market stall during work hours.
