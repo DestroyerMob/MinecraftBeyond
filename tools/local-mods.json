@@ -55,6 +55,15 @@
       "modId": "modqualitypicker",
       "jarGlob": "modqualitypicker-*.jar",
       "notes": "NeoForge 21.1.234, early scaffold"
+    },
+    {
+      "name": "Axiom Survival",
+      "repository": "https://github.com/DestroyerMob/AxiomSurvival.git",
+      "branch": "main",
+      "sourceFolder": "AxiomSurvival",
+      "modId": "axiomsurvival",
+      "jarGlob": "axiomsurvival-*.jar",
+      "notes": "Fabric 1.21.1 add-on for Axiom; the pack config enables survival capture hooks."
     }
   ]
 }

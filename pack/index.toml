@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/axiom-survival.json"
+hash = "3810aed8f179f3c1cdf7b5d9fe911db71f6d457f42aeb2a203901218ec5dac76"
+
+[[files]]
 file = "config/better-advanced-tooltips-client.toml"
 hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
 
@@ -121,6 +125,16 @@ hash = "a445471ac6843bcf9fb76eabb4357de0357dfa7782be536a7827a26764fe45c1"
 metafile = true
 
 [[files]]
+file = "mods/autochefs-delight.pw.toml"
+hash = "6ffd3974dac599c325533619265b6d222e3243f7cd9507d78ac2ae00162498d6"
+metafile = true
+
+[[files]]
+file = "mods/axiom.pw.toml"
+hash = "a70bd4878fa5be176d0a25ff3e2e2db3ae65d23ae926f84e95567eb3a66833a8"
+metafile = true
+
+[[files]]
 file = "mods/baguettelib.pw.toml"
 hash = "1a52b3a6071fa86dc0854189e110e7dd6c27c0944856fee39a781f58275e1cdd"
 metafile = true
@@ -148,6 +162,11 @@ metafile = true
 [[files]]
 file = "mods/betterf3.pw.toml"
 hash = "c495c19a48e96ad7d32d8738a9209539968f7f41db7a5f8d20eed1b0f477fcad"
+metafile = true
+
+[[files]]
+file = "mods/biolith.pw.toml"
+hash = "cc68949c02bcb1ea4ad83d7a8f9c7b039b7ccb6af8ac97a8b9ea62efaac7a484"
 metafile = true
 
 [[files]]
@@ -241,6 +260,11 @@ hash = "42ffb6f5835250003da6ca3667ff751709ea295faee43b49c365b0f6c1e8f4d8"
 metafile = true
 
 [[files]]
+file = "mods/cooking-for-blockheads.pw.toml"
+hash = "6085304a0b6cb891c998be35caef79ddef5c043e6119a3d951a77b37eb34bd86"
+metafile = true
+
+[[files]]
 file = "mods/coroutil.pw.toml"
 hash = "8ff227007d3ea2f499193f04410000892bcc35b87572ae74d3f19494c6572368"
 metafile = true
@@ -288,6 +312,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "f92e7a06645e41ea1934dc420eb2772edb1708c0d71cb427baef8cf753acb934"
+metafile = true
+
+[[files]]
+file = "mods/do-api.pw.toml"
+hash = "488c916a519935ea70a04ae507400bfcaf794cbbf108acb1a3e213db2a15058b"
 metafile = true
 
 [[files]]
@@ -358,6 +387,11 @@ metafile = true
 [[files]]
 file = "mods/farmers-delight.pw.toml"
 hash = "efc2c4fe9e2cc169aff61a6b7a41ea9bc7a22a90aadf0776b22de647ddf3cef6"
+metafile = true
+
+[[files]]
+file = "mods/farmers-knives.pw.toml"
+hash = "241539b76e9be337e03741a87510b8041a7b137ee49d680d52ab78cb27b7696c"
 metafile = true
 
 [[files]]
@@ -523,6 +557,101 @@ metafile = true
 [[files]]
 file = "mods/kubejs.pw.toml"
 hash = "018fd970193f808f8c28f873d8b8c69ac9ba134712c7db27fc8d639cb226c9a6"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-addon-compat.pw.toml"
+hash = "f90c71612f382ce51f0f94ce68a2896b79f81b3829ddedb306a60626710680b2"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-addon-corn-expansion.pw.toml"
+hash = "180458e26f5b61da75e7778aa8f6dd42594d9d1973e3b395999ad76a3275ed88"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-alpine-whispers.pw.toml"
+hash = "16b08d58b50de7f49d9832a738d0a5d8fd590b293b8a7a8a04fea2d92a7ae334"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-bakery-farm-charm-compat.pw.toml"
+hash = "fe03daa6952b6e57096d34deb0f966d9c53c319bc1bf075e333220a64f77459c"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-beachparty.pw.toml"
+hash = "6f3fa78929bb20a763b95056fef1803572f3661eb8f6b6531330e0cc15e15fb8"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-bloomingnature.pw.toml"
+hash = "3652b3e64c6585f6c3a962c1626802a25d152cec90fcd3cf6222a7cb1db87091"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-brewery-farm-charm-compat.pw.toml"
+hash = "5d61d610d531e30f1d644469b0cd3cd5d038f6882591cc9e8cdad62f48245412"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-camping.pw.toml"
+hash = "433dfe7ce909c573166a06c0586a073b71e10400760f067519f14f4ca359e6b0"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-candlelight-farm-charm-compat.pw.toml"
+hash = "2ab88faa1c5f40051af3e87d98b6c530f371de68304fc0883d35c87bdf18f563"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-emi-compat.pw.toml"
+hash = "551d023b8227367bee3526b7456085e20d0ccb557a1d04d846cc37f3eae0c89e"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-farm-charm.pw.toml"
+hash = "431de34dbf6e32b94fa0542fb2c814ce5bd004d16466db31ebb62edded1bc135"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-furniture.pw.toml"
+hash = "343c951f648e4d30f10c85f277c3d57c5492ba7d6f9820c8dfe764812fbeb2fd"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-hearth-timber.pw.toml"
+hash = "976a2dc8149adf9b961f83da89a0c3846718bbe669b2129e41a1067a264fb8e2"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-herbal-brews.pw.toml"
+hash = "1fc98affc9830a4f23ca858d16014cd04655341f519418c1b9e38be588c6518a"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-lilis-lucky-lures.pw.toml"
+hash = "cecdd2786ccca47b8294205d943e978a7a498ba0e75c79c1afc9372d34e4b9e6"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-lilis-pottery.pw.toml"
+hash = "ef94f02edaf6391e397ec8f9342556748807d2977eb286a5d86cb933076720bd"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-meadow.pw.toml"
+hash = "f3eb4cc1b5250c35ddb14963e77e941efa2ca1dc0916b104916a6430facb4742"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-vinery.pw.toml"
+hash = "4588e9d94ce9adad3db306fb29558782b1db12156d506a60667794fcb23248a7"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-wildernature.pw.toml"
+hash = "0c93cce4687d676ade38014ef7c93eb70d00edb42537cf0beae8675b1affbb89"
 metafile = true
 
 [[files]]
@@ -863,4 +992,34 @@ metafile = true
 [[files]]
 file = "mods/yungs-extras-neoforge.pw.toml"
 hash = "cd321f6365bc3938e0671450aadcd40c8e03af5cb24d0a545fb07c890b4793ac"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bliss-shader.pw.toml"
+hash = "3428aeb935f5a682b033388d70cae2f25809953d04e00da300299e11192e9947"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+hash = "fdf8424c3cd07cdef6a1523cad515d0d03c567626526e8efb74b4d2d552fcd3f"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "b456438ab41d854296474dbb492e4d9ebfa3236c52a9aa52fa2ee3d052b52e0b"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-unbound.pw.toml"
+hash = "af2b986c26efc339a4cd893d573f6d1d09cb5860919a33898335f1f059bd69b3"
+metafile = true
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shader.pw.toml"
+hash = "c7eac59819a55f2c8eacc3adc4179e857a95d86d0a433f65c4c69b59b4da347e"
+metafile = true
+
+[[files]]
+file = "shaderpacks/solas-shader.pw.toml"
+hash = "e861461741bd84d2eef8e801635a97616ec1c1d95300eecf7990a8c585551968"
 metafile = true

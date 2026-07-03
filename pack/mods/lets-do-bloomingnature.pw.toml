@@ -1,0 +1,13 @@
+name = "[Let's Do] BloomingNature"
+filename = "letsdo-bloomingnature-neoforge-1.1.10.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4c161f19d06d5eba52f8ad212fe7fd7c1fcc2c8b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7829623
+project-id = 962885

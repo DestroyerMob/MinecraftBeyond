@@ -1,0 +1,13 @@
+name = "[Let's Do Addon] Corn Expansion"
+filename = "cornexpansion-neoforge-1.2.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ba775629c1355e7c0dcc8ea5dfce0ce704d7f7a1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7716154
+project-id = 1038740

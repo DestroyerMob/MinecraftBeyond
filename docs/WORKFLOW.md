@@ -43,6 +43,7 @@ Environment variables override the local config:
 
 - `MINECRAFT_MOD_SOURCE_ROOT`
 - `MINECRAFT_BEYOND_PRISM_MODS_DIR`
+- `MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR`
 - `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
 - `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
 
@@ -102,6 +103,25 @@ The script copies jars from `minecraft/mods/` into `pack/mods/`, runs `packwiz c
 
 This works best for CurseForge downloads because packwiz can fingerprint jars against CurseForge. Unmatched jars are left in the Prism instance for local testing but removed from the staged pack copy so they do not accidentally become committed pack files.
 
+### Shaderpacks
+
+Shaderpacks use the same packwiz idea as mods: commit metadata, not downloaded zip files. If you install shaders with Prism, Prism can leave `.pw.toml` metadata in `minecraft/shaderpacks/`. Sync that metadata into the distributable pack with:
+
+```bash
+./scripts/modpack import-prism-shaderpacks
+```
+
+The command copies shader metadata into `pack/shaderpacks/`, warns about loose shader zip files or extracted shader folders that are not packwiz-managed, and refreshes the pack index. Commit the generated `.pw.toml` files and `pack/index.toml`.
+
+After pulling shader metadata on another machine, apply it to the Prism instance with either command:
+
+```bash
+./scripts/modpack update-prism-mods
+./scripts/modpack update-prism-shaderpacks
+```
+
+Both use the same packwiz installer path. The shader-specific command is only a clearer alias when you are thinking about shaders.
+
 Typical flow:
 
 ```bash
@@ -128,7 +148,7 @@ On Windows:
 .\scripts\modpack.ps1 update-prism-mods
 ```
 
-The command serves the local `pack/pack.toml` with packwiz and runs `packwiz-installer-bootstrap` against the Prism `minecraft/` directory. The bootstrap jar and downloaded installer jar live under ignored `tools/bin/`, so each machine can recreate them locally. This handles packwiz-managed third-party mods; unpublished local mods still come from `./scripts/modpack update-local-mods`.
+The command serves the local `pack/pack.toml` with packwiz and runs `packwiz-installer-bootstrap` against the Prism `minecraft/` directory. The bootstrap jar and downloaded installer jar live under ignored `tools/bin/`, so each machine can recreate them locally. This handles packwiz-managed third-party mods, configs, and shaderpacks; unpublished local mods still come from `./scripts/modpack update-local-mods`.
 
 ## Local Unpublished Mods
 
@@ -154,6 +174,8 @@ Pull, build, and copy the latest local mod jars into Prism:
 ```
 
 Existing dirty source checkouts are skipped by default so unfinished work is not disturbed. Use `--allow-dirty` only when you intentionally want to pull inside a checkout with local changes.
+
+Local mods can be marked with `enabled: false` in `tools/local-mods.json`. Disabled entries remain documented, but local update and sync commands skip them.
 
 ## Commit And Push Protocol
 
@@ -225,5 +247,6 @@ For a playable snapshot:
 ## Compatibility Notes
 
 - The Prism instance currently uses NeoForge 21.1.234.
-- All local mod repositories currently target NeoForge 21.1.234.
+- Most local mod repositories target NeoForge 21.1.234.
+- Axiom Survival is a Fabric 1.21.1 Axiom add-on for Sinytra Connector. The pack config enables its survival capture hooks.
 - MoreWeapons must use the `1.21.1-neoforge` branch for this pack.

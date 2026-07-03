@@ -23,11 +23,16 @@ from typing import Iterable, Sequence
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TOOLS_DIR = REPO_ROOT / "tools"
 PACK_DIR = REPO_ROOT / "pack"
+PACK_MODS_DIR = PACK_DIR / "mods"
+PACK_SHADERPACKS_DIR = PACK_DIR / "shaderpacks"
 PACK_TOML = PACK_DIR / "pack.toml"
 INDEX_TOML = PACK_DIR / "index.toml"
 LOCAL_MODS_JSON = TOOLS_DIR / "local-mods.json"
 DEV_ENV_LOCAL = TOOLS_DIR / "dev-env.local.json"
 DEFAULT_SOURCE_ROOT = Path.home() / "Documents" / "minecraft-mod-sources"
+DEFAULT_PRISM_MINECRAFT_DIR = REPO_ROOT / "minecraft"
+DEFAULT_PRISM_MODS_DIR = DEFAULT_PRISM_MINECRAFT_DIR / "mods"
+DEFAULT_PRISM_SHADERPACKS_DIR = DEFAULT_PRISM_MINECRAFT_DIR / "shaderpacks"
 PACKWIZ_INSTALLER_BOOTSTRAP_URL = (
     "https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/"
     "packwiz-installer-bootstrap.jar"
@@ -204,6 +209,10 @@ def first_line_match(path: Path, pattern: str) -> str | None:
     return None
 
 
+def packwiz_metadata_filename(path: Path) -> str | None:
+    return first_line_match(path, r"filename\s*=\s*['\"]([^'\"]+)['\"]")
+
+
 def parse_pack_index_hash() -> str | None:
     if not PACK_TOML.exists():
         return None
@@ -246,12 +255,14 @@ def parse_index_files() -> list[dict[str, str]]:
     return files
 
 
-def read_local_mods(path: Path = LOCAL_MODS_JSON) -> list[dict]:
+def read_local_mods(path: Path = LOCAL_MODS_JSON, *, include_disabled: bool = False) -> list[dict]:
     data = load_json(path)
     mods = data.get("mods", [])
     if not isinstance(mods, list):
         raise ToolError(f"Expected a mods array in {path}")
-    return mods
+    if include_disabled:
+        return mods
+    return [mod for mod in mods if mod.get("enabled", True)]
 
 
 def resolve_packwiz(dev_env: dict, explicit: str | None = None) -> Path | None:
@@ -374,7 +385,14 @@ def command_doctor(args: argparse.Namespace) -> int:
         ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
         dev_env,
         "modsDir",
-        REPO_ROOT / "minecraft" / "mods",
+        DEFAULT_PRISM_MODS_DIR,
+    )
+    shaderpacks_dir = setting(
+        args.shaderpacks_dir,
+        ("MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR",),
+        dev_env,
+        "shaderpacksDir",
+        DEFAULT_PRISM_SHADERPACKS_DIR,
     )
     packwiz = resolve_packwiz(dev_env, args.packwiz)
     java = resolve_java(dev_env, args.java_home)
@@ -447,14 +465,17 @@ def command_doctor(args: argparse.Namespace) -> int:
     metadata_checks.append(Check("indexed files", "ok" if not missing_files else "missing", f"{len(files)} listed, {len(missing_files)} missing"))
     metadata_checks.append(Check("file hashes", "matched" if not mismatched_files else "mismatch", f"{len(mismatched_files)} mismatch(es)"))
 
-    mod_metadata = sorted((PACK_DIR / "mods").glob("*.pw.toml"))
+    mod_metadata = sorted(PACK_MODS_DIR.glob("*.pw.toml"))
+    shader_metadata = sorted(PACK_SHADERPACKS_DIR.glob("*.pw.toml"))
     metadata_checks.append(Check("mod metadata", "ok", f"{len(mod_metadata)} .pw.toml files"))
+    metadata_checks.append(Check("shader metadata", "ok", f"{len(shader_metadata)} .pw.toml files"))
     required_ok = print_checks("Pack", metadata_checks) and required_ok
 
     env_checks = [
         Check("dev env file", "found" if DEV_ENV_LOCAL.exists() else "missing", str(DEV_ENV_LOCAL)),
         Check("source root", "found" if source_root and source_root.exists() else "missing", str(source_root) if source_root else ""),
         Check("Prism mods", "found" if mods_dir and mods_dir.exists() else "missing", str(mods_dir) if mods_dir else ""),
+        Check("Prism shaderpacks", "found" if shaderpacks_dir and shaderpacks_dir.exists() else "missing", str(shaderpacks_dir) if shaderpacks_dir else ""),
     ]
 
     local_mod_checks: list[Check] = []
@@ -514,6 +535,7 @@ def command_init_env(args: argparse.Namespace) -> int:
     overrides = {
         "sourceRoot": args.source_root,
         "modsDir": args.mods_dir,
+        "shaderpacksDir": args.shaderpacks_dir,
         "packwiz": args.packwiz,
         "javaHome": args.java_home,
     }
@@ -718,7 +740,7 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
         ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
         dev_env,
         "modsDir",
-        REPO_ROOT / "minecraft" / "mods",
+        DEFAULT_PRISM_MODS_DIR,
     )
     assert source_root is not None
     assert mods_dir is not None
@@ -809,7 +831,7 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
         ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
         dev_env,
         "modsDir",
-        REPO_ROOT / "minecraft" / "mods",
+        DEFAULT_PRISM_MODS_DIR,
     )
     pack_dir = expand_path(args.pack_dir or PACK_DIR)
     assert prism_mods is not None
@@ -865,10 +887,102 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
                 staged_path.unlink()
             print("Removed unmatched staged jar copies from pack/mods. Original Prism jars were left alone.")
 
-    print("Refreshing packwiz index...")
+    print("Refreshing packwiz index...", flush=True)
     run([packwiz, "refresh"], cwd=pack_dir)
     print("Import complete. Review and commit the generated pack metadata.")
     return 0
+
+
+def command_import_prism_shaderpacks(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
+    prism_shaderpacks = setting(
+        args.prism_shaderpacks_dir,
+        ("MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR",),
+        dev_env,
+        "shaderpacksDir",
+        DEFAULT_PRISM_SHADERPACKS_DIR,
+    )
+    pack_dir = expand_path(args.pack_dir or PACK_DIR)
+    assert prism_shaderpacks is not None
+    assert pack_dir is not None
+
+    pack_toml = pack_dir / "pack.toml"
+    if not pack_toml.exists():
+        raise ToolError(f"pack.toml not found at {pack_toml}")
+
+    if not prism_shaderpacks.exists():
+        print(f"WARNING: Prism shaderpacks folder does not exist yet: {prism_shaderpacks}")
+        return 0
+
+    source_metadata = sorted(prism_shaderpacks.glob("*.pw.toml"))
+    if not source_metadata:
+        print(f"No packwiz shader metadata found in {prism_shaderpacks}.")
+        print("Install shaders through Prism or packwiz first so the repo can track metadata instead of zip files.")
+        return 0
+
+    pack_shaderpacks = pack_dir / "shaderpacks"
+    if not args.dry_run:
+        pack_shaderpacks.mkdir(parents=True, exist_ok=True)
+
+    rows: list[tuple[str, str, str]] = []
+    managed_archives: set[str] = set()
+    for metadata in source_metadata:
+        archive_name = packwiz_metadata_filename(metadata) or ""
+        if archive_name:
+            managed_archives.add(archive_name)
+
+        destination = pack_shaderpacks / metadata.name
+        if destination.exists() and sha256(metadata) == sha256(destination):
+            action = "unchanged"
+        elif destination.exists():
+            action = "would update" if args.dry_run else "updated"
+            if not args.dry_run:
+                shutil.copy2(metadata, destination)
+        else:
+            action = "would copy" if args.dry_run else "copied"
+            if not args.dry_run:
+                shutil.copy2(metadata, destination)
+        rows.append((metadata.name, action, archive_name or "(filename not found)"))
+
+    print_rows(("Metadata", "Action", "Archive"), rows)
+
+    unmanaged_archives = sorted(
+        archive.name for archive in prism_shaderpacks.glob("*.zip") if archive.name not in managed_archives
+    )
+    if unmanaged_archives:
+        print("\nWARNING: These shader zip files do not have matching packwiz metadata and were not copied:")
+        print_rows(("Archive",), [(name,) for name in unmanaged_archives])
+
+    extracted_folders = sorted(
+        path.name
+        for path in prism_shaderpacks.iterdir()
+        if path.is_dir() and not path.name.startswith(".")
+    )
+    if extracted_folders:
+        print("\nIgnoring extracted shaderpack folders. Keep the packwiz pack focused on downloadable archives/metadata:")
+        print_rows(("Folder",), [(name,) for name in extracted_folders])
+
+    if args.skip_refresh:
+        print("Skipping packwiz refresh.")
+        return 0
+
+    if args.dry_run:
+        print("DRY RUN: packwiz refresh would run.")
+        return 0
+
+    packwiz = resolve_packwiz(dev_env, args.packwiz)
+    if not packwiz:
+        raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
+
+    print("Refreshing packwiz index...", flush=True)
+    run([packwiz, "refresh"], cwd=pack_dir)
+    print("Shaderpack import complete. Review and commit the generated pack metadata.")
+    return 0
+
+
+def command_update_prism_shaderpacks(args: argparse.Namespace) -> int:
+    print("Applying packwiz metadata to Prism; shaderpacks update through the same installer path as mods and configs.")
+    return command_update_prism_mods(args)
 
 
 def command_update_prism_mods(args: argparse.Namespace) -> int:
@@ -892,7 +1006,7 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
         ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
         dev_env,
         "modsDir",
-        REPO_ROOT / "minecraft" / "mods",
+        DEFAULT_PRISM_MODS_DIR,
     )
     minecraft_dir = expand_path(args.minecraft_dir) if args.minecraft_dir else (prism_mods.parent if prism_mods else None)
     if minecraft_dir is None:
@@ -921,7 +1035,7 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
         print(f"Downloading packwiz installer bootstrap to {bootstrap}", flush=True)
         download_file(args.bootstrap_url, bootstrap, dry_run=args.dry_run)
 
-    port = args.port or find_free_local_port()
+    port = args.port or (42123 if args.dry_run else find_free_local_port())
     pack_url = f"http://127.0.0.1:{port}/pack.toml"
     installer_command = [
         java,
@@ -962,7 +1076,7 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
                 server.kill()
                 server.wait(timeout=5)
 
-    print("Prism mods updated from packwiz metadata.")
+    print("Prism pack files updated from packwiz metadata.")
     return 0
 
 
@@ -992,6 +1106,20 @@ def print_rows(headers: Sequence[str], rows: Iterable[Sequence[object]]) -> None
         print("  " + "  ".join(cell.ljust(widths[index]) for index, cell in enumerate(row)))
 
 
+def add_update_prism_arguments(command: argparse.ArgumentParser) -> None:
+    command.add_argument("--minecraft-dir", help="Prism minecraft folder. Defaults to the parent of modsDir.")
+    command.add_argument("--mods-dir", help="Prism mods folder, used to derive minecraft-dir when minecraft-dir is omitted.")
+    command.add_argument("--pack-dir")
+    command.add_argument("--packwiz")
+    command.add_argument("--java-home")
+    command.add_argument("--installer", help="Path to packwiz-installer-bootstrap.jar.")
+    command.add_argument("--main-jar", help="Path where the bootstrapper stores packwiz-installer.jar.")
+    command.add_argument("--bootstrap-url", default=PACKWIZ_INSTALLER_BOOTSTRAP_URL)
+    command.add_argument("--no-download", action="store_true", help="Fail instead of downloading the bootstrap jar if it is missing.")
+    command.add_argument("--port", type=int, help="Local port for the temporary packwiz server.")
+    command.add_argument("--dry-run", action="store_true")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="modpack",
@@ -1003,6 +1131,7 @@ def build_parser() -> argparse.ArgumentParser:
     doctor.add_argument("--strict", action="store_true", help="Exit non-zero for missing required tools or pack hash mismatches.")
     doctor.add_argument("--source-root")
     doctor.add_argument("--mods-dir")
+    doctor.add_argument("--shaderpacks-dir")
     doctor.add_argument("--packwiz")
     doctor.add_argument("--java-home")
     doctor.set_defaults(func=command_doctor)
@@ -1015,6 +1144,7 @@ def build_parser() -> argparse.ArgumentParser:
     init_env = subparsers.add_parser("init-env", help="Create the ignored machine-local dev environment config.")
     init_env.add_argument("--source-root")
     init_env.add_argument("--mods-dir")
+    init_env.add_argument("--shaderpacks-dir")
     init_env.add_argument("--packwiz")
     init_env.add_argument("--java-home")
     init_env.add_argument("--force", action="store_true")
@@ -1058,19 +1188,21 @@ def build_parser() -> argparse.ArgumentParser:
     prism.add_argument("--dry-run", action="store_true")
     prism.set_defaults(func=command_import_prism_mods)
 
+    prism_shaders = subparsers.add_parser("import-prism-shaderpacks", help="Import Prism shaderpack metadata into packwiz.")
+    prism_shaders.add_argument("--prism-shaderpacks-dir")
+    prism_shaders.add_argument("--pack-dir")
+    prism_shaders.add_argument("--packwiz")
+    prism_shaders.add_argument("--skip-refresh", action="store_true")
+    prism_shaders.add_argument("--dry-run", action="store_true")
+    prism_shaders.set_defaults(func=command_import_prism_shaderpacks)
+
     update_prism = subparsers.add_parser("update-prism-mods", help="Apply packwiz metadata to the Prism minecraft folder.")
-    update_prism.add_argument("--minecraft-dir", help="Prism minecraft folder. Defaults to the parent of modsDir.")
-    update_prism.add_argument("--mods-dir", help="Prism mods folder, used to derive minecraft-dir when minecraft-dir is omitted.")
-    update_prism.add_argument("--pack-dir")
-    update_prism.add_argument("--packwiz")
-    update_prism.add_argument("--java-home")
-    update_prism.add_argument("--installer", help="Path to packwiz-installer-bootstrap.jar.")
-    update_prism.add_argument("--main-jar", help="Path where the bootstrapper stores packwiz-installer.jar.")
-    update_prism.add_argument("--bootstrap-url", default=PACKWIZ_INSTALLER_BOOTSTRAP_URL)
-    update_prism.add_argument("--no-download", action="store_true", help="Fail instead of downloading the bootstrap jar if it is missing.")
-    update_prism.add_argument("--port", type=int, help="Local port for the temporary packwiz server.")
-    update_prism.add_argument("--dry-run", action="store_true")
+    add_update_prism_arguments(update_prism)
     update_prism.set_defaults(func=command_update_prism_mods)
+
+    update_prism_shaders = subparsers.add_parser("update-prism-shaderpacks", help="Apply packwiz shaderpack metadata to Prism.")
+    add_update_prism_arguments(update_prism_shaders)
+    update_prism_shaders.set_defaults(func=command_update_prism_shaderpacks)
 
     refresh = subparsers.add_parser("refresh", help="Run packwiz refresh for the pack.")
     refresh.add_argument("--pack-dir")

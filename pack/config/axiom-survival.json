@@ -1,0 +1,4 @@
+{
+  "enableAxiomVanillaEditCapture": true,
+  "axiomVanillaEditMaxPendingBlocks": 100000
+}

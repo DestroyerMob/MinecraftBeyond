@@ -101,10 +101,12 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early scaffold for per-world quality/mod/config profiles. |
+| Axiom Survival | `DestroyerMob/AxiomSurvival` | `main` | Fabric 1.21.1 add-on for Axiom. Survival capture hooks are enabled by pack config. |
 
 ## Mod Integrations
 
 - Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
+- Axiom Survival stages Axiom edits behind survival inventory costs when `enableAxiomVanillaEditCapture` is enabled before launch.
 - Ecology's player-facing bee systems are documented in [docs/ECOLOGY_BEE_GUIDE.md](docs/ECOLOGY_BEE_GUIDE.md).
 - Ecology's village systems are documented in [docs/ECOLOGY_VILLAGE_GUIDE.md](docs/ECOLOGY_VILLAGE_GUIDE.md).
 

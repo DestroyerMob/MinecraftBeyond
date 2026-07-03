@@ -1,0 +1,13 @@
+name = "[Let's Do] Lili's Pottery"
+filename = "letsdo-lilis_pottery-neoforge-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4ae315d10db928ac4a261e3a87a3102c04435f88"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7586633
+project-id = 1419242

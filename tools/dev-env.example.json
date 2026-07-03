@@ -1,6 +1,7 @@
 {
   "sourceRoot": "~/Documents/minecraft-mod-sources",
   "modsDir": "minecraft/mods",
+  "shaderpacksDir": "minecraft/shaderpacks",
   "packwiz": "tools/bin/packwiz",
   "javaHome": ""
 }
