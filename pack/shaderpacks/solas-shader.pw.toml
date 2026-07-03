@@ -1,6 +1,6 @@
 filename = 'Solas Shader V3.6.zip'
 name = 'Solas Shader'
-side = ''
+side = 'client'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
 x-prismlauncher-mc-versions = [
@@ -62,7 +62,6 @@ x-prismlauncher-version-number = 'Solas Shader V3.6'
 hash = 'c7c7384399399c6f1b06aa312e0f1a1a2793c314'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
 
 [update.curseforge]
 file-id = 8009005

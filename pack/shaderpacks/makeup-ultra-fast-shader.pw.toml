@@ -1,6 +1,6 @@
 filename = 'MakeUp-UltraFast-9.5c.zip'
 name = 'MakeUp - Ultra Fast | Shaders'
-side = ''
+side = 'client'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
 x-prismlauncher-mc-versions = [
@@ -63,7 +63,6 @@ x-prismlauncher-version-number = 'MakeUp-UltraFast-9.5c.zip'
 hash = '57dfa2eb8b3f9c2e4963f6b77a3cedb0e846dc5d'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
 
 [update.curseforge]
 file-id = 8330757

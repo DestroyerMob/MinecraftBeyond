@@ -1,6 +1,6 @@
 filename = 'ComplementaryReimagined_r5.8.1.zip'
 name = 'Complementary Shaders - Reimagined'
-side = ''
+side = 'client'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
 x-prismlauncher-mc-versions = [
@@ -52,7 +52,6 @@ x-prismlauncher-version-number = 'Complementary Reimagined r5.8.1'
 hash = '5a021081f0178ed91dd911194071465ab0a4348b'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
 
 [update.curseforge]
 file-id = 8123287

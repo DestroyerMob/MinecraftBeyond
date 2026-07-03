@@ -213,6 +213,19 @@ def packwiz_metadata_filename(path: Path) -> str | None:
     return first_line_match(path, r"filename\s*=\s*['\"]([^'\"]+)['\"]")
 
 
+def normalize_shader_metadata(text: str) -> str:
+    normalized: list[str] = []
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if re.fullmatch(r"side\s*=\s*['\"]\s*['\"]", line):
+            normalized.append("side = 'client'")
+            continue
+        if re.fullmatch(r"url\s*=\s*['\"]\s*['\"]", line):
+            continue
+        normalized.append(raw_line)
+    return "\n".join(normalized) + "\n"
+
+
 def parse_pack_index_hash() -> str | None:
     if not PACK_TOML.exists():
         return None
@@ -927,21 +940,22 @@ def command_import_prism_shaderpacks(args: argparse.Namespace) -> int:
     rows: list[tuple[str, str, str]] = []
     managed_archives: set[str] = set()
     for metadata in source_metadata:
+        normalized_metadata = normalize_shader_metadata(metadata.read_text(encoding="utf-8"))
         archive_name = packwiz_metadata_filename(metadata) or ""
         if archive_name:
             managed_archives.add(archive_name)
 
         destination = pack_shaderpacks / metadata.name
-        if destination.exists() and sha256(metadata) == sha256(destination):
+        if destination.exists() and destination.read_text(encoding="utf-8") == normalized_metadata:
             action = "unchanged"
         elif destination.exists():
             action = "would update" if args.dry_run else "updated"
             if not args.dry_run:
-                shutil.copy2(metadata, destination)
+                destination.write_text(normalized_metadata, encoding="utf-8")
         else:
             action = "would copy" if args.dry_run else "copied"
             if not args.dry_run:
-                shutil.copy2(metadata, destination)
+                destination.write_text(normalized_metadata, encoding="utf-8")
         rows.append((metadata.name, action, archive_name or "(filename not found)"))
 
     print_rows(("Metadata", "Action", "Archive"), rows)
