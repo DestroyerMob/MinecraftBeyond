@@ -2,7 +2,7 @@
 #VANILLA_SAFE keeps Ecology passive. LIGHT_ECOLOGY enables colony data and beekeeper relocation without replacing vanilla bee AI.
 #FULL_SIMULATION enables the complete bee simulation and village construction. DEBUG_TESTING is full simulation plus noisy diagnostics and auto-seeded hives.
 #Allowed Values: CUSTOM, VANILLA_SAFE, LIGHT_ECOLOGY, FULL_SIMULATION, DEBUG_TESTING
-gameplayPreset = "FULL_SIMULATION"
+gameplayPreset = "LIGHT_ECOLOGY"
 #Master switch for Ecology's advanced bee AI, colony simulation, hive data, and bee relocation items. Disabled by default so vanilla bee behavior is unchanged unless a pack opts in.
 enableBeeSystem = true
 #When false, Ecology only initializes bee memory and leaves vanilla bee AI intact.

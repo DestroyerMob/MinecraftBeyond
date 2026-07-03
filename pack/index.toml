@@ -9,6 +9,10 @@ file = "config/better-advanced-tooltips-client.toml"
 hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
 
 [[files]]
+file = "config/bettercaves/neoforge-1_21_1/liquidregions.json"
+hash = "c43d25d96dec063e4bb82262fda71a25a44cd3db492f59d3c921915cb99f4dfa"
+
+[[files]]
 file = "config/dragonfight.json"
 hash = "86d26252a2d5f2cc6b2981686f2f3c039aa3c32c8e2c674444b1c0d3f631b092"
 
@@ -18,11 +22,15 @@ hash = "ce175be150956967699405d6d5466a4e648baa52c8aeeb49850145a6a160d865"
 
 [[files]]
 file = "config/ecology-common.toml"
-hash = "2c1d25033c9be290cb2957a196092cc79dd4217edc12f86ba1d611cf2cccf4ff"
+hash = "6246d6fdb80ad7a8643fbe0ac894fab12949440177806c114530dee7d44762cb"
 
 [[files]]
 file = "config/enchdesc.json"
 hash = "650f05dcb6db5a42acffde5fb9a5716e7943d3b6975525e4707748db7c512df7"
+
+[[files]]
+file = "config/ftbessentials.snbt"
+hash = "586b35a2681e6326a6ecde72509d6c1554f5b18b41defb768d6d1570b7c71f8e"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -35,6 +43,10 @@ hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
 [[files]]
 file = "config/mobstoolforging-common.toml"
 hash = "54d7e3f9e0ca5bb00ffcd6862b55ef5ad2794237ee6a76c3f27ecb115e74897a"
+
+[[files]]
+file = "config/supplementaries-common.toml"
+hash = "edb59fd12c1357f57524f442318be151319e42c63754200f1125086cc1945c57"
 
 [[files]]
 file = "config/tooltipoverhaul/custom_frames.json"
@@ -63,6 +75,14 @@ hash = "1b96ce219de192551cc355e76a409f8b6ac4374c27ecd38ebb9e3b432ef81c72"
 [[files]]
 file = "kubejs/server_scripts/gravel_to_flint.js"
 hash = "d140cf89b62a2333e6a8adb75aab611f98ce00f7eaeb0f1ab8418e13a8163d87"
+
+[[files]]
+file = "kubejs/server_scripts/player_warps.js"
+hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
+
+[[files]]
+file = "options.txt"
+hash = "e58b8e3b5aa6d83161902182b28988807b198eb9a3c4179d8a11b603317b1a3d"
 
 [[files]]
 file = "mods/advancement-plaques.pw.toml"
