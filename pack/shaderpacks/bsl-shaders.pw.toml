@@ -1,6 +1,6 @@
 filename = 'BSL_v10.1.3.zip'
 name = 'BSL Shaders'
-side = ''
+side = 'client'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
 x-prismlauncher-mc-versions = [
@@ -31,7 +31,6 @@ x-prismlauncher-version-number = 'BSL v10.1.3'
 hash = 'c2459c82c23dc7442eaf1976dade30c2c2f18a9f'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
 
 [update.curseforge]
 file-id = 7955829

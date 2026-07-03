@@ -1,6 +1,6 @@
 filename = 'ComplementaryUnbound_r5.8.1.zip'
 name = 'Complementary Shaders - Unbound'
-side = ''
+side = 'client'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
 x-prismlauncher-mc-versions = [
@@ -52,7 +52,6 @@ x-prismlauncher-version-number = 'Complementary Unbound r5.8.1'
 hash = 'af656a33be2cbd217ea08986ad2cdd76f6bbfe1c'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
-url = ''
 
 [update.curseforge]
 file-id = 8123288
