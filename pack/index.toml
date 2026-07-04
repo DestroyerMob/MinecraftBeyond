@@ -30,7 +30,7 @@ hash = "650f05dcb6db5a42acffde5fb9a5716e7943d3b6975525e4707748db7c512df7"
 
 [[files]]
 file = "config/ftbessentials.snbt"
-hash = "586b35a2681e6326a6ecde72509d6c1554f5b18b41defb768d6d1570b7c71f8e"
+hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -42,11 +42,23 @@ hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "54d7e3f9e0ca5bb00ffcd6862b55ef5ad2794237ee6a76c3f27ecb115e74897a"
+hash = "28bfb0947512f35af232b671805f76e8d90cf8ba8aab9a6f986fac5b0b096ffb"
+
+[[files]]
+file = "config/modqualitypicker-common.toml"
+hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
+
+[[files]]
+file = "config/modqualitypicker/presets/balanced.json"
+hash = "db9d520f1e1c785d2cdfad61e84e317e7866850ce759eeabda25714f0f04f848"
+
+[[files]]
+file = "config/modqualitypicker/presets/max.json"
+hash = "46e9724e6e5e655457a31ccfe24d430c68eb9f9c96d4f890b3a00c663cba929a"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "edb59fd12c1357f57524f442318be151319e42c63754200f1125086cc1945c57"
+hash = "a57f7feb6692d2a8cea897309405dec075dfa646183588c79283d600f77190e7"
 
 [[files]]
 file = "config/tooltipoverhaul/custom_frames.json"
@@ -79,10 +91,6 @@ hash = "d140cf89b62a2333e6a8adb75aab611f98ce00f7eaeb0f1ab8418e13a8163d87"
 [[files]]
 file = "kubejs/server_scripts/player_warps.js"
 hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
-
-[[files]]
-file = "options.txt"
-hash = "e58b8e3b5aa6d83161902182b28988807b198eb9a3c4179d8a11b603317b1a3d"
 
 [[files]]
 file = "mods/advancement-plaques.pw.toml"
@@ -1018,6 +1026,10 @@ metafile = true
 file = "mods/yungs-extras-neoforge.pw.toml"
 hash = "cd321f6365bc3938e0671450aadcd40c8e03af5cb24d0a545fb07c890b4793ac"
 metafile = true
+
+[[files]]
+file = "options.txt"
+hash = "fb5f4c353191395d320777fb8887a8ae54aa859c1e088d4608c73100682f6e67"
 
 [[files]]
 file = "shaderpacks/bliss-shader.pw.toml"
