@@ -14,11 +14,15 @@ import socket
 import subprocess
 import sys
 import time
-import tomllib
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Sequence
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    tomllib = None
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +45,7 @@ PACKWIZ_INSTALLER_BOOTSTRAP_URL = (
 PACKWIZ_INSTALLER_BOOTSTRAP = TOOLS_DIR / "bin" / "packwiz-installer-bootstrap.jar"
 PACKWIZ_INSTALLER_MAIN = TOOLS_DIR / "bin" / "packwiz-installer.jar"
 PACK_LOCAL_QUALITY_APPLIER = TOOLS_DIR / "modqualitypicker_prism.py"
+PYTHON_COMPAT_DIR = TOOLS_DIR / "python_compat"
 
 
 class ToolError(RuntimeError):
@@ -348,6 +353,23 @@ def resolve_quality_applier(dev_env: dict) -> Path | None:
     return None
 
 
+def python_compat_environment() -> dict[str, str] | None:
+    if sys.version_info >= (3, 11) or not PYTHON_COMPAT_DIR.exists():
+        return None
+
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH")
+    paths = [str(PYTHON_COMPAT_DIR)]
+    if existing:
+        paths.append(existing)
+    env["PYTHONPATH"] = os.pathsep.join(paths)
+    return env
+
+
+def quality_pending_profile_path(minecraft_dir: Path) -> Path:
+    return minecraft_dir / "config" / "modqualitypicker" / "pending-profile.json"
+
+
 def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_run: bool, skip: bool) -> None:
     if skip:
         print("Skipping Mod Quality Picker jar state apply.")
@@ -363,8 +385,12 @@ def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_
     if dry_run:
         command.append("--dry-run")
 
-    print("Applying active Mod Quality Picker profile to synced jars...", flush=True)
-    run(command, cwd=REPO_ROOT)
+    pending_profile = quality_pending_profile_path(minecraft_dir)
+    if pending_profile.exists():
+        print("Applying queued Mod Quality Picker profile to synced jars...", flush=True)
+    else:
+        print("No queued Mod Quality Picker profile found; applying active profile to synced jars...", flush=True)
+    run(command, cwd=REPO_ROOT, env=python_compat_environment())
 
 
 def active_quality_profile_id(minecraft_dir: Path) -> str | None:
@@ -373,13 +399,16 @@ def active_quality_profile_id(minecraft_dir: Path) -> str | None:
         return None
 
     text = config.read_text(encoding="utf-8")
-    try:
-        parsed = tomllib.loads(text)
-        profile_id = parsed.get("activeProfileId")
-        return profile_id if isinstance(profile_id, str) and profile_id else None
-    except tomllib.TOMLDecodeError:
-        match = re.search(r'activeProfileId\s*=\s*"([^"]+)"', text)
-        return match.group(1) if match else None
+    if tomllib is not None:
+        try:
+            parsed = tomllib.loads(text)
+            profile_id = parsed.get("activeProfileId")
+            return profile_id if isinstance(profile_id, str) and profile_id else None
+        except tomllib.TOMLDecodeError:
+            pass
+
+    match = re.search(r'activeProfileId\s*=\s*"([^"]+)"', text)
+    return match.group(1) if match else None
 
 
 def restore_active_quality_profile_id(minecraft_dir: Path, profile_id: str | None, *, dry_run: bool) -> None:
@@ -881,7 +910,7 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
             raise ToolError(f"No runtime jar matching {mod['jarGlob']} found for {name} in {libs_dir}.")
 
         jar = jars[0]
-        destination = mods_dir / f"{mod['modId']}-local.jar"
+        destination = local_mod_sync_destination(mods_dir, mod["modId"])
         print(f"Syncing {name}: {jar.name} -> {destination}")
         if not args.dry_run:
             shutil.copy2(jar, destination)
@@ -895,6 +924,14 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
         print_rows(("Mod", "Jar", "Destination"), rows)
     apply_quality_profile_after_sync(dev_env, mods_dir.parent, dry_run=args.dry_run, skip=args.skip_quality_apply)
     return 0
+
+
+def local_mod_sync_destination(mods_dir: Path, mod_id: str) -> Path:
+    enabled = mods_dir / f"{mod_id}-local.jar"
+    disabled = enabled.with_name(enabled.name + ".disabled")
+    if disabled.exists() and not enabled.exists():
+        return disabled
+    return enabled
 
 
 def command_update_local_mods(args: argparse.Namespace) -> int:

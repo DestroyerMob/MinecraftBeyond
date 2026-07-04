@@ -3,7 +3,7 @@
   "id": "balanced",
   "displayName": "Balanced",
   "sortOrder": 10,
-  "description": "Balanced performance sweep preset: current mod list with Ecology, YUNG worldgen, and Axiom disabled. Continuity is enabled with Connector/Fabric API dependencies.",
+  "description": "All mods enabled. Performance-trim rules are disabled until the quality profiles are rebuilt.",
   "mods": {
     "advancementplaques": {
       "enabled": true,
@@ -21,6 +21,11 @@
       "reason": ""
     },
     "alpinewhispers": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "alternate_current": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -82,13 +87,18 @@
     },
     "axiom": {
       "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables Axiom and its add-ons for the performance sweep."
+      "locked": false,
+      "reason": ""
     },
     "axiomsurvival": {
       "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables Axiom and its add-ons for the performance sweep."
+      "locked": false,
+      "reason": ""
+    },
+    "badoptimizations": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "baguettelib": {
       "enabled": true,
@@ -126,9 +136,9 @@
       "reason": ""
     },
     "bettercaves": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "bettercombat": {
       "enabled": true,
@@ -136,14 +146,14 @@
       "reason": ""
     },
     "betterdeserttemples": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betterdungeons": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betterenchanting": {
       "enabled": true,
@@ -156,34 +166,34 @@
       "reason": ""
     },
     "betterfortresses": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betterjungletemples": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "bettermineshafts": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betteroceanmonuments": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betterstrongholds": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "betterwitchhuts": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "biolith": {
       "enabled": true,
@@ -201,6 +211,11 @@
       "reason": ""
     },
     "brewery": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "brewinandchewin": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -245,6 +260,11 @@
       "locked": false,
       "reason": ""
     },
+    "chunky": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "cleanswing": {
       "enabled": true,
       "locked": false,
@@ -272,8 +292,8 @@
     },
     "com_moulberry_axiomclientapi": {
       "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables Axiom and its add-ons for the performance sweep."
+      "locked": false,
+      "reason": ""
     },
     "comforts": {
       "enabled": true,
@@ -308,12 +328,12 @@
     "connector": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "continuity": {
       "enabled": true,
       "locked": false,
-      "reason": "Enabled in Balanced; required Connector/Fabric API dependencies are auto-enabled."
+      "reason": ""
     },
     "controlling": {
       "enabled": true,
@@ -350,6 +370,11 @@
       "locked": false,
       "reason": ""
     },
+    "crabbersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
@@ -370,12 +395,22 @@
       "locked": false,
       "reason": ""
     },
+    "culturaldelights": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "cupboard": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "curios": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "delightlib": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -400,6 +435,11 @@
       "locked": false,
       "reason": ""
     },
+    "dynamic_fps": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "eatinganimation": {
       "enabled": true,
       "locked": false,
@@ -407,8 +447,8 @@
     },
     "ecology": {
       "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables Ecology completely for the performance sweep."
+      "locked": false,
+      "reason": ""
     },
     "elytraslot": {
       "enabled": true,
@@ -435,12 +475,27 @@
       "locked": false,
       "reason": ""
     },
+    "ends_delight": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "entityculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "everycomp": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "expandeddelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -463,217 +518,217 @@
     "fabric_api": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_api_base": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_api_lookup_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_biome_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_block_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_block_view_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_blockrenderlayer_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_client_tags_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_command_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_content_registries_v0": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_convention_tags_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_convention_tags_v2": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_data_attachment_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_data_generation_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_entity_events_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_events_interaction_v0": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_game_rule_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_gametest_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_item_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_item_group_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_key_binding_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_lifecycle_events_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_loot_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_loot_api_v3": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_message_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_model_loading_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_networking_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_object_builder_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_particles_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_recipe_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_registry_sync_v0": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_renderer_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_renderer_indigo": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_rendering_data_attachment_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_rendering_fluids_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_rendering_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_resource_conditions_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_resource_loader_v0": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_screen_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_screen_handler_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_sound_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_transfer_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fabric_transitive_access_wideners_v1": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "fallingleaves": {
       "enabled": true,
@@ -681,6 +736,11 @@
       "reason": ""
     },
     "farm_and_charm": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "farmers_cutting_regions_unexplored_1_21_1_1_1b_neoforge": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -723,7 +783,7 @@
     "forgified_fabric_api": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Continuity."
+      "reason": ""
     },
     "framework": {
       "enabled": true,
@@ -815,6 +875,11 @@
       "locked": false,
       "reason": ""
     },
+    "immediatelyfast": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "immersiveui": {
       "enabled": true,
       "locked": false,
@@ -875,6 +940,11 @@
       "locked": false,
       "reason": ""
     },
+    "ksyxis": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "kubejs": {
       "enabled": true,
       "locked": false,
@@ -887,8 +957,8 @@
     },
     "lattice": {
       "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "locked": false,
+      "reason": ""
     },
     "letsdocompat": {
       "enabled": true,
@@ -921,9 +991,9 @@
       "reason": ""
     },
     "lootintegrations_yungs": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "lootr": {
       "enabled": true,
@@ -975,7 +1045,27 @@
       "locked": false,
       "reason": ""
     },
+    "moreculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "moredelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mousetweaks": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "mr_farmers_cuttingregionsunexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "mynethersdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -996,6 +1086,16 @@
       "reason": ""
     },
     "netherportalfix": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "noisium": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "oceansdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1075,6 +1175,11 @@
       "locked": false,
       "reason": ""
     },
+    "regions_unexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "resourcefullib": {
       "enabled": true,
       "locked": false,
@@ -1091,6 +1196,11 @@
       "reason": ""
     },
     "searchables": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "servercore": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1116,6 +1226,16 @@
       "reason": ""
     },
     "sound_physics_remastered": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "spark": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "spawn": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1246,24 +1366,24 @@
       "reason": ""
     },
     "yungsapi": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "yungsbridges": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "yungscavebiomes": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "yungsextras": {
-      "enabled": false,
-      "locked": true,
-      "reason": "Balanced disables the YUNG structure/worldgen stack for the performance sweep."
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     }
   },
   "configFiles": [],

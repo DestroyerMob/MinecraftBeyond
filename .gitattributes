@@ -1,3 +1,4 @@
+.gitattributes text eol=lf
 *.bat text eol=crlf
 *.cmd text eol=crlf
 *.ps1 text eol=crlf
@@ -5,4 +6,6 @@
 scripts/modpack text eol=lf
 *.toml text eol=lf
 *.json text eol=lf
+*.snbt text eol=lf
+pack/options.txt text eol=lf
 *.md text eol=lf

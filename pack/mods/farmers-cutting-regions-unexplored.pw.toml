@@ -1,0 +1,13 @@
+name = "Farmer's Cutting: Regions Unexplored"
+filename = "farmers-cutting-regions-unexplored-1.21.1-1.1b-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/lFKDc2ny/versions/HjwPIJ3o/farmers-cutting-regions-unexplored-1.21.1-1.1b-neoforge.jar"
+hash-format = "sha512"
+hash = "42f40dd95aaf30d642d18615c6fe8dbc271a0e9182beec26ed9e0d2113d25d6e281f04183ba9fb5323742c44a50e8dd4c979985fc31d45b4ad3814cb9f8c6cec"
+
+[update]
+[update.modrinth]
+mod-id = "lFKDc2ny"
+version = "HjwPIJ3o"

@@ -17,6 +17,7 @@
 
 # Build and tool caches.
 /.gradle/
+/.gradle-*/
 /build/
 /.packwizserver/
 /tools/bin/

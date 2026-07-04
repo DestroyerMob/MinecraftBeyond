@@ -16,14 +16,14 @@ fullscreen:true
 gamma:0.5
 graphicsMode:1
 guiScale:4
-maxFps:140
+maxFps:120
 mipmapLevels:4
 narrator:0
 particles:0
 reducedDebugInfo:false
 renderClouds:"true"
-renderDistance:16
-simulationDistance:8
+renderDistance:12
+simulationDistance:6
 screenEffectScale:1.0
 soundDevice:""
 autoJump:false
