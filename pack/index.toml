@@ -42,7 +42,7 @@ hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "28bfb0947512f35af232b671805f76e8d90cf8ba8aab9a6f986fac5b0b096ffb"
+hash = "6ceb00c8438efc55f6ad72bc645745ee7f73d845e11bb67ae54c72c98fab890b"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
@@ -50,7 +50,7 @@ hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "db9d520f1e1c785d2cdfad61e84e317e7866850ce759eeabda25714f0f04f848"
+hash = "391bb3cd10057270fe476cd932140059ac7d4cda631045a10e915da90cd118b6"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"

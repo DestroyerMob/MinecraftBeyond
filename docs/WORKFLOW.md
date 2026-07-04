@@ -150,6 +150,10 @@ On Windows:
 
 The command serves the local `pack/pack.toml` with packwiz and runs `packwiz-installer-bootstrap` against the Prism `minecraft/` directory. The bootstrap jar and downloaded installer jar live under ignored `tools/bin/`, so each machine can recreate them locally. This handles packwiz-managed third-party mods, configs, and shaderpacks; unpublished local mods still come from `./scripts/modpack update-local-mods`.
 
+After packwiz finishes, the command restores the local Mod Quality Picker `activeProfileId` and re-applies that preset to `minecraft/mods/`. This matters because packwiz manages downloaded files, while Mod Quality Picker manages local runtime state by renaming jars between `.jar` and `.jar.disabled`.
+
+Quality presets that should ship with the pack live in `pack/config/modqualitypicker/presets/`. Keep them there and run `./scripts/modpack refresh` so packwiz indexes them alongside quests, configs, and other bundled pack data.
+
 ## Local Unpublished Mods
 
 Use two lanes:
@@ -176,6 +180,8 @@ Pull, build, and copy the latest local mod jars into Prism:
 Existing dirty source checkouts are skipped by default so unfinished work is not disturbed. Use `--allow-dirty` only when you intentionally want to pull inside a checkout with local changes.
 
 Local mods can be marked with `enabled: false` in `tools/local-mods.json`. Disabled entries remain documented, but local update and sync commands skip them.
+
+Local mod sync also re-applies the active Mod Quality Picker preset after copying jars. Use `--skip-quality-apply` only when you intentionally want to inspect the raw synced jar set before the quality preset renames files.
 
 ## Commit And Push Protocol
 

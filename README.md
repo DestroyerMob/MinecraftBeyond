@@ -14,6 +14,7 @@ Current target:
 
 - `pack/` is the future packwiz pack root. Third-party mods, configs, resource packs, default options, and export metadata should live there.
 - `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`.
+- Mod Quality Picker presets are bundled pack data under `pack/config/modqualitypicker/presets/` and indexed by packwiz like quests/configs.
 - `tools/local-mods.json` records the unpublished local mods and their expected branches/jar names.
 - `tools/modpack.py` is the cross-platform workspace command used by macOS, Linux, and Windows.
 - `tools/dev-env.example.json` is the template for optional machine-local paths.
@@ -75,10 +76,10 @@ Every command supports `--help`.
 | `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--packwiz`, `--java-home`, `--force` |
 | `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
 | `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
-| `sync-local-mods` | Copy built local mod jars into the Prism mods folder. | `--source-root`, `--mods-dir`, `--build`, `--dry-run` |
-| `update-local-mods` | Pull local mod repos, build them, and sync their jars into Prism. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--dry-run` |
+| `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
+| `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
 | `import-prism-mods` | Import Prism-downloaded jars through packwiz CurseForge detection, then refresh the index. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--include-local`, `--keep-unmatched-staged-jars`, `--dry-run` |
-| `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--dry-run` |
+| `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
 | `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
 
 ## Packwiz Setup
@@ -136,7 +137,7 @@ On Windows, the equivalent command is:
 .\scripts\modpack.ps1 update-prism-mods
 ```
 
-This command starts a temporary local packwiz server, downloads `packwiz-installer-bootstrap.jar` into ignored `tools/bin/` if needed, and updates `minecraft/mods/` from `pack/pack.toml`.
+This command starts a temporary local packwiz server, downloads `packwiz-installer-bootstrap.jar` into ignored `tools/bin/` if needed, and updates `minecraft/mods/` from `pack/pack.toml`. After packwiz finishes, it restores the local `activeProfileId` and runs the Mod Quality Picker applier so any jars restored by packwiz are renamed back to the active quality preset before Minecraft launches.
 
 Clone or pull all local mod source repositories:
 
@@ -156,7 +157,7 @@ Pull the local mod repos, build them, and sync their jars into the local Prism i
 ./scripts/modpack update-local-mods
 ```
 
-The update script copies jars into `minecraft/mods/`, which is ignored by git. The pack repo should track metadata and config, not generated jars.
+The update script copies jars into `minecraft/mods/`, which is ignored by git, then re-applies the active Mod Quality Picker preset. The pack repo should track metadata and config, not generated jars.
 
 ## Keeping Remotes Current
 

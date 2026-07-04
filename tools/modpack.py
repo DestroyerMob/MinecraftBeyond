@@ -14,6 +14,7 @@ import socket
 import subprocess
 import sys
 import time
+import tomllib
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
@@ -39,6 +40,7 @@ PACKWIZ_INSTALLER_BOOTSTRAP_URL = (
 )
 PACKWIZ_INSTALLER_BOOTSTRAP = TOOLS_DIR / "bin" / "packwiz-installer-bootstrap.jar"
 PACKWIZ_INSTALLER_MAIN = TOOLS_DIR / "bin" / "packwiz-installer.jar"
+PACK_LOCAL_QUALITY_APPLIER = TOOLS_DIR / "modqualitypicker_prism.py"
 
 
 class ToolError(RuntimeError):
@@ -326,6 +328,86 @@ def resolve_java(dev_env: dict, explicit_home: str | None = None) -> Path | None
         if candidate.exists():
             return candidate.resolve()
     return None
+
+
+def resolve_quality_applier(dev_env: dict) -> Path | None:
+    candidates = [PACK_LOCAL_QUALITY_APPLIER]
+    source_root = setting(
+        None,
+        ("MINECRAFT_MOD_SOURCE_ROOT",),
+        dev_env,
+        "sourceRoot",
+        DEFAULT_SOURCE_ROOT,
+    )
+    if source_root:
+        candidates.append(source_root / "ModQualityPicker" / "tools" / "modqualitypicker_prism.py")
+
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate.resolve()
+    return None
+
+
+def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_run: bool, skip: bool) -> None:
+    if skip:
+        print("Skipping Mod Quality Picker jar state apply.")
+        return
+
+    applier = resolve_quality_applier(dev_env)
+    if applier is None:
+        print("WARNING: Mod Quality Picker applier was not found; preset jar state was not re-applied.")
+        print("         Run update-local-mods once the ModQualityPicker source checkout exists, or pass --skip-quality-apply intentionally.")
+        return
+
+    command = [sys.executable, applier, "apply", "--instance-root", minecraft_dir]
+    if dry_run:
+        command.append("--dry-run")
+
+    print("Applying active Mod Quality Picker profile to synced jars...", flush=True)
+    run(command, cwd=REPO_ROOT)
+
+
+def active_quality_profile_id(minecraft_dir: Path) -> str | None:
+    config = minecraft_dir / "config" / "modqualitypicker-common.toml"
+    if not config.exists():
+        return None
+
+    text = config.read_text(encoding="utf-8")
+    try:
+        parsed = tomllib.loads(text)
+        profile_id = parsed.get("activeProfileId")
+        return profile_id if isinstance(profile_id, str) and profile_id else None
+    except tomllib.TOMLDecodeError:
+        match = re.search(r'activeProfileId\s*=\s*"([^"]+)"', text)
+        return match.group(1) if match else None
+
+
+def restore_active_quality_profile_id(minecraft_dir: Path, profile_id: str | None, *, dry_run: bool) -> None:
+    if not profile_id:
+        return
+
+    config = minecraft_dir / "config" / "modqualitypicker-common.toml"
+    line = f'activeProfileId = "{profile_id}"'
+    if dry_run:
+        print(f"DRY RUN: preserve Mod Quality Picker activeProfileId = {profile_id}")
+        return
+
+    config.parent.mkdir(parents=True, exist_ok=True)
+    if not config.exists():
+        config.write_text(line + "\n", encoding="utf-8")
+        print(f"Restored Mod Quality Picker activeProfileId = {profile_id}")
+        return
+
+    text = config.read_text(encoding="utf-8")
+    if re.search(r'(?m)^\s*activeProfileId\s*=\s*"[^"]*"\s*$', text):
+        next_text = re.sub(r'(?m)^\s*activeProfileId\s*=\s*"[^"]*"\s*$', line, text, count=1)
+    else:
+        separator = "" if text.endswith(("\n", "\r")) else "\n"
+        next_text = f"{text}{separator}{line}\n"
+
+    if next_text != text:
+        config.write_text(next_text, encoding="utf-8")
+        print(f"Restored Mod Quality Picker activeProfileId = {profile_id}")
 
 
 def build_environment(dev_env: dict) -> dict[str, str]:
@@ -811,6 +893,7 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
     if rows:
         print("\nSynced local mods:")
         print_rows(("Mod", "Jar", "Destination"), rows)
+    apply_quality_profile_after_sync(dev_env, mods_dir.parent, dry_run=args.dry_run, skip=args.skip_quality_apply)
     return 0
 
 
@@ -831,6 +914,7 @@ def command_update_local_mods(args: argparse.Namespace) -> int:
         mods_dir=args.mods_dir,
         build=not args.skip_build,
         dry_run=args.dry_run,
+        skip_quality_apply=args.skip_quality_apply,
     )
     command_sync_local_mods(sync_args)
     print("Local mod update complete.")
@@ -1025,6 +1109,7 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
     minecraft_dir = expand_path(args.minecraft_dir) if args.minecraft_dir else (prism_mods.parent if prism_mods else None)
     if minecraft_dir is None:
         raise ToolError("Could not resolve the Prism minecraft directory.")
+    preserved_quality_profile_id = active_quality_profile_id(minecraft_dir)
 
     bootstrap = setting(
         args.installer,
@@ -1065,6 +1150,8 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
         print(f"DRY RUN: ensure Prism minecraft dir exists: {minecraft_dir}")
         print(f"DRY RUN: ({pack_dir}) {packwiz} serve --port {port}")
         print(f"DRY RUN: ({minecraft_dir}) {' '.join(str(part) for part in installer_command)}")
+        restore_active_quality_profile_id(minecraft_dir, preserved_quality_profile_id, dry_run=True)
+        apply_quality_profile_after_sync(dev_env, minecraft_dir, dry_run=True, skip=args.skip_quality_apply)
         return 0
 
     minecraft_dir.mkdir(parents=True, exist_ok=True)
@@ -1091,6 +1178,8 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
                 server.wait(timeout=5)
 
     print("Prism pack files updated from packwiz metadata.")
+    restore_active_quality_profile_id(minecraft_dir, preserved_quality_profile_id, dry_run=False)
+    apply_quality_profile_after_sync(dev_env, minecraft_dir, dry_run=False, skip=args.skip_quality_apply)
     return 0
 
 
@@ -1131,6 +1220,7 @@ def add_update_prism_arguments(command: argparse.ArgumentParser) -> None:
     command.add_argument("--bootstrap-url", default=PACKWIZ_INSTALLER_BOOTSTRAP_URL)
     command.add_argument("--no-download", action="store_true", help="Fail instead of downloading the bootstrap jar if it is missing.")
     command.add_argument("--port", type=int, help="Local port for the temporary packwiz server.")
+    command.add_argument("--skip-quality-apply", action="store_true", help="Do not re-apply the active Mod Quality Picker preset after packwiz sync.")
     command.add_argument("--dry-run", action="store_true")
 
 
@@ -1181,6 +1271,7 @@ def build_parser() -> argparse.ArgumentParser:
     sync.add_argument("--source-root")
     sync.add_argument("--mods-dir")
     sync.add_argument("--build", action="store_true")
+    sync.add_argument("--skip-quality-apply", action="store_true", help="Do not re-apply the active Mod Quality Picker preset after syncing jars.")
     sync.add_argument("--dry-run", action="store_true")
     sync.set_defaults(func=command_sync_local_mods)
 
@@ -1190,6 +1281,7 @@ def build_parser() -> argparse.ArgumentParser:
     update.add_argument("--skip-pull", action="store_true")
     update.add_argument("--skip-build", action="store_true")
     update.add_argument("--allow-dirty", action="store_true")
+    update.add_argument("--skip-quality-apply", action="store_true", help="Do not re-apply the active Mod Quality Picker preset after syncing jars.")
     update.add_argument("--dry-run", action="store_true")
     update.set_defaults(func=command_update_local_mods)
 
