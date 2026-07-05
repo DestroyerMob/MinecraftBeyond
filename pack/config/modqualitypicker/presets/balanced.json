@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "balanced",
-  "displayName": "Balanced",
-  "sortOrder": 10,
-  "description": "All mods enabled. Performance-trim rules are disabled until the quality profiles are rebuilt.",
+  "displayName": "balanced",
+  "sortOrder": 30,
+  "description": "Captured from the currently loaded mod list.",
   "mods": {
     "advancementplaques": {
       "enabled": true,
@@ -21,11 +21,6 @@
       "reason": ""
     },
     "alpinewhispers": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "alternate_current": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -85,21 +80,6 @@
       "locked": false,
       "reason": ""
     },
-    "axiom": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "axiomsurvival": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "badoptimizations": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "baguettelib": {
       "enabled": true,
       "locked": false,
@@ -135,22 +115,7 @@
       "locked": false,
       "reason": ""
     },
-    "bettercaves": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "bettercombat": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterdeserttemples": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterdungeons": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -161,36 +126,6 @@
       "reason": ""
     },
     "betterf3": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterfortresses": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterjungletemples": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "bettermineshafts": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betteroceanmonuments": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterstrongholds": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "betterwitchhuts": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -211,11 +146,6 @@
       "reason": ""
     },
     "brewery": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "brewinandchewin": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -260,11 +190,6 @@
       "locked": false,
       "reason": ""
     },
-    "chunky": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "cleanswing": {
       "enabled": true,
       "locked": false,
@@ -287,11 +212,6 @@
     },
     "collective": {
       "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "com_moulberry_axiomclientapi": {
-      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -370,11 +290,6 @@
       "locked": false,
       "reason": ""
     },
-    "crabbersdelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
@@ -395,22 +310,12 @@
       "locked": false,
       "reason": ""
     },
-    "culturaldelights": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "cupboard": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "curios": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "delightlib": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -435,18 +340,8 @@
       "locked": false,
       "reason": ""
     },
-    "dynamic_fps": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "eatinganimation": {
       "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "ecology": {
-      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -475,27 +370,12 @@
       "locked": false,
       "reason": ""
     },
-    "ends_delight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "entityculling": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "everycomp": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "expandeddelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -740,11 +620,6 @@
       "locked": false,
       "reason": ""
     },
-    "farmers_cutting_regions_unexplored_1_21_1_1_1b_neoforge": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "farmersdelight": {
       "enabled": true,
       "locked": false,
@@ -875,11 +750,6 @@
       "locked": false,
       "reason": ""
     },
-    "immediatelyfast": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "immersiveui": {
       "enabled": true,
       "locked": false,
@@ -940,11 +810,6 @@
       "locked": false,
       "reason": ""
     },
-    "ksyxis": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "kubejs": {
       "enabled": true,
       "locked": false,
@@ -952,11 +817,6 @@
     },
     "kuma_api": {
       "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "lattice": {
-      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -990,11 +850,6 @@
       "locked": false,
       "reason": ""
     },
-    "lootintegrations_yungs": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "lootr": {
       "enabled": true,
       "locked": false,
@@ -1020,11 +875,6 @@
       "locked": false,
       "reason": ""
     },
-    "mobstoolforging": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "modelfix": {
       "enabled": true,
       "locked": false,
@@ -1038,34 +888,14 @@
     "modqualitypicker": {
       "enabled": true,
       "locked": true,
-      "reason": "Required to manage quality presets."
+      "reason": ""
     },
     "moonlight": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
-    "moreculling": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "moredelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "mousetweaks": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "mr_farmers_cuttingregionsunexplored": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "mynethersdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1086,16 +916,6 @@
       "reason": ""
     },
     "netherportalfix": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "noisium": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "oceansdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1200,11 +1020,6 @@
       "locked": false,
       "reason": ""
     },
-    "servercore": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "sodium": {
       "enabled": true,
       "locked": false,
@@ -1230,16 +1045,6 @@
       "locked": false,
       "reason": ""
     },
-    "spark": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "spawn": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "spectrelib": {
       "enabled": true,
       "locked": false,
@@ -1256,7 +1061,7 @@
       "reason": ""
     },
     "tectonic": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -1271,7 +1076,7 @@
       "reason": ""
     },
     "terralith": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -1365,23 +1170,228 @@
       "locked": false,
       "reason": ""
     },
-    "yungsapi": {
+    "dev_lukebemish_opensesame_opensesame_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_macro_library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame_compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_dataformat_jackson_dataformat_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame-compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_dataformat_jackson-dataformat-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "groovybundler": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson-annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-macro-library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson-databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame-groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "mobstoolforging": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
-    "yungsbridges": {
-      "enabled": true,
+    "ecology": {
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
-    "yungscavebiomes": {
-      "enabled": true,
+    "axiom": {
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
-    "yungsextras": {
-      "enabled": true,
+    "axiomsurvival": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
+    "com_moulberry_axiomclientapi": {
+      "enabled": false,
       "locked": false,
       "reason": ""
     }

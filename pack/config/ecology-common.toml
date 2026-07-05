@@ -2,7 +2,7 @@
 #VANILLA_SAFE keeps Ecology passive. LIGHT_ECOLOGY enables colony data and beekeeper relocation without replacing vanilla bee AI.
 #FULL_SIMULATION enables the complete bee simulation and village construction. DEBUG_TESTING is full simulation plus noisy diagnostics and auto-seeded hives.
 #Allowed Values: CUSTOM, VANILLA_SAFE, LIGHT_ECOLOGY, FULL_SIMULATION, DEBUG_TESTING
-gameplayPreset = "LIGHT_ECOLOGY"
+gameplayPreset = "FULL_SIMULATION"
 #Master switch for Ecology's advanced bee AI, colony simulation, hive data, and bee relocation items. Disabled by default so vanilla bee behavior is unchanged unless a pack opts in.
 enableBeeSystem = true
 #When false, Ecology only initializes bee memory and leaves vanilla bee AI intact.
@@ -117,7 +117,7 @@ villageHomeUpgradeSavingsCost = 24
 # Default: 2
 # Range: 1 ~ 8
 villageHomeUpgradeMaxBeds = 2
-#Legacy pacing value kept for existing configs. Vanilla template homes are placed as complete structures.
+#How much construction progress a household makes per work step. Higher values complete approved vanilla homes faster.
 # Default: 8
 # Range: 1 ~ 64
 villageHouseConstructionBlocksPerStep = 8
@@ -149,7 +149,7 @@ enableVillagePlayerTrades = true
 # Default: 64
 # Range: 1 ~ 225
 villagePlayerTradeMaxOffers = 64
-#Assigns each village one trade currency. Ruby and sapphire villages only spawn when another mod/datapack supplies items through Ecology's village currency tags.
+#Enables local village currencies and inherited villager eye genes. Ruby and sapphire identities only appear when another mod/datapack supplies items through Ecology's village currency tags.
 enableVillageCurrencies = true
 #Worker bee lifespan in Minecraft days.
 # Default: 7
@@ -265,3 +265,33 @@ pathVerticalTriggerRange = 2.0
 # Default: 60
 # Range: 1 ~ 600
 routeAgitationAttackTicks = 60
+#Lets Ecology queue and slowly place missing vanilla workstations when adult villagers cannot claim a reachable job site.
+enableVillageWorkstationProvisioning = true
+#Uses a temporary village construction crew to build queued houses and worksites block-by-block instead of placing full structures instantly.
+enableVillageConstructionCrews = true
+#Maximum villagers assigned to one village construction crew. Ecology intentionally caps this at five so the whole village is not pulled away.
+# Default: 5
+# Range: 1 ~ 5
+villageConstructionCrewMaxSize = 5
+#Ticks a ready construction worker spends placing one queued block.
+# Default: 12
+# Range: 1 ~ 200
+villageConstructionBlockWorkTicks = 12
+#Logs diagnostic village worksite request and placement events.
+debugVillageWorksites = false
+#Currencies Ecology may use for village economies and villager eye genes. Unknown names are ignored.
+villageEligibleCurrencies = ["emerald", "ruby", "sapphire"]
+#Eligible currencies that may be selected automatically when a village first gets a local economy. Empty means all eligible currencies.
+villageNaturalCurrencies = ["emerald", "ruby", "sapphire"]
+#Eligible currencies players may set manually with the Village Ledger at a bell. Empty means all eligible currencies.
+villagePlayerSelectableCurrencies = ["emerald", "ruby", "sapphire"]
+#Currencies Ecology must never select, even if they also appear in another list.
+villageBlockedCurrencies = []
+#Number of matching currency items consumed when a player sets a village's local currency with the Village Ledger at a bell.
+# Default: 32
+# Range: 0 ~ 2304
+villageCurrencyChangeCost = 32
+#Chance that a baby villager with multiple inherited currency traits is born with different-colored eyes.
+# Default: 0.04
+# Range: 0.0 ~ 1.0
+villageHeterochromiaChance = 0.04

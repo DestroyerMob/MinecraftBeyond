@@ -25,11 +25,6 @@
       "locked": false,
       "reason": ""
     },
-    "alternate_current": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "ambientsounds": {
       "enabled": true,
       "locked": false,
@@ -91,11 +86,6 @@
       "reason": ""
     },
     "axiomsurvival": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "badoptimizations": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -215,11 +205,6 @@
       "locked": false,
       "reason": ""
     },
-    "brewinandchewin": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "bridgingmod": {
       "enabled": true,
       "locked": false,
@@ -256,11 +241,6 @@
       "reason": ""
     },
     "cherishedworlds": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "chunky": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -370,11 +350,6 @@
       "locked": false,
       "reason": ""
     },
-    "crabbersdelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
@@ -395,22 +370,12 @@
       "locked": false,
       "reason": ""
     },
-    "culturaldelights": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "cupboard": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "curios": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "delightlib": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -431,11 +396,6 @@
       "reason": ""
     },
     "durabilitytooltip": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "dynamic_fps": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -475,27 +435,12 @@
       "locked": false,
       "reason": ""
     },
-    "ends_delight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "entityculling": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "everycomp": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "expandeddelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -740,11 +685,6 @@
       "locked": false,
       "reason": ""
     },
-    "farmers_cutting_regions_unexplored_1_21_1_1_1b_neoforge": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "farmersdelight": {
       "enabled": true,
       "locked": false,
@@ -875,11 +815,6 @@
       "locked": false,
       "reason": ""
     },
-    "immediatelyfast": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "immersiveui": {
       "enabled": true,
       "locked": false,
@@ -936,11 +871,6 @@
       "reason": ""
     },
     "kotlinforforge": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "ksyxis": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1045,27 +975,7 @@
       "locked": false,
       "reason": ""
     },
-    "moreculling": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "moredelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "mousetweaks": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "mr_farmers_cuttingregionsunexplored": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "mynethersdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1086,16 +996,6 @@
       "reason": ""
     },
     "netherportalfix": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "noisium": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "oceansdelight": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1175,11 +1075,6 @@
       "locked": false,
       "reason": ""
     },
-    "regions_unexplored": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "resourcefullib": {
       "enabled": true,
       "locked": false,
@@ -1196,11 +1091,6 @@
       "reason": ""
     },
     "searchables": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "servercore": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1226,16 +1116,6 @@
       "reason": ""
     },
     "sound_physics_remastered": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "spark": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "spawn": {
       "enabled": true,
       "locked": false,
       "reason": ""

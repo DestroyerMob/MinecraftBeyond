@@ -10,7 +10,7 @@ hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
 
 [[files]]
 file = "config/bettercaves/neoforge-1_21_1/liquidregions.json"
-hash = "c43d25d96dec063e4bb82262fda71a25a44cd3db492f59d3c921915cb99f4dfa"
+hash = "ad0e43cd1d8fff16d76ff6036699bd67598ff8bc18220b7e8e951245c92cf139"
 
 [[files]]
 file = "config/dragonfight.json"
@@ -18,15 +18,15 @@ hash = "86d26252a2d5f2cc6b2981686f2f3c039aa3c32c8e2c674444b1c0d3f631b092"
 
 [[files]]
 file = "config/durabilitytooltip-common.toml"
-hash = "ce175be150956967699405d6d5466a4e648baa52c8aeeb49850145a6a160d865"
+hash = "dc1ad14721211626b32e11c7c47331274f03c14b0cf87244736220d3e965b17d"
 
 [[files]]
 file = "config/ecology-common.toml"
-hash = "6246d6fdb80ad7a8643fbe0ac894fab12949440177806c114530dee7d44762cb"
+hash = "49845385b8457957d71d7ca940f75a67e09397e3dce011bbd58e2e7d590706da"
 
 [[files]]
 file = "config/enchdesc.json"
-hash = "650f05dcb6db5a42acffde5fb9a5716e7943d3b6975525e4707748db7c512df7"
+hash = "a6c42f67aa4641b14c518f9ec72b44f37c4c2f51f3ebb7a8e4e433b056db1bd2"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "7d5ac989e78da4796934bcf1435317472e16705ff3776dd083b22b28ce8b9000"
+hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -42,11 +42,11 @@ hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
-hash = "e6175af1d429ab3471eb0d2e9f535397dcd58f3f9bc832758eb57785e43390cc"
+hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "6ceb00c8438efc55f6ad72bc645745ee7f73d845e11bb67ae54c72c98fab890b"
+hash = "88fb2e5460e3eb4c2782115d98e3e3534dcda4cfa5efe8c760f662b15bf0784b"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
@@ -54,15 +54,15 @@ hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "379cebf16d819cc36adf1d75a3f0bbc9341a40ed085c3854825634a80c56e2d0"
+hash = "dbfa57043d3a5f80f74ad936e7bfe31de61a7a86d284113c7edc17e2fa068fae"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "d150f7c65a0a1f11b1335d3fb951d34709d68ce918640ce5d7f4e8aa1c43b171"
+hash = "46e9724e6e5e655457a31ccfe24d430c68eb9f9c96d4f890b3a00c663cba929a"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "a57f7feb6692d2a8cea897309405dec075dfa646183588c79283d600f77190e7"
+hash = "4f440294fb65a6cbe7eea586f60128cfe93d597f56c217b85db50212e783edca"
 
 [[files]]
 file = "config/tooltipoverhaul/custom_frames.json"
@@ -1143,7 +1143,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "d6054da7a7dde98f93920d716b3e868d9a5a81e20fa712e7cc6ec2212644d125"
+hash = "ed3a876a2287487cde278b4dc61355a954b65b39a0da859712ad4a2f55cc7541"
 
 [[files]]
 file = "shaderpacks/bliss-shader.pw.toml"
@@ -1174,3 +1174,18 @@ metafile = true
 file = "shaderpacks/solas-shader.pw.toml"
 hash = "041612700f59472629dec2d8ba8acf0074f47bceb75d49c152ff817990cfa2a4"
 metafile = true
+[[files]]
+file = "mods/auric-local.jar"
+hash = "90fd7660e3401bad5fc93ca996a8cc98b6f669347491c597c35efd530c8256a8"
+[[files]]
+file = "mods/betterenchanting-local.jar"
+hash = "de32161f235fcaffa7eff903d6a10d4992981a33ffcbfdf3929e5b6cc6990c63"
+[[files]]
+file = "mods/mobsmoreweapons-local.jar"
+hash = "ac04c5d47b3f12f2e4acd8f82602a169d4609b7f5691e632dc2e4b5e04efecb9"
+[[files]]
+file = "mods/mobstoolforging-local.jar"
+hash = "ae64cc6a055be26cfacbfda21f546667a0fa3c5fc1855154e067d36d94cc5604"
+[[files]]
+file = "mods/modqualitypicker-local.jar"
+hash = "1cc80e4cd9c57fd1f8ca90876fc5394b82892ad50700b8a5741a66b769bb6284"
