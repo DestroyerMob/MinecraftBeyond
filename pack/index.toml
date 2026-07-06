@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -71,6 +71,14 @@ hash = "5fe285a83924db98f45f7daabbf77e1df8ad177f3fa0893d76525c6a685a7c87"
 [[files]]
 file = "config/tooltipoverhaul/tooltipoverhaul.toml"
 hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
+
+[[files]]
+file = "kubejs/data/ecology/tags/item/village_currency/ruby.json"
+hash = "70286259eaa1b7a4040832247f96965dc3a7fd0602f3e9b7e6a776399783acd5"
+
+[[files]]
+file = "kubejs/data/ecology/tags/item/village_currency/sapphire.json"
+hash = "fc79ebb3fa3d6f1f50599fdf77e94abba282c613ed96feb4694ad781d609206d"
 
 [[files]]
 file = "kubejs/data/minecraft_beyond/loot_modifiers/convert_vanilla_tools_after_affixes.json"
@@ -1174,18 +1182,3 @@ metafile = true
 file = "shaderpacks/solas-shader.pw.toml"
 hash = "041612700f59472629dec2d8ba8acf0074f47bceb75d49c152ff817990cfa2a4"
 metafile = true
-[[files]]
-file = "mods/auric-local.jar"
-hash = "90fd7660e3401bad5fc93ca996a8cc98b6f669347491c597c35efd530c8256a8"
-[[files]]
-file = "mods/betterenchanting-local.jar"
-hash = "1ba7387b2d4d8ece65817fef13479c871cef28260feae90a23f0e8e20acdc4b9"
-[[files]]
-file = "mods/mobsmoreweapons-local.jar"
-hash = "ac04c5d47b3f12f2e4acd8f82602a169d4609b7f5691e632dc2e4b5e04efecb9"
-[[files]]
-file = "mods/mobstoolforging-local.jar"
-hash = "ae64cc6a055be26cfacbfda21f546667a0fa3c5fc1855154e067d36d94cc5604"
-[[files]]
-file = "mods/modqualitypicker-local.jar"
-hash = "1cc80e4cd9c57fd1f8ca90876fc5394b82892ad50700b8a5741a66b769bb6284"

@@ -33,10 +33,16 @@ if (-not (Test-Path $prismModsPath)) {
     return
 }
 
-$prismJars = Get-ChildItem -Path $prismModsPath -Filter "*.jar" -File
-if (-not $IncludeLocal) {
-    $prismJars = $prismJars | Where-Object { $_.Name -notmatch "-local\.jar$" }
+$allPrismJars = @(Get-ChildItem -Path $prismModsPath -Filter "*.jar" -File)
+$localRuntimeJars = @($allPrismJars | Where-Object { $_.Name -match "-local\.jar$" })
+if ($localRuntimeJars.Count -gt 0) {
+    if ($IncludeLocal) {
+        Write-Warning "-IncludeLocal is deprecated; local runtime jars are skipped. Use the modpack write-local-mod-releases command for published artifacts."
+    } else {
+        Write-Host "Skipping $($localRuntimeJars.Count) local runtime jar(s)."
+    }
 }
+$prismJars = @($allPrismJars | Where-Object { $_.Name -notmatch "-local\.jar$" })
 
 if (-not $prismJars -or $prismJars.Count -eq 0) {
     Write-Host "No Prism mod jars found to import."

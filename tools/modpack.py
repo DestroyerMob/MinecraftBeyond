@@ -220,6 +220,81 @@ def packwiz_metadata_filename(path: Path) -> str | None:
     return first_line_match(path, r"filename\s*=\s*['\"]([^'\"]+)['\"]")
 
 
+def toml_string(value: object) -> str:
+    return json.dumps(str(value))
+
+
+def is_local_runtime_jar(path: Path | str) -> bool:
+    name = path.name if isinstance(path, Path) else str(path)
+    return name.endswith("-local.jar")
+
+
+def safe_pack_relative_path(value: object, *, default: str) -> Path:
+    text = str(value or default).replace("\\", "/").strip()
+    path = Path(text)
+    if path.is_absolute() or ".." in path.parts:
+        raise ToolError(f"Pack-relative paths must stay inside the pack directory: {text}")
+    return path
+
+
+def local_mod_pack_config(mod: dict) -> dict[str, str]:
+    pack = mod.get("pack") if isinstance(mod.get("pack"), dict) else {}
+    mod_id = mod["modId"]
+    return {
+        "metafile": str(safe_pack_relative_path(pack.get("metafile"), default=f"mods/{mod_id}.pw.toml")).replace("\\", "/"),
+        "filename": str(pack.get("filename") or f"{mod_id}-local.jar"),
+        "side": str(pack.get("side") or "both"),
+    }
+
+
+def local_mod_download_config(mod: dict) -> dict[str, str] | None:
+    pack = mod.get("pack") if isinstance(mod.get("pack"), dict) else {}
+    download = pack.get("download") if isinstance(pack.get("download"), dict) else {}
+
+    url = download.get("url") or pack.get("downloadUrl")
+    digest = download.get("hash") or pack.get("hash")
+    hash_format = (
+        download.get("hashFormat")
+        or download.get("hash-format")
+        or pack.get("hashFormat")
+        or pack.get("hash-format")
+        or "sha512"
+    )
+
+    if not url and not digest:
+        return None
+    if not url or not digest:
+        raise ToolError(f"{mod.get('name', mod.get('modId', 'local mod'))} has incomplete pack download metadata.")
+
+    return {
+        "url": str(url),
+        "hash": str(digest),
+        "hashFormat": str(hash_format),
+    }
+
+
+def local_mod_packwiz_metafile_text(mod: dict) -> tuple[str, str, str]:
+    pack = local_mod_pack_config(mod)
+    download = local_mod_download_config(mod)
+    if download is None:
+        raise ToolError(f"{mod['name']} does not have release download metadata.")
+
+    text = "\n".join(
+        [
+            f"name = {toml_string(mod['name'])}",
+            f"filename = {toml_string(pack['filename'])}",
+            f"side = {toml_string(pack['side'])}",
+            "",
+            "[download]",
+            f"url = {toml_string(download['url'])}",
+            f"hash-format = {toml_string(download['hashFormat'])}",
+            f"hash = {toml_string(download['hash'])}",
+            "",
+        ]
+    )
+    return pack["metafile"], pack["filename"], text
+
+
 def normalize_shader_metadata(text: str) -> str:
     normalized: list[str] = []
     for raw_line in text.splitlines():
@@ -589,6 +664,31 @@ def command_doctor(args: argparse.Namespace) -> int:
     metadata_checks.append(Check("indexed files", "ok" if not missing_files else "missing", f"{len(files)} listed, {len(missing_files)} missing"))
     metadata_checks.append(Check("file hashes", "matched" if not mismatched_files else "mismatch", f"{len(mismatched_files)} mismatch(es)"))
 
+    indexed_local_runtime_jars = [
+        item.get("file", "")
+        for item in files
+        if item.get("file", "").startswith("mods/") and is_local_runtime_jar(item.get("file", ""))
+    ]
+    metadata_checks.append(
+        Check(
+            "indexed local jars",
+            "ok" if not indexed_local_runtime_jars else "mismatch",
+            f"{len(indexed_local_runtime_jars)} runtime jar(s) indexed",
+        )
+    )
+
+    if git_found:
+        tracked_result = git_optional(["ls-files", "minecraft/mods/*-local.jar", "pack/mods/*-local.jar"], REPO_ROOT)
+        tracked_local_runtime_jars = tracked_result.stdout.strip().splitlines() if tracked_result.returncode == 0 else []
+        tracked_existing_local_runtime_jars = [path for path in tracked_local_runtime_jars if (REPO_ROOT / path).exists()]
+        metadata_checks.append(
+            Check(
+                "tracked local jars",
+                "ok" if not tracked_existing_local_runtime_jars else "mismatch",
+                f"{len(tracked_existing_local_runtime_jars)} tracked, {len(tracked_local_runtime_jars) - len(tracked_existing_local_runtime_jars)} pending removal",
+            )
+        )
+
     mod_metadata = sorted(PACK_MODS_DIR.glob("*.pw.toml"))
     shader_metadata = sorted(PACK_SHADERPACKS_DIR.glob("*.pw.toml"))
     metadata_checks.append(Check("mod metadata", "ok", f"{len(mod_metadata)} .pw.toml files"))
@@ -611,15 +711,39 @@ def command_doctor(args: argparse.Namespace) -> int:
             existing += 1
     local_mod_checks.append(Check("local mod sources", "ok" if existing == len(local_mods) else "partial", f"{existing}/{len(local_mods)} present"))
 
+    all_local_mods = read_local_mods(include_disabled=True)
+    release_pinned = 0
+    release_errors: list[str] = []
+    for mod in all_local_mods:
+        try:
+            if local_mod_download_config(mod) is not None:
+                release_pinned += 1
+        except ToolError as exc:
+            release_errors.append(str(exc))
+    local_mod_checks.append(
+        Check(
+            "release pins",
+            "ok" if release_pinned else "source-only",
+            f"{release_pinned}/{len(all_local_mods)} local mod(s) have pack download metadata",
+        )
+    )
+    if release_errors:
+        local_mod_checks.append(Check("release metadata", "mismatch", "; ".join(release_errors)))
+
     print_checks("Local Environment", env_checks)
     print_checks("Local Mods", local_mod_checks)
 
     if args.strict:
         strict_failures = [
             item
-            for item in [*tool_checks, *metadata_checks]
-            if item.status in {"missing", "mismatch"} or (item.required and not item.ok)
+            for item in tool_checks
+            if item.required and not item.ok
         ]
+        strict_failures.extend(
+            item
+            for item in metadata_checks
+            if item.status in {"missing", "mismatch"} or (item.required and not item.ok)
+        )
         return 1 if strict_failures or not required_ok else 0
 
     return 0
@@ -958,6 +1082,123 @@ def command_update_local_mods(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_write_local_mod_releases(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
+    pack_dir = expand_path(args.pack_dir or PACK_DIR)
+    assert pack_dir is not None
+
+    selected = set(args.mod or [])
+    mods = read_local_mods(include_disabled=args.include_disabled)
+    if selected:
+        mods = [mod for mod in mods if mod.get("modId") in selected or mod.get("name") in selected]
+        missing_selection = selected.difference({mod.get("modId") for mod in mods}, {mod.get("name") for mod in mods})
+        if missing_selection:
+            raise ToolError(f"Unknown local mod selection: {', '.join(sorted(missing_selection))}")
+
+    rows: list[tuple[str, str, str, str]] = []
+    source_only: list[tuple[str, str]] = []
+
+    for mod in mods:
+        try:
+            download = local_mod_download_config(mod)
+        except ToolError as exc:
+            raise ToolError(f"Invalid release metadata for {mod.get('name', mod.get('modId', 'local mod'))}: {exc}") from exc
+
+        pack = local_mod_pack_config(mod)
+        if download is None:
+            source_only.append((mod["name"], pack["filename"]))
+            continue
+
+        metafile, filename, text = local_mod_packwiz_metafile_text(mod)
+        destination = pack_dir / safe_pack_relative_path(metafile, default=metafile)
+        current = destination.read_text(encoding="utf-8") if destination.exists() else None
+        if current == text:
+            action = "unchanged"
+        elif destination.exists():
+            action = "would update" if args.dry_run else "updated"
+        else:
+            action = "would create" if args.dry_run else "created"
+
+        if not args.dry_run and current != text:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+
+        rows.append((mod["name"], action, metafile, filename))
+
+    if rows:
+        print_rows(("Mod", "Action", "Metafile", "Filename"), rows)
+
+    if source_only:
+        print("\nSource-only local mods without release download metadata:")
+        print_rows(("Mod", "Runtime Jar"), source_only)
+        if args.require_all:
+            raise ToolError("Not every selected local mod has release download metadata.")
+
+    if not rows:
+        print("No release-pinned local mod metadata was written.")
+        return 0
+
+    if args.skip_refresh:
+        print("Skipping packwiz refresh.")
+        return 0
+
+    if args.dry_run:
+        print("DRY RUN: packwiz refresh would run.")
+        return 0
+
+    packwiz = resolve_packwiz(dev_env, args.packwiz)
+    if not packwiz:
+        raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
+
+    print("Refreshing packwiz index...", flush=True)
+    run([packwiz, "refresh"], cwd=pack_dir)
+    return 0
+
+
+def command_sync_instance(args: argparse.Namespace) -> int:
+    local_mods_dir = args.mods_dir
+    if local_mods_dir is None and args.minecraft_dir:
+        minecraft_dir = expand_path(args.minecraft_dir)
+        if minecraft_dir is not None:
+            local_mods_dir = str(minecraft_dir / "mods")
+
+    if not args.skip_prism:
+        update_prism_args = argparse.Namespace(
+            minecraft_dir=args.minecraft_dir,
+            mods_dir=args.mods_dir,
+            pack_dir=args.pack_dir,
+            packwiz=args.packwiz,
+            java_home=args.java_home,
+            installer=args.installer,
+            main_jar=args.main_jar,
+            bootstrap_url=args.bootstrap_url,
+            no_download=args.no_download,
+            port=args.port,
+            skip_quality_apply=not args.skip_local or args.skip_quality_apply,
+            dry_run=args.dry_run,
+        )
+        command_update_prism_mods(update_prism_args)
+    else:
+        print("Skipping packwiz-to-Prism update.")
+
+    if not args.skip_local:
+        update_local_args = argparse.Namespace(
+            source_root=args.source_root,
+            mods_dir=local_mods_dir,
+            skip_pull=args.skip_pull,
+            skip_build=args.skip_build,
+            allow_dirty=args.allow_dirty,
+            skip_quality_apply=args.skip_quality_apply,
+            dry_run=args.dry_run,
+        )
+        command_update_local_mods(update_local_args)
+    else:
+        print("Skipping local mod source build/sync.")
+
+    print("Instance sync complete.")
+    return 0
+
+
 def command_import_prism_mods(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
     prism_mods = setting(
@@ -979,9 +1220,14 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
         print(f"WARNING: Prism mods folder does not exist yet: {prism_mods}")
         return 0
 
-    prism_jars = sorted(prism_mods.glob("*.jar"))
-    if not args.include_local:
-        prism_jars = [jar for jar in prism_jars if not jar.name.endswith("-local.jar")]
+    all_prism_jars = sorted(prism_mods.glob("*.jar"))
+    local_runtime_jars = [jar for jar in all_prism_jars if is_local_runtime_jar(jar)]
+    if local_runtime_jars:
+        if args.include_local:
+            print("WARNING: --include-local is deprecated; local runtime jars are skipped. Use write-local-mod-releases for published artifacts.")
+        else:
+            print(f"Skipping {len(local_runtime_jars)} local runtime jar(s).")
+    prism_jars = [jar for jar in all_prism_jars if not is_local_runtime_jar(jar)]
 
     if not prism_jars:
         print("No Prism mod jars found to import.")
@@ -1322,11 +1568,42 @@ def build_parser() -> argparse.ArgumentParser:
     update.add_argument("--dry-run", action="store_true")
     update.set_defaults(func=command_update_local_mods)
 
+    local_releases = subparsers.add_parser("write-local-mod-releases", help="Write packwiz metadata for local mods that have pinned release downloads.")
+    local_releases.add_argument("--pack-dir")
+    local_releases.add_argument("--packwiz")
+    local_releases.add_argument("--mod", action="append", help="Limit to a local mod name or modId. Can be passed more than once.")
+    local_releases.add_argument("--include-disabled", action="store_true", help="Also consider local mods marked enabled=false.")
+    local_releases.add_argument("--require-all", action="store_true", help="Fail if any selected local mod is still source-only.")
+    local_releases.add_argument("--skip-refresh", action="store_true")
+    local_releases.add_argument("--dry-run", action="store_true")
+    local_releases.set_defaults(func=command_write_local_mod_releases)
+
+    sync_instance = subparsers.add_parser("sync-instance", help="Apply packwiz metadata, then pull/build/sync local mod jars.")
+    sync_instance.add_argument("--source-root")
+    sync_instance.add_argument("--minecraft-dir")
+    sync_instance.add_argument("--mods-dir")
+    sync_instance.add_argument("--pack-dir")
+    sync_instance.add_argument("--packwiz")
+    sync_instance.add_argument("--java-home")
+    sync_instance.add_argument("--installer", help="Path to packwiz-installer-bootstrap.jar.")
+    sync_instance.add_argument("--main-jar", help="Path where the bootstrapper stores packwiz-installer.jar.")
+    sync_instance.add_argument("--bootstrap-url", default=PACKWIZ_INSTALLER_BOOTSTRAP_URL)
+    sync_instance.add_argument("--no-download", action="store_true", help="Fail instead of downloading the bootstrap jar if it is missing.")
+    sync_instance.add_argument("--port", type=int, help="Local port for the temporary packwiz server.")
+    sync_instance.add_argument("--skip-prism", action="store_true", help="Do not run the packwiz-to-Prism update.")
+    sync_instance.add_argument("--skip-local", action="store_true", help="Do not pull/build/sync local mod source jars.")
+    sync_instance.add_argument("--skip-pull", action="store_true")
+    sync_instance.add_argument("--skip-build", action="store_true")
+    sync_instance.add_argument("--allow-dirty", action="store_true")
+    sync_instance.add_argument("--skip-quality-apply", action="store_true", help="Do not re-apply the active Mod Quality Picker preset after syncing.")
+    sync_instance.add_argument("--dry-run", action="store_true")
+    sync_instance.set_defaults(func=command_sync_instance)
+
     prism = subparsers.add_parser("import-prism-mods", help="Import Prism-downloaded jars through packwiz CurseForge detection.")
     prism.add_argument("--prism-mods-dir")
     prism.add_argument("--pack-dir")
     prism.add_argument("--packwiz")
-    prism.add_argument("--include-local", action="store_true")
+    prism.add_argument("--include-local", action="store_true", help="Deprecated; local runtime jars are always skipped.")
     prism.add_argument("--keep-unmatched-staged-jars", action="store_true")
     prism.add_argument("--dry-run", action="store_true")
     prism.set_defaults(func=command_import_prism_mods)

@@ -9,6 +9,11 @@
       "sourceFolder": "ecology",
       "modId": "ecology",
       "jarGlob": "ecology-*.jar",
+      "pack": {
+        "metafile": "mods/ecology.pw.toml",
+        "filename": "ecology-local.jar",
+        "side": "both"
+      },
       "notes": "NeoForge 21.1.234"
     },
     {
@@ -18,6 +23,11 @@
       "sourceFolder": "MoreWeapons",
       "modId": "mobsmoreweapons",
       "jarGlob": "mobsmoreweapons-*.jar",
+      "pack": {
+        "metafile": "mods/mobsmoreweapons.pw.toml",
+        "filename": "mobsmoreweapons-local.jar",
+        "side": "both"
+      },
       "notes": "Use the 1.21.1-neoforge branch, not the default master branch."
     },
     {
@@ -27,6 +37,11 @@
       "sourceFolder": "BetterEnchants",
       "modId": "betterenchanting",
       "jarGlob": "betterenchanting-*.jar",
+      "pack": {
+        "metafile": "mods/betterenchanting.pw.toml",
+        "filename": "betterenchanting-local.jar",
+        "side": "both"
+      },
       "notes": "NeoForge 21.1.234"
     },
     {
@@ -36,6 +51,11 @@
       "sourceFolder": "Auric",
       "modId": "auric",
       "jarGlob": "auric-*.jar",
+      "pack": {
+        "metafile": "mods/auric.pw.toml",
+        "filename": "auric-local.jar",
+        "side": "both"
+      },
       "notes": "Early development"
     },
     {
@@ -45,6 +65,11 @@
       "sourceFolder": "MobsToolForging",
       "modId": "mobstoolforging",
       "jarGlob": "mobstoolforging-*.jar",
+      "pack": {
+        "metafile": "mods/mobstoolforging.pw.toml",
+        "filename": "mobstoolforging-local.jar",
+        "side": "both"
+      },
       "notes": "NeoForge 21.1.234"
     },
     {
@@ -54,6 +79,11 @@
       "sourceFolder": "ModQualityPicker",
       "modId": "modqualitypicker",
       "jarGlob": "modqualitypicker-*.jar",
+      "pack": {
+        "metafile": "mods/modqualitypicker.pw.toml",
+        "filename": "modqualitypicker-local.jar",
+        "side": "both"
+      },
       "notes": "NeoForge 21.1.234, early scaffold"
     },
     {
@@ -63,6 +93,11 @@
       "sourceFolder": "AxiomSurvival",
       "modId": "axiomsurvival",
       "jarGlob": "axiomsurvival-*.jar",
+      "pack": {
+        "metafile": "mods/axiomsurvival.pw.toml",
+        "filename": "axiomsurvival-local.jar",
+        "side": "client"
+      },
       "notes": "Fabric 1.21.1 add-on for Axiom; the pack config enables survival capture hooks."
     }
   ]

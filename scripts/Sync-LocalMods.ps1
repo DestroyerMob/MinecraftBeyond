@@ -36,6 +36,11 @@ $synced = @()
 $missing = @()
 
 foreach ($mod in $configData.mods) {
+    if ($null -ne $mod.enabled -and -not [bool]$mod.enabled) {
+        Write-Host "Skipping disabled local mod entry: $($mod.name)"
+        continue
+    }
+
     $sourceDir = Join-Path $sourceRootPath $mod.sourceFolder
 
     if (-not (Test-Path $sourceDir)) {
@@ -92,7 +97,9 @@ foreach ($mod in $configData.mods) {
         throw "No runtime jar matching $($mod.jarGlob) found for $($mod.name) in $libsDir"
     }
 
-    $destination = Join-Path $modsDirPath "$($mod.modId)-local.jar"
+    $enabledDestination = Join-Path $modsDirPath "$($mod.modId)-local.jar"
+    $disabledDestination = "$enabledDestination.disabled"
+    $destination = if ((Test-Path $disabledDestination) -and -not (Test-Path $enabledDestination)) { $disabledDestination } else { $enabledDestination }
     Write-Host "Syncing $($mod.name): $($jar.Name) -> $destination"
 
     if (-not $DryRun) {

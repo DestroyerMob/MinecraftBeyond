@@ -82,6 +82,7 @@ Status meanings:
 
 - Commit pack metadata, configs, scripts, docs, and Prism instance metadata.
 - Do not commit downloaded mod jars, generated runtime files, logs, worlds, screenshots, or local cache folders.
+- Do not commit `minecraft/mods/*-local.jar` or `pack/mods/*-local.jar`; local jars are either rebuilt per machine or represented by packwiz release metadata.
 - Do not commit `tools/bin/`; recreate packwiz locally with `scripts/modpack install-packwiz`.
 - Do not commit `tools/dev-env.local.json`; it is for per-machine paths and tool locations.
 - Keep unpublished mod source outside this repo, normally in a folder such as `$HOME\Documents\minecraft-mod-sources`.
@@ -102,6 +103,8 @@ If you use Prism's mod browser because it is faster and nicer, download the mod 
 The script copies jars from `minecraft/mods/` into `pack/mods/`, runs `packwiz cf detect`, and refreshes the pack index. When detection succeeds, the temporary staged jar is replaced by a `.pw.toml` metadata file. Commit the generated metadata under `pack/`.
 
 This works best for CurseForge downloads because packwiz can fingerprint jars against CurseForge. Unmatched jars are left in the Prism instance for local testing but removed from the staged pack copy so they do not accidentally become committed pack files.
+
+Local runtime jars named `*-local.jar` are always skipped by this importer, even if the old `--include-local` flag is passed. Promote a local mod through the release metadata flow below instead.
 
 ### Shaderpacks
 
@@ -152,6 +155,14 @@ The command serves the local `pack/pack.toml` with packwiz and runs `packwiz-ins
 
 After packwiz finishes, the command restores the local Mod Quality Picker `activeProfileId` and re-applies that preset to `minecraft/mods/`. This matters because packwiz manages downloaded files, while Mod Quality Picker manages local runtime state by renaming jars between `.jar` and `.jar.disabled`.
 
+For a normal two-machine sync, prefer:
+
+```bash
+./scripts/modpack sync-instance
+```
+
+That command runs the packwiz update first, then runs `update-local-mods`. The order keeps generated `*-local.jar` files local: packwiz can clean the metadata-owned file set, and then the local source builds are copied back into Prism.
+
 Quality presets that should ship with the pack live in `pack/config/modqualitypicker/presets/`. Keep them there and run `./scripts/modpack refresh` so packwiz indexes them alongside quests, configs, and other bundled pack data.
 
 ## Local Unpublished Mods
@@ -161,7 +172,34 @@ Use two lanes:
 1. Development lane: clone or pull each mod repo locally, build with its Gradle wrapper, then sync the built jar into `minecraft/mods/` with `scripts/modpack update-local-mods`.
 2. Distribution lane: once a local mod has a usable test build, publish it as a GitHub Release or package artifact, then add that URL to packwiz. This keeps the pack reproducible on both machines without committing jars.
 
-Avoid committing unpublished jars directly to the pack repo unless you explicitly want a short-lived emergency build. If you do it, remove the jar once the mod has a real release URL.
+Avoid committing unpublished jars directly to the pack repo. If a build needs to be shared between machines without rebuilding, publish a real artifact and pin its URL plus hash in metadata.
+
+### Release Metadata For Local Mods
+
+Each entry in `tools/local-mods.json` has a `pack` block that names the packwiz metafile and runtime filename. While a mod is source-only, that block has no `download` entry and no `.pw.toml` file is generated for it.
+
+When a local mod is published, add a pinned direct-download block:
+
+```json
+"pack": {
+  "metafile": "mods/auric.pw.toml",
+  "filename": "auric-local.jar",
+  "side": "both",
+  "download": {
+    "url": "https://github.com/DestroyerMob/Auric/releases/download/<tag>/auric-local.jar",
+    "hashFormat": "sha512",
+    "hash": "<sha512>"
+  }
+}
+```
+
+Then generate packwiz metadata:
+
+```bash
+./scripts/modpack write-local-mod-releases --mod auric
+```
+
+Commit the generated `pack/mods/*.pw.toml`, `pack/index.toml`, `pack/pack.toml`, and the manifest change. Do not commit the jar.
 
 ### Local Mod Source Updates
 
@@ -190,6 +228,7 @@ Keep the repositories synced independently:
 - Pack metadata, configs, docs, scripts, and packwiz changes are committed to `DestroyerMob/MinecraftBeyond`.
 - Local mod source and resource changes are committed to that mod's own repository.
 - Built local jars copied into `minecraft/mods/` are runtime output and should stay ignored.
+- Published local-mod builds should enter the pack through packwiz `.pw.toml` metadata with a pinned URL and hash.
 
 When a pack change depends on a local mod change, push the mod repo first, then commit the pack change with the mod commit hash or release tag in the commit body or pull request notes.
 
@@ -229,9 +268,17 @@ On each machine:
 4. Run `./scripts/modpack doctor` or `.\scripts\modpack.ps1 doctor`.
 5. Run `./scripts/modpack install-packwiz` to create `tools/bin/packwiz`.
 6. Run `./scripts/modpack update-repos` to clone the local mod repos into the configured source folder.
-7. Run `./scripts/modpack update-local-mods` to build and sync local mod jars.
+7. Run `./scripts/modpack sync-instance` to apply pack metadata, then build and sync local mod jars.
 
 For local mods that are private or require authentication, make sure both machines have GitHub credentials that can read the repos before relying on automation.
+
+Daily two-machine sync:
+
+```bash
+git pull --ff-only
+./scripts/modpack sync-instance
+./scripts/modpack sync-status --fetch
+```
 
 ## Branch Protocol
 
@@ -245,10 +292,11 @@ For local mods that are private or require authentication, make sure both machin
 For a playable snapshot:
 
 1. Confirm Prism launches from a clean `minecraft/mods/`.
-2. Run `./scripts/modpack refresh`.
-3. Tag the pack repo, for example `pack-v0.1.0`.
-4. Publish local mod jars as GitHub Releases or packages.
-5. Export `.mrpack` or CurseForge zip only after the pack works through packwiz install/update.
+2. Publish any local mod jars needed for distribution as GitHub Releases or packages.
+3. Run `./scripts/modpack write-local-mod-releases --require-all` if the snapshot should be installable without local source builds.
+4. Run `./scripts/modpack refresh`.
+5. Tag the pack repo, for example `pack-v0.1.0`.
+6. Export `.mrpack` or CurseForge zip only after the pack works through packwiz install/update.
 
 ## Compatibility Notes
 

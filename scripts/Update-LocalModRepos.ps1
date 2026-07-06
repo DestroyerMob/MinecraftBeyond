@@ -89,6 +89,11 @@ if (-not $DryRun -and -not (Test-Path $sourceRootPath)) {
 $results = @()
 
 foreach ($mod in $configData.mods) {
+    if ($null -ne $mod.enabled -and -not [bool]$mod.enabled) {
+        Write-Host "Skipping disabled local mod entry: $($mod.name)"
+        continue
+    }
+
     $sourceDir = Join-Path $sourceRootPath $mod.sourceFolder
     $gitDir = Join-Path $sourceDir ".git"
 
@@ -168,4 +173,3 @@ if ($results.Count -gt 0) {
     Write-Host "Local mod repository status:"
     $results | Format-Table -AutoSize
 }
-

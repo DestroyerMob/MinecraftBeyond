@@ -13,9 +13,9 @@ Current target:
 ## Repository Layout
 
 - `pack/` is the future packwiz pack root. Third-party mods, configs, resource packs, default options, and export metadata should live there.
-- `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`.
+- `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`; generated `minecraft/mods/*-local.jar` files are runtime output.
 - Mod Quality Picker presets are bundled pack data under `pack/config/modqualitypicker/presets/` and indexed by packwiz like quests/configs.
-- `tools/local-mods.json` records the unpublished local mods and their expected branches/jar names.
+- `tools/local-mods.json` records unpublished local mods, their expected branches/jar names, and optional release download pins for packwiz metadata.
 - `tools/modpack.py` is the cross-platform workspace command used by macOS, Linux, and Windows.
 - `tools/dev-env.example.json` is the template for optional machine-local paths.
 - `scripts/` contains portable wrappers plus the original PowerShell helpers.
@@ -78,7 +78,9 @@ Every command supports `--help`.
 | `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
 | `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
 | `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
-| `import-prism-mods` | Import Prism-downloaded jars through packwiz CurseForge detection, then refresh the index. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--include-local`, `--keep-unmatched-staged-jars`, `--dry-run` |
+| `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
+| `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
+| `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--dry-run` |
 | `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
 | `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
 
@@ -139,6 +141,12 @@ On Windows, the equivalent command is:
 
 This command starts a temporary local packwiz server, downloads `packwiz-installer-bootstrap.jar` into ignored `tools/bin/` if needed, and updates `minecraft/mods/` from `pack/pack.toml`. After packwiz finishes, it restores the local `activeProfileId` and runs the Mod Quality Picker applier so any jars restored by packwiz are renamed back to the active quality preset before Minecraft launches.
 
+For a full machine sync, run the combined command instead. It applies packwiz first, then builds and copies local source jars so packwiz does not remove machine-local runtime output after the local sync:
+
+```bash
+./scripts/modpack sync-instance
+```
+
 Clone or pull all local mod source repositories:
 
 ```bash
@@ -159,13 +167,22 @@ Pull the local mod repos, build them, and sync their jars into the local Prism i
 
 The update script copies jars into `minecraft/mods/`, which is ignored by git, then re-applies the active Mod Quality Picker preset. The pack repo should track metadata and config, not generated jars.
 
+When a local mod has a published artifact that both machines should install without building from source, add its direct download URL and hash under that mod's `pack.download` entry in `tools/local-mods.json`, then run:
+
+```bash
+./scripts/modpack write-local-mod-releases --mod <modId>
+```
+
+Commit the generated `.pw.toml` metadata and refreshed pack index, not the jar.
+
 ## Keeping Remotes Current
 
 There are separate repositories involved here:
 
 - Pack changes live in this repo, `DestroyerMob/MinecraftBeyond`.
 - Local mod source changes live in each mod's own repo, such as `DestroyerMob/MoreWeapons`.
-- Built `*-local.jar` files in `minecraft/mods/` are local runtime output and should not be committed.
+- Built `*-local.jar` files in `minecraft/mods/` are local runtime output and are ignored.
+- Published local-mod builds should enter the pack through packwiz `.pw.toml` metadata with a pinned URL and hash.
 
 Before and after a work session, run:
 

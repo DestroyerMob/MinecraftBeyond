@@ -161,6 +161,8 @@ Selling goods to a ruby or sapphire village gives you that village currency, and
 
 Ruby and sapphire villages only enter the rotation when the matching item tags are populated. Ecology checks `ecology:village_currency/ruby`, `c:gems/ruby`, `forge:gems/ruby`, and the matching sapphire variants.
 
+In Minecraft Beyond, the KubeJS datapack maps ExtraGems' `extragems:ruby` into `ecology:village_currency/ruby` and `extragems:sapphire` into `ecology:village_currency/sapphire`. That makes ruby and sapphire villages available anywhere Ecology is enabled with the shipped pack config.
+
 ## Golem Construction
 
 Village health lightly affects Ecology's golem construction system. Thriving villages can start construction with one fewer participant and build a little faster. Neglected villages build a little slower.
