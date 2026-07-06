@@ -255,6 +255,11 @@
       "locked": false,
       "reason": ""
     },
+    "controllable": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "controlling": {
       "enabled": true,
       "locked": false,
@@ -895,6 +900,11 @@
       "locked": false,
       "reason": ""
     },
+    "moreculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mousetweaks": {
       "enabled": true,
       "locked": false,
@@ -1100,12 +1110,22 @@
       "locked": false,
       "reason": ""
     },
+    "transition": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "tooltipoverhaul": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "trashslot": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "trender": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1394,6 +1414,186 @@
       "enabled": false,
       "locked": false,
       "reason": ""
+    },
+    "bettercaves": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Caves should be active in balanced."
+    },
+    "betterdeserttemples": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Desert Temples should be active in balanced."
+    },
+    "betterdungeons": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Dungeons should be active in balanced."
+    },
+    "betterjungletemples": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Jungle Temples should be active in balanced."
+    },
+    "bettermineshafts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Mineshafts should be active in balanced."
+    },
+    "betterfortresses": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Nether Fortresses should be active in balanced."
+    },
+    "betteroceanmonuments": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Ocean Monuments should be active in balanced."
+    },
+    "betterstrongholds": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Strongholds should be active in balanced."
+    },
+    "betterwitchhuts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Witch Huts should be active in balanced."
+    },
+    "yungsapi": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by enabled YUNG structure mods."
+    },
+    "yungsbridges": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Bridges should be active in balanced."
+    },
+    "yungscavebiomes": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Cave Biomes should be active in balanced."
+    },
+    "yungsextras": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Extras should be active in balanced."
+    },
+    "lootintegrations_yungs": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG loot integration should be active in balanced."
+    },
+    "brewinandchewin": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "crabbersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "culturaldelights": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "delightlib": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by enabled Delight add-ons."
+    },
+    "ends_delight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "expandeddelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "moredelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "mynethersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "oceansdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "mr_farmers_cuttingregionsunexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Cutting compatibility should be active in balanced."
+    },
+    "alternate_current": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "badoptimizations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "dynamic_fps": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "entityculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "immediatelyfast": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "ksyxis": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "noisium": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "servercore": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "spark": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance/profiling mod should be active in balanced."
+    },
+    "greenhouseconfig": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Brewin\u2019 and Chewin\u2019."
+    },
+    "greenhouseconfig_night_config": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Greenhouse Config."
+    },
+    "greenhouseconfig_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Greenhouse Config."
     }
   },
   "configFiles": [],
