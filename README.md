@@ -12,7 +12,7 @@ Current target:
 
 ## Repository Layout
 
-- `pack/` is the future packwiz pack root. Third-party mods, configs, resource packs, default options, and export metadata should live there.
+- `pack/` is the packwiz pack root. Third-party mod and shaderpack metadata, configs, KubeJS/data files, default options, and export metadata live there.
 - `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`; generated `minecraft/mods/*-local.jar` files are runtime output.
 - Mod Quality Picker presets are bundled pack data under `pack/config/modqualitypicker/presets/` and indexed by packwiz like quests/configs.
 - `tools/local-mods.json` records unpublished local mods, their expected branches/jar names, and optional release download pins for packwiz metadata.
@@ -48,6 +48,7 @@ For machine-specific paths, generate the local config and edit it locally:
 
 - `sourceRoot`: where unpublished mod source repositories live.
 - `modsDir`: the Prism mods folder to sync local jars into.
+- `shaderpacksDir`: the Prism shaderpacks folder to import local packwiz shader metadata from.
 - `packwiz`: a repo-local or system packwiz executable.
 - `javaHome`: a Java 21 installation.
 
@@ -55,6 +56,7 @@ Environment variables override the local config:
 
 - `MINECRAFT_MOD_SOURCE_ROOT`
 - `MINECRAFT_BEYOND_PRISM_MODS_DIR`
+- `MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR`
 - `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
 - `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
 
@@ -71,9 +73,9 @@ Every command supports `--help`.
 
 | Command | Purpose | Useful options |
 | --- | --- | --- |
-| `doctor` | Check tools, Java, packwiz metadata, repo state, Prism mods, and local mod sources. | `--strict`, `--source-root`, `--mods-dir`, `--packwiz`, `--java-home` |
+| `doctor` | Check tools, Java, packwiz metadata, repo state, Prism mods/shaderpacks, and local mod sources. | `--strict`, `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home` |
 | `install-packwiz` | Install packwiz into ignored `tools/bin/` using Go. | `--install-dir`, `--module` |
-| `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--packwiz`, `--java-home`, `--force` |
+| `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home`, `--force` |
 | `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
 | `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
 | `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
@@ -81,7 +83,9 @@ Every command supports `--help`.
 | `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
 | `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--dry-run` |
+| `import-prism-shaderpacks` | Import Prism shaderpack `.pw.toml` metadata into `pack/shaderpacks/`, warn about unmanaged shader files, then refresh the index. | `--prism-shaderpacks-dir`, `--pack-dir`, `--packwiz`, `--skip-refresh`, `--dry-run` |
 | `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
+| `update-prism-shaderpacks` | Clearer alias for applying packwiz metadata to Prism when you are thinking about shaderpack changes. | same installer/path options as `update-prism-mods` |
 | `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
 
 ## Packwiz Setup
@@ -98,7 +102,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 | Mod | Repo | Branch | Notes |
 | --- | --- | --- | --- |
-| Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Advanced bee simulation is config-gated and off by default. |
+| Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Requires Villager Names 8.5+, which the pack includes. Advanced bee simulation is config-gated and off by default. |
 | MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Default branch is old Forge 1.20.1; use this branch for the pack. Includes Mobs Tool Forging and Better Enchanting bridge data. |
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Includes explicit Apotheosis/Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
@@ -125,6 +129,12 @@ After downloading CurseForge mods through Prism, import the downloaded jars into
 
 ```bash
 ./scripts/modpack import-prism-mods
+```
+
+After adding shaderpacks through Prism, import the Prism-side packwiz shader metadata into the pack:
+
+```bash
+./scripts/modpack import-prism-shaderpacks
 ```
 
 After pulling packwiz metadata from git, apply it back into the local Prism instance:
