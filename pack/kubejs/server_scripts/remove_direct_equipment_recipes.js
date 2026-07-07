@@ -1,0 +1,18 @@
+ServerEvents.recipes(event => {
+  const armorMaterials = ['iron', 'golden', 'diamond', 'netherite']
+  const armorSlots = ['helmet', 'chestplate', 'leggings', 'boots']
+  const moreWeaponsMaterials = ['wooden', 'stone', 'iron', 'golden', 'diamond', 'netherite']
+  const moreWeaponsTypes = ['battle_axe', 'great_sword', 'katana', 'knife', 'machete']
+
+  armorMaterials.forEach(material => {
+    armorSlots.forEach(slot => {
+      event.remove({ output: `minecraft:${material}_${slot}` })
+    })
+  })
+
+  moreWeaponsMaterials.forEach(material => {
+    moreWeaponsTypes.forEach(type => {
+      event.remove({ output: `mobsmoreweapons:${material}_${type}` })
+    })
+  })
+})

@@ -140,6 +140,8 @@ def run(
         )
     except FileNotFoundError as exc:
         raise ToolError(f"Command not found: {cmd[0]}") from exc
+    except OSError as exc:
+        raise ToolError(f"Failed to start command {cmd[0]}: {exc}") from exc
 
     if check and completed.returncode != 0:
         message = f"{' '.join(cmd)} failed with exit code {completed.returncode}"
@@ -989,6 +991,14 @@ def gradle_wrapper(source_dir: Path) -> list[str]:
 
     gradlew = source_dir / "gradlew"
     if gradlew.exists():
+        if os.name == "nt":
+            wrapper_jar = source_dir / "gradle" / "wrapper" / "gradle-wrapper.jar"
+            if wrapper_jar.exists():
+                return ["java", "-classpath", str(wrapper_jar), "org.gradle.wrapper.GradleWrapperMain"]
+            bash = shutil.which("bash")
+            if bash:
+                return [bash, str(gradlew)]
+            raise ToolError(f"{source_dir} has gradlew but no gradlew.bat, and bash was not found on PATH.")
         if os.name != "nt" and not os.access(gradlew, os.X_OK):
             return ["bash", str(gradlew)]
         return [str(gradlew)]

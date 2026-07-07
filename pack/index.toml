@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -97,12 +97,24 @@ file = "kubejs/data/neoforge/loot_modifiers/global_loot_modifiers.json"
 hash = "1b96ce219de192551cc355e76a409f8b6ac4374c27ecd38ebb9e3b432ef81c72"
 
 [[files]]
+file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_frequently_spawns.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_spawns.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
 file = "kubejs/server_scripts/gravel_to_flint.js"
 hash = "d140cf89b62a2333e6a8adb75aab611f98ce00f7eaeb0f1ab8418e13a8163d87"
 
 [[files]]
 file = "kubejs/server_scripts/player_warps.js"
 hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
+
+[[files]]
+file = "kubejs/server_scripts/remove_direct_equipment_recipes.js"
+hash = "64ca6ba905b80e96dcf9ce0a20cb8d92b619a305b814478d130be626af48d16a"
 
 [[files]]
 file = "mods/advancement-plaques.pw.toml"
