@@ -116,7 +116,7 @@
       "reason": ""
     },
     "bettercombat": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -875,6 +875,11 @@
       "locked": false,
       "reason": ""
     },
+    "mobscombat": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mobsmoreweapons": {
       "enabled": true,
       "locked": false,
@@ -1091,9 +1096,9 @@
       "reason": ""
     },
     "tiny_config": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
-      "reason": ""
+      "reason": "Bundled inside Better Combat; disabled with Better Combat in balanced."
     },
     "tipsmod": {
       "enabled": true,
@@ -1488,17 +1493,17 @@
     "brewinandchewin": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "crabbersdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "culturaldelights": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "delightlib": {
       "enabled": true,
@@ -1508,32 +1513,32 @@
     "ends_delight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "expandeddelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "moredelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "mynethersdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "oceansdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+      "reason": "Farmer’s Delight add-on should be active in balanced."
     },
     "mr_farmers_cuttingregionsunexplored": {
       "enabled": true,
       "locked": false,
-      "reason": "Farmer\u2019s Cutting compatibility should be active in balanced."
+      "reason": "Farmer’s Cutting compatibility should be active in balanced."
     },
     "alternate_current": {
       "enabled": true,
@@ -1583,7 +1588,7 @@
     "greenhouseconfig": {
       "enabled": true,
       "locked": false,
-      "reason": "Bundled dependency required by Brewin\u2019 and Chewin\u2019."
+      "reason": "Bundled dependency required by Brewin’ and Chewin’."
     },
     "greenhouseconfig_night_config": {
       "enabled": true,
@@ -1594,6 +1599,21 @@
       "enabled": true,
       "locked": false,
       "reason": "Bundled dependency required by Greenhouse Config."
+    },
+    "spawn": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "chunky": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "farmers_cutting_regions_unexplored_1_21_1_1_1b_neoforge": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     }
   },
   "configFiles": [],

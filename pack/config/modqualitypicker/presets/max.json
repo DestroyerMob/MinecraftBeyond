@@ -945,6 +945,11 @@
       "locked": false,
       "reason": ""
     },
+    "mobscombat": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mobsmoreweapons": {
       "enabled": true,
       "locked": false,

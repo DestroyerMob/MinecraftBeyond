@@ -84,6 +84,7 @@ Every command supports `--help`.
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
 | `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--dry-run` |
 | `import-prism-shaderpacks` | Import Prism shaderpack `.pw.toml` metadata into `pack/shaderpacks/`, warn about unmanaged shader files, then refresh the index. | `--prism-shaderpacks-dir`, `--pack-dir`, `--packwiz`, `--skip-refresh`, `--dry-run` |
+| `sync-quality-presets` | Copy in-instance Mod Quality Picker preset edits into bundled pack metadata, then refresh the index. | `--profile`, `--include-defaults`, `--skip-refresh`, `--dry-run` |
 | `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
 | `update-prism-shaderpacks` | Clearer alias for applying packwiz metadata to Prism when you are thinking about shaderpack changes. | same installer/path options as `update-prism-mods` |
 | `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
@@ -104,6 +105,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | --- | --- | --- | --- |
 | Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Requires Villager Names 8.5+, which the pack includes. Advanced bee simulation is config-gated and off by default. |
 | MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Default branch is old Forge 1.20.1; use this branch for the pack. Includes Mobs Tool Forging and Better Enchanting bridge data. |
+| Mobs Combat | `DestroyerMob/MobsCombat` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Compatibility-first posture, shield guard, recovery windows, and data-driven weapon/entity profiles. |
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Includes explicit Apotheosis/Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
@@ -135,6 +137,12 @@ After adding shaderpacks through Prism, import the Prism-side packwiz shader met
 
 ```bash
 ./scripts/modpack import-prism-shaderpacks
+```
+
+After editing presets in-game or under `minecraft/config/modqualitypicker/presets/`, promote those runtime edits into the bundled pack metadata:
+
+```bash
+./scripts/modpack sync-quality-presets --profile balanced
 ```
 
 After pulling packwiz metadata from git, apply it back into the local Prism instance:

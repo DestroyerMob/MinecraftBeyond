@@ -163,7 +163,7 @@ For a normal two-machine sync, prefer:
 
 That command runs the packwiz update first, then runs `update-local-mods`. The order keeps generated `*-local.jar` files local: packwiz can clean the metadata-owned file set, and then the local source builds are copied back into Prism.
 
-Quality presets that should ship with the pack live in `pack/config/modqualitypicker/presets/`. Keep them there and run `./scripts/modpack refresh` so packwiz indexes them alongside quests, configs, and other bundled pack data.
+Quality presets that should ship with the pack live in `pack/config/modqualitypicker/presets/`. If you edit a preset in-game or under `minecraft/config/modqualitypicker/presets/`, run `./scripts/modpack sync-quality-presets --profile <profileId>` to promote that runtime copy into the bundled pack metadata and refresh the packwiz index. Use `--include-defaults` only when you intentionally want to ship captured config baselines as well.
 
 ## Local Unpublished Mods
 

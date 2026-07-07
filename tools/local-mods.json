@@ -31,6 +31,20 @@
       "notes": "Use the 1.21.1-neoforge branch, not the default master branch."
     },
     {
+      "name": "Mobs Combat",
+      "repository": "https://github.com/DestroyerMob/MobsCombat.git",
+      "branch": "main",
+      "sourceFolder": "MobsCombat",
+      "modId": "mobscombat",
+      "jarGlob": "mobscombat-*.jar",
+      "pack": {
+        "metafile": "mods/mobscombat.pw.toml",
+        "filename": "mobscombat-local.jar",
+        "side": "both"
+      },
+      "notes": "NeoForge 21.1.234. Compatibility-first combat posture, guard, and recovery framework."
+    },
+    {
       "name": "Better Enchanting",
       "repository": "https://github.com/DestroyerMob/BetterEnchants.git",
       "branch": "main",

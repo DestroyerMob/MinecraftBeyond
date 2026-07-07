@@ -468,6 +468,32 @@ def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_
     run(command, cwd=REPO_ROOT, env=python_compat_environment())
 
 
+def copy_quality_path(source: Path, target: Path, *, dry_run: bool) -> str:
+    if source.is_dir():
+        if dry_run:
+            return f"would copy directory {source} -> {target}"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            shutil.rmtree(target)
+        shutil.copytree(source, target)
+        return f"copied directory {source} -> {target}"
+
+    if dry_run:
+        return f"would copy {source} -> {target}"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, target)
+    return f"copied {source} -> {target}"
+
+
+def quality_profile_filename(profile: str) -> str:
+    name = profile.strip()
+    if not name:
+        raise ToolError("Profile names must not be blank.")
+    if "/" in name or "\\" in name or name in {".", ".."}:
+        raise ToolError(f"Invalid quality profile name: {profile}")
+    return name if name.endswith(".json") else f"{name}.json"
+
+
 def active_quality_profile_id(minecraft_dir: Path) -> str | None:
     config = minecraft_dir / "config" / "modqualitypicker-common.toml"
     if not config.exists():
@@ -1366,6 +1392,91 @@ def command_update_prism_shaderpacks(args: argparse.Namespace) -> int:
     return command_update_prism_mods(args)
 
 
+def command_sync_quality_presets(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
+    pack_dir = expand_path(args.pack_dir or PACK_DIR)
+    assert pack_dir is not None
+
+    prism_mods = setting(
+        args.mods_dir,
+        ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
+        dev_env,
+        "modsDir",
+        DEFAULT_PRISM_MODS_DIR,
+    )
+    minecraft_dir = expand_path(args.minecraft_dir) if args.minecraft_dir else (prism_mods.parent if prism_mods else None)
+    if minecraft_dir is None:
+        raise ToolError("Could not resolve the Prism minecraft directory.")
+
+    source_root = minecraft_dir / "config" / "modqualitypicker"
+    target_root = pack_dir / "config" / "modqualitypicker"
+    source_presets = source_root / "presets"
+    target_presets = target_root / "presets"
+    if not source_presets.exists():
+        raise ToolError(f"Runtime quality preset folder was not found: {source_presets}")
+
+    if args.profile:
+        profile_files = [source_presets / quality_profile_filename(profile) for profile in args.profile]
+    else:
+        profile_files = sorted(source_presets.glob("*.json"))
+
+    if not profile_files:
+        raise ToolError(f"No quality preset JSON files found in {source_presets}")
+
+    actions: list[str] = []
+    for source_file in profile_files:
+        if not source_file.exists():
+            raise ToolError(f"Quality preset not found: {source_file}")
+        if not source_file.is_file():
+            raise ToolError(f"Quality preset is not a file: {source_file}")
+
+        profile = load_json(source_file)
+        profile_id = str(profile.get("id") or source_file.stem)
+        if profile_id != source_file.stem:
+            print(f"WARNING: {source_file.name} contains id={profile_id}; syncing by filename {source_file.stem}.")
+
+        actions.append(copy_quality_path(source_file, target_presets / source_file.name, dry_run=args.dry_run))
+        source_profile_dir = source_presets / source_file.stem
+        target_profile_dir = target_presets / source_file.stem
+        if source_profile_dir.exists():
+            actions.append(copy_quality_path(source_profile_dir, target_profile_dir, dry_run=args.dry_run))
+        elif target_profile_dir.exists():
+            print(f"WARNING: {target_profile_dir} exists but {source_profile_dir} does not; leaving the pack directory unchanged.")
+
+    if args.include_defaults:
+        source_defaults = source_root / "defaults"
+        if source_defaults.exists():
+            actions.append(copy_quality_path(source_defaults, target_root / "defaults", dry_run=args.dry_run))
+        else:
+            print(f"WARNING: no runtime defaults directory found at {source_defaults}")
+
+        source_manifest = source_root / "defaults-manifest.json"
+        if source_manifest.exists():
+            actions.append(copy_quality_path(source_manifest, target_root / "defaults-manifest.json", dry_run=args.dry_run))
+        else:
+            print(f"WARNING: no runtime defaults manifest found at {source_manifest}")
+
+    for action in actions:
+        print(action)
+
+    if args.skip_refresh:
+        print("Skipping packwiz refresh.")
+        return 0
+
+    if args.dry_run:
+        print("DRY RUN: packwiz refresh would run.")
+        return 0
+
+    packwiz = resolve_packwiz(dev_env, args.packwiz)
+    if not packwiz:
+        raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
+
+    print("Refreshing packwiz index...", flush=True)
+    run([packwiz, "refresh"], cwd=pack_dir)
+    print("Quality presets synced into pack metadata.")
+    return 0
+
+
 def command_update_prism_mods(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
     packwiz = resolve_packwiz(dev_env, args.packwiz)
@@ -1615,6 +1726,17 @@ def build_parser() -> argparse.ArgumentParser:
     prism_shaders.add_argument("--skip-refresh", action="store_true")
     prism_shaders.add_argument("--dry-run", action="store_true")
     prism_shaders.set_defaults(func=command_import_prism_shaderpacks)
+
+    quality_presets = subparsers.add_parser("sync-quality-presets", help="Copy in-instance Mod Quality Picker presets into pack metadata.")
+    quality_presets.add_argument("--profile", action="append", help="Limit to one profile id or JSON filename. Can be passed more than once.")
+    quality_presets.add_argument("--minecraft-dir", help="Prism minecraft folder. Defaults to the parent of modsDir.")
+    quality_presets.add_argument("--mods-dir", help="Prism mods folder, used to derive minecraft-dir when minecraft-dir is omitted.")
+    quality_presets.add_argument("--pack-dir")
+    quality_presets.add_argument("--packwiz")
+    quality_presets.add_argument("--include-defaults", action="store_true", help="Also copy config default baselines and defaults-manifest.json.")
+    quality_presets.add_argument("--skip-refresh", action="store_true")
+    quality_presets.add_argument("--dry-run", action="store_true")
+    quality_presets.set_defaults(func=command_sync_quality_presets)
 
     update_prism = subparsers.add_parser("update-prism-mods", help="Apply packwiz metadata to the Prism minecraft folder.")
     add_update_prism_arguments(update_prism)
