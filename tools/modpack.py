@@ -917,6 +917,94 @@ def command_sync_status(args: argparse.Namespace) -> int:
     return 0
 
 
+def publish_repo(name: str, repository: Path, *, dry_run: bool, no_push: bool) -> str:
+    if not repository.exists():
+        return "missing"
+    if not (repository / ".git").exists():
+        return "not-git"
+
+    dirty = git(["status", "--short"], repository, capture=True)
+    if not dirty:
+        return "clean"
+
+    print(f"\n{name}: {repository}")
+    print(dirty)
+    if dry_run:
+        print("DRY RUN: would prompt for a commit message, then run git add ., git commit, and git push.")
+        return "would-publish"
+
+    if not sys.stdin.isatty():
+        raise ToolError("publish-dirty-repos needs an interactive terminal for commit messages.")
+
+    try:
+        message = input(f"Commit message for {name} (blank skips): ").strip()
+    except EOFError as exc:
+        raise ToolError("No commit message input was available.") from exc
+
+    if not message:
+        print(f"Skipping {name}.")
+        return "skipped"
+
+    git(["add", "."], repository)
+    staged = git_optional(["diff", "--cached", "--quiet"], repository)
+    if staged.returncode == 0:
+        print(f"No staged changes for {name} after git add .; skipping commit.")
+        return "no-staged-changes"
+
+    git(["commit", "-m", message], repository)
+    if no_push:
+        print(f"Committed {name}; push skipped.")
+        return "committed"
+
+    branch = git(["branch", "--show-current"], repository, capture=True)
+    if not branch:
+        raise ToolError(f"{name} is on a detached HEAD; commit was created but push was skipped.")
+
+    origin = git_optional(["remote", "get-url", "origin"], repository)
+    if origin.returncode != 0:
+        raise ToolError(f"{name} has no origin remote; commit was created but push was skipped.")
+
+    upstream = git_optional(["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"], repository)
+    if upstream.returncode == 0:
+        git(["push"], repository)
+    else:
+        git(["push", "-u", "origin", branch], repository)
+    return "committed-pushed"
+
+
+def command_publish_dirty_repos(args: argparse.Namespace) -> int:
+    if args.pack_only and args.local_mods_only:
+        raise ToolError("--pack-only and --local-mods-only cannot be used together.")
+    if not shutil.which("git"):
+        raise ToolError("git is not on PATH.")
+
+    dev_env = load_dev_env()
+    source_root = setting(
+        args.source_root,
+        ("MINECRAFT_MOD_SOURCE_ROOT",),
+        dev_env,
+        "sourceRoot",
+        DEFAULT_SOURCE_ROOT,
+    )
+    assert source_root is not None
+
+    repositories: list[tuple[str, Path]] = []
+    if not args.local_mods_only:
+        repositories.append(("Modpack", REPO_ROOT))
+    if not args.pack_only:
+        for mod in read_local_mods(include_disabled=args.include_disabled):
+            repositories.append((mod["name"], source_root / mod["sourceFolder"]))
+
+    rows: list[tuple[str, str, str]] = []
+    for name, repository in repositories:
+        result = publish_repo(name, repository, dry_run=args.dry_run, no_push=args.no_push)
+        rows.append((name, result, str(repository)))
+
+    print("\nPublish summary")
+    print_rows(("Repo", "Result", "Path"), rows)
+    return 0
+
+
 def command_update_repos(args: argparse.Namespace) -> int:
     if not shutil.which("git"):
         raise ToolError("git is not on PATH.")
@@ -1174,7 +1262,7 @@ def command_write_local_mod_releases(args: argparse.Namespace) -> int:
         print("No release-pinned local mod metadata was written.")
         return 0
 
-    if args.skip_refresh:
+    if getattr(args, "skip_refresh", False):
         print("Skipping packwiz refresh.")
         return 0
 
@@ -1303,9 +1391,80 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
                 staged_path.unlink()
             print("Removed unmatched staged jar copies from pack/mods. Original Prism jars were left alone.")
 
+    if getattr(args, "skip_refresh", False):
+        print("Skipping packwiz refresh.")
+        return 0
+
     print("Refreshing packwiz index...", flush=True)
     run([packwiz, "refresh"], cwd=pack_dir)
     print("Import complete. Review and commit the generated pack metadata.")
+    return 0
+
+
+def command_capture_instance(args: argparse.Namespace) -> int:
+    minecraft_dir = expand_path(args.minecraft_dir) if args.minecraft_dir else None
+    mods_dir = args.mods_dir
+    shaderpacks_dir = args.shaderpacks_dir
+    if minecraft_dir is not None:
+        if mods_dir is None:
+            mods_dir = str(minecraft_dir / "mods")
+        if shaderpacks_dir is None:
+            shaderpacks_dir = str(minecraft_dir / "shaderpacks")
+
+    if not args.skip_mods:
+        print("\n== Importing Prism mods ==")
+        command_import_prism_mods(
+            argparse.Namespace(
+                prism_mods_dir=mods_dir,
+                pack_dir=args.pack_dir,
+                packwiz=args.packwiz,
+                include_local=False,
+                keep_unmatched_staged_jars=args.keep_unmatched_staged_jars,
+                skip_refresh=True,
+                dry_run=args.dry_run,
+            )
+        )
+    else:
+        print("Skipping Prism mod import.")
+
+    if not args.skip_shaderpacks:
+        print("\n== Importing Prism shaderpacks ==")
+        command_import_prism_shaderpacks(
+            argparse.Namespace(
+                prism_shaderpacks_dir=shaderpacks_dir,
+                pack_dir=args.pack_dir,
+                packwiz=args.packwiz,
+                skip_refresh=True,
+                dry_run=args.dry_run,
+            )
+        )
+    else:
+        print("Skipping Prism shaderpack import.")
+
+    if not args.skip_quality_presets:
+        print("\n== Syncing Mod Quality Picker presets ==")
+        command_sync_quality_presets(
+            argparse.Namespace(
+                profile=args.profile,
+                minecraft_dir=args.minecraft_dir,
+                mods_dir=mods_dir,
+                pack_dir=args.pack_dir,
+                packwiz=args.packwiz,
+                include_defaults=args.include_quality_defaults,
+                skip_refresh=True,
+                dry_run=args.dry_run,
+            )
+        )
+    else:
+        print("Skipping Mod Quality Picker preset sync.")
+
+    if args.dry_run:
+        print("\nDRY RUN: final packwiz refresh would run.")
+        return 0
+
+    print("\n== Refreshing packwiz index ==")
+    command_refresh(argparse.Namespace(pack_dir=args.pack_dir, packwiz=args.packwiz))
+    print("Instance capture complete. Review and commit the generated pack metadata.")
     return 0
 
 
@@ -1664,6 +1823,15 @@ def build_parser() -> argparse.ArgumentParser:
     sync_status.add_argument("--strict", action="store_true", help="Exit non-zero unless every repo is clean and synced.")
     sync_status.set_defaults(func=command_sync_status)
 
+    publish_dirty = subparsers.add_parser("publish-dirty-repos", help="Interactively commit and push dirty pack/local mod repos.")
+    publish_dirty.add_argument("--source-root")
+    publish_dirty.add_argument("--include-disabled", action="store_true", help="Also consider local mods marked enabled=false.")
+    publish_dirty.add_argument("--pack-only", action="store_true", help="Only process the MinecraftBeyond pack repo.")
+    publish_dirty.add_argument("--local-mods-only", action="store_true", help="Only process configured local mod source repos.")
+    publish_dirty.add_argument("--no-push", action="store_true", help="Commit dirty repos but do not push.")
+    publish_dirty.add_argument("--dry-run", action="store_true")
+    publish_dirty.set_defaults(func=command_publish_dirty_repos)
+
     update_repos = subparsers.add_parser("update-repos", help="Clone or fast-forward local mod repositories.")
     update_repos.add_argument("--source-root")
     update_repos.add_argument("--skip-pull", action="store_true")
@@ -1720,12 +1888,28 @@ def build_parser() -> argparse.ArgumentParser:
     sync_instance.add_argument("--dry-run", action="store_true")
     sync_instance.set_defaults(func=command_sync_instance)
 
+    capture = subparsers.add_parser("capture-instance", help="Import Prism-side mods, shaderpacks, and quality presets into pack metadata.")
+    capture.add_argument("--minecraft-dir", help="Prism minecraft folder. Used to derive mods/shaderpacks dirs when omitted.")
+    capture.add_argument("--mods-dir", help="Prism mods folder to import from.")
+    capture.add_argument("--shaderpacks-dir", help="Prism shaderpacks folder to import from.")
+    capture.add_argument("--pack-dir")
+    capture.add_argument("--packwiz")
+    capture.add_argument("--profile", action="append", help="Limit quality preset sync to one profile id or JSON filename. Can be passed more than once.")
+    capture.add_argument("--include-quality-defaults", action="store_true", help="Also copy Mod Quality Picker default baselines and defaults-manifest.json.")
+    capture.add_argument("--keep-unmatched-staged-jars", action="store_true")
+    capture.add_argument("--skip-mods", action="store_true", help="Do not import Prism mod jars.")
+    capture.add_argument("--skip-shaderpacks", action="store_true", help="Do not import Prism shaderpack metadata.")
+    capture.add_argument("--skip-quality-presets", action="store_true", help="Do not sync Mod Quality Picker presets.")
+    capture.add_argument("--dry-run", action="store_true")
+    capture.set_defaults(func=command_capture_instance)
+
     prism = subparsers.add_parser("import-prism-mods", help="Import Prism-downloaded jars through packwiz CurseForge detection.")
     prism.add_argument("--prism-mods-dir")
     prism.add_argument("--pack-dir")
     prism.add_argument("--packwiz")
     prism.add_argument("--include-local", action="store_true", help="Deprecated; local runtime jars are always skipped.")
     prism.add_argument("--keep-unmatched-staged-jars", action="store_true")
+    prism.add_argument("--skip-refresh", action="store_true")
     prism.add_argument("--dry-run", action="store_true")
     prism.set_defaults(func=command_import_prism_mods)
 

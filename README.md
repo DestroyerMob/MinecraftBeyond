@@ -77,12 +77,14 @@ Every command supports `--help`.
 | `install-packwiz` | Install packwiz into ignored `tools/bin/` using Go. | `--install-dir`, `--module` |
 | `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home`, `--force` |
 | `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
+| `publish-dirty-repos` | Interactively run `git add .`, commit, and push dirty pack/local mod repos after prompting for each commit message. | `--pack-only`, `--local-mods-only`, `--include-disabled`, `--no-push`, `--dry-run` |
 | `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
 | `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
 | `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
 | `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
-| `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--dry-run` |
+| `capture-instance` | Import Prism-side mod jars, shaderpack metadata, and Mod Quality Picker presets into `pack/`, then refresh packwiz once. | `--profile`, `--include-quality-defaults`, `--skip-mods`, `--skip-shaderpacks`, `--skip-quality-presets`, `--dry-run` |
+| `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--skip-refresh`, `--dry-run` |
 | `import-prism-shaderpacks` | Import Prism shaderpack `.pw.toml` metadata into `pack/shaderpacks/`, warn about unmanaged shader files, then refresh the index. | `--prism-shaderpacks-dir`, `--pack-dir`, `--packwiz`, `--skip-refresh`, `--dry-run` |
 | `sync-quality-presets` | Copy in-instance Mod Quality Picker preset edits into bundled pack metadata, then refresh the index. | `--profile`, `--include-defaults`, `--skip-refresh`, `--dry-run` |
 | `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
@@ -144,6 +146,14 @@ After editing presets in-game or under `minecraft/config/modqualitypicker/preset
 ```bash
 ./scripts/modpack sync-quality-presets --profile balanced
 ```
+
+To capture the usual Prism-side changes in one pass before committing the pack repo, run:
+
+```bash
+./scripts/modpack capture-instance
+```
+
+This imports Prism-downloaded mod jars through packwiz, copies shaderpack `.pw.toml` metadata, syncs all Mod Quality Picker presets, and refreshes `pack/index.toml` once. Add `--include-quality-defaults` only when you intentionally want to promote runtime default config baselines too.
 
 After pulling packwiz metadata from git, apply it back into the local Prism instance:
 
@@ -209,3 +219,11 @@ Before and after a work session, run:
 ```
 
 If a local mod changed, commit and push that mod repo first. Then commit and push the pack repo, mentioning the mod commit or release when the pack depends on it.
+
+For an interactive sweep across dirty repos:
+
+```bash
+./scripts/modpack publish-dirty-repos
+```
+
+The command prints each dirty repo's short status, asks for a commit message, runs `git add .`, commits, and pushes the current branch. Leave a message blank to skip that repo.

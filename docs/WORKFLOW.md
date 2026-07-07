@@ -165,6 +165,26 @@ That command runs the packwiz update first, then runs `update-local-mods`. The o
 
 Quality presets that should ship with the pack live in `pack/config/modqualitypicker/presets/`. If you edit a preset in-game or under `minecraft/config/modqualitypicker/presets/`, run `./scripts/modpack sync-quality-presets --profile <profileId>` to promote that runtime copy into the bundled pack metadata and refresh the packwiz index. Use `--include-defaults` only when you intentionally want to ship captured config baselines as well.
 
+### Capturing Prism Changes Into The Pack
+
+When you have been making normal instance-side changes through Prism or in-game menus, use the combined capture command:
+
+```bash
+./scripts/modpack capture-instance
+```
+
+It imports Prism mod jars through packwiz CurseForge detection, copies Prism shaderpack `.pw.toml` metadata into `pack/shaderpacks/`, syncs Mod Quality Picker presets into `pack/config/modqualitypicker/presets/`, and runs one final `packwiz refresh`.
+
+Use these options when you need a narrower capture:
+
+```bash
+./scripts/modpack capture-instance --profile balanced
+./scripts/modpack capture-instance --skip-mods
+./scripts/modpack capture-instance --include-quality-defaults
+```
+
+Review the resulting git diff before committing. Unmatched Prism jars are removed from the staged pack copy by default so loose downloads do not accidentally become committed pack files.
+
 ## Local Unpublished Mods
 
 Use two lanes:
@@ -250,6 +270,22 @@ git status --short
 git add README.md docs/WORKFLOW.md tools scripts pack
 git commit -m "Update modpack workflow tooling"
 git push origin main
+```
+
+For a guided sweep across the pack repo and configured local mod repos:
+
+```bash
+./scripts/modpack publish-dirty-repos
+```
+
+The command only acts on dirty repositories. For each one, it prints `git status --short`, asks for a commit message, runs `git add .`, commits, and pushes the current branch. Leave the message blank to skip that repository.
+
+Useful narrower variants:
+
+```bash
+./scripts/modpack publish-dirty-repos --local-mods-only
+./scripts/modpack publish-dirty-repos --pack-only
+./scripts/modpack publish-dirty-repos --no-push
 ```
 
 End each work session with:
