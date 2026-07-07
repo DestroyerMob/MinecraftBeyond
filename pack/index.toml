@@ -41,6 +41,10 @@ file = "config/itemborders.toml"
 hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
+file = "config/mobscombat-common.toml"
+hash = "5ca540d1f477b862e2c2663c71e4314cb1b94a0c37090bf0eb1c1ab7c31699f4"
+
+[[files]]
 file = "config/mobsmoreweapons-common.toml"
 hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 

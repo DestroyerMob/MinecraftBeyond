@@ -1,0 +1,95 @@
+[general]
+	enable_combat_overhaul = true
+	enable_debug_messages = false
+
+[posture]
+	enable_posture = true
+	enable_recovery_windows = true
+	enable_pvp_posture = false
+	enable_hard_stagger = true
+	enable_boss_hard_stagger = false
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	generic_posture_base_multiplier = 1.0
+	# Default: 20
+	# Range: 0 ~ 72000
+	posture_recovery_delay_ticks = 20
+	# Default: 24
+	# Range: 0 ~ 72000
+	default_stagger_duration_ticks = 24
+	# Default: 50
+	# Range: 0 ~ 72000
+	default_stagger_cooldown_ticks = 50
+	# Default: 100.0
+	# Range: 1.0 ~ 100000.0
+	boss_health_threshold = 100.0
+	enable_player_posture = true
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	posture_after_break_ratio = 0.2
+
+[guard]
+	enable_shield_guard = true
+	enable_timed_blocks = true
+	enable_parry = true
+	# Default: 6
+	# Range: 0 ~ 200
+	perfect_block_window_ticks = 6
+	# Default: 20
+	# Range: 0 ~ 72000
+	counter_window_ticks = 20
+	# Default: 5
+	# Range: 0 ~ 200
+	parry_window_ticks = 5
+	# Default: 3
+	# Range: 0 ~ 200
+	dagger_parry_window_bonus_ticks = 3
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	parry_damage_multiplier = 0.0
+	# Default: 8.0
+	# Range: 0.0 ~ 10000.0
+	parry_posture_damage = 8.0
+	enable_dual_wield = true
+	# Default: 0.65
+	# Range: 0.05 ~ 1.0
+	dual_wield_cooldown_multiplier = 0.65
+	# Default: 1.35
+	# Range: 1.0 ~ 100.0
+	dual_wield_finisher_damage_multiplier = 1.35
+	# Default: 1.5
+	# Range: 1.0 ~ 100.0
+	dual_wield_finisher_posture_multiplier = 1.5
+	# Default: 20.0
+	# Range: 0.0 ~ 10000.0
+	guard_recovery_per_second = 20.0
+	# Default: 100.0
+	# Range: 1.0 ~ 10000.0
+	default_guard_max = 100.0
+	# Default: 20
+	# Range: 0 ~ 72000
+	guard_recovery_delay_ticks = 20
+	# Default: 35
+	# Range: 0 ~ 72000
+	guard_break_ticks = 35
+
+[stealth]
+	enable_stealth = true
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	sneaking_visibility_multiplier = 0.35
+	# Default: 130.0
+	# Range: 1.0 ~ 360.0
+	hostile_vision_cone_degrees = 130.0
+	# Default: 3.0
+	# Range: 0.0 ~ 64.0
+	close_range_awareness_blocks = 3.0
+	# Default: 1.35
+	# Range: 1.0 ~ 100.0
+	stealth_strike_damage_multiplier = 1.35
+	# Default: 1.75
+	# Range: 1.0 ~ 100.0
+	dagger_stealth_strike_damage_multiplier = 1.75
+	# Default: 1.5
+	# Range: 1.0 ~ 100.0
+	stealth_strike_posture_multiplier = 1.5
