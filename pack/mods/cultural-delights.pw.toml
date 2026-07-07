@@ -3,11 +3,11 @@ filename = "culturaldelights-0.17.8.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/YttyNOFA/versions/yNIrDVfJ/culturaldelights-0.17.8.jar"
-hash-format = "sha512"
-hash = "661a98c822daf15e50267395f41dcb45d1730b6834ee1accb9a67cb37371a4aee5d71606d03891bb17fb6e88940fa2eaf39f2b01a73d4cdd23038ebb76b97f33"
+hash-format = "sha1"
+hash = "b3ad3bb769e4d35f13b3e1efec87aeb30222da15"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "YttyNOFA"
-version = "yNIrDVfJ"
+[update.curseforge]
+file-id = 8126191
+project-id = 574622
