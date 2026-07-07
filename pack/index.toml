@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -50,7 +50,7 @@ hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "88fb2e5460e3eb4c2782115d98e3e3534dcda4cfa5efe8c760f662b15bf0784b"
+hash = "2ffef1ae924ed764ef46863579235a01fb807e548074b27102d42818baac017d"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
@@ -98,7 +98,7 @@ hash = "d83c766d816df9c3f1364085890cf3c97f1d358a4f7dad716dd3e958b019dd18"
 
 [[files]]
 file = "kubejs/data/neoforge/loot_modifiers/global_loot_modifiers.json"
-hash = "1b96ce219de192551cc355e76a409f8b6ac4374c27ecd38ebb9e3b432ef81c72"
+hash = "9f8bec808b360d9e55e36ec5ec2749ec2f702d2161f74c728d5a10337279ba4b"
 
 [[files]]
 file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_frequently_spawns.json"
@@ -118,7 +118,7 @@ hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
 
 [[files]]
 file = "kubejs/server_scripts/remove_direct_equipment_recipes.js"
-hash = "64ca6ba905b80e96dcf9ce0a20cb8d92b619a305b814478d130be626af48d16a"
+hash = "a83b339bc6f7fbac7788f334eef049a45ad1763b5ad0c80806566e8f351de1c4"
 
 [[files]]
 file = "mods/accessories.pw.toml"
