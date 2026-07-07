@@ -1614,6 +1614,21 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "simplehats": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "accessories": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because simplehats requires it."
+    },
+    "owo": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because simplehats requires it."
     }
   },
   "configFiles": [],
