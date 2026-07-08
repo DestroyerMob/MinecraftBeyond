@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -63,6 +63,10 @@ hash = "c378801fb3fc1511abaf476d33e512f235fd0d78e9328feac54be8eca032b450"
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
 hash = "0262363b88601eaa43404baf17aed36277d7de6ac7073efaea2e8b3f7abe2066"
+
+[[files]]
+file = "config/modqualitypicker/presets/new_profile.json"
+hash = "4cd1e2e92d8946c1b6a9e416af2f73b9b7541baf6e762468d0a283adfc044947"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -823,6 +827,11 @@ metafile = true
 [[files]]
 file = "mods/max-health-fix.pw.toml"
 hash = "70db2eec093dadc990fe5862f9c3fe59a0d0de53542872eaccb5dc7f54be5fb1"
+metafile = true
+
+[[files]]
+file = "mods/mmmmmmmmmmmm.pw.toml"
+hash = "2fb7e655ff6cd74cf4d97ce3cdb14c606e015ae3c59fa0a970deaddd990b6a80"
 metafile = true
 
 [[files]]
