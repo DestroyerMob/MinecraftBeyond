@@ -955,6 +955,11 @@
       "locked": false,
       "reason": ""
     },
+    "devtools": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mobstoolforging": {
       "enabled": true,
       "locked": false,

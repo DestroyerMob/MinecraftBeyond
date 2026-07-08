@@ -6,6 +6,7 @@
 # Local source checkouts and built mod jars.
 /local-mods/
 /mod-sources/
+/punchy-blockbench-rig/
 /tools/dev-env.local.json
 *.jar
 /pack/mods/*.jar

@@ -101,6 +101,20 @@
       "notes": "NeoForge 21.1.234, early scaffold"
     },
     {
+      "name": "Dev Tools",
+      "repository": "https://github.com/DestroyerMob/DevTools.git",
+      "branch": "main",
+      "sourceFolder": "DevTools",
+      "modId": "devtools",
+      "jarGlob": "devtools-*.jar",
+      "pack": {
+        "metafile": "mods/devtools.pw.toml",
+        "filename": "devtools-local.jar",
+        "side": "both"
+      },
+      "notes": "NeoForge 21.1.234. Shared home for pack development tools and third-party mod testing helpers."
+    },
+    {
       "name": "Axiom Survival",
       "repository": "https://github.com/DestroyerMob/AxiomSurvival.git",
       "branch": "main",

@@ -1146,7 +1146,7 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
             (
                 jar
                 for jar in libs_dir.glob(mod["jarGlob"])
-                if not re.search(r"(sources|javadoc|dev|plain)", jar.name)
+                if not re.search(r"-(sources|javadoc|dev|plain)(?:-[^/]+)?\.jar$", jar.name)
             ),
             key=lambda path: path.stat().st_mtime,
             reverse=True,

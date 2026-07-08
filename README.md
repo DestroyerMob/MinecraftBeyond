@@ -112,6 +112,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early scaffold for per-world quality/mod/config profiles. |
+| Dev Tools | `DestroyerMob/DevTools` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Shared home for pack development tools and third-party mod testing helpers. |
 | Axiom Survival | `DestroyerMob/AxiomSurvival` | `main` | Fabric 1.21.1 add-on for Axiom. Survival capture hooks are enabled by pack config. |
 
 ## Mod Integrations

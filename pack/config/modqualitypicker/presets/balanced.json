@@ -1395,6 +1395,11 @@
       "locked": false,
       "reason": "Required by an enabled mod."
     },
+    "devtools": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mobstoolforging": {
       "enabled": true,
       "locked": false,
