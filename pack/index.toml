@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -66,7 +66,7 @@ hash = "0262363b88601eaa43404baf17aed36277d7de6ac7073efaea2e8b3f7abe2066"
 
 [[files]]
 file = "config/modqualitypicker/presets/new_profile.json"
-hash = "fe337f39924330f53227f8f28917e30dbc4cfbfa374f592e7d8abe639f9dc472"
+hash = "4cd1e2e92d8946c1b6a9e416af2f73b9b7541baf6e762468d0a283adfc044947"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -103,6 +103,10 @@ hash = "d83c766d816df9c3f1364085890cf3c97f1d358a4f7dad716dd3e958b019dd18"
 [[files]]
 file = "kubejs/data/neoforge/loot_modifiers/global_loot_modifiers.json"
 hash = "9f8bec808b360d9e55e36ec5ec2749ec2f702d2161f74c728d5a10337279ba4b"
+
+[[files]]
+file = "kubejs/data/neoforge/tags/block/relocation_not_supported.json"
+hash = "54684b805b137d0297e53cd896b768961a8aaceabcd84698aa053c3e83b93fa7"
 
 [[files]]
 file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_frequently_spawns.json"
@@ -345,6 +349,11 @@ hash = "9920b3cadb064073516f8d678e09c0d13a146bc3058725d036323852e5e18f15"
 metafile = true
 
 [[files]]
+file = "mods/controlify.pw.toml"
+hash = "c929c3b0a8742b974f6f47cf19310aeb605c874466e527ef8ab9f344ebcfa1c4"
+metafile = true
+
+[[files]]
 file = "mods/controllable.pw.toml"
 hash = "44253d33ea5dc68f091c810ee5b4d7371dccc87c1f390e3a2325105e56bfb8f7"
 metafile = true
@@ -442,6 +451,11 @@ metafile = true
 [[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "e2a3aca8101a179153b92e99000a10d06e4b5d285d358fbe457a53690d12dab5"
+metafile = true
+
+[[files]]
+file = "mods/easy-name-tags-rename-nametags.pw.toml"
+hash = "270985ca5385e15aa12e83f0c43a216878d2628d841c954f8067a4d0cd91dc3f"
 metafile = true
 
 [[files]]
