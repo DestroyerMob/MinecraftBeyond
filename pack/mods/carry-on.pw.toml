@@ -1,0 +1,13 @@
+name = "Carry On"
+filename = "carryon-neoforge-1.21.1-2.2.5.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "198182d51b788ce262b922537edeeddf27c5353d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8383188
+project-id = 274259
