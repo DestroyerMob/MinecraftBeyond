@@ -17,7 +17,7 @@ Current target:
 - **Progression:** Mobs Tool Forging replaces direct equipment recipes with physical knapping, pattern making, heating, forging, lapidary work, leatherworking, modular assembly, and repair.
 - **Combat and equipment:** MoreWeapons supplies additional weapon families, Mobs Combat adds posture/guard/parry/stealth/dual-wield systems, and Better Enchanting makes enchantment selection essence- and tag-driven.
 - **Living world:** Ecology remains an experimental future pillar for advanced apiculture and settlement systems. It is disabled by the recommended Balanced preset because of its performance cost, while the player-facing quality menu exposes Light and Full opt-in modes. Worldgen, structure, creature, farming, food, and furniture mods broaden exploration and everyday survival in the meantime.
-- **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, sculk experience tools, and small magical discoveries. Axiom Survival provides an experimental survival-cost boundary around Axiom edits.
+- **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, sculk experience tools, and small magical discoveries.
 - **Presentation and scalability:** shader, sound, animation, UI, controller, map, performance, and quality-profile tooling let the same pack target different machines and play styles.
 
 This is an internal playtesting pack rather than a finished public release. Local mod balance, art, compatibility, and distribution packaging are still evolving.
@@ -127,14 +127,12 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |
 | Dev Tools | `DestroyerMob/DevTools` | `main` | Pack-only testing helpers: Lootr chest placement/retargeting/rerolling and opt-in final/raw damage diagnostics. |
-| Axiom Survival | `DestroyerMob/AxiomSurvival` | `main` | Fabric Axiom add-on, loaded here through Sinytra Connector, that validates survival materials and tools before applying captured block edits. |
 
 ## Mod Integrations
 
 - Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
 - MoreWeapons owns bridge data for its Mobs Tool Forging weapon parts and Better Enchanting routes, while Mobs Combat recognizes the shared weapon tags and coordinates dual-wield visuals with Punchy.
 - Mobs Tool Forging converts compatible loot equipment after Apotheosis affixes are applied, and the pack removes direct vanilla armour and MoreWeapons recipes so the physical equipment loop remains authoritative.
-- Axiom Survival captures Axiom block edits when `enableAxiomVanillaEditCapture` is enabled before launch, validates material/tool costs, then either applies the validated edit or rejects it without consuming resources.
 - Dev Tools is a development dependency only; its Lootr and damage diagnostics are intended for pack testing, not normal progression.
 - Ecology's player-facing bee systems are documented in [docs/ECOLOGY_BEE_GUIDE.md](docs/ECOLOGY_BEE_GUIDE.md).
 - Ecology's village systems are documented in [docs/ECOLOGY_VILLAGE_GUIDE.md](docs/ECOLOGY_VILLAGE_GUIDE.md).

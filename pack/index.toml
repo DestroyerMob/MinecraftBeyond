@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/axiom-survival.json"
-hash = "3810aed8f179f3c1cdf7b5d9fe911db71f6d457f42aeb2a203901218ec5dac76"
-
-[[files]]
 file = "config/better-advanced-tooltips-client.toml"
 hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
 
@@ -34,7 +30,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
+hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -70,7 +66,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "7dc8cabad9fb65a1b46f3a8858dfd2fb7de0013f70d98817370e4ece72511df4"
+hash = "6150c2157aa4b00800acb78cdfd59bc1227f79c344321a793d872f6fccb018d6"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -212,11 +208,6 @@ hash = "6ffd3974dac599c325533619265b6d222e3243f7cd9507d78ac2ae00162498d6"
 metafile = true
 
 [[files]]
-file = "mods/axiom.pw.toml"
-hash = "a70bd4878fa5be176d0a25ff3e2e2db3ae65d23ae926f84e95567eb3a66833a8"
-metafile = true
-
-[[files]]
 file = "mods/badoptimizations.pw.toml"
 hash = "e2f2a6f6ff38054ce8d91a43a20b79ea7b4e84cb924142fb7d2bcfdd95fe5b57"
 metafile = true
@@ -304,11 +295,6 @@ metafile = true
 [[files]]
 file = "mods/chunky-pregenerator-forge.pw.toml"
 hash = "7be63eaec6a70605f2f21cc30f0889fb27978c2e2fe62ee4584210502289e77d"
-metafile = true
-
-[[files]]
-file = "mods/chunky.pw.toml"
-hash = "1d5cc2b6dcfd1fc3adba4566b1c29b57ff1175316678c1f22e63cbc3e28a5ba0"
 metafile = true
 
 [[files]]
@@ -872,11 +858,6 @@ hash = "983f834edf2911324a9db31af66c139c10b49e20a5ca11ed3517169d92a4d9ec"
 metafile = true
 
 [[files]]
-file = "mods/more-delight.pw.toml"
-hash = "7b00b0ef46a798a4a46fe541314c63cfd62017190cd554e855cc21ef44e32635"
-metafile = true
-
-[[files]]
 file = "mods/moreculling.pw.toml"
 hash = "d126f045e2cc43c9142ea4bcb2acec1917351fc6416eb71bf0bc8d32f7bfe69f"
 metafile = true
@@ -1098,7 +1079,7 @@ metafile = true
 
 [[files]]
 file = "mods/terrablender.pw.toml"
-hash = "15962183bec2468058c70e87aa32e902a08489b0f86741088cdc9aa958ba4931"
+hash = "b8d0cf3ae2de762dd2c6c6bd64e7537d7e0c0ee8edd86b17e45dc0f935d1e804"
 metafile = true
 
 [[files]]

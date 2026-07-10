@@ -1,8 +1,0 @@
-name = "Axiom"
-filename = "Axiom-5.4.2-for-MC1.21.1.jar"
-side = "client"
-
-[download]
-url = "https://cdn.modrinth.com/data/N6n5dqoA/versions/BzK22yyR/Axiom-5.4.2-for-MC1.21.1.jar"
-hash-format = "sha256"
-hash = "ecb14b29e7eb4cdc5c1f299782d32a2c26202292a8a9b4060a9104526e6d7267"

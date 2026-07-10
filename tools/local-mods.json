@@ -113,20 +113,6 @@
         "side": "both"
       },
       "notes": "NeoForge 21.1.234. Shared home for pack development tools and third-party mod testing helpers."
-    },
-    {
-      "name": "Axiom Survival",
-      "repository": "https://github.com/DestroyerMob/AxiomSurvival.git",
-      "branch": "main",
-      "sourceFolder": "AxiomSurvival",
-      "modId": "axiomsurvival",
-      "jarGlob": "axiomsurvival-*.jar",
-      "pack": {
-        "metafile": "mods/axiomsurvival.pw.toml",
-        "filename": "axiomsurvival-local.jar",
-        "side": "client"
-      },
-      "notes": "Fabric 1.21.1 add-on for Axiom; the pack config enables survival capture hooks."
     }
   ]
 }
