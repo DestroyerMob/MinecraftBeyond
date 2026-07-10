@@ -1,10 +1,15 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "max",
-  "displayName": "MAX",
+  "displayName": "Max",
   "sortOrder": 20,
-  "description": "Full current Minecraft Beyond mod list; use as the max/extreme baseline.",
+  "description": "Maximum presentation profile for high-end systems, including the experimental full Ecology simulation and combined world generation.",
   "mods": {
+    "accessories": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "advancementplaques": {
       "enabled": true,
       "locked": false,
@@ -24,6 +29,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "alternate_current": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "ambientsounds": {
       "enabled": true,
@@ -90,6 +100,11 @@
       "locked": false,
       "reason": ""
     },
+    "badoptimizations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "baguettelib": {
       "enabled": true,
       "locked": false,
@@ -126,11 +141,6 @@
       "reason": ""
     },
     "bettercaves": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "bettercombat": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -205,6 +215,11 @@
       "locked": false,
       "reason": ""
     },
+    "brewinandchewin": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "bridgingmod": {
       "enabled": true,
       "locked": false,
@@ -245,6 +260,11 @@
       "locked": false,
       "reason": ""
     },
+    "chunky": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "cleanswing": {
       "enabled": true,
       "locked": false,
@@ -270,10 +290,60 @@
       "locked": false,
       "reason": ""
     },
+    "com_fasterxml_jackson_core_jackson-annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_core_jackson-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_core_jackson-databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_core_jackson_annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_core_jackson_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_core_jackson_databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_dataformat_jackson-dataformat-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_fasterxml_jackson_dataformat_jackson_dataformat_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_github_llamalad7_mixinextras": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "com_moulberry_axiomclientapi": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "com_moulberry_mixinconstraints": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "comforts": {
       "enabled": true,
@@ -315,6 +385,11 @@
       "locked": false,
       "reason": ""
     },
+    "controlify": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "controlling": {
       "enabled": true,
       "locked": false,
@@ -350,6 +425,11 @@
       "locked": false,
       "reason": ""
     },
+    "crabbersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
@@ -370,12 +450,57 @@
       "locked": false,
       "reason": ""
     },
+    "culturaldelights": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "cupboard": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "curios": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "delightlib": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame-compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame-groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame_compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "dev_lukebemish_opensesame_opensesame_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "devtools": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -395,10 +520,25 @@
       "locked": false,
       "reason": ""
     },
+    "dummmmmmy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "durabilitytooltip": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "dynamic_fps": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "easynametags": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "eatinganimation": {
       "enabled": true,
@@ -408,7 +548,7 @@
     "ecology": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "Full Ecology simulation is selected by the Max preset."
     },
     "elytraslot": {
       "enabled": true,
@@ -435,6 +575,16 @@
       "locked": false,
       "reason": ""
     },
+    "ends_delight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "entityculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
@@ -444,6 +594,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "expandeddelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "exposure": {
       "enabled": true,
@@ -785,6 +940,26 @@
       "locked": false,
       "reason": ""
     },
+    "greenhouseconfig": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "greenhouseconfig_night_config": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "greenhouseconfig_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "groovybundler": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "guardvillagers": {
       "enabled": true,
       "locked": false,
@@ -814,6 +989,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "immediatelyfast": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "immersiveui": {
       "enabled": true,
@@ -874,6 +1054,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "ksyxis": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "kubejs": {
       "enabled": true,
@@ -945,17 +1130,17 @@
       "locked": false,
       "reason": ""
     },
+    "mixinextras": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "mobscombat": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "mobsmoreweapons": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "devtools": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -985,10 +1170,30 @@
       "locked": false,
       "reason": ""
     },
+    "moreculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "moredelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "mousetweaks": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "mr_farmers_cuttingregionsunexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "mynethersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "naturalist": {
       "enabled": true,
@@ -1010,15 +1215,155 @@
       "locked": false,
       "reason": ""
     },
+    "noisium": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "oceansdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "octolib": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
+    "org_apache_groovy_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-macro-library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy-xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_macro_library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "org_apache_groovy_groovy_xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "overflowingbars": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "owo": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "particle_core": {
       "enabled": true,
@@ -1085,6 +1430,11 @@
       "locked": false,
       "reason": ""
     },
+    "regions_unexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "resourcefullib": {
       "enabled": true,
       "locked": false,
@@ -1104,6 +1454,16 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "servercore": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "simplehats": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "sodium": {
       "enabled": true,
@@ -1129,6 +1489,16 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "spark": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "spawn": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "spectrelib": {
       "enabled": true,
@@ -1165,11 +1535,6 @@
       "locked": false,
       "reason": ""
     },
-    "tiny_config": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "tipsmod": {
       "enabled": true,
       "locked": false,
@@ -1190,10 +1555,20 @@
       "locked": false,
       "reason": ""
     },
+    "transition": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "trashslot": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "trender": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "villagernames": {
       "enabled": true,
@@ -1277,5 +1652,9 @@
     }
   },
   "configFiles": [],
-  "options": {}
+  "options": {},
+  "featureChoices": {
+    "ecology": "max",
+    "world_generation": "combined"
+  }
 }

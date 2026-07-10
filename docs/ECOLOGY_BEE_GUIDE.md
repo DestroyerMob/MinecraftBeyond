@@ -4,7 +4,7 @@ This guide explains how the Ecology bee systems work in Minecraft Beyond. It is 
 
 Ecology turns bees from a mostly vanilla mob into a colony system. A hive is not just a block with a few bees inside it: it can have a queen, workers, drones, traits, health, lineage, forage needs, swarming pressure, and beekeeper treatments. The important thing is that the player tools are meant to translate that complexity into understandable goals.
 
-In Minecraft Beyond, Ecology is configured with `FULL_SIMULATION`. That means the full bee system is enabled: colony ticking, custom bee roles, worker routes, mating, queen migration, hive health, traits, relocation items, swarming, and pollination bonuses.
+Ecology is disabled by the recommended Balanced quality preset because its simulation cost is high. The Pack Quality screen exposes experimental Light and Full choices, and Max defaults to Full. Full mode includes colony ticking, custom bee roles, worker routes, mating, queen migration, hive health, traits, relocation items, swarming, and pollination bonuses.
 
 ## The Short Version
 

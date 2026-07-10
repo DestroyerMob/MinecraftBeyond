@@ -257,7 +257,7 @@ Typical local mod change:
 ```bash
 git -C "$MINECRAFT_MOD_SOURCE_ROOT/MoreWeapons" status --short
 git -C "$MINECRAFT_MOD_SOURCE_ROOT/MoreWeapons" add src/main/resources
-git -C "$MINECRAFT_MOD_SOURCE_ROOT/MoreWeapons" commit -m "Add Better Combat battle axe profile"
+git -C "$MINECRAFT_MOD_SOURCE_ROOT/MoreWeapons" commit -m "Add Punchy battle axe animation profile"
 git -C "$MINECRAFT_MOD_SOURCE_ROOT/MoreWeapons" push origin 1.21.1-neoforge
 ```
 

@@ -1,10 +1,15 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "balanced",
-  "displayName": "balanced",
-  "sortOrder": 30,
-  "description": "Captured from the currently loaded mod list.",
+  "displayName": "Balanced",
+  "sortOrder": 10,
+  "description": "Recommended Minecraft Beyond profile with optional heavy systems disabled for stable everyday play.",
   "mods": {
+    "accessories": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because simplehats requires it."
+    },
     "advancementplaques": {
       "enabled": true,
       "locked": false,
@@ -24,6 +29,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "alternate_current": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
     },
     "ambientsounds": {
       "enabled": true,
@@ -80,6 +90,21 @@
       "locked": false,
       "reason": ""
     },
+    "axiom": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
+    "axiomsurvival": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
+    "badoptimizations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
     "baguettelib": {
       "enabled": true,
       "locked": false,
@@ -115,10 +140,20 @@
       "locked": false,
       "reason": ""
     },
-    "bettercombat": {
-      "enabled": false,
+    "bettercaves": {
+      "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "YUNG Better Caves should be active in balanced."
+    },
+    "betterdeserttemples": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Desert Temples should be active in balanced."
+    },
+    "betterdungeons": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Dungeons should be active in balanced."
     },
     "betterenchanting": {
       "enabled": true,
@@ -129,6 +164,36 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "betterfortresses": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Nether Fortresses should be active in balanced."
+    },
+    "betterjungletemples": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Jungle Temples should be active in balanced."
+    },
+    "bettermineshafts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Mineshafts should be active in balanced."
+    },
+    "betteroceanmonuments": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Ocean Monuments should be active in balanced."
+    },
+    "betterstrongholds": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Strongholds should be active in balanced."
+    },
+    "betterwitchhuts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG Better Witch Huts should be active in balanced."
     },
     "biolith": {
       "enabled": true,
@@ -149,6 +214,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "brewinandchewin": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
     },
     "bridgingmod": {
       "enabled": true,
@@ -190,6 +260,11 @@
       "locked": false,
       "reason": ""
     },
+    "chunky": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "cleanswing": {
       "enabled": true,
       "locked": false,
@@ -214,6 +289,61 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "com_fasterxml_jackson_core_jackson-annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson-databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_annotations": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_core_jackson_databind": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_dataformat_jackson-dataformat-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_fasterxml_jackson_dataformat_jackson_dataformat_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "com_github_llamalad7_mixinextras": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
+    "com_moulberry_axiomclientapi": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
+    "com_moulberry_mixinconstraints": {
+      "enabled": false,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "comforts": {
       "enabled": true,
@@ -255,10 +385,10 @@
       "locked": false,
       "reason": ""
     },
-    "controllable": {
+    "controlify": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "Detected from the installed mod catalog."
     },
     "controlling": {
       "enabled": true,
@@ -295,6 +425,11 @@
       "locked": false,
       "reason": ""
     },
+    "crabbersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
@@ -315,12 +450,57 @@
       "locked": false,
       "reason": ""
     },
+    "culturaldelights": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
     "cupboard": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "curios": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "delightlib": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by enabled Delight add-ons."
+    },
+    "dev_lukebemish_opensesame_opensesame-compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame-core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame-groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame_compile": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame_core": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "dev_lukebemish_opensesame_opensesame_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "devtools": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -340,15 +520,35 @@
       "locked": false,
       "reason": ""
     },
+    "dummmmmmy": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "durabilitytooltip": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
+    "dynamic_fps": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "easynametags": {
+      "enabled": false,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "eatinganimation": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "ecology": {
+      "enabled": false,
+      "locked": true,
+      "reason": "Disabled until Ecology's performance cost is fixed."
     },
     "elytraslot": {
       "enabled": true,
@@ -375,6 +575,16 @@
       "locked": false,
       "reason": ""
     },
+    "ends_delight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
+    "entityculling": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
@@ -384,6 +594,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "expandeddelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
     },
     "exposure": {
       "enabled": true,
@@ -725,6 +940,26 @@
       "locked": false,
       "reason": ""
     },
+    "greenhouseconfig": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Brewin\u2019 and Chewin\u2019."
+    },
+    "greenhouseconfig_night_config": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Greenhouse Config."
+    },
+    "greenhouseconfig_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Bundled dependency required by Greenhouse Config."
+    },
+    "groovybundler": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
     "guardvillagers": {
       "enabled": true,
       "locked": false,
@@ -754,6 +989,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "immediatelyfast": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
     },
     "immersiveui": {
       "enabled": true,
@@ -815,6 +1055,11 @@
       "locked": false,
       "reason": ""
     },
+    "ksyxis": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
     "kubejs": {
       "enabled": true,
       "locked": false,
@@ -824,6 +1069,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "lattice": {
+      "enabled": false,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
     },
     "letsdocompat": {
       "enabled": true,
@@ -855,6 +1105,11 @@
       "locked": false,
       "reason": ""
     },
+    "lootintegrations_yungs": {
+      "enabled": true,
+      "locked": false,
+      "reason": "YUNG loot integration should be active in balanced."
+    },
     "lootr": {
       "enabled": true,
       "locked": false,
@@ -875,12 +1130,22 @@
       "locked": false,
       "reason": ""
     },
+    "mixinextras": {
+      "enabled": false,
+      "locked": false,
+      "reason": "Detected from the installed mod catalog."
+    },
     "mobscombat": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
     "mobsmoreweapons": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "mobstoolforging": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -910,10 +1175,25 @@
       "locked": false,
       "reason": ""
     },
+    "moredelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
     "mousetweaks": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "mr_farmers_cuttingregionsunexplored": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Cutting compatibility should be active in balanced."
+    },
+    "mynethersdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
     },
     "naturalist": {
       "enabled": true,
@@ -935,15 +1215,155 @@
       "locked": false,
       "reason": ""
     },
+    "noisium": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "oceansdelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Farmer\u2019s Delight add-on should be active in balanced."
+    },
     "octolib": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
+    "org_apache_groovy_groovy": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-macro-library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy-xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_contracts": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_datetime": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_dateutil": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_ginq": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_json": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_macro": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_macro_library": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_nio": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_templates": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_toml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_typecheckers": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
+    "org_apache_groovy_groovy_xml": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
+    },
     "overflowingbars": {
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "owo": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because simplehats requires it."
     },
     "particle_core": {
       "enabled": true,
@@ -1035,6 +1455,16 @@
       "locked": false,
       "reason": ""
     },
+    "servercore": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance mod should be active in balanced."
+    },
+    "simplehats": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "sodium": {
       "enabled": true,
       "locked": false,
@@ -1056,6 +1486,16 @@
       "reason": ""
     },
     "sound_physics_remastered": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "spark": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Performance/profiling mod should be active in balanced."
+    },
+    "spawn": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1095,11 +1535,6 @@
       "locked": false,
       "reason": ""
     },
-    "tiny_config": {
-      "enabled": false,
-      "locked": false,
-      "reason": "Bundled inside Better Combat; disabled with Better Combat in balanced."
-    },
     "tipsmod": {
       "enabled": true,
       "locked": false,
@@ -1115,12 +1550,12 @@
       "locked": false,
       "reason": ""
     },
-    "transition": {
+    "tooltipoverhaul": {
       "enabled": true,
       "locked": false,
       "reason": ""
     },
-    "tooltipoverhaul": {
+    "transition": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -1195,281 +1630,6 @@
       "locked": false,
       "reason": ""
     },
-    "dev_lukebemish_opensesame_opensesame_core": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-typecheckers": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson_annotations": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_dateutil": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-nio": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson-core": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_macro": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_datetime": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson_core": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-ginq": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-xml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_contracts": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-dateutil": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_macro_library": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_ginq": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_nio": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "dev_lukebemish_opensesame_opensesame_compile": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-datetime": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_dataformat_jackson_dataformat_toml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-macro": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-toml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_xml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-json": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "dev_lukebemish_opensesame_opensesame-compile": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_dataformat_jackson-dataformat-toml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson_databind": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-templates": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_toml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "groovybundler": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_json": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson-annotations": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-macro-library": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "com_fasterxml_jackson_core_jackson-databind": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_typecheckers": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "dev_lukebemish_opensesame_opensesame_groovy": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "dev_lukebemish_opensesame_opensesame-core": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy_templates": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "org_apache_groovy_groovy-contracts": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "dev_lukebemish_opensesame_opensesame-groovy": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by an enabled mod."
-    },
-    "devtools": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "mobstoolforging": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "ecology": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "axiom": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "axiomsurvival": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "com_moulberry_axiomclientapi": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
-    "bettercaves": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Caves should be active in balanced."
-    },
-    "betterdeserttemples": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Desert Temples should be active in balanced."
-    },
-    "betterdungeons": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Dungeons should be active in balanced."
-    },
-    "betterjungletemples": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Jungle Temples should be active in balanced."
-    },
-    "bettermineshafts": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Mineshafts should be active in balanced."
-    },
-    "betterfortresses": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Nether Fortresses should be active in balanced."
-    },
-    "betteroceanmonuments": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Ocean Monuments should be active in balanced."
-    },
-    "betterstrongholds": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Strongholds should be active in balanced."
-    },
-    "betterwitchhuts": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG Better Witch Huts should be active in balanced."
-    },
     "yungsapi": {
       "enabled": true,
       "locked": false,
@@ -1489,158 +1649,12 @@
       "enabled": true,
       "locked": false,
       "reason": "YUNG Extras should be active in balanced."
-    },
-    "lootintegrations_yungs": {
-      "enabled": true,
-      "locked": false,
-      "reason": "YUNG loot integration should be active in balanced."
-    },
-    "brewinandchewin": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "crabbersdelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "culturaldelights": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "delightlib": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required by enabled Delight add-ons."
-    },
-    "ends_delight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "expandeddelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "moredelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "mynethersdelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "oceansdelight": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Delight add-on should be active in balanced."
-    },
-    "mr_farmers_cuttingregionsunexplored": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Farmer’s Cutting compatibility should be active in balanced."
-    },
-    "alternate_current": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "badoptimizations": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "dynamic_fps": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "entityculling": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "immediatelyfast": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "ksyxis": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "noisium": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "servercore": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance mod should be active in balanced."
-    },
-    "spark": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Performance/profiling mod should be active in balanced."
-    },
-    "greenhouseconfig": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Bundled dependency required by Brewin’ and Chewin’."
-    },
-    "greenhouseconfig_night_config": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Bundled dependency required by Greenhouse Config."
-    },
-    "greenhouseconfig_toml": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Bundled dependency required by Greenhouse Config."
-    },
-    "spawn": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "chunky": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "farmers_cutting_regions_unexplored_1_21_1_1_1b_neoforge": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "simplehats": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "accessories": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required because simplehats requires it."
-    },
-    "owo": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Required because simplehats requires it."
-    },
-    "dummmmmmy": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
     }
   },
   "configFiles": [],
-  "options": {}
+  "options": {},
+  "featureChoices": {
+    "ecology": "off",
+    "world_generation": "vanilla"
+  }
 }

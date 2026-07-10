@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "groups": {
+    "ecology": {
+      "id": "ecology",
+      "displayName": "Ecology Simulation",
+      "description": "Controls the optional Ecology simulation. Full simulation is intentionally marked experimental because it is performance-heavy.",
+      "sortOrder": 10,
+      "scope": "WORLD",
+      "playerAdjustable": true,
+      "defaultChoice": "off",
+      "choices": {
+        "off": {
+          "id": "off",
+          "displayName": "Off",
+          "description": "Disables Ecology for the best performance.",
+          "mods": {
+            "ecology": {
+              "enabled": false,
+              "locked": true,
+              "reason": "Ecology is disabled by this feature choice."
+            }
+          },
+          "configFiles": [],
+          "applyRequirement": "RESTART",
+          "experimental": false
+        },
+        "light": {
+          "id": "light",
+          "displayName": "Light",
+          "description": "Enables Ecology's lighter colony systems without the full simulation workload.",
+          "mods": {
+            "ecology": {
+              "enabled": true,
+              "locked": false,
+              "reason": "Ecology light simulation is selected."
+            }
+          },
+          "configFiles": [
+            {
+              "path": "config/ecology-common.toml",
+              "mode": "MERGE_TOML",
+              "presetFile": "features/ecology/light/ecology-common.toml",
+              "sha256": ""
+            }
+          ],
+          "applyRequirement": "RESTART",
+          "experimental": true
+        },
+        "max": {
+          "id": "max",
+          "displayName": "Full",
+          "description": "Enables Ecology's complete simulation. This has a substantial performance cost.",
+          "mods": {
+            "ecology": {
+              "enabled": true,
+              "locked": false,
+              "reason": "Ecology full simulation is selected."
+            }
+          },
+          "configFiles": [
+            {
+              "path": "config/ecology-common.toml",
+              "mode": "MERGE_TOML",
+              "presetFile": "features/ecology/max/ecology-common.toml",
+              "sha256": ""
+            }
+          ],
+          "applyRequirement": "RESTART",
+          "experimental": true
+        }
+      }
+    },
+    "world_generation": {
+      "id": "world_generation",
+      "displayName": "World Generation",
+      "description": "Selects the developer-supported terrain mod set. Change this before creating a world; changing it for an existing world can create terrain seams.",
+      "sortOrder": 20,
+      "scope": "WORLDGEN",
+      "playerAdjustable": true,
+      "defaultChoice": "vanilla",
+      "choices": {
+        "vanilla": {
+          "id": "vanilla",
+          "displayName": "Vanilla",
+          "description": "Uses the pack's base world generation without Terralith or Tectonic.",
+          "mods": {
+            "terralith": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected." },
+            "tectonic": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected." }
+          },
+          "configFiles": [],
+          "applyRequirement": "NEW_WORLD",
+          "experimental": false
+        },
+        "terralith": {
+          "id": "terralith",
+          "displayName": "Terralith",
+          "description": "Enables Terralith biomes with vanilla terrain shaping.",
+          "mods": {
+            "terralith": { "enabled": true, "locked": false, "reason": "Terralith world generation is selected." },
+            "tectonic": { "enabled": false, "locked": true, "reason": "Terralith-only world generation is selected." }
+          },
+          "configFiles": [],
+          "applyRequirement": "NEW_WORLD",
+          "experimental": false
+        },
+        "tectonic": {
+          "id": "tectonic",
+          "displayName": "Tectonic",
+          "description": "Enables Tectonic terrain shaping without Terralith biomes.",
+          "mods": {
+            "terralith": { "enabled": false, "locked": true, "reason": "Tectonic-only world generation is selected." },
+            "tectonic": { "enabled": true, "locked": false, "reason": "Tectonic world generation is selected." }
+          },
+          "configFiles": [],
+          "applyRequirement": "NEW_WORLD",
+          "experimental": false
+        },
+        "combined": {
+          "id": "combined",
+          "displayName": "Terralith + Tectonic",
+          "description": "Uses the pack's maximum terrain set: Terralith biomes with Tectonic terrain shaping.",
+          "mods": {
+            "terralith": { "enabled": true, "locked": false, "reason": "Combined world generation is selected." },
+            "tectonic": { "enabled": true, "locked": false, "reason": "Combined world generation is selected." }
+          },
+          "configFiles": [],
+          "applyRequirement": "NEW_WORLD",
+          "experimental": false
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 # Minecraft Beyond
 
-Minecraft Beyond is being set up as a vanilla enhanced Minecraft 1.21.1 modpack for Prism Launcher.
+Minecraft Beyond is an in-development Minecraft 1.21.1 survival modpack for Prism Launcher. It keeps the vanilla adventure loop recognizable while adding deeper toolmaking, deterministic enchanting, posture-driven combat, village and bee simulation, exploration, food, building, and presentation upgrades.
+
+The pack is also the integration environment for nine local projects. Those mods are developed in separate repositories, built into this instance for playtesting, and connected here through configs, tags, loot data, recipes, compatibility data, and Mod Quality Picker profiles.
 
 Current target:
 
@@ -10,13 +12,24 @@ Current target:
 - Launcher: Prism Launcher
 - Local Java: 21
 
+## Pack Direction
+
+- **Progression:** Mobs Tool Forging replaces direct equipment recipes with physical knapping, pattern making, heating, forging, lapidary work, leatherworking, modular assembly, and repair.
+- **Combat and equipment:** MoreWeapons supplies additional weapon families, Mobs Combat adds posture/guard/parry/stealth/dual-wield systems, and Better Enchanting makes enchantment selection essence- and tag-driven.
+- **Living world:** Ecology remains an experimental future pillar for advanced apiculture and settlement systems. It is disabled by the recommended Balanced preset because of its performance cost, while the player-facing quality menu exposes Light and Full opt-in modes. Worldgen, structure, creature, farming, food, and furniture mods broaden exploration and everyday survival in the meantime.
+- **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, sculk experience tools, and small magical discoveries. Axiom Survival provides an experimental survival-cost boundary around Axiom edits.
+- **Presentation and scalability:** shader, sound, animation, UI, controller, map, performance, and quality-profile tooling let the same pack target different machines and play styles.
+
+This is an internal playtesting pack rather than a finished public release. Local mod balance, art, compatibility, and distribution packaging are still evolving.
+
 ## Repository Layout
 
 - `pack/` is the packwiz pack root. Third-party mod and shaderpack metadata, configs, KubeJS/data files, default options, and export metadata live there.
 - `minecraft/` is the local Prism game directory. It is intentionally ignored except for `.gitkeep`; generated `minecraft/mods/*-local.jar` files are runtime output.
-- Mod Quality Picker presets are bundled pack data under `pack/config/modqualitypicker/presets/` and indexed by packwiz like quests/configs.
+- Mod Quality Picker presets and composable feature groups are bundled under `pack/config/modqualitypicker/` and indexed by packwiz like quests/configs.
 - `tools/local-mods.json` records unpublished local mods, their expected branches/jar names, and optional release download pins for packwiz metadata.
 - `tools/modpack.py` is the cross-platform workspace command used by macOS, Linux, and Windows.
+- `modqualitypicker-local.jar` is self-contained: the same jar supplies the in-game menu and the Java pre-launch applier used by Prism.
 - `tools/dev-env.example.json` is the template for optional machine-local paths.
 - `scripts/` contains portable wrappers plus the original PowerShell helpers.
 
@@ -80,13 +93,14 @@ Every command supports `--help`.
 | `publish-dirty-repos` | Interactively run `git add .`, commit, and push dirty pack/local mod repos after prompting for each commit message. | `--pack-only`, `--local-mods-only`, `--include-disabled`, `--no-push`, `--dry-run` |
 | `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
 | `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
+| `apply-quality-profile` | Apply the queued or active Mod Quality Picker profile; used by Prism before launch. | `--instance-root`, `--world-id`, `--dry-run`, `--keep-pending` |
 | `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
 | `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
 | `capture-instance` | Import Prism-side mod jars, shaderpack metadata, and Mod Quality Picker presets into `pack/`, then refresh packwiz once. | `--profile`, `--include-quality-defaults`, `--skip-mods`, `--skip-shaderpacks`, `--skip-quality-presets`, `--dry-run` |
 | `import-prism-mods` | Import Prism-downloaded third-party jars through packwiz CurseForge detection, then refresh the index. Local runtime jars are always skipped. | `--prism-mods-dir`, `--pack-dir`, `--packwiz`, `--keep-unmatched-staged-jars`, `--skip-refresh`, `--dry-run` |
 | `import-prism-shaderpacks` | Import Prism shaderpack `.pw.toml` metadata into `pack/shaderpacks/`, warn about unmanaged shader files, then refresh the index. | `--prism-shaderpacks-dir`, `--pack-dir`, `--packwiz`, `--skip-refresh`, `--dry-run` |
-| `sync-quality-presets` | Copy in-instance Mod Quality Picker preset edits into bundled pack metadata, then refresh the index. | `--profile`, `--include-defaults`, `--skip-refresh`, `--dry-run` |
+| `sync-quality-presets` | Copy in-instance Mod Quality Picker presets, feature groups, and feature overlays into bundled pack metadata, then refresh the index. | `--profile`, `--include-defaults`, `--skip-refresh`, `--dry-run` |
 | `update-prism-mods` | Apply `pack/pack.toml` back into the local Prism `minecraft/` folder using packwiz installer, then re-apply the active Mod Quality Picker preset. | `--minecraft-dir`, `--mods-dir`, `--pack-dir`, `--packwiz`, `--java-home`, `--installer`, `--main-jar`, `--bootstrap-url`, `--no-download`, `--port`, `--skip-quality-apply`, `--dry-run` |
 | `update-prism-shaderpacks` | Clearer alias for applying packwiz metadata to Prism when you are thinking about shaderpack changes. | same installer/path options as `update-prism-mods` |
 | `refresh` | Run `packwiz refresh` for the pack. | `--pack-dir`, `--packwiz` |
@@ -105,20 +119,23 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 | Mod | Repo | Branch | Notes |
 | --- | --- | --- | --- |
-| Ecology | `DestroyerMob/ecology` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Requires Villager Names 8.5+, which the pack includes. Advanced bee simulation is config-gated and off by default. |
-| MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Default branch is old Forge 1.20.1; use this branch for the pack. Includes Mobs Tool Forging and Better Enchanting bridge data. |
-| Mobs Combat | `DestroyerMob/MobsCombat` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Compatibility-first posture, shield guard, recovery windows, and data-driven weapon/entity profiles. |
-| Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Includes explicit Apotheosis/Apothic Enchanting support. |
-| Auric | `DestroyerMob/Auric` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early development. |
-| Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. |
-| Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Early scaffold for per-world quality/mod/config profiles. |
-| Dev Tools | `DestroyerMob/DevTools` | `main` | NeoForge 1.21.1, currently aligned with NeoForge 21.1.234. Shared home for pack development tools and third-party mod testing helpers. |
-| Axiom Survival | `DestroyerMob/AxiomSurvival` | `main` | Fabric 1.21.1 add-on for Axiom. Survival capture hooks are enabled by pack config. |
+| Ecology | `DestroyerMob/ecology` | `main` | Opt-in bee-colony simulation plus village ecology, households, supplies, construction crews, markets, currencies, and guard integration. Requires Villager Names 8.5+; disabled in Balanced and exposed as experimental Light/Full quality choices. |
+| MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | Great swords, katanas, battle axes, knives, and machetes with Punchy animation metadata and data bridges for Mobs Tool Forging and Better Enchanting. The default branch is old Forge 1.20.1; use this branch for the pack. |
+| Mobs Combat | `DestroyerMob/MobsCombat` | `main` | Server-authoritative posture, guard, timed block, parry, stealth, recovery, dual-wield, Punchy animation, and Jade/Apotheosis inspection support with data-driven entity and weapon profiles. |
+| Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
+| Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
+| Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
+| Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |
+| Dev Tools | `DestroyerMob/DevTools` | `main` | Pack-only testing helpers: Lootr chest placement/retargeting/rerolling and opt-in final/raw damage diagnostics. |
+| Axiom Survival | `DestroyerMob/AxiomSurvival` | `main` | Fabric Axiom add-on, loaded here through Sinytra Connector, that validates survival materials and tools before applying captured block edits. |
 
 ## Mod Integrations
 
 - Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
-- Axiom Survival stages Axiom edits behind survival inventory costs when `enableAxiomVanillaEditCapture` is enabled before launch.
+- MoreWeapons owns bridge data for its Mobs Tool Forging weapon parts and Better Enchanting routes, while Mobs Combat recognizes the shared weapon tags and coordinates dual-wield visuals with Punchy.
+- Mobs Tool Forging converts compatible loot equipment after Apotheosis affixes are applied, and the pack removes direct vanilla armour and MoreWeapons recipes so the physical equipment loop remains authoritative.
+- Axiom Survival captures Axiom block edits when `enableAxiomVanillaEditCapture` is enabled before launch, validates material/tool costs, then either applies the validated edit or rejects it without consuming resources.
+- Dev Tools is a development dependency only; its Lootr and damage diagnostics are intended for pack testing, not normal progression.
 - Ecology's player-facing bee systems are documented in [docs/ECOLOGY_BEE_GUIDE.md](docs/ECOLOGY_BEE_GUIDE.md).
 - Ecology's village systems are documented in [docs/ECOLOGY_VILLAGE_GUIDE.md](docs/ECOLOGY_VILLAGE_GUIDE.md).
 

@@ -44,8 +44,6 @@ PACKWIZ_INSTALLER_BOOTSTRAP_URL = (
 )
 PACKWIZ_INSTALLER_BOOTSTRAP = TOOLS_DIR / "bin" / "packwiz-installer-bootstrap.jar"
 PACKWIZ_INSTALLER_MAIN = TOOLS_DIR / "bin" / "packwiz-installer.jar"
-PACK_LOCAL_QUALITY_APPLIER = TOOLS_DIR / "modqualitypicker_prism.py"
-PYTHON_COMPAT_DIR = TOOLS_DIR / "python_compat"
 
 
 class ToolError(RuntimeError):
@@ -412,35 +410,15 @@ def resolve_java(dev_env: dict, explicit_home: str | None = None) -> Path | None
     return None
 
 
-def resolve_quality_applier(dev_env: dict) -> Path | None:
-    candidates = [PACK_LOCAL_QUALITY_APPLIER]
-    source_root = setting(
-        None,
-        ("MINECRAFT_MOD_SOURCE_ROOT",),
-        dev_env,
-        "sourceRoot",
-        DEFAULT_SOURCE_ROOT,
-    )
-    if source_root:
-        candidates.append(source_root / "ModQualityPicker" / "tools" / "modqualitypicker_prism.py")
-
-    for candidate in candidates:
-        if candidate.exists():
-            return candidate.resolve()
-    return None
-
-
-def python_compat_environment() -> dict[str, str] | None:
-    if sys.version_info >= (3, 11) or not PYTHON_COMPAT_DIR.exists():
-        return None
-
-    env = os.environ.copy()
-    existing = env.get("PYTHONPATH")
-    paths = [str(PYTHON_COMPAT_DIR)]
-    if existing:
-        paths.append(existing)
-    env["PYTHONPATH"] = os.pathsep.join(paths)
-    return env
+def resolve_quality_jar(minecraft_dir: Path) -> Path | None:
+    mods_dir = minecraft_dir / "mods"
+    candidates = [
+        mods_dir / "modqualitypicker-local.jar",
+        mods_dir / "modqualitypicker-local.jar.disabled",
+    ]
+    candidates.extend(sorted(mods_dir.glob("modqualitypicker*.jar")))
+    candidates.extend(sorted(mods_dir.glob("modqualitypicker*.jar.disabled")))
+    return next((candidate.resolve() for candidate in candidates if candidate.is_file()), None)
 
 
 def quality_pending_profile_path(minecraft_dir: Path) -> Path:
@@ -452,13 +430,14 @@ def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_
         print("Skipping Mod Quality Picker jar state apply.")
         return
 
-    applier = resolve_quality_applier(dev_env)
-    if applier is None:
-        print("WARNING: Mod Quality Picker applier was not found; preset jar state was not re-applied.")
-        print("         Run update-local-mods once the ModQualityPicker source checkout exists, or pass --skip-quality-apply intentionally.")
+    quality_jar = resolve_quality_jar(minecraft_dir)
+    java = resolve_java(dev_env)
+    if quality_jar is None or java is None:
+        print("WARNING: Mod Quality Picker jar or Java was not found; preset jar state was not re-applied.")
+        print("         Sync the ModQualityPicker jar and configure Java, or pass --skip-quality-apply intentionally.")
         return
 
-    command = [sys.executable, applier, "apply", "--instance-root", minecraft_dir]
+    command = [java, "-jar", quality_jar, "apply", "--instance-root", minecraft_dir]
     if dry_run:
         command.append("--dry-run")
 
@@ -467,7 +446,44 @@ def apply_quality_profile_after_sync(dev_env: dict, minecraft_dir: Path, *, dry_
         print("Applying queued Mod Quality Picker profile to synced jars...", flush=True)
     else:
         print("No queued Mod Quality Picker profile found; applying active profile to synced jars...", flush=True)
-    run(command, cwd=REPO_ROOT, env=python_compat_environment())
+    run(command, cwd=REPO_ROOT)
+
+
+def command_apply_quality_profile(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
+    instance_root = expand_path(args.instance_root or REPO_ROOT)
+    assert instance_root is not None
+    minecraft_dir = instance_root / "minecraft" if (instance_root / "minecraft").is_dir() else instance_root
+    quality_jar = resolve_quality_jar(minecraft_dir)
+    java = resolve_java(dev_env)
+    if quality_jar is None:
+        raise ToolError("Mod Quality Picker jar was not found in the instance mods directory.")
+    if java is None:
+        raise ToolError("Java was not found. Configure javaHome or JAVA_HOME.")
+    command: list[str | os.PathLike[str]] = [
+        java,
+        "-jar",
+        quality_jar,
+        "apply",
+        "--instance-root",
+        instance_root,
+    ]
+    if args.world_id:
+        command.extend(("--world-id", args.world_id))
+    if args.dry_run:
+        command.append("--dry-run")
+    if args.keep_pending:
+        command.append("--keep-pending")
+
+    pending_profile = quality_pending_profile_path(
+        instance_root / "minecraft" if (instance_root / "minecraft").is_dir() else instance_root
+    )
+    if pending_profile.exists():
+        print("Applying queued Mod Quality Picker profile before launch...", flush=True)
+    else:
+        print("Re-applying the active Mod Quality Picker profile before launch...", flush=True)
+    run(command, cwd=REPO_ROOT)
+    return 0
 
 
 def copy_quality_path(source: Path, target: Path, *, dry_run: bool) -> str:
@@ -1593,6 +1609,16 @@ def command_sync_quality_presets(args: argparse.Namespace) -> int:
         raise ToolError(f"No quality preset JSON files found in {source_presets}")
 
     actions: list[str] = []
+    source_feature_groups = source_root / "feature-groups.json"
+    if source_feature_groups.exists():
+        actions.append(copy_quality_path(source_feature_groups, target_root / "feature-groups.json", dry_run=args.dry_run))
+    else:
+        print(f"WARNING: no runtime feature-group definition found at {source_feature_groups}")
+
+    source_features = source_root / "features"
+    if source_features.exists():
+        actions.append(copy_quality_path(source_features, target_root / "features", dry_run=args.dry_run))
+
     for source_file in profile_files:
         if not source_file.exists():
             raise ToolError(f"Quality preset not found: {source_file}")
@@ -1847,6 +1873,13 @@ def build_parser() -> argparse.ArgumentParser:
     sync.add_argument("--dry-run", action="store_true")
     sync.set_defaults(func=command_sync_local_mods)
 
+    apply_quality = subparsers.add_parser("apply-quality-profile", help="Apply the queued or active Mod Quality Picker profile before launch.")
+    apply_quality.add_argument("--instance-root", help="Prism instance root or minecraft directory. Defaults to this repository.")
+    apply_quality.add_argument("--world-id", default="", help="Apply this world's config diff layer.")
+    apply_quality.add_argument("--dry-run", action="store_true")
+    apply_quality.add_argument("--keep-pending", action="store_true")
+    apply_quality.set_defaults(func=command_apply_quality_profile)
+
     update = subparsers.add_parser("update-local-mods", help="Pull, build, and sync local mod jars.")
     update.add_argument("--source-root")
     update.add_argument("--mods-dir")
@@ -1921,7 +1954,7 @@ def build_parser() -> argparse.ArgumentParser:
     prism_shaders.add_argument("--dry-run", action="store_true")
     prism_shaders.set_defaults(func=command_import_prism_shaderpacks)
 
-    quality_presets = subparsers.add_parser("sync-quality-presets", help="Copy in-instance Mod Quality Picker presets into pack metadata.")
+    quality_presets = subparsers.add_parser("sync-quality-presets", help="Copy in-instance Mod Quality Picker presets and feature groups into pack metadata.")
     quality_presets.add_argument("--profile", action="append", help="Limit to one profile id or JSON filename. Can be passed more than once.")
     quality_presets.add_argument("--minecraft-dir", help="Prism minecraft folder. Defaults to the parent of modsDir.")
     quality_presets.add_argument("--mods-dir", help="Prism mods folder, used to derive minecraft-dir when minecraft-dir is omitted.")

@@ -57,16 +57,24 @@ file = "config/modqualitypicker-common.toml"
 hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
 
 [[files]]
+file = "config/modqualitypicker/feature-groups.json"
+hash = "cc4804292f05fbac6b770c1756eb41b049f5487e43b89cf445c0503b84949adf"
+
+[[files]]
+file = "config/modqualitypicker/features/ecology/light/ecology-common.toml"
+hash = "89607cc18cbe123f35392efa9a5fc58adddc7e8459b635959e3d7a5ac435cee4"
+
+[[files]]
+file = "config/modqualitypicker/features/ecology/max/ecology-common.toml"
+hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
+
+[[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "1f4bd1688663811aef4c7d6a2010745701445cd9677178a9c88775a31434bae4"
+hash = "9d7b7e8cf1c05b9b52c4a33bcdd3fad253a001f3745c837adc41553046cafeca"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "0262363b88601eaa43404baf17aed36277d7de6ac7073efaea2e8b3f7abe2066"
-
-[[files]]
-file = "config/modqualitypicker/presets/new_profile.json"
-hash = "fe337f39924330f53227f8f28917e30dbc4cfbfa374f592e7d8abe639f9dc472"
+hash = "f1df1a73a759678bc80e4caa012f757f1d3edd472f4b573ed0174915d57b97c1"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -226,11 +234,6 @@ metafile = true
 [[files]]
 file = "mods/better-advancements.pw.toml"
 hash = "bb2700ce31fc7cd121ecf07f106302303ee366b7573b77bbdd97eee955233cda"
-metafile = true
-
-[[files]]
-file = "mods/better-combat-by-daedelus.pw.toml"
-hash = "2b75c579e6dec00700a1a8407769020370b9ba11d52bacd0ea893d564d91b965"
 metafile = true
 
 [[files]]
