@@ -1,0 +1,13 @@
+name = "More Chests Variants (MCV)"
+filename = "MoreChestVariants-1.5.15+1.21.1-Neo.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "55358661e1b2feb9553981a8f8b103d932ee802e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7310871
+project-id = 858032

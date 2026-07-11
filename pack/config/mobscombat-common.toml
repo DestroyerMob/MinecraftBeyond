@@ -38,9 +38,12 @@
 	# Default: 20
 	# Range: 0 ~ 72000
 	counter_window_ticks = 20
-	# Default: 5
-	# Range: 0 ~ 200
-	parry_window_ticks = 5
+	# Default: 12
+	# Range: 1 ~ 200
+	parry_window_ticks = 12
+	# Default: 18
+	# Range: 1 ~ 72000
+	parry_cooldown_ticks = 18
 	# Default: 3
 	# Range: 0 ~ 200
 	dagger_parry_window_bonus_ticks = 3

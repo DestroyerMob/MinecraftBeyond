@@ -1,0 +1,13 @@
+name = "Quad"
+filename = "Quad-1.2.9+1.21.1-Neo.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "98e606fc1a7d170ef5c1a54fc08f0ac137cf0b77"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5900860
+project-id = 932715

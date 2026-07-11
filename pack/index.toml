@@ -30,7 +30,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -38,7 +38,7 @@ hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
 file = "config/mobscombat-common.toml"
-hash = "5ca540d1f477b862e2c2663c71e4314cb1b94a0c37090bf0eb1c1ab7c31699f4"
+hash = "37ceb9057e8e5b2901c5e77f2f872d90345f011f75e92b755adb4adb249ad53c"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
@@ -66,7 +66,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "bc8f2a72ca333681f18ec6316f05187dccf8056a820f5572f45f94293b9d4187"
+hash = "50c268d79e6cc8976232fd1611d424c54eb4a84e665892f6fa7a9025cfc5112f"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -618,6 +618,11 @@ hash = "e717bb275a54a5caadaa7cf82bc34df3589f49402074adf93c31eaac43860313"
 metafile = true
 
 [[files]]
+file = "mods/functional-storage.pw.toml"
+hash = "201b5f2a7c20c5f71b248b6dad8ce3e69a3bea07fc7a8f0fd0f7e8b2d494d8e4"
+metafile = true
+
+[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "e37a8fc12d470910e90f2c7adadd263ac9cfea1bc781f4aadbd03a8fa803f8f5"
 metafile = true
@@ -655,6 +660,11 @@ metafile = true
 [[files]]
 file = "mods/iceberg.pw.toml"
 hash = "dbc34ada7af1fe08105d440312f544dc1fc0ef2032ef8bc0adda9f0e9c4fb067"
+metafile = true
+
+[[files]]
+file = "mods/iglee-library.pw.toml"
+hash = "f0faf003008fa89253cdc43a85873ec62ef86057c3e6997c400ef748251bfdbf"
 metafile = true
 
 [[files]]
@@ -873,6 +883,16 @@ hash = "a58c1322f0d21a88b3a42627374f045fe34a0385ef6630ec516b77d73438accc"
 metafile = true
 
 [[files]]
+file = "mods/more-chest-variants-lieonlion.pw.toml"
+hash = "dad7247fbf1d724c48785cfd38168d257579a089c195da8720f66c9d85373a4f"
+metafile = true
+
+[[files]]
+file = "mods/more-crafting-tables-for-forge.pw.toml"
+hash = "50e9bfbbc585ac499ce3ee713c605667b02fcc9318c8d1e2e60f05fa273204a8"
+metafile = true
+
+[[files]]
 file = "mods/more-delight-forge.pw.toml"
 hash = "983f834edf2911324a9db31af66c139c10b49e20a5ca11ed3517169d92a4d9ec"
 metafile = true
@@ -1018,6 +1038,11 @@ hash = "6a07261762a29c6108ea6030ec71ff6801e03127a0004cf105490004c77eacf5"
 metafile = true
 
 [[files]]
+file = "mods/quad.pw.toml"
+hash = "4241765c356143f023ef91bca2d960aa6322791252674cba4c6414ecd27ae8e9"
+metafile = true
+
+[[files]]
 file = "mods/refurbished-furniture.pw.toml"
 hash = "208de52370a896983814bd3f69ed0e2b46ca52d99603656562f3890f96d151da"
 metafile = true
@@ -1150,6 +1175,11 @@ metafile = true
 [[files]]
 file = "mods/tips.pw.toml"
 hash = "80c337f39bf8842d0e927f8a2fbe50566549e094ac84ee134a3cfd6977afcfea"
+metafile = true
+
+[[files]]
+file = "mods/titanium.pw.toml"
+hash = "b4839b51f328fbd3af8addab6905f444a425ffd8d540966766bbe2947528cba8"
 metafile = true
 
 [[files]]

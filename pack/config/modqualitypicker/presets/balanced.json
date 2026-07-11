@@ -93,7 +93,7 @@
     "axiom": {
       "enabled": false,
       "locked": false,
-      "reason": ""
+      "reason": "selected mod"
     },
     "axiomsurvival": {
       "enabled": false,
@@ -1481,7 +1481,7 @@
       "reason": ""
     },
     "sophisticatedstorage": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -1714,6 +1714,36 @@
       "enabled": true,
       "locked": false,
       "reason": "Required because hc2nerf requires it."
+    },
+    "quad": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "mctb": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "lolmcv": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "igleelib": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "functionalstorage": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "titanium": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because functionalstorage requires it."
     }
   },
   "configFiles": [],
