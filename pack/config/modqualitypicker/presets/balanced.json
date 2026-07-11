@@ -1654,6 +1654,66 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "bountifulfares": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "croptopia": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "farmers_croptopia": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "hc2nerf": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "pamhc2crops": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "pamhc2foodextended": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "pamhc2trees": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "solcarrot": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "toms_storage": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "epherolib": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because croptopia requires it."
+    },
+    "nexuslib": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because bountifulfares requires it."
+    },
+    "pamhc2foodcore": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required because hc2nerf requires it."
     }
   },
   "configFiles": [],

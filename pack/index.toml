@@ -30,7 +30,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
+hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -66,7 +66,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "7dc8cabad9fb65a1b46f3a8858dfd2fb7de0013f70d98817370e4ece72511df4"
+hash = "bc8f2a72ca333681f18ec6316f05187dccf8056a820f5572f45f94293b9d4187"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
