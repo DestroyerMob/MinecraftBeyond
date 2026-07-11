@@ -30,7 +30,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -66,7 +66,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "6150c2157aa4b00800acb78cdfd59bc1227f79c344321a793d872f6fccb018d6"
+hash = "7dc8cabad9fb65a1b46f3a8858dfd2fb7de0013f70d98817370e4ece72511df4"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -130,7 +130,7 @@ hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
 
 [[files]]
 file = "kubejs/server_scripts/remove_direct_equipment_recipes.js"
-hash = "a83b339bc6f7fbac7788f334eef049a45ad1763b5ad0c80806566e8f351de1c4"
+hash = "82f4b17d85e9d60451a8e8dfff4c124641ea42420fb5bbae084a34cec8aab0ca"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -245,6 +245,11 @@ metafile = true
 [[files]]
 file = "mods/bookshelf.pw.toml"
 hash = "cf914684c4151076b726116a66f7bc81a6116655551bcce70a9e64e34e5aa308"
+metafile = true
+
+[[files]]
+file = "mods/bountiful-fares.pw.toml"
+hash = "13770089bbfddfca0e170ff7c95a718616f02bdc3fcba2332e3690361a4c0cbc"
 metafile = true
 
 [[files]]
@@ -403,6 +408,11 @@ hash = "fcffeffc0b8f4fb24c213e7d69449fca45ef80c8ed618409996e5b2f0f751d2c"
 metafile = true
 
 [[files]]
+file = "mods/croptopia.pw.toml"
+hash = "f4a74eca4d76cbe003e7fd3832ae57a390177813dfb01f30944a2feed97d6bcf"
+metafile = true
+
+[[files]]
 file = "mods/cubes-without-borders.pw.toml"
 hash = "9441e0a305d19725ed73bfe5199263bc1617e7fffc67bd56534ef89a294535ed"
 metafile = true
@@ -488,6 +498,11 @@ hash = "346f28e2ec19543a6b410bf2cf5389401bc6d1aa0189e39d07bf11d64d8bd321"
 metafile = true
 
 [[files]]
+file = "mods/epherolib.pw.toml"
+hash = "bb3972a97a3915f202ce571fc7b943b2055119a0d70404424505e4dbc811958c"
+metafile = true
+
+[[files]]
 file = "mods/euphoria-patches.pw.toml"
 hash = "1010c34ac2177d15b77d843b7e514d152df73d5f0c05b59247eeaa525b23698d"
 metafile = true
@@ -520,6 +535,11 @@ metafile = true
 [[files]]
 file = "mods/falling-leaves-forge.pw.toml"
 hash = "107e17092cb624d106bddc63f2165f5e0461ca910e365a864bbae4c4f0de539d"
+metafile = true
+
+[[files]]
+file = "mods/farmers-croptopia.pw.toml"
+hash = "d4acae88d2cdf5540b82cba21f2c992d26a9d0f31ceefde0ec35cc0c4be55f4f"
 metafile = true
 
 [[files]]
@@ -888,6 +908,11 @@ hash = "78cf82fda4c8a7ea9556cf4481b43f38762151bcac0a09fd412f82d5f0883cc7"
 metafile = true
 
 [[files]]
+file = "mods/nexuslib.pw.toml"
+hash = "400a52db1e1b782a1282d6b49bae2b862f4a18027c13d379111a3ccffe0a2ae9"
+metafile = true
+
+[[files]]
 file = "mods/noisium.pw.toml"
 hash = "bf47aad5d7a2e5f5ec27ab671713a3f8358d5cea1a3d4f4f1b43438db38ba7f0"
 metafile = true
@@ -905,6 +930,31 @@ metafile = true
 [[files]]
 file = "mods/owo-lib.pw.toml"
 hash = "3db5943419e6b6f4e33946266be8797230434573bc68dbe3a77d72f19001ae0c"
+metafile = true
+
+[[files]]
+file = "mods/pams-harvestcraft-2-crops.pw.toml"
+hash = "6f9626c4489bfad0bdf6e1f0718f54c6652ba54ca51a18b14face54893a5f182"
+metafile = true
+
+[[files]]
+file = "mods/pams-harvestcraft-2-food-core.pw.toml"
+hash = "eb045b8823c41b658530d231ce14c53f43deb2981c17f03eb48d12cebb18f296"
+metafile = true
+
+[[files]]
+file = "mods/pams-harvestcraft-2-food-extended.pw.toml"
+hash = "5fe860bdef3f16ae211dbe360061f8225b68e3b5a3b699ffeb5d8926536bd91b"
+metafile = true
+
+[[files]]
+file = "mods/pams-harvestcraft-2-nerf.pw.toml"
+hash = "00cffc68175330f2e85bf8a202cddcdd73ad71730da3a0dc8bbeb9952163e8d7"
+metafile = true
+
+[[files]]
+file = "mods/pams-harvestcraft-2-trees.pw.toml"
+hash = "d48697a0d75267fe97428fa6b8442ec419846d7396e2dc9b4dd2c90e13f17daa"
 metafile = true
 
 [[files]]
@@ -1063,6 +1113,11 @@ hash = "558fb1b1d2d1310b2fe87f62250c244b3d95b7b5c772552e097ab8f55c141eca"
 metafile = true
 
 [[files]]
+file = "mods/spice-of-life-carrot-edition.pw.toml"
+hash = "e520ad446364dff7dd50896108a96140f3f5598b72003dade5b17308fa9ef2a9"
+metafile = true
+
+[[files]]
 file = "mods/supermartijn642s-config-lib.pw.toml"
 hash = "2e42245826ce70d4ad673addb0e5244da388841f1484f03ee5a9426ee33b2229"
 metafile = true
@@ -1075,6 +1130,11 @@ metafile = true
 [[files]]
 file = "mods/tectonic.pw.toml"
 hash = "cbbc06cd921b629776f574566af0b5dbd58819fad7513cfaac2967d3fb750845"
+metafile = true
+
+[[files]]
+file = "mods/terrablender-neoforge.pw.toml"
+hash = "d77e4dc337b6090358c1ef01b0f99a8357e5279443e0e23e511de1be865c01c9"
 metafile = true
 
 [[files]]

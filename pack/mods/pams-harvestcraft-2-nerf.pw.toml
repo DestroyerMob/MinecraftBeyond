@@ -1,0 +1,13 @@
+name = "Pam's HarvestCraft 2 Nerf"
+filename = "hc2nerf-Neoforge-1.21.1-1.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "782c29dcd40b86e7bb9eab0e70c10f152e538fb8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6521898
+project-id = 1217405
