@@ -1,23 +1,29 @@
 ServerEvents.recipes(event => {
-  const armorMaterials = ['leather', 'iron', 'golden', 'diamond', 'netherite']
-  const armorSlots = ['helmet', 'chestplate', 'leggings', 'boots']
-  const moreWeaponsMaterials = ['wooden', 'stone', 'copper', 'iron', 'golden', 'diamond', 'netherite']
-  const moreWeaponsTypes = ['battle_axe', 'great_sword', 'katana', 'knife', 'machete', 'spear']
-  const farmersDelightKnifeMaterials = ['flint', 'iron', 'golden', 'diamond', 'netherite']
+  // MTF owns direct equipment progression. Tags make this apply to vanilla,
+  // Extra Gems, and any other mod that follows the standard equipment tags.
+  const blockedEquipmentTags = [
+    'minecraft:axes',
+    'minecraft:hoes',
+    'minecraft:pickaxes',
+    'minecraft:shovels',
+    'minecraft:swords',
+    'minecraft:head_armor',
+    'minecraft:chest_armor',
+    'minecraft:leg_armor',
+    'minecraft:foot_armor',
+    'minecraft:enchantable/crossbow',
+    'c:tools/knife',
+    'farmersdelight:tools/knives'
+  ]
 
-  armorMaterials.forEach(material => {
-    armorSlots.forEach(slot => {
-      event.remove({ output: `minecraft:${material}_${slot}` })
+  blockedEquipmentTags.forEach(tag => {
+    event.remove({
+      not: { mod: 'mobstoolforging' },
+      output: `#${tag}`
     })
   })
 
-  moreWeaponsMaterials.forEach(material => {
-    moreWeaponsTypes.forEach(type => {
-      event.remove({ output: `mobsmoreweapons:${material}_${type}` })
-    })
-  })
-
-  farmersDelightKnifeMaterials.forEach(material => {
-    event.remove({ output: `farmersdelight:${material}_knife` })
-  })
+  // More Weapons' recipes are all finished weapons. Its MTF parts and station
+  // data are not Recipe Manager recipes, so removing this namespace is safe.
+  event.remove({ mod: 'mobsmoreweapons' })
 })

@@ -34,7 +34,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -50,7 +50,7 @@ hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "2ffef1ae924ed764ef46863579235a01fb807e548074b27102d42818baac017d"
+hash = "029ca20f4be7dc2576e66e9aa04e39cdfafb03d4fc53f7a7e2068e14d4f6e308"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
@@ -70,7 +70,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "7fbd50568ac9dd9160036905434f407c2414aef3c7388e25c679d410e11974ad"
+hash = "50c268d79e6cc8976232fd1611d424c54eb4a84e665892f6fa7a9025cfc5112f"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -134,7 +134,7 @@ hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
 
 [[files]]
 file = "kubejs/server_scripts/remove_direct_equipment_recipes.js"
-hash = "a51d4b243ac400b685f777cb0fba9c2a847780b56f535bb3f096eb7a718acd4f"
+hash = "d5ba0061fbae33dc8fc3d5ce2e30630a9276f58e82443b6c7c3c80a9f666cad3"
 
 [[files]]
 file = "mods/accessories.pw.toml"
