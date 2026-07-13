@@ -1,0 +1,2583 @@
+[
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/apple_pie",
+    "canonical": "bountifulfares:apple_pie",
+    "items": [
+      "bountifulfares:apple_pie",
+      "farmersdelight:apple_pie",
+      "bakery:apple_pie",
+      "croptopia:apple_pie",
+      "pamhc2foodcore:applepieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/apple",
+    "canonical": "bountifulfares:apple_sapling",
+    "items": [
+      "bountifulfares:apple_sapling",
+      "vinery:apple_tree_sapling",
+      "croptopia:apple_sapling",
+      "pamhc2trees:apple_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/candied_lemon",
+    "canonical": "bountifulfares:candied_lemon",
+    "items": [
+      "bountifulfares:candied_lemon",
+      "pamhc2foodextended:candiedlemonitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/coconut",
+    "canonical": "bountifulfares:coconut",
+    "items": [
+      "bountifulfares:coconut",
+      "crabbersdelight:coconut",
+      "crabbersdelight:palm_sapling",
+      "beachparty:coconut",
+      "croptopia:coconut",
+      "croptopia:coconut_sapling",
+      "pamhc2trees:coconutitem",
+      "pamhc2trees:coconut_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fish_stew",
+    "canonical": "bountifulfares:fish_stew",
+    "items": [
+      "bountifulfares:fish_stew",
+      "farmersdelight:fish_stew"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/flour",
+    "canonical": "bountifulfares:flour",
+    "items": [
+      "bountifulfares:flour",
+      "farm_and_charm:flour",
+      "croptopia:flour",
+      "pamhc2foodcore:flouritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/leek",
+    "canonical": "bountifulfares:leek",
+    "items": [
+      "bountifulfares:leek",
+      "croptopia:leek",
+      "pamhc2crops:leekitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/leek",
+    "canonical": "bountifulfares:leek_seeds",
+    "items": [
+      "bountifulfares:leek_seeds",
+      "croptopia:leek_seed",
+      "pamhc2crops:leekseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/lemon",
+    "canonical": "bountifulfares:lemon",
+    "items": [
+      "bountifulfares:lemon",
+      "croptopia:lemon",
+      "pamhc2trees:lemonitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/lemon_pie",
+    "canonical": "bountifulfares:lemon_pie",
+    "items": [
+      "bountifulfares:lemon_pie",
+      "pamhc2foodextended:lemonpieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/lemon",
+    "canonical": "bountifulfares:lemon_sapling",
+    "items": [
+      "bountifulfares:lemon_sapling",
+      "croptopia:lemon_sapling",
+      "pamhc2trees:lemon_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/melon_pie",
+    "canonical": "bountifulfares:melon_pie",
+    "items": [
+      "bountifulfares:melon_pie",
+      "pamhc2foodcore:melonpieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/orange",
+    "canonical": "bountifulfares:orange",
+    "items": [
+      "bountifulfares:orange",
+      "croptopia:orange",
+      "pamhc2trees:orangeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/orange_pie",
+    "canonical": "bountifulfares:orange_pie",
+    "items": [
+      "bountifulfares:orange_pie",
+      "pamhc2foodextended:orangepieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/orange",
+    "canonical": "bountifulfares:orange_sapling",
+    "items": [
+      "bountifulfares:orange_sapling",
+      "croptopia:orange_sapling",
+      "pamhc2trees:orange_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/plum",
+    "canonical": "bountifulfares:plum",
+    "items": [
+      "bountifulfares:plum",
+      "croptopia:plum",
+      "pamhc2trees:plumitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/plum_pie",
+    "canonical": "bountifulfares:plum_pie",
+    "items": [
+      "bountifulfares:plum_pie",
+      "pamhc2foodextended:plumpieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/plum",
+    "canonical": "bountifulfares:plum_sapling",
+    "items": [
+      "bountifulfares:plum_sapling",
+      "croptopia:plum_sapling",
+      "pamhc2trees:plum_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/walnut",
+    "canonical": "bountifulfares:walnut",
+    "items": [
+      "bountifulfares:walnut",
+      "croptopia:walnut",
+      "pamhc2trees:walnutitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/walnut",
+    "canonical": "bountifulfares:walnut_sapling",
+    "items": [
+      "bountifulfares:walnut_sapling",
+      "croptopia:walnut_sapling",
+      "pamhc2trees:walnut_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/tea_leaves",
+    "canonical": "bountifulfares:tea_leaves",
+    "items": [
+      "bountifulfares:tea_leaves",
+      "croptopia:tea_leaves",
+      "pamhc2crops:tealeafitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/maize",
+    "canonical": "bountifulfares:maize",
+    "items": [
+      "bountifulfares:maize",
+      "culturaldelights:corn_cob",
+      "farm_and_charm:corn",
+      "croptopia:corn",
+      "pamhc2crops:cornitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/maize",
+    "canonical": "bountifulfares:maize_seeds",
+    "items": [
+      "bountifulfares:maize_seeds",
+      "culturaldelights:corn_kernels",
+      "farm_and_charm:kernels",
+      "croptopia:corn_seed",
+      "pamhc2crops:cornseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/elderberries",
+    "canonical": "bountifulfares:elderberries",
+    "items": [
+      "bountifulfares:elderberries",
+      "croptopia:elderberry",
+      "croptopia:elderberry_seed",
+      "pamhc2crops:elderberryitem",
+      "pamhc2crops:elderberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/passion_fruit",
+    "canonical": "bountifulfares:passion_fruit",
+    "items": [
+      "bountifulfares:passion_fruit",
+      "pamhc2trees:passionfruititem",
+      "pamhc2trees:passionfruit_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/tea",
+    "canonical": "bountifulfares:tea_berries",
+    "items": [
+      "bountifulfares:tea_berries",
+      "croptopia:tea_seed",
+      "pamhc2crops:tealeafseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/candy",
+    "canonical": "bountifulfares:candy",
+    "items": [
+      "bountifulfares:candy",
+      "supplementaries:candy"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/bacon",
+    "canonical": "farmersdelight:bacon",
+    "items": [
+      "farmersdelight:bacon",
+      "farm_and_charm:bacon",
+      "croptopia:bacon"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/apple_cider",
+    "canonical": "farmersdelight:apple_cider",
+    "items": [
+      "farmersdelight:apple_cider",
+      "vinery:apple_cider",
+      "pamhc2foodextended:applecideritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/bacon_and_eggs",
+    "canonical": "farmersdelight:bacon_and_eggs",
+    "items": [
+      "farmersdelight:bacon_and_eggs",
+      "pamhc2foodcore:baconandeggsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/beef_stew",
+    "canonical": "farmersdelight:beef_stew",
+    "items": [
+      "farmersdelight:beef_stew",
+      "croptopia:beef_stew"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cabbage",
+    "canonical": "farmersdelight:cabbage",
+    "items": [
+      "farmersdelight:cabbage",
+      "croptopia:cabbage",
+      "pamhc2crops:cabbageitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/cabbage",
+    "canonical": "farmersdelight:cabbage_seeds",
+    "items": [
+      "farmersdelight:cabbage_seeds",
+      "croptopia:cabbage_seed",
+      "pamhc2crops:cabbageseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chocolate_pie",
+    "canonical": "farmersdelight:chocolate_pie",
+    "items": [
+      "farmersdelight:chocolate_pie",
+      "pamhc2foodcore:chocolatepieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_bacon",
+    "canonical": "farmersdelight:cooked_bacon",
+    "items": [
+      "farmersdelight:cooked_bacon",
+      "croptopia:cooked_bacon"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/dough",
+    "canonical": "farmersdelight:wheat_dough",
+    "items": [
+      "farmersdelight:wheat_dough",
+      "farm_and_charm:dough",
+      "croptopia:dough",
+      "pamhc2foodcore:doughitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/dog_food",
+    "canonical": "farmersdelight:dog_food",
+    "items": [
+      "farmersdelight:dog_food",
+      "farm_and_charm:dog_food"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fried_egg",
+    "canonical": "farmersdelight:fried_egg",
+    "items": [
+      "farmersdelight:fried_egg",
+      "pamhc2foodcore:friedeggitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fried_rice",
+    "canonical": "farmersdelight:fried_rice",
+    "items": [
+      "farmersdelight:fried_rice",
+      "pamhc2foodextended:friedriceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fruit_salad",
+    "canonical": "farmersdelight:fruit_salad",
+    "items": [
+      "farmersdelight:fruit_salad",
+      "croptopia:fruit_salad",
+      "pamhc2foodcore:fruitsaladitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/hamburger",
+    "canonical": "farmersdelight:hamburger",
+    "items": [
+      "farmersdelight:hamburger",
+      "croptopia:hamburger"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/honey_glazed_ham",
+    "canonical": "farmersdelight:honey_glazed_ham",
+    "items": [
+      "farmersdelight:honey_glazed_ham",
+      "pamhc2foodextended:honeyglazedhamitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/melon_juice",
+    "canonical": "farmersdelight:melon_juice",
+    "items": [
+      "farmersdelight:melon_juice",
+      "croptopia:melon_juice",
+      "pamhc2foodcore:melonjuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/melon_popsicle",
+    "canonical": "farmersdelight:melon_popsicle",
+    "items": [
+      "farmersdelight:melon_popsicle",
+      "pamhc2foodcore:melonpopsicleitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/milk_bottle",
+    "canonical": "farmersdelight:milk_bottle",
+    "items": [
+      "farmersdelight:milk_bottle",
+      "croptopia:milk_bottle"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/minced_beef",
+    "canonical": "farmersdelight:minced_beef",
+    "items": [
+      "farmersdelight:minced_beef",
+      "farm_and_charm:minced_beef"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/mixed_salad",
+    "canonical": "farmersdelight:mixed_salad",
+    "items": [
+      "farmersdelight:mixed_salad",
+      "pamhc2foodextended:mixedsaladitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/noodle_soup",
+    "canonical": "farmersdelight:noodle_soup",
+    "items": [
+      "farmersdelight:noodle_soup",
+      "pamhc2foodcore:noodlesoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/onion",
+    "canonical": "farmersdelight:onion",
+    "items": [
+      "farmersdelight:onion",
+      "farm_and_charm:onion",
+      "croptopia:onion",
+      "croptopia:onion_seed",
+      "pamhc2crops:onionitem",
+      "pamhc2crops:onionseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/onion_soup",
+    "canonical": "farmersdelight:onion_soup",
+    "items": [
+      "farmersdelight:onion_soup",
+      "farm_and_charm:onion_soup"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pumpkin_soup",
+    "canonical": "farmersdelight:pumpkin_soup",
+    "items": [
+      "farmersdelight:pumpkin_soup",
+      "croptopia:pumpkin_soup",
+      "pamhc2foodcore:pumpkinsoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/ratatouille",
+    "canonical": "farmersdelight:ratatouille",
+    "items": [
+      "farmersdelight:ratatouille",
+      "croptopia:ratatouille"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/raw_pasta",
+    "canonical": "farmersdelight:raw_pasta",
+    "items": [
+      "farmersdelight:raw_pasta",
+      "farm_and_charm:raw_pasta"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/rice",
+    "canonical": "farmersdelight:rice",
+    "items": [
+      "farmersdelight:rice",
+      "croptopia:rice",
+      "croptopia:rice_seed",
+      "pamhc2crops:riceitem",
+      "pamhc2crops:riceseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/roast_chicken",
+    "canonical": "farmersdelight:roast_chicken",
+    "items": [
+      "farmersdelight:roast_chicken",
+      "pamhc2foodextended:roastchickenitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/rotten_tomato",
+    "canonical": "farmersdelight:rotten_tomato",
+    "items": [
+      "farmersdelight:rotten_tomato",
+      "farm_and_charm:rotten_tomato"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/shepherds_pie",
+    "canonical": "farmersdelight:shepherds_pie",
+    "items": [
+      "farmersdelight:shepherds_pie",
+      "croptopia:shepherds_pie"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/tomato",
+    "canonical": "farmersdelight:tomato",
+    "items": [
+      "farmersdelight:tomato",
+      "farm_and_charm:tomato",
+      "croptopia:tomato",
+      "pamhc2crops:tomatoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/tomato",
+    "canonical": "farmersdelight:tomato_seeds",
+    "items": [
+      "farmersdelight:tomato_seeds",
+      "farm_and_charm:tomato_seeds",
+      "croptopia:tomato_seed",
+      "pamhc2crops:tomatoseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/vegetable_soup",
+    "canonical": "farmersdelight:vegetable_soup",
+    "items": [
+      "farmersdelight:vegetable_soup",
+      "pamhc2foodextended:vegetablesoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/avocado",
+    "canonical": "culturaldelights:avocado",
+    "items": [
+      "culturaldelights:avocado",
+      "croptopia:avocado",
+      "pamhc2trees:avocadoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/avocado",
+    "canonical": "culturaldelights:avocado_sapling",
+    "items": [
+      "culturaldelights:avocado_sapling",
+      "croptopia:avocado_sapling",
+      "pamhc2trees:avocado_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/avocado_toast",
+    "canonical": "culturaldelights:avocado_toast",
+    "items": [
+      "culturaldelights:avocado_toast",
+      "croptopia:avocado_toast",
+      "pamhc2foodextended:avocadotoastitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_calamari",
+    "canonical": "crabbersdelight:cooked_squid_tentacles",
+    "items": [
+      "crabbersdelight:cooked_squid_tentacles",
+      "culturaldelights:cooked_calamari",
+      "croptopia:cooked_calamari"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/corn_dough",
+    "canonical": "culturaldelights:corn_dough",
+    "items": [
+      "culturaldelights:corn_dough",
+      "cornexpansion:corn_dough"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/creamed_corn",
+    "canonical": "culturaldelights:creamed_corn",
+    "items": [
+      "culturaldelights:creamed_corn",
+      "pamhc2foodextended:creamedcornitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cucumber",
+    "canonical": "culturaldelights:cucumber",
+    "items": [
+      "culturaldelights:cucumber",
+      "croptopia:cucumber",
+      "pamhc2crops:cucumberitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/cucumber",
+    "canonical": "culturaldelights:cucumber_seeds",
+    "items": [
+      "culturaldelights:cucumber_seeds",
+      "croptopia:cucumber_seed",
+      "pamhc2crops:cucumberseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/egg_roll",
+    "canonical": "culturaldelights:egg_roll",
+    "items": [
+      "culturaldelights:egg_roll",
+      "croptopia:egg_roll",
+      "pamhc2foodextended:eggrollitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/eggplant",
+    "canonical": "culturaldelights:eggplant",
+    "items": [
+      "culturaldelights:eggplant",
+      "croptopia:eggplant",
+      "pamhc2crops:eggplantitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/eggplant",
+    "canonical": "culturaldelights:eggplant_seeds",
+    "items": [
+      "culturaldelights:eggplant_seeds",
+      "croptopia:eggplant_seed",
+      "pamhc2crops:eggplantseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/eggplant_parmesan",
+    "canonical": "culturaldelights:eggplant_parmesan",
+    "items": [
+      "culturaldelights:eggplant_parmesan",
+      "croptopia:eggplant_parmesan"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fish_taco",
+    "canonical": "culturaldelights:fish_taco",
+    "items": [
+      "culturaldelights:fish_taco",
+      "pamhc2foodextended:fishtacoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/ginger",
+    "canonical": "croptopia:ginger",
+    "items": [
+      "croptopia:ginger",
+      "pamhc2crops:gingeritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/popcorn",
+    "canonical": "culturaldelights:popcorn",
+    "items": [
+      "culturaldelights:popcorn",
+      "cornexpansion:popcorn",
+      "croptopia:popcorn",
+      "pamhc2foodextended:popcornitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/spicy_curry",
+    "canonical": "culturaldelights:spicy_curry",
+    "items": [
+      "culturaldelights:spicy_curry",
+      "mynethersdelight:spicy_curry"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/tortilla",
+    "canonical": "culturaldelights:tortilla",
+    "items": [
+      "culturaldelights:tortilla",
+      "croptopia:tortilla",
+      "pamhc2foodextended:tortillaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/asparagus",
+    "canonical": "expandeddelight:asparagus",
+    "items": [
+      "expandeddelight:asparagus",
+      "croptopia:asparagus",
+      "pamhc2crops:asparagusitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/asparagus",
+    "canonical": "expandeddelight:asparagus_seeds",
+    "items": [
+      "expandeddelight:asparagus_seeds",
+      "croptopia:asparagus_seed",
+      "pamhc2crops:asparagusseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/baked_sweet_potato",
+    "canonical": "expandeddelight:baked_sweet_potato",
+    "items": [
+      "expandeddelight:baked_sweet_potato",
+      "croptopia:baked_sweet_potato",
+      "pamhc2crops:bakedsweetpotatoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/chili_pepper",
+    "canonical": "expandeddelight:chili_pepper",
+    "items": [
+      "expandeddelight:chili_pepper",
+      "croptopia:chile_pepper",
+      "pamhc2crops:chilipepperitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/chili_pepper",
+    "canonical": "expandeddelight:chili_pepper_seeds",
+    "items": [
+      "expandeddelight:chili_pepper_seeds",
+      "croptopia:chile_pepper_seed",
+      "pamhc2crops:chilipepperseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/peanut",
+    "canonical": "expandeddelight:peanut",
+    "items": [
+      "expandeddelight:peanut",
+      "croptopia:peanut",
+      "croptopia:peanut_seed",
+      "pamhc2crops:peanutitem",
+      "pamhc2crops:peanutseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/peanut_butter",
+    "canonical": "expandeddelight:peanut_butter",
+    "items": [
+      "expandeddelight:peanut_butter",
+      "croptopia:peanut_butter",
+      "pamhc2foodextended:peanutbutteritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cranberries",
+    "canonical": "expandeddelight:cranberries",
+    "items": [
+      "expandeddelight:cranberries",
+      "croptopia:cranberry",
+      "croptopia:cranberry_seed",
+      "pamhc2crops:cranberryitem",
+      "pamhc2crops:cranberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cinnamon",
+    "canonical": "expandeddelight:cinnamon",
+    "items": [
+      "expandeddelight:cinnamon",
+      "croptopia:cinnamon",
+      "pamhc2trees:cinnamonitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/cinnamon",
+    "canonical": "expandeddelight:cinnamon_sapling",
+    "items": [
+      "expandeddelight:cinnamon_sapling",
+      "croptopia:cinnamon_sapling",
+      "pamhc2trees:cinnamon_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/sweet_potato",
+    "canonical": "expandeddelight:sweet_potato",
+    "items": [
+      "expandeddelight:sweet_potato",
+      "croptopia:sweetpotato",
+      "croptopia:sweetpotato_seed",
+      "pamhc2crops:sweetpotatoitem",
+      "pamhc2crops:sweetpotatoseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/salt",
+    "canonical": "expandeddelight:salt",
+    "items": [
+      "expandeddelight:salt",
+      "meadow:alpine_salt",
+      "croptopia:salt",
+      "pamhc2foodcore:saltitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/source/salt_ore",
+    "canonical": "expandeddelight:salt_ore",
+    "items": [
+      "expandeddelight:salt_ore",
+      "croptopia:salt_ore"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/grilled_cheese",
+    "canonical": "expandeddelight:grilled_cheese",
+    "items": [
+      "expandeddelight:grilled_cheese",
+      "croptopia:grilled_cheese",
+      "pamhc2foodcore:grilledcheeseitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/apple_juice",
+    "canonical": "expandeddelight:apple_juice",
+    "items": [
+      "expandeddelight:apple_juice",
+      "vinery:apple_juice",
+      "croptopia:apple_juice",
+      "pamhc2foodcore:applejuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cranberry_juice",
+    "canonical": "expandeddelight:cranberry_juice",
+    "items": [
+      "expandeddelight:cranberry_juice",
+      "croptopia:cranberry_juice",
+      "pamhc2foodextended:cranberryjuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cranberry_jelly",
+    "canonical": "expandeddelight:cranberry_jelly",
+    "items": [
+      "expandeddelight:cranberry_jelly",
+      "pamhc2foodextended:cranberryjellyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/glow_berry_jelly",
+    "canonical": "expandeddelight:glow_berry_jelly",
+    "items": [
+      "expandeddelight:glow_berry_jelly",
+      "pamhc2foodcore:glowberryjellyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/glow_berry_juice",
+    "canonical": "expandeddelight:glow_berry_juice",
+    "items": [
+      "expandeddelight:glow_berry_juice",
+      "pamhc2foodcore:glowberryjuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/sweet_berry_jelly",
+    "canonical": "expandeddelight:sweet_berry_jelly",
+    "items": [
+      "expandeddelight:sweet_berry_jelly",
+      "pamhc2foodcore:sweetberryjellyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/sweet_berry_juice",
+    "canonical": "expandeddelight:sweet_berry_juice",
+    "items": [
+      "expandeddelight:sweet_berry_juice",
+      "pamhc2foodcore:sweetberryjuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/sugar_cookie",
+    "canonical": "expandeddelight:sugar_cookie",
+    "items": [
+      "expandeddelight:sugar_cookie",
+      "pamhc2foodextended:sugarcookieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/cheese_slice",
+    "canonical": "expandeddelight:cheese_slice",
+    "items": [
+      "expandeddelight:cheese_slice",
+      "meadow:cheese_slice"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/goat_cheese_slice",
+    "canonical": "expandeddelight:goat_cheese_slice",
+    "items": [
+      "expandeddelight:goat_cheese_slice",
+      "meadow:goat_cheese_slice"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cheese_sandwich",
+    "canonical": "expandeddelight:cheese_sandwich",
+    "items": [
+      "expandeddelight:cheese_sandwich",
+      "meadow:cheese_sandwich"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cheese_wheel",
+    "canonical": "expandeddelight:cheese_wheel",
+    "items": [
+      "expandeddelight:cheese_wheel",
+      "meadow:cheese_wheel"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/goat_cheese_wheel",
+    "canonical": "expandeddelight:goat_cheese_wheel",
+    "items": [
+      "expandeddelight:goat_cheese_wheel",
+      "meadow:goat_cheese_wheel"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/apple_jelly",
+    "canonical": "brewinandchewin:apple_jelly",
+    "items": [
+      "brewinandchewin:apple_jelly",
+      "pamhc2foodcore:applejellyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/beer",
+    "canonical": "brewinandchewin:beer",
+    "items": [
+      "brewinandchewin:beer",
+      "croptopia:beer"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/ham_and_cheese_sandwich",
+    "canonical": "brewinandchewin:ham_and_cheese_sandwich",
+    "items": [
+      "brewinandchewin:ham_and_cheese_sandwich",
+      "pamhc2foodextended:hamandcheesesandwichitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/kimchi",
+    "canonical": "brewinandchewin:kimchi",
+    "items": [
+      "brewinandchewin:kimchi",
+      "pamhc2foodextended:kimchiitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/mead",
+    "canonical": "brewinandchewin:mead",
+    "items": [
+      "brewinandchewin:mead",
+      "vinery:mead",
+      "croptopia:mead"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pizza",
+    "canonical": "brewinandchewin:pizza",
+    "items": [
+      "brewinandchewin:pizza",
+      "croptopia:pizza"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pizza_slice",
+    "canonical": "brewinandchewin:pizza_slice",
+    "items": [
+      "brewinandchewin:pizza_slice",
+      "pamhc2foodextended:pizzasliceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/quiche",
+    "canonical": "brewinandchewin:quiche",
+    "items": [
+      "brewinandchewin:quiche",
+      "croptopia:quiche"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/clam",
+    "canonical": "crabbersdelight:clam",
+    "items": [
+      "crabbersdelight:clam",
+      "spawn:clam",
+      "croptopia:clam"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/clam_chowder",
+    "canonical": "crabbersdelight:clam_chowder",
+    "items": [
+      "crabbersdelight:clam_chowder",
+      "spawn:clam_chowder"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_shrimp",
+    "canonical": "crabbersdelight:cooked_shrimp",
+    "items": [
+      "crabbersdelight:cooked_shrimp",
+      "croptopia:cooked_shrimp"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/crab",
+    "canonical": "crabbersdelight:crab",
+    "items": [
+      "crabbersdelight:crab",
+      "croptopia:crab"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/shrimp",
+    "canonical": "crabbersdelight:shrimp",
+    "items": [
+      "crabbersdelight:shrimp",
+      "croptopia:shrimp"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/carrot_soup",
+    "canonical": "moredelight:carrot_soup",
+    "items": [
+      "moredelight:carrot_soup",
+      "pamhc2foodcore:carrotsoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/mashed_potatoes",
+    "canonical": "moredelight:mashed_potatoes",
+    "items": [
+      "moredelight:mashed_potatoes",
+      "brewery:mashed_potatoes",
+      "croptopia:mashed_potatoes",
+      "pamhc2foodcore:mashedpotatoesitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/omelette",
+    "canonical": "moredelight:omelette",
+    "items": [
+      "moredelight:omelette",
+      "candlelight:omelet",
+      "pamhc2foodextended:omeletitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/potato_salad",
+    "canonical": "moredelight:potato_salad",
+    "items": [
+      "moredelight:potato_salad",
+      "brewery:potato_salad",
+      "pamhc2foodextended:potatosaladitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/toast",
+    "canonical": "moredelight:toast",
+    "items": [
+      "moredelight:toast",
+      "bakery:toast",
+      "croptopia:toast",
+      "pamhc2foodcore:toastitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/boiled_egg",
+    "canonical": "mynethersdelight:boiled_egg",
+    "items": [
+      "mynethersdelight:boiled_egg",
+      "pamhc2foodcore:boiledeggitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/deviled_egg",
+    "canonical": "mynethersdelight:deviled_egg",
+    "items": [
+      "mynethersdelight:deviled_egg",
+      "pamhc2foodextended:deviledeggitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/hot_wings",
+    "canonical": "mynethersdelight:hot_wings",
+    "items": [
+      "mynethersdelight:hot_wings",
+      "pamhc2foodextended:hotwingsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/stuffed_pepper",
+    "canonical": "mynethersdelight:stuffed_pepper",
+    "items": [
+      "mynethersdelight:stuffed_pepper",
+      "pamhc2foodextended:stuffedpepperitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chocolate_cake",
+    "canonical": "bakery:chocolate_cake",
+    "items": [
+      "bakery:chocolate_cake",
+      "pamhc2foodcore:chocolatecakeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/croissant",
+    "canonical": "bakery:croissant",
+    "items": [
+      "bakery:croissant",
+      "pamhc2foodextended:croissantitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/strawberry_jam",
+    "canonical": "bakery:strawberry_jam",
+    "items": [
+      "bakery:strawberry_jam",
+      "croptopia:strawberry_jam"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fried_chicken",
+    "canonical": "brewery:fried_chicken",
+    "items": [
+      "brewery:fried_chicken",
+      "croptopia:fried_chicken",
+      "pamhc2foodcore:friedchickenitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/hops",
+    "canonical": "brewery:hops",
+    "items": [
+      "brewery:hops",
+      "croptopia:hops",
+      "croptopia:hops_seed"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/sausage",
+    "canonical": "brewery:sausage",
+    "items": [
+      "brewery:sausage",
+      "croptopia:sausage",
+      "pamhc2foodextended:sausageitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/barley",
+    "canonical": "farm_and_charm:barley",
+    "items": [
+      "farm_and_charm:barley",
+      "croptopia:barley",
+      "pamhc2crops:barleyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/barley",
+    "canonical": "farm_and_charm:barley_seeds",
+    "items": [
+      "farm_and_charm:barley_seeds",
+      "croptopia:barley_seed",
+      "pamhc2crops:barleyseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/butter",
+    "canonical": "farm_and_charm:butter",
+    "items": [
+      "farm_and_charm:butter",
+      "croptopia:butter",
+      "pamhc2foodcore:butteritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/lettuce",
+    "canonical": "farm_and_charm:lettuce",
+    "items": [
+      "farm_and_charm:lettuce",
+      "croptopia:lettuce",
+      "pamhc2crops:lettuceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/lettuce",
+    "canonical": "farm_and_charm:lettuce_seeds",
+    "items": [
+      "farm_and_charm:lettuce_seeds",
+      "croptopia:lettuce_seed",
+      "pamhc2crops:lettuceseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/strawberry",
+    "canonical": "farm_and_charm:strawberry",
+    "items": [
+      "farm_and_charm:strawberry",
+      "croptopia:strawberry",
+      "pamhc2crops:strawberryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/strawberry",
+    "canonical": "farm_and_charm:strawberry_seeds",
+    "items": [
+      "farm_and_charm:strawberry_seeds",
+      "croptopia:strawberry_seed",
+      "pamhc2crops:strawberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/goulash",
+    "canonical": "farm_and_charm:goulash",
+    "items": [
+      "farm_and_charm:goulash",
+      "croptopia:goulash"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/potato_soup",
+    "canonical": "farm_and_charm:potato_soup",
+    "items": [
+      "farm_and_charm:potato_soup",
+      "croptopia:potato_soup",
+      "pamhc2foodcore:potatosoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cherry",
+    "canonical": "vinery:cherry",
+    "items": [
+      "vinery:cherry",
+      "croptopia:cherry",
+      "pamhc2trees:cherryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/beef_wellington",
+    "canonical": "candlelight:beef_wellington",
+    "items": [
+      "candlelight:beef_wellington",
+      "croptopia:beef_wellington",
+      "pamhc2foodextended:beefwellingtonitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/beetroot_salad",
+    "canonical": "candlelight:beetroot_salad",
+    "items": [
+      "candlelight:beetroot_salad",
+      "croptopia:beetroot_salad"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chicken_alfredo",
+    "canonical": "candlelight:chicken_alfredo",
+    "items": [
+      "candlelight:chicken_alfredo",
+      "pamhc2foodextended:chickenalfredoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/tomato_soup",
+    "canonical": "candlelight:tomato_soup",
+    "items": [
+      "candlelight:tomato_soup",
+      "farm_and_charm:simple_tomato_soup",
+      "pamhc2foodextended:tomatosoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/corn_on_the_cob",
+    "canonical": "cornexpansion:corn_on_the_cob",
+    "items": [
+      "cornexpansion:corn_on_the_cob",
+      "pamhc2foodextended:cornonthecobitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/cornmeal",
+    "canonical": "cornexpansion:cornmeal",
+    "items": [
+      "cornexpansion:cornmeal",
+      "pamhc2foodextended:cornmealitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/dates",
+    "canonical": "spawn:dates",
+    "items": [
+      "spawn:dates",
+      "croptopia:date",
+      "pamhc2trees:dateitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/date",
+    "canonical": "spawn:date_seed",
+    "items": [
+      "spawn:date_seed",
+      "croptopia:date_sapling",
+      "pamhc2trees:date_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/roasted_sunflower_seeds",
+    "canonical": "spawn:roasted_sunflower_seeds",
+    "items": [
+      "spawn:roasted_sunflower_seeds",
+      "croptopia:roasted_sunflower_seeds",
+      "pamhc2foodcore:roastedsunflowerseedsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/sunflower",
+    "canonical": "spawn:sunflower_seeds",
+    "items": [
+      "spawn:sunflower_seeds",
+      "pamhc2foodcore:sunflowerseedsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/steamed_clams",
+    "canonical": "spawn:steamed_clams",
+    "items": [
+      "spawn:steamed_clams",
+      "croptopia:steamed_clams"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/tuna_roll",
+    "canonical": "spawn:tuna_roll",
+    "items": [
+      "spawn:tuna_roll",
+      "croptopia:tuna_roll"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/tuna_sandwich",
+    "canonical": "spawn:tuna_sandwich",
+    "items": [
+      "spawn:tuna_sandwich",
+      "croptopia:tuna_sandwich"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/hazelnut",
+    "canonical": "wildernature:hazelnut",
+    "items": [
+      "wildernature:hazelnut",
+      "pamhc2trees:hazelnutitem",
+      "pamhc2trees:hazelnut_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/truffle",
+    "canonical": "wildernature:truffle",
+    "items": [
+      "wildernature:truffle",
+      "pamhc2crops:truffleitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/flax",
+    "canonical": "supplementaries:flax",
+    "items": [
+      "supplementaries:flax",
+      "pamhc2crops:flaxitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/flax",
+    "canonical": "supplementaries:flax_seeds",
+    "items": [
+      "supplementaries:flax_seeds",
+      "pamhc2crops:flaxseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pancake",
+    "canonical": "supplementaries:pancake",
+    "items": [
+      "supplementaries:pancake",
+      "pamhc2foodextended:pancakesitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/almond",
+    "canonical": "croptopia:almond",
+    "items": [
+      "croptopia:almond",
+      "pamhc2trees:almonditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/apricot",
+    "canonical": "croptopia:apricot",
+    "items": [
+      "croptopia:apricot",
+      "pamhc2trees:apricotitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/artichoke",
+    "canonical": "croptopia:artichoke",
+    "items": [
+      "croptopia:artichoke",
+      "pamhc2crops:artichokeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/banana",
+    "canonical": "croptopia:banana",
+    "items": [
+      "croptopia:banana",
+      "pamhc2trees:bananaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/bellpepper",
+    "canonical": "croptopia:bellpepper",
+    "items": [
+      "croptopia:bellpepper",
+      "pamhc2crops:bellpepperitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/blackberry",
+    "canonical": "croptopia:blackberry",
+    "items": [
+      "croptopia:blackberry",
+      "pamhc2crops:blackberryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/blueberry",
+    "canonical": "croptopia:blueberry",
+    "items": [
+      "croptopia:blueberry",
+      "pamhc2crops:blueberryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/broccoli",
+    "canonical": "croptopia:broccoli",
+    "items": [
+      "croptopia:broccoli",
+      "pamhc2crops:broccoliitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cantaloupe",
+    "canonical": "croptopia:cantaloupe",
+    "items": [
+      "croptopia:cantaloupe",
+      "pamhc2crops:cantaloupeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cashew",
+    "canonical": "croptopia:cashew",
+    "items": [
+      "croptopia:cashew",
+      "pamhc2trees:cashewitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/cauliflower",
+    "canonical": "croptopia:cauliflower",
+    "items": [
+      "croptopia:cauliflower",
+      "pamhc2crops:caulifloweritem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/celery",
+    "canonical": "croptopia:celery",
+    "items": [
+      "croptopia:celery",
+      "pamhc2crops:celeryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/coffee_beans",
+    "canonical": "herbalbrews:coffee_beans",
+    "items": [
+      "herbalbrews:coffee_beans",
+      "croptopia:coffee_beans",
+      "pamhc2crops:coffeebeanitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/dragonfruit",
+    "canonical": "croptopia:dragonfruit",
+    "items": [
+      "croptopia:dragonfruit",
+      "pamhc2trees:dragonfruititem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/fig",
+    "canonical": "croptopia:fig",
+    "items": [
+      "croptopia:fig",
+      "pamhc2trees:figitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/garlic",
+    "canonical": "croptopia:garlic",
+    "items": [
+      "croptopia:garlic",
+      "pamhc2crops:garlicitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/grape",
+    "canonical": "croptopia:grape",
+    "items": [
+      "croptopia:grape",
+      "pamhc2crops:grapeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/grapefruit",
+    "canonical": "croptopia:grapefruit",
+    "items": [
+      "croptopia:grapefruit",
+      "pamhc2trees:grapefruititem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/greenonion",
+    "canonical": "croptopia:greenonion",
+    "items": [
+      "croptopia:greenonion",
+      "pamhc2crops:scallionitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/kale",
+    "canonical": "croptopia:kale",
+    "items": [
+      "croptopia:kale",
+      "pamhc2crops:kaleitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/kiwi",
+    "canonical": "croptopia:kiwi",
+    "items": [
+      "croptopia:kiwi",
+      "pamhc2crops:kiwiitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/lime",
+    "canonical": "croptopia:lime",
+    "items": [
+      "croptopia:lime",
+      "pamhc2trees:limeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/mango",
+    "canonical": "croptopia:mango",
+    "items": [
+      "croptopia:mango",
+      "pamhc2trees:mangoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/nutmeg",
+    "canonical": "croptopia:nutmeg",
+    "items": [
+      "croptopia:nutmeg",
+      "pamhc2trees:nutmegitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/oat",
+    "canonical": "farm_and_charm:oat",
+    "items": [
+      "farm_and_charm:oat",
+      "croptopia:oat",
+      "pamhc2crops:oatsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/olive",
+    "canonical": "croptopia:olive",
+    "items": [
+      "croptopia:olive",
+      "pamhc2trees:oliveitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/peach",
+    "canonical": "croptopia:peach",
+    "items": [
+      "croptopia:peach",
+      "pamhc2trees:peachitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/pear",
+    "canonical": "croptopia:pear",
+    "items": [
+      "croptopia:pear",
+      "pamhc2trees:pearitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/pecan",
+    "canonical": "croptopia:pecan",
+    "items": [
+      "croptopia:pecan",
+      "pamhc2trees:pecanitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/persimmon",
+    "canonical": "croptopia:persimmon",
+    "items": [
+      "croptopia:persimmon",
+      "pamhc2trees:persimmonitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/pineapple",
+    "canonical": "croptopia:pineapple",
+    "items": [
+      "croptopia:pineapple",
+      "pamhc2crops:pineappleitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/radish",
+    "canonical": "croptopia:radish",
+    "items": [
+      "croptopia:radish",
+      "pamhc2crops:radishitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/raspberry",
+    "canonical": "croptopia:raspberry",
+    "items": [
+      "croptopia:raspberry",
+      "pamhc2crops:raspberryitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/rhubarb",
+    "canonical": "croptopia:rhubarb",
+    "items": [
+      "croptopia:rhubarb",
+      "pamhc2crops:rhubarbitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/rutabaga",
+    "canonical": "croptopia:rutabaga",
+    "items": [
+      "croptopia:rutabaga",
+      "pamhc2crops:rutabagaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/soybean",
+    "canonical": "croptopia:soybean",
+    "items": [
+      "croptopia:soybean",
+      "pamhc2crops:soybeanitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/spinach",
+    "canonical": "croptopia:spinach",
+    "items": [
+      "croptopia:spinach",
+      "pamhc2crops:spinachitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/starfruit",
+    "canonical": "croptopia:starfruit",
+    "items": [
+      "croptopia:starfruit",
+      "pamhc2trees:starfruititem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/tomatillo",
+    "canonical": "croptopia:tomatillo",
+    "items": [
+      "croptopia:tomatillo",
+      "pamhc2crops:tomatilloitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/turnip",
+    "canonical": "croptopia:turnip",
+    "items": [
+      "croptopia:turnip",
+      "pamhc2crops:turnipitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/zucchini",
+    "canonical": "croptopia:zucchini",
+    "items": [
+      "croptopia:zucchini",
+      "pamhc2crops:zucchiniitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/mustard_seeds",
+    "canonical": "croptopia:mustard_seed",
+    "items": [
+      "croptopia:mustard_seed",
+      "pamhc2crops:mustardseedsitem",
+      "pamhc2crops:mustardseedsseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/vanilla",
+    "canonical": "croptopia:vanilla",
+    "items": [
+      "croptopia:vanilla",
+      "pamhc2foodextended:vanillaitem",
+      "pamhc2trees:vanillabeanitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/artichoke",
+    "canonical": "croptopia:artichoke_seed",
+    "items": [
+      "croptopia:artichoke_seed",
+      "pamhc2crops:artichokeseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/bellpepper",
+    "canonical": "croptopia:bellpepper_seed",
+    "items": [
+      "croptopia:bellpepper_seed",
+      "pamhc2crops:bellpepperseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/blackberry",
+    "canonical": "croptopia:blackberry_seed",
+    "items": [
+      "croptopia:blackberry_seed",
+      "pamhc2crops:blackberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/blueberry",
+    "canonical": "croptopia:blueberry_seed",
+    "items": [
+      "croptopia:blueberry_seed",
+      "pamhc2crops:blueberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/broccoli",
+    "canonical": "croptopia:broccoli_seed",
+    "items": [
+      "croptopia:broccoli_seed",
+      "pamhc2crops:broccoliseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/cantaloupe",
+    "canonical": "croptopia:cantaloupe_seed",
+    "items": [
+      "croptopia:cantaloupe_seed",
+      "pamhc2crops:cantaloupeseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/cauliflower",
+    "canonical": "croptopia:cauliflower_seed",
+    "items": [
+      "croptopia:cauliflower_seed",
+      "pamhc2crops:cauliflowerseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/celery",
+    "canonical": "croptopia:celery_seed",
+    "items": [
+      "croptopia:celery_seed",
+      "pamhc2crops:celeryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/garlic",
+    "canonical": "croptopia:garlic_seed",
+    "items": [
+      "croptopia:garlic_seed",
+      "pamhc2crops:garlicseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/ginger",
+    "canonical": "croptopia:ginger_seed",
+    "items": [
+      "croptopia:ginger_seed",
+      "pamhc2crops:gingerseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/grape",
+    "canonical": "croptopia:grape_seed",
+    "items": [
+      "croptopia:grape_seed",
+      "pamhc2crops:grapeseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/kale",
+    "canonical": "croptopia:kale_seed",
+    "items": [
+      "croptopia:kale_seed",
+      "pamhc2crops:kaleseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/kiwi",
+    "canonical": "croptopia:kiwi_seed",
+    "items": [
+      "croptopia:kiwi_seed",
+      "pamhc2crops:kiwiseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/pineapple",
+    "canonical": "croptopia:pineapple_seed",
+    "items": [
+      "croptopia:pineapple_seed",
+      "pamhc2crops:pineappleseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/radish",
+    "canonical": "croptopia:radish_seed",
+    "items": [
+      "croptopia:radish_seed",
+      "pamhc2crops:radishseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/raspberry",
+    "canonical": "croptopia:raspberry_seed",
+    "items": [
+      "croptopia:raspberry_seed",
+      "pamhc2crops:raspberryseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/rhubarb",
+    "canonical": "croptopia:rhubarb_seed",
+    "items": [
+      "croptopia:rhubarb_seed",
+      "pamhc2crops:rhubarbseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/rutabaga",
+    "canonical": "croptopia:rutabaga_seed",
+    "items": [
+      "croptopia:rutabaga_seed",
+      "pamhc2crops:rutabagaseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/soybean",
+    "canonical": "croptopia:soybean_seed",
+    "items": [
+      "croptopia:soybean_seed",
+      "pamhc2crops:soybeanseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/spinach",
+    "canonical": "croptopia:spinach_seed",
+    "items": [
+      "croptopia:spinach_seed",
+      "pamhc2crops:spinachseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/tomatillo",
+    "canonical": "croptopia:tomatillo_seed",
+    "items": [
+      "croptopia:tomatillo_seed",
+      "pamhc2crops:tomatilloseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/turnip",
+    "canonical": "croptopia:turnip_seed",
+    "items": [
+      "croptopia:turnip_seed",
+      "pamhc2crops:turnipseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/zucchini",
+    "canonical": "croptopia:zucchini_seed",
+    "items": [
+      "croptopia:zucchini_seed",
+      "pamhc2crops:zucchiniseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/coffee",
+    "canonical": "croptopia:coffee_seed",
+    "items": [
+      "croptopia:coffee_seed",
+      "pamhc2crops:coffeebeanseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/greenonion",
+    "canonical": "croptopia:greenonion_seed",
+    "items": [
+      "croptopia:greenonion_seed",
+      "pamhc2crops:scallionseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/oat",
+    "canonical": "farm_and_charm:oat_seeds",
+    "items": [
+      "farm_and_charm:oat_seeds",
+      "croptopia:oat_seed",
+      "pamhc2crops:oatsseeditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/olive",
+    "canonical": "croptopia:olive_seed",
+    "items": [
+      "croptopia:olive_seed",
+      "pamhc2trees:olive_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/seed/vanilla",
+    "canonical": "croptopia:vanilla_seeds",
+    "items": [
+      "croptopia:vanilla_seeds",
+      "pamhc2trees:vanillabean_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/almond",
+    "canonical": "croptopia:almond_sapling",
+    "items": [
+      "croptopia:almond_sapling",
+      "pamhc2trees:almond_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/apricot",
+    "canonical": "croptopia:apricot_sapling",
+    "items": [
+      "croptopia:apricot_sapling",
+      "pamhc2trees:apricot_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/banana",
+    "canonical": "croptopia:banana_sapling",
+    "items": [
+      "croptopia:banana_sapling",
+      "pamhc2trees:banana_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/cashew",
+    "canonical": "croptopia:cashew_sapling",
+    "items": [
+      "croptopia:cashew_sapling",
+      "pamhc2trees:cashew_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/cherry",
+    "canonical": "vinery:dark_cherry_sapling",
+    "items": [
+      "vinery:dark_cherry_sapling",
+      "croptopia:cherry_sapling",
+      "pamhc2trees:cherry_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/dragonfruit",
+    "canonical": "croptopia:dragonfruit_sapling",
+    "items": [
+      "croptopia:dragonfruit_sapling",
+      "pamhc2trees:dragonfruit_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/fig",
+    "canonical": "croptopia:fig_sapling",
+    "items": [
+      "croptopia:fig_sapling",
+      "pamhc2trees:fig_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/grapefruit",
+    "canonical": "croptopia:grapefruit_sapling",
+    "items": [
+      "croptopia:grapefruit_sapling",
+      "pamhc2trees:grapefruit_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/lime",
+    "canonical": "croptopia:lime_sapling",
+    "items": [
+      "croptopia:lime_sapling",
+      "pamhc2trees:lime_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/mango",
+    "canonical": "croptopia:mango_sapling",
+    "items": [
+      "croptopia:mango_sapling",
+      "pamhc2trees:mango_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/nutmeg",
+    "canonical": "croptopia:nutmeg_sapling",
+    "items": [
+      "croptopia:nutmeg_sapling",
+      "pamhc2trees:nutmeg_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/peach",
+    "canonical": "croptopia:peach_sapling",
+    "items": [
+      "croptopia:peach_sapling",
+      "pamhc2trees:peach_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/pear",
+    "canonical": "croptopia:pear_sapling",
+    "items": [
+      "croptopia:pear_sapling",
+      "pamhc2trees:pear_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/pecan",
+    "canonical": "croptopia:pecan_sapling",
+    "items": [
+      "croptopia:pecan_sapling",
+      "pamhc2trees:pecan_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/persimmon",
+    "canonical": "croptopia:persimmon_sapling",
+    "items": [
+      "croptopia:persimmon_sapling",
+      "pamhc2trees:persimmon_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/sapling/starfruit",
+    "canonical": "croptopia:starfruit_sapling",
+    "items": [
+      "croptopia:starfruit_sapling",
+      "pamhc2trees:starfruit_sapling"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/baked_beans",
+    "canonical": "croptopia:baked_beans",
+    "items": [
+      "croptopia:baked_beans",
+      "pamhc2foodextended:bakedbeansitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/banana_nut_bread",
+    "canonical": "croptopia:banana_nut_bread",
+    "items": [
+      "croptopia:banana_nut_bread",
+      "pamhc2foodextended:banananutbreaditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/banana_smoothie",
+    "canonical": "croptopia:banana_smoothie",
+    "items": [
+      "croptopia:banana_smoothie",
+      "pamhc2foodextended:bananasmoothieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/beef_jerky",
+    "canonical": "croptopia:beef_jerky",
+    "items": [
+      "croptopia:beef_jerky",
+      "pamhc2foodcore:beefjerkyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/candy_corn",
+    "canonical": "croptopia:candy_corn",
+    "items": [
+      "croptopia:candy_corn",
+      "pamhc2foodextended:candycornitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/caramel",
+    "canonical": "croptopia:caramel",
+    "items": [
+      "croptopia:caramel",
+      "pamhc2foodcore:caramelitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cashew_chicken",
+    "canonical": "croptopia:cashew_chicken",
+    "items": [
+      "croptopia:cashew_chicken",
+      "pamhc2foodextended:cashewchickenitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cheese",
+    "canonical": "croptopia:cheese",
+    "items": [
+      "croptopia:cheese",
+      "pamhc2foodcore:cheeseitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cheese_cake",
+    "canonical": "meadow:cheesecake_slice",
+    "items": [
+      "meadow:cheesecake_slice",
+      "croptopia:cheese_cake",
+      "pamhc2foodcore:cheesecakeitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cherry_pie",
+    "canonical": "croptopia:cherry_pie",
+    "items": [
+      "croptopia:cherry_pie",
+      "pamhc2foodextended:cherrypieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chimichanga",
+    "canonical": "croptopia:chimichanga",
+    "items": [
+      "croptopia:chimichanga",
+      "pamhc2foodextended:chimichangaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chocolate_ice_cream",
+    "canonical": "croptopia:chocolate_ice_cream",
+    "items": [
+      "croptopia:chocolate_ice_cream",
+      "pamhc2foodcore:chocolateicecreamitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cinnamon_roll",
+    "canonical": "croptopia:cinnamon_roll",
+    "items": [
+      "croptopia:cinnamon_roll",
+      "pamhc2foodextended:cinnamonrollitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/enchilada",
+    "canonical": "croptopia:enchilada",
+    "items": [
+      "croptopia:enchilada",
+      "pamhc2foodextended:enchiladaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/fish_and_chips",
+    "canonical": "croptopia:fish_and_chips",
+    "items": [
+      "croptopia:fish_and_chips",
+      "pamhc2foodcore:fishandchipsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/grape_juice",
+    "canonical": "croptopia:grape_juice",
+    "items": [
+      "croptopia:grape_juice",
+      "pamhc2foodextended:grapejuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/ground_pork",
+    "canonical": "croptopia:ground_pork",
+    "items": [
+      "croptopia:ground_pork",
+      "pamhc2foodcore:groundporkitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/kale_chips",
+    "canonical": "croptopia:kale_chips",
+    "items": [
+      "croptopia:kale_chips",
+      "pamhc2foodextended:kalechipsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/lemon_chicken",
+    "canonical": "croptopia:lemon_chicken",
+    "items": [
+      "croptopia:lemon_chicken",
+      "pamhc2foodextended:lemonchickenitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/meringue",
+    "canonical": "croptopia:meringue",
+    "items": [
+      "croptopia:meringue",
+      "pamhc2foodextended:meringueitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/mustard",
+    "canonical": "croptopia:mustard",
+    "items": [
+      "croptopia:mustard",
+      "pamhc2foodextended:mustarditem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/onion_rings",
+    "canonical": "croptopia:onion_rings",
+    "items": [
+      "croptopia:onion_rings",
+      "pamhc2foodextended:onionringsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/orange_juice",
+    "canonical": "croptopia:orange_juice",
+    "items": [
+      "croptopia:orange_juice",
+      "pamhc2foodextended:orangejuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pecan_pie",
+    "canonical": "croptopia:pecan_pie",
+    "items": [
+      "croptopia:pecan_pie",
+      "pamhc2foodextended:pecanpieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pepperoni",
+    "canonical": "croptopia:pepperoni",
+    "items": [
+      "croptopia:pepperoni",
+      "pamhc2foodextended:pepperoniitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pineapple_juice",
+    "canonical": "croptopia:pineapple_juice",
+    "items": [
+      "croptopia:pineapple_juice",
+      "pamhc2foodextended:pineapplejuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pork_jerky",
+    "canonical": "croptopia:pork_jerky",
+    "items": [
+      "croptopia:pork_jerky",
+      "pamhc2foodcore:porkjerkyitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/potato_chips",
+    "canonical": "croptopia:potato_chips",
+    "items": [
+      "croptopia:potato_chips",
+      "pamhc2foodcore:potatochipsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/pumpkin_spice_latte",
+    "canonical": "croptopia:pumpkin_spice_latte",
+    "items": [
+      "croptopia:pumpkin_spice_latte",
+      "pamhc2foodextended:pumpkinspicelatteitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/quesadilla",
+    "canonical": "croptopia:quesadilla",
+    "items": [
+      "croptopia:quesadilla",
+      "pamhc2foodextended:quesadillaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/raisins",
+    "canonical": "croptopia:raisins",
+    "items": [
+      "croptopia:raisins",
+      "pamhc2foodextended:raisinsitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/refried_beans",
+    "canonical": "croptopia:refried_beans",
+    "items": [
+      "croptopia:refried_beans",
+      "pamhc2foodextended:refriedbeansitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/salsa",
+    "canonical": "croptopia:salsa",
+    "items": [
+      "croptopia:salsa",
+      "pamhc2foodextended:salsaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/soy_milk",
+    "canonical": "croptopia:soy_milk",
+    "items": [
+      "croptopia:soy_milk",
+      "pamhc2foodextended:soymilkitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/soy_sauce",
+    "canonical": "croptopia:soy_sauce",
+    "items": [
+      "croptopia:soy_sauce",
+      "pamhc2foodextended:soysauceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/strawberry_smoothie",
+    "canonical": "croptopia:strawberry_smoothie",
+    "items": [
+      "croptopia:strawberry_smoothie",
+      "pamhc2foodextended:strawberrysmoothieitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/supreme_pizza",
+    "canonical": "croptopia:supreme_pizza",
+    "items": [
+      "croptopia:supreme_pizza",
+      "pamhc2foodextended:supremepizzaitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/sushi",
+    "canonical": "croptopia:sushi",
+    "items": [
+      "croptopia:sushi",
+      "pamhc2foodextended:sushiitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/taco",
+    "canonical": "croptopia:taco",
+    "items": [
+      "croptopia:taco",
+      "pamhc2foodextended:tacoitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/toast_sandwich",
+    "canonical": "croptopia:toast_sandwich",
+    "items": [
+      "croptopia:toast_sandwich",
+      "pamhc2foodextended:toastsandwichitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/trail_mix",
+    "canonical": "croptopia:trail_mix",
+    "items": [
+      "croptopia:trail_mix",
+      "pamhc2foodcore:trailmixitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/vanilla_ice_cream",
+    "canonical": "croptopia:vanilla_ice_cream",
+    "items": [
+      "croptopia:vanilla_ice_cream",
+      "pamhc2foodextended:vanillaicecreamitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/carrot_juice",
+    "canonical": "pamhc2foodcore:carrotjuiceitem",
+    "items": [
+      "pamhc2foodcore:carrotjuiceitem",
+      "pamhc2foodextended:carrotjuiceitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chicken_noodle_soup",
+    "canonical": "pamhc2foodcore:chickennoodlesoupitem",
+    "items": [
+      "pamhc2foodcore:chickennoodlesoupitem",
+      "pamhc2foodextended:chickennoodlesoupitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/chocolate_milk",
+    "canonical": "pamhc2foodcore:chocolatemilkitem",
+    "items": [
+      "pamhc2foodcore:chocolatemilkitem",
+      "pamhc2foodextended:chocolatemilkitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/crackers_and_cheese",
+    "canonical": "pamhc2foodcore:crackersandcheeseitem",
+    "items": [
+      "pamhc2foodcore:crackersandcheeseitem",
+      "pamhc2foodextended:crackersandcheeseitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/powdered_donut",
+    "canonical": "pamhc2foodcore:powdereddonutitem",
+    "items": [
+      "pamhc2foodcore:powdereddonutitem",
+      "pamhc2foodextended:powdereddonutitem"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/apple_pie_slice",
+    "canonical": "farmersdelight:apple_pie_slice",
+    "items": [
+      "farmersdelight:apple_pie_slice",
+      "bakery:apple_pie_slice"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_egg",
+    "canonical": "bountifulfares:cooked_egg",
+    "items": [
+      "bountifulfares:cooked_egg",
+      "naturalist:cooked_egg"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/venison",
+    "canonical": "naturalist:venison",
+    "items": [
+      "naturalist:venison",
+      "wildernature:venison"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_venison",
+    "canonical": "naturalist:cooked_venison",
+    "items": [
+      "naturalist:cooked_venison",
+      "wildernature:cooked_venison"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/crab_legs",
+    "canonical": "crabbersdelight:crab_legs",
+    "items": [
+      "crabbersdelight:crab_legs",
+      "croptopia:crab_legs"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/dried_corn",
+    "canonical": "cornexpansion:dried_corn",
+    "items": [
+      "cornexpansion:dried_corn",
+      "brewery:dried_corn"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/dumplings",
+    "canonical": "farmersdelight:dumplings",
+    "items": [
+      "farmersdelight:dumplings",
+      "brewery:dumplings"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/coffee",
+    "canonical": "herbalbrews:coffee",
+    "items": [
+      "herbalbrews:coffee",
+      "croptopia:coffee"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cheeseburger",
+    "canonical": "moredelight:hamburger_with_cheese",
+    "items": [
+      "moredelight:hamburger_with_cheese",
+      "croptopia:cheeseburger"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/prepared/cooked_crab",
+    "canonical": "crabbersdelight:cooked_crab",
+    "items": [
+      "crabbersdelight:cooked_crab",
+      "croptopia:steamed_crab"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/ingredient/fugu_slice",
+    "canonical": "oceansdelight:fugu_slice",
+    "items": [
+      "oceansdelight:fugu_slice",
+      "crabbersdelight:pufferfish_slice"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/glowing_calamari",
+    "canonical": "crabbersdelight:raw_glow_squid_tentacles",
+    "items": [
+      "crabbersdelight:raw_glow_squid_tentacles",
+      "croptopia:glowing_calamari"
+    ]
+  },
+  {
+    "tag": "minecraft_beyond:food_unification/raw/calamari",
+    "canonical": "crabbersdelight:raw_squid_tentacles",
+    "items": [
+      "crabbersdelight:raw_squid_tentacles",
+      "culturaldelights:raw_calamari",
+      "oceansdelight:tentacles",
+      "croptopia:calamari"
+    ]
+  }
+]

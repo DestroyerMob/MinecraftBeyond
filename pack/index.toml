@@ -1,6 +1,34 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/almostunified/debug.json"
+hash = "b62fcc25516806d7fd92a71fd47572ba366ec80e76145fa9aeacf154e09f77b1"
+
+[[files]]
+file = "config/almostunified/duplicates.json"
+hash = "94a5a487e8c3bf8fc1a46b9ba5cfdb325c4f92b71f3dc4730d8ba5eb09d92777"
+
+[[files]]
+file = "config/almostunified/startup.json"
+hash = "b4ce4d99b37a679b372fd2d5c34113f0b79adfe67a5b830e4fb5a20f47951278"
+
+[[files]]
+file = "config/almostunified/tags.json"
+hash = "03c4d2ce7ef8b48440b47a1740ebe8ebfa7e7095a767ed4fdeb7849cd6df05a3"
+
+[[files]]
+file = "config/almostunified/unification/food.json"
+hash = "34aa25d15b5570c944788e259a96b9e355eb6d7d508aed345dd54e7b30d182a4"
+
+[[files]]
+file = "config/almostunified/unification/materials.json"
+hash = "4a81b1ccb8fd33d1cb839442ecf394e80cbf4fdfe90d92bac1d065941e7695e2"
+
+[[files]]
+file = "config/beachparty-common.toml"
+hash = "71bce3fdba32559f4ae24b2ad255fb167c6d81c672bf2332b1e63868481a3516"
+
+[[files]]
 file = "config/better-advanced-tooltips-client.toml"
 hash = "8c6cbacea81be19c772381c752132ff45f9fbf44d180dcf6583b433464816765"
 
@@ -9,8 +37,16 @@ file = "config/bettercaves/neoforge-1_21_1/liquidregions.json"
 hash = "ad0e43cd1d8fff16d76ff6036699bd67598ff8bc18220b7e8e951245c92cf139"
 
 [[files]]
+file = "config/bountifulfares-common.toml"
+hash = "6a227612c12d65202c09a0473922b7abb0c9c30a0afe156e38b1786d545f3299"
+
+[[files]]
 file = "config/carryon-common.toml"
 hash = "24cb108dc3a2346b1089b100470197a7018c0e72ad21f535efad86e1f3d6f68b"
+
+[[files]]
+file = "config/crabbersdelight-common.toml"
+hash = "b1b89a66a1c6b72a7c0575c96fc757d6a57ff117c8dd18b7bb279b92ffc63a2c"
 
 [[files]]
 file = "config/dragonfight.json"
@@ -34,7 +70,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -70,11 +106,23 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "7fbd50568ac9dd9160036905434f407c2414aef3c7388e25c679d410e11974ad"
+hash = "9bc82140cb7eed5e2fb0fb1d07c5358c929614c1abcddd5dfe1b8c9ba61ba740"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
 hash = "f1df1a73a759678bc80e4caa012f757f1d3edd472f4b573ed0174915d57b97c1"
+
+[[files]]
+file = "config/pamhc2crops.toml"
+hash = "47a61400e31353296234e46dc41c51e675a20528d8af5dbdbabb84f01f1c96cd"
+
+[[files]]
+file = "config/pamhc2trees.toml"
+hash = "415efc66a48e936d7d93f0d2c394559054bbff0aebae28f9d1731a1e08551a72"
+
+[[files]]
+file = "config/regions_unexplored/common.json"
+hash = "64c5a3b40aaf26fd49375b9c2e88db727838d7a19175f5f29d40a04a198c25b8"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -89,12 +137,188 @@ file = "config/tooltipoverhaul/tooltipoverhaul.toml"
 hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
 
 [[files]]
+file = "kubejs/config/food_unification_groups.json"
+hash = "4736eaab2fec56458fc7571348c6a7656a3d784e9c4e2681e0feedb2c2386476"
+
+[[files]]
+file = "kubejs/data/beachparty/neoforge/biome_modifier/add_palm_tree.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/crabbersdelight/neoforge/biome_modifier/add_tree_palm.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_apple_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_asparagus_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_avocado_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_barley_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_cabbage_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_cherry_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_chile_pepper_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_cinnamon_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_coconut_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_corn_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_cranberry_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_cucumber_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_date_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_eggplant_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_elderberry_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_hops_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_leek_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_lemon_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_lettuce_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_oat_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_onion_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_orange_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_peanut_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_plum_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_rice_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_salt_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_strawberry_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_sweetpotato_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_tea_leaves_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_tomato_crop_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/croptopia/neoforge/biome_modifier/add_walnut_tree_to_biomes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/culturaldelights/neoforge/biome_modifier/add_corn.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
 file = "kubejs/data/ecology/tags/item/village_currency/ruby.json"
 hash = "70286259eaa1b7a4040832247f96965dc3a7fd0602f3e9b7e6a776399783acd5"
 
 [[files]]
 file = "kubejs/data/ecology/tags/item/village_currency/sapphire.json"
 hash = "fc79ebb3fa3d6f1f50599fdf77e94abba282c613ed96feb4694ad781d609206d"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_beetroots.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_carrots.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_corn.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_onions.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_potatoes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_tomatoes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_beetroots.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_carrots.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_potatoes.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
 file = "kubejs/data/minecraft_beyond/loot_modifiers/convert_vanilla_tools_after_affixes.json"
@@ -117,12 +341,136 @@ file = "kubejs/data/neoforge/tags/block/relocation_not_supported.json"
 hash = "54684b805b137d0297e53cd896b768961a8aaceabcd84698aa053c3e83b93fa7"
 
 [[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/almond_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/apple_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/apricot_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/avocado_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/banana_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/cashew_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/cherry_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/cinnamon_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/coconut_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/date_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/dragonfruit_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/fig_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/grapefruit_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/hazelnut_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/lemon_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/lime_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/mango_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/nutmeg_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/olive_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/orange_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/passionfruit_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/peach_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/pear_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/pecan_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/persimmon_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/plum_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/starfruit_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/vanillabean_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/pamhc2trees/neoforge/biome_modifier/walnut_placed.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
 file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_frequently_spawns.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_spawns.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/vinery/neoforge/biome_modifier/add_apple_tree.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/server_scripts/food_recipe_unification.js"
+hash = "10f69be0ee6623461c396ba2c773ab7ebbeba6396c4be4ec9caeedd688ff0c78"
 
 [[files]]
 file = "kubejs/server_scripts/gravel_to_flint.js"
@@ -135,6 +483,18 @@ hash = "b16da877532a422c67d2cc970b8ccafc76d905b8c18fbbf0bf3eff1c4e416d87"
 [[files]]
 file = "kubejs/server_scripts/remove_direct_equipment_recipes.js"
 hash = "d5ba0061fbae33dc8fc3d5ce2e30630a9276f58e82443b6c7c3c80a9f666cad3"
+
+[[files]]
+file = "kubejs/startup_scripts/food_unification_baking_items.js"
+hash = "cd2ff15a25458161d41b39c0cfb6e4e8070ccf0533e0a70dd0dfb0649e94ceae"
+
+[[files]]
+file = "kubejs/startup_scripts/food_unification_station_items.js"
+hash = "3c8cee306014887ff76ee643cafee4f7aa3b9f8b746d90c5b3ef266776499af0"
+
+[[files]]
+file = "kubejs/startup_scripts/food_unification_targets.js"
+hash = "4588a8fa6139de50bd35d61409e38583def110fb2e8eac2ab905adbb4c633781"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -707,6 +1067,11 @@ hash = "a53db3cbfcc59ff30269743315bdaa929271bb7cd31674285a364e8162e44a7f"
 metafile = true
 
 [[files]]
+file = "mods/iventory-vertical-swap.pw.toml"
+hash = "7512d43b320d6cb30051dec712d692ebb6ff34d0f005a6b5983304dc47f9eca3"
+metafile = true
+
+[[files]]
 file = "mods/jade-addons.pw.toml"
 hash = "89420f657cec1038646f75531ae388e92d27c51c84b1f121e935ae5aecf995be"
 metafile = true
@@ -1024,6 +1389,11 @@ metafile = true
 [[files]]
 file = "mods/polymorph.pw.toml"
 hash = "8b725f1822c0feab9e51bef600f2ee6f4c26efbb55aa3ee9073a027f1f134202"
+metafile = true
+
+[[files]]
+file = "mods/portable-hole.pw.toml"
+hash = "bb92c235557db21e595e118e938e5062675df721578ed2c55addeb5c6bab5efb"
 metafile = true
 
 [[files]]

@@ -1,0 +1,13 @@
+name = "Iventory Vertical Swap"
+filename = "inventory_vertical_swap-1.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9d7ebc5a7253a667afd1930820cf06e99d44dbe6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8107809
+project-id = 1546735
