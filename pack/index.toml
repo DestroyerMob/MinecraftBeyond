@@ -14,11 +14,11 @@ hash = "b4ce4d99b37a679b372fd2d5c34113f0b79adfe67a5b830e4fb5a20f47951278"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "03c4d2ce7ef8b48440b47a1740ebe8ebfa7e7095a767ed4fdeb7849cd6df05a3"
+hash = "8851472f0a7292f2eaf2a4302c2946ae59820f16472b2c84eee8a67892902c93"
 
 [[files]]
 file = "config/almostunified/unification/food.json"
-hash = "34aa25d15b5570c944788e259a96b9e355eb6d7d508aed345dd54e7b30d182a4"
+hash = "2667cead6419b3cf815ed9e1ab6291a2cfefac9d4efee13eb048994f29360d93"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
@@ -70,7 +70,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
+hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -106,7 +106,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "9bc82140cb7eed5e2fb0fb1d07c5358c929614c1abcddd5dfe1b8c9ba61ba740"
+hash = "a760b8a6a4d64696dbd87542ab8afccc1b850c1c878573c7e862a52e1ce5e5bf"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -494,7 +494,7 @@ hash = "3c8cee306014887ff76ee643cafee4f7aa3b9f8b746d90c5b3ef266776499af0"
 
 [[files]]
 file = "kubejs/startup_scripts/food_unification_targets.js"
-hash = "4588a8fa6139de50bd35d61409e38583def110fb2e8eac2ab905adbb4c633781"
+hash = "5f9de607449973e0f4dcf7272c4b7f050746bfb9bd80fb29a13f87e43e2168cd"
 
 [[files]]
 file = "mods/accessories.pw.toml"
