@@ -1754,12 +1754,22 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "inventory_vertical_swap": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "portablehole": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     }
   },
   "configFiles": [],
   "options": {},
   "featureChoices": {
     "ecology": "off",
-    "world_generation": "vanilla"
+    "world_generation": "combined"
   }
 }
