@@ -87,6 +87,20 @@
       "notes": "NeoForge 21.1.234"
     },
     {
+      "name": "Mobs Storage",
+      "repository": "https://github.com/DestroyerMob/MobsStorage.git",
+      "branch": "main",
+      "sourceFolder": "MobsStorage",
+      "modId": "mobsstorage",
+      "jarGlob": "mobsstorage-*.jar",
+      "pack": {
+        "metafile": "mods/mobsstorage.pw.toml",
+        "filename": "mobsstorage-local.jar",
+        "side": "both"
+      },
+      "notes": "NeoForge 21.1.234. Visual storage labels with item and tag whitelists."
+    },
+    {
       "name": "Mod Quality Picker",
       "repository": "https://github.com/DestroyerMob/ModQualityPicker.git",
       "branch": "main",

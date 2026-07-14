@@ -106,11 +106,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "a760b8a6a4d64696dbd87542ab8afccc1b850c1c878573c7e862a52e1ce5e5bf"
+hash = "30a8709d68198c6fefb0357fbdeefcb7a216832f00855ee26132aba1fff63fb3"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "f1df1a73a759678bc80e4caa012f757f1d3edd472f4b573ed0174915d57b97c1"
+hash = "748800b24b09ddcad9a98ea46023f38d1720f0df4e6ed96a2a85acaaa56560e8"
 
 [[files]]
 file = "config/pamhc2crops.toml"

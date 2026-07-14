@@ -1140,6 +1140,11 @@
       "locked": false,
       "reason": ""
     },
+    "mobsstorage": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "mobsmoreweapons": {
       "enabled": true,
       "locked": false,

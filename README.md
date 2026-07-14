@@ -2,7 +2,7 @@
 
 Minecraft Beyond is an in-development Minecraft 1.21.1 survival modpack for Prism Launcher. It keeps the vanilla adventure loop recognizable while adding deeper toolmaking, deterministic enchanting, posture-driven combat, village and bee simulation, exploration, food, building, and presentation upgrades.
 
-The pack is also the integration environment for nine local projects. Those mods are developed in separate repositories, built into this instance for playtesting, and connected here through configs, tags, loot data, recipes, compatibility data, and Mod Quality Picker profiles.
+The pack is also the integration environment for ten local projects. Those mods are developed in separate repositories, built into this instance for playtesting, and connected here through configs, tags, loot data, recipes, compatibility data, and Mod Quality Picker profiles.
 
 Current target:
 
@@ -125,6 +125,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
+| Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Configurable visual storage labels with exact-item and item-tag whitelists for vanilla-style containers and double chests. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |
 | Dev Tools | `DestroyerMob/DevTools` | `main` | Pack-only testing helpers: Lootr chest placement/retargeting/rerolling and opt-in final/raw damage diagnostics. |
 
