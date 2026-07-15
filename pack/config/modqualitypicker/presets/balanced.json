@@ -1001,7 +1001,7 @@
       "reason": ""
     },
     "inventorysorter": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
