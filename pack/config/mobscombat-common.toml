@@ -44,9 +44,6 @@
 	# Default: 18
 	# Range: 1 ~ 72000
 	parry_cooldown_ticks = 18
-	# Default: 3
-	# Range: 0 ~ 200
-	dagger_parry_window_bonus_ticks = 3
 	# Default: 0.0
 	# Range: 0.0 ~ 1.0
 	parry_damage_multiplier = 0.0

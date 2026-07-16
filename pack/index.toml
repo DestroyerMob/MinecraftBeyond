@@ -78,7 +78,7 @@ hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
 file = "config/mobscombat-common.toml"
-hash = "37ceb9057e8e5b2901c5e77f2f872d90345f011f75e92b755adb4adb249ad53c"
+hash = "6d16df049ed6ad148d8c60d66a7c5093a517b38b0c323079c4cda9dbf5d57f30"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
@@ -106,11 +106,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "685c876fc39f1a0ed0cea2da8a702706ea91bbd31d39656de468a34b865df56a"
+hash = "ead3cc0520b88b208d467ec1228be0be8bb686c293c70bfa7c4b6f4853353705"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "748800b24b09ddcad9a98ea46023f38d1720f0df4e6ed96a2a85acaaa56560e8"
+hash = "b68ab4967de834bf8ce8a6e33247b31b21d3c4c29b16cd5bccf43c09f997abb4"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -123,6 +123,10 @@ hash = "415efc66a48e936d7d93f0d2c394559054bbff0aebae28f9d1731a1e08551a72"
 [[files]]
 file = "config/regions_unexplored/common.json"
 hash = "64c5a3b40aaf26fd49375b9c2e88db727838d7a19175f5f29d40a04a198c25b8"
+
+[[files]]
+file = "config/servercore/optimizations.yml"
+hash = "85d1eadbb7a38b2d5c8e93b81bc2b722104a6ad8f601ff38fc22261367293966"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -1217,6 +1221,11 @@ hash = "0c93cce4687d676ade38014ef7c93eb70d00edb42537cf0beae8675b1affbb89"
 metafile = true
 
 [[files]]
+file = "mods/lithium.pw.toml"
+hash = "fb6171c8f7ff0d83513b3f75ee5d7a98659559c427d79fb69eb0219639af8a37"
+metafile = true
+
+[[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "8c48430e5553c00173143180b8067b25a7f1122cfe2668fd376350be3044f580"
 metafile = true
@@ -1257,6 +1266,16 @@ hash = "a58c1322f0d21a88b3a42627374f045fe34a0385ef6630ec516b77d73438accc"
 metafile = true
 
 [[files]]
+file = "mods/moonrise-compats.pw.toml"
+hash = "5842a22e0ab775c99d6530c592481d5047a05b56bfc0eb6c29901667035b6ff5"
+metafile = true
+
+[[files]]
+file = "mods/moonrise.pw.toml"
+hash = "354143bdb8abbf1a5808e24707fb390eb36ea0d97cead95c48c132ec42ac2afa"
+metafile = true
+
+[[files]]
 file = "mods/more-chest-variants-lieonlion.pw.toml"
 hash = "dad7247fbf1d724c48785cfd38168d257579a089c195da8720f66c9d85373a4f"
 metafile = true
@@ -1269,11 +1288,6 @@ metafile = true
 [[files]]
 file = "mods/more-delight-forge.pw.toml"
 hash = "983f834edf2911324a9db31af66c139c10b49e20a5ca11ed3517169d92a4d9ec"
-metafile = true
-
-[[files]]
-file = "mods/moreculling.pw.toml"
-hash = "d126f045e2cc43c9142ea4bcb2acec1917351fc6416eb71bf0bc8d32f7bfe69f"
 metafile = true
 
 [[files]]
@@ -1304,11 +1318,6 @@ metafile = true
 [[files]]
 file = "mods/nexuslib.pw.toml"
 hash = "400a52db1e1b782a1282d6b49bae2b862f4a18027c13d379111a3ccffe0a2ae9"
-metafile = true
-
-[[files]]
-file = "mods/noisium.pw.toml"
-hash = "bf47aad5d7a2e5f5ec27ab671713a3f8358d5cea1a3d4f4f1b43438db38ba7f0"
 metafile = true
 
 [[files]]
@@ -1432,6 +1441,11 @@ hash = "92123fa28c660844e36b9b410ab771ab3bb643915a01dbc81e52388c8e620b0b"
 metafile = true
 
 [[files]]
+file = "mods/resourceful-config.pw.toml"
+hash = "89d21f5da7fea8b1197c6e8e5215d45f7400844560e0f7c179d3c6145bd36a95"
+metafile = true
+
+[[files]]
 file = "mods/resourceful-lib.pw.toml"
 hash = "aa83553db30adc47f86010f6443340251323a62ee3f9415a0c4332cb6d502419"
 metafile = true
@@ -1519,6 +1533,11 @@ metafile = true
 [[files]]
 file = "mods/spice-of-life-carrot-edition.pw.toml"
 hash = "e520ad446364dff7dd50896108a96140f3f5598b72003dade5b17308fa9ef2a9"
+metafile = true
+
+[[files]]
+file = "mods/structure-layout-optimizer.pw.toml"
+hash = "db845eb158247bde04edc727945fbf67c6a46f0cbe4d2a1e9142263c022c73f8"
 metafile = true
 
 [[files]]

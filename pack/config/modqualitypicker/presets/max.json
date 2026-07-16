@@ -1090,6 +1090,11 @@
       "locked": false,
       "reason": ""
     },
+    "lithium": {
+      "enabled": true,
+      "locked": false,
+      "reason": "General server and game-logic performance optimization."
+    },
     "lithostitched": {
       "enabled": true,
       "locked": false,
@@ -1175,10 +1180,20 @@
       "locked": false,
       "reason": ""
     },
-    "moreculling": {
+    "moonrise": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Chunk loading, generation, saving, and server scheduling optimization."
+    },
+    "moonrise_compats": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Compatibility patches for the pinned Moonrise build."
+    },
+    "moreculling": {
+      "enabled": false,
+      "locked": false,
+      "reason": "Disabled because its collision-shape cache is incompatible with Moonrise."
     },
     "moredelight": {
       "enabled": true,
@@ -1219,11 +1234,6 @@
       "enabled": true,
       "locked": false,
       "reason": ""
-    },
-    "noisium": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Detected from the installed mod catalog."
     },
     "oceansdelight": {
       "enabled": true,
@@ -1440,6 +1450,11 @@
       "locked": false,
       "reason": "Detected from the installed mod catalog."
     },
+    "resourcefulconfig": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by Structure Layout Optimizer."
+    },
     "resourcefullib": {
       "enabled": true,
       "locked": false,
@@ -1514,6 +1529,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "structure_layout_optimizer": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Optimizes jigsaw and NBT structure generation."
     },
     "supplementaries": {
       "enabled": true,
