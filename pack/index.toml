@@ -106,7 +106,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "4836675d0d64d9744359d5ae3b3f80dd954a58533cff3986045e0505682efd3d"
+hash = "673a2c33547b92be374be292026c9a702ee945a0ca023f85f3a5818aa855b325"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"

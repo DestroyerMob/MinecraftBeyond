@@ -1756,7 +1756,7 @@
       "reason": ""
     },
     "inventory_vertical_swap": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
