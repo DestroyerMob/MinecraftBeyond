@@ -20,6 +20,8 @@ Current target:
 - **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, sculk experience tools, and small magical discoveries.
 - **Presentation and scalability:** shader, sound, animation, UI, controller, map, performance, and quality-profile tooling let the same pack target different machines and play styles.
 
+Controller-first play, including Steam and Steam Deck setup, pack radial-menu actions, and troubleshooting, is documented in [docs/CONTROLLER_GUIDE.md](docs/CONTROLLER_GUIDE.md).
+
 This is an internal playtesting pack rather than a finished public release. Local mod balance, art, compatibility, and distribution packaging are still evolving.
 
 ## Repository Layout

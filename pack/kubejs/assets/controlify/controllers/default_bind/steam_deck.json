@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "fabric-key-binding-api-v1:key.sophisticatedbackpacks.open_backpack": {
+      "button": "controlify:button/left_paddle_1"
+    },
+    "fabric-key-binding-api-v1:gui.xaero_open_map": {
+      "button": "controlify:button/right_paddle_1"
+    },
+    "fabric-key-binding-api-v1:key.mobstoolforging.knapping_previous": {
+      "button": "controlify:button/left_paddle_2"
+    },
+    "fabric-key-binding-api-v1:key.mobstoolforging.knapping_next": {
+      "button": "controlify:button/right_paddle_2"
+    }
+  }
+}

@@ -388,7 +388,7 @@
     "controlify": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Primary controller implementation for gamepad, Steam, and Steam Deck play."
     },
     "controlling": {
       "enabled": true,

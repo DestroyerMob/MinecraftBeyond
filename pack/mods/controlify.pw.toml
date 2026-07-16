@@ -1,13 +1,13 @@
 name = "Controlify (Controller support)"
-filename = "controlify-3.0.0+lts+1.21.1-neoforge.jar"
+filename = "controlify-3.0.1+lts+1.21.1-neoforge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "94f241b658d67b75d932e5f4d12af2a96051eb08"
+hash = "6d904472e1c95bd9d8b5e7c5421b8db628915e20"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8088069
+file-id = 8406701
 project-id = 835847

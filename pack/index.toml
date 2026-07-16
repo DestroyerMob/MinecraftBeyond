@@ -110,11 +110,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "204c36395b9a004cbd79e9af86291dd76c38cd528620a4eb517524ce928a3bb0"
+hash = "620379ba670ae87d86bfe5cd70713f2e4853eff9ff72862b717c030d5ddcadf5"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "f36db0820637d8e5110f08b2a55e04b1a2a4d495706a11c364e94d1fccfd06c9"
+hash = "f072b13cf1ab17ae9b256bc99764f08897f52221f4d09a2e598484d226ca1c63"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -143,6 +143,14 @@ hash = "5fe285a83924db98f45f7daabbf77e1df8ad177f3fa0893d76525c6a685a7c87"
 [[files]]
 file = "config/tooltipoverhaul/tooltipoverhaul.toml"
 hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
+
+[[files]]
+file = "kubejs/assets/controlify/controllers/default_bind/steam_deck.json"
+hash = "6d9f48f44fcaafe2421f8f614a83639b4dff16cbd0695be3164f236ac09d2070"
+
+[[files]]
+file = "kubejs/assets/controlify/controllers/default_config/default.json"
+hash = "9ca81db72853aed6070a61ac3298097bf1630ca369465831c5c86e288b461332"
 
 [[files]]
 file = "kubejs/config/food_unification_groups.json"
@@ -736,12 +744,7 @@ metafile = true
 
 [[files]]
 file = "mods/controlify.pw.toml"
-hash = "c929c3b0a8742b974f6f47cf19310aeb605c874466e527ef8ab9f344ebcfa1c4"
-metafile = true
-
-[[files]]
-file = "mods/controllable.pw.toml"
-hash = "44253d33ea5dc68f091c810ee5b4d7371dccc87c1f390e3a2325105e56bfb8f7"
+hash = "5748cac2dc50df99cda6e1cfa97ea91884a6f3a779ed3547a27853f2efc09b53"
 metafile = true
 
 [[files]]
