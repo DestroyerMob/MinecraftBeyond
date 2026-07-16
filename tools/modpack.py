@@ -13,6 +13,7 @@ import shutil
 import socket
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 from dataclasses import dataclass
@@ -1367,14 +1368,25 @@ def command_import_prism_mods(args: argparse.Namespace) -> int:
             print("WARNING: --include-local is deprecated; local runtime jars are skipped. Use write-local-mod-releases for published artifacts.")
         else:
             print(f"Skipping {len(local_runtime_jars)} local runtime jar(s).")
-    prism_jars = [jar for jar in all_prism_jars if not is_local_runtime_jar(jar)]
+    pack_mods = pack_dir / "mods"
+    managed_filenames = {
+        filename
+        for metafile in sorted(pack_mods.glob("*.pw.toml"))
+        if (filename := packwiz_metadata_filename(metafile))
+    }
+    managed_prism_jars = [jar for jar in all_prism_jars if jar.name in managed_filenames]
+    if managed_prism_jars:
+        print(f"Preserving metadata for {len(managed_prism_jars)} already-managed Prism jar(s).")
+    prism_jars = [
+        jar for jar in all_prism_jars
+        if not is_local_runtime_jar(jar) and jar.name not in managed_filenames
+    ]
 
     if not prism_jars:
         print("No Prism mod jars found to import.")
         return 0
 
     print(f"Preparing to import {len(prism_jars)} Prism mod jar(s) through packwiz CurseForge detection.")
-    pack_mods = pack_dir / "mods"
     packwiz = None if args.dry_run else resolve_packwiz(dev_env, args.packwiz)
     if not args.dry_run and not packwiz:
         raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
@@ -1772,6 +1784,85 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_verify_fresh_install(args: argparse.Namespace) -> int:
+    temporary_target = args.minecraft_dir is None
+    if args.minecraft_dir:
+        minecraft_dir = expand_path(args.minecraft_dir)
+    elif args.dry_run:
+        minecraft_dir = Path(tempfile.gettempdir()) / "minecraft-beyond-fresh-install"
+    else:
+        minecraft_dir = Path(tempfile.mkdtemp(prefix="minecraft-beyond-fresh-install-"))
+    assert minecraft_dir is not None
+
+    if minecraft_dir.exists() and any(minecraft_dir.iterdir()):
+        raise ToolError(f"Fresh-install target is not empty: {minecraft_dir}")
+
+    pack_dir = expand_path(args.pack_dir or PACK_DIR)
+    assert pack_dir is not None
+    managed_targets: dict[Path, Path] = {}
+    duplicate_targets: list[tuple[Path, Path, Path]] = []
+    for metafile in sorted(pack_dir.rglob("*.pw.toml")):
+        filename = packwiz_metadata_filename(metafile)
+        side = first_line_match(metafile, r"side\s*=\s*['\"]([^'\"]+)['\"]")
+        if not filename or side == "server":
+            continue
+        relative = metafile.parent.relative_to(pack_dir) / filename
+        previous = managed_targets.get(relative)
+        if previous is not None:
+            duplicate_targets.append((relative, previous, metafile))
+        else:
+            managed_targets[relative] = metafile
+    if duplicate_targets:
+        details = "\n".join(
+            f"  - {target}: {first.relative_to(pack_dir)} and {second.relative_to(pack_dir)}"
+            for target, first, second in duplicate_targets
+        )
+        raise ToolError(f"Multiple Packwiz metafiles target the same installed file:\n{details}")
+
+    print(f"Verifying a fresh Packwiz install in {minecraft_dir}")
+    succeeded = False
+    try:
+        command_update_prism_mods(argparse.Namespace(
+            minecraft_dir=str(minecraft_dir),
+            mods_dir=None,
+            pack_dir=str(pack_dir),
+            packwiz=args.packwiz,
+            java_home=args.java_home,
+            installer=args.installer,
+            main_jar=args.main_jar,
+            bootstrap_url=args.bootstrap_url,
+            no_download=args.no_download,
+            port=args.port,
+            skip_quality_apply=True,
+            dry_run=args.dry_run,
+        ))
+
+        if not args.dry_run:
+            missing: list[Path] = []
+            for relative in managed_targets:
+                installed = minecraft_dir / relative
+                disabled = installed.with_name(installed.name + ".disabled")
+                if not installed.exists() and not disabled.exists():
+                    missing.append(relative)
+
+            if missing:
+                shown = "\n".join(f"  - {path}" for path in missing[:20])
+                remainder = f"\n  ... and {len(missing) - 20} more" if len(missing) > 20 else ""
+                raise ToolError(
+                    f"Fresh install completed with {len(missing)} missing managed file(s):\n{shown}{remainder}"
+                )
+            print(f"Fresh install verified: {len(managed_targets)} managed client file(s) are present.")
+        succeeded = True
+    finally:
+        if temporary_target and minecraft_dir.exists():
+            if succeeded and not args.keep and not args.dry_run:
+                shutil.rmtree(minecraft_dir)
+                print(f"Removed temporary verification directory: {minecraft_dir}")
+            elif not args.dry_run:
+                print(f"Kept verification directory for inspection: {minecraft_dir}")
+    return 0
+
+
 def command_refresh(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
     packwiz = resolve_packwiz(dev_env, args.packwiz)
@@ -1972,6 +2063,14 @@ def build_parser() -> argparse.ArgumentParser:
     update_prism_shaders = subparsers.add_parser("update-prism-shaderpacks", help="Apply packwiz shaderpack metadata to Prism.")
     add_update_prism_arguments(update_prism_shaders)
     update_prism_shaders.set_defaults(func=command_update_prism_shaderpacks)
+
+    verify_fresh = subparsers.add_parser(
+        "verify-fresh-install",
+        help="Install the Packwiz pack into an empty directory and verify every managed client file is present.",
+    )
+    add_update_prism_arguments(verify_fresh)
+    verify_fresh.add_argument("--keep", action="store_true", help="Keep an automatically-created verification directory after success.")
+    verify_fresh.set_defaults(func=command_verify_fresh_install)
 
     refresh = subparsers.add_parser("refresh", help="Run packwiz refresh for the pack.")
     refresh.add_argument("--pack-dir")

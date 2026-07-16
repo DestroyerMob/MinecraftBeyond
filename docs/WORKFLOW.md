@@ -100,7 +100,7 @@ If you use Prism's mod browser because it is faster and nicer, download the mod 
 ./scripts/modpack import-prism-mods
 ```
 
-The script copies jars from `minecraft/mods/` into `pack/mods/`, runs `packwiz cf detect`, and refreshes the pack index. When detection succeeds, the temporary staged jar is replaced by a `.pw.toml` metadata file. Commit the generated metadata under `pack/`.
+The script copies unmanaged jars from `minecraft/mods/` into `pack/mods/`, runs `packwiz cf detect`, and refreshes the pack index. Jars whose filenames are already represented by Packwiz metadata are skipped so their existing provider, download URL, side, and hash cannot be silently replaced. When detection succeeds for an unmanaged jar, the temporary staged jar is replaced by a `.pw.toml` metadata file. Commit the generated metadata under `pack/`.
 
 This works best for CurseForge downloads because packwiz can fingerprint jars against CurseForge. Unmatched jars are left in the Prism instance for local testing but removed from the staged pack copy so they do not accidentally become committed pack files.
 
