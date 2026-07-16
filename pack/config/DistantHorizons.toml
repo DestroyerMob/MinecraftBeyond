@@ -1,0 +1,17 @@
+# Minecraft Beyond defaults for Distant Horizons.
+# Keep the useful LOD view while limiting background work on an 8-thread CPU.
+
+[client.advanced.graphics.quality]
+# 128 chunks / 2048 blocks of LOD terrain beyond the normal render distance.
+lodChunkRenderDistanceRadius = 128
+
+[common.multiThreading]
+# Matches Distant Horizons' LOW_IMPACT preset on this 8-thread system.
+numberOfThreads = 2
+threadRunTimeRatio = 1.0
+
+[common.worldGenerator]
+# Generate lightweight terrain surfaces in the background. Trees and structures
+# resolve normally as vanilla chunks load, avoiding FEATURES-mode worldgen risk.
+enableDistantGeneration = true
+distantGeneratorMode = "SURFACE"

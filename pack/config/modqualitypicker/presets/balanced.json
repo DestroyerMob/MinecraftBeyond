@@ -505,6 +505,11 @@
       "locked": false,
       "reason": ""
     },
+    "distanthorizons": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Extends visible terrain using level-of-detail rendering beyond the normal render distance."
+    },
     "doapi": {
       "enabled": true,
       "locked": false,

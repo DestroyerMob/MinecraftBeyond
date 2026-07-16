@@ -100,7 +100,7 @@ foreach ($mod in $configData.mods) {
     }
 
     $jar = Get-ChildItem -Path $libsDir -Filter $mod.jarGlob -File |
-        Where-Object { $_.Name -notmatch "(sources|javadoc|dev|plain)" } |
+        Where-Object { $_.Name -notmatch "-(sources|javadoc|dev|plain)(?:-[^/]+)?\.jar$" } |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
 

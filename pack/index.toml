@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "a7b0a97989ecb105a69ee58d2968e3fa01ccb135c30e719a56c4aa481c468cf0"
+
+[[files]]
 file = "config/almostunified/debug.json"
 hash = "b62fcc25516806d7fd92a71fd47572ba366ec80e76145fa9aeacf154e09f77b1"
 
@@ -106,11 +110,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "ead3cc0520b88b208d467ec1228be0be8bb686c293c70bfa7c4b6f4853353705"
+hash = "a0cf2118f95da8bfd209561fe62643386f684c2017915c113650168e466d6053"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "b68ab4967de834bf8ce8a6e33247b31b21d3c4c29b16cd5bccf43c09f997abb4"
+hash = "f36db0820637d8e5110f08b2a55e04b1a2a4d495706a11c364e94d1fccfd06c9"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -616,6 +620,11 @@ hash = "cc68949c02bcb1ea4ad83d7a8f9c7b039b7ccb6af8ac97a8b9ea62efaac7a484"
 metafile = true
 
 [[files]]
+file = "mods/blueprint.pw.toml"
+hash = "c55fa4363fa59143627aba388dfb14546791ca58dce47c2d0521803bb5259411"
+metafile = true
+
+[[files]]
 file = "mods/bookshelf.pw.toml"
 hash = "cf914684c4151076b726116a66f7bc81a6116655551bcce70a9e64e34e5aa308"
 metafile = true
@@ -643,6 +652,11 @@ metafile = true
 [[files]]
 file = "mods/carry-on.pw.toml"
 hash = "ff26de9f383ba6ab7b85fa6bc17ac8494411ccf31e4f35abcd841e07b3c83031"
+metafile = true
+
+[[files]]
+file = "mods/caverns-and-chasms.pw.toml"
+hash = "2d01d1bc5328516d35374f51eab2fd4558035528f8d98143a77fa421e776f4a0"
 metafile = true
 
 [[files]]
@@ -808,6 +822,11 @@ metafile = true
 [[files]]
 file = "mods/delight-lib.pw.toml"
 hash = "53db992bf801e7788e72d611281252f73b53c1161c8958137f8a1b912bb3f615"
+metafile = true
+
+[[files]]
+file = "mods/distant-horizons.pw.toml"
+hash = "1bbe182b3a43c998b702e565e7f061125a491c5ee385fd9b050de0faaf28647f"
 metafile = true
 
 [[files]]
@@ -1568,6 +1587,11 @@ metafile = true
 [[files]]
 file = "mods/terralith.pw.toml"
 hash = "f083c3cdf6aadc3b033e20ba8ccc929d5e1b86a0be50b05dc638d7f76dab5024"
+metafile = true
+
+[[files]]
+file = "mods/the-beyond.pw.toml"
+hash = "ba8a13d420c285de50fcf4c73ed4eebcd1e4225d07a64a95ee23c35aa4f96953"
 metafile = true
 
 [[files]]
