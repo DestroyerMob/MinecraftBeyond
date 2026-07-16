@@ -98,7 +98,7 @@
         "filename": "mobsstorage-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Visual storage labels with item and tag whitelists."
+      "notes": "NeoForge 21.1.234. Safe visual filters and anchor-limited storage networks with searchable terminals, automation ports, and refills."
     },
     {
       "name": "Mod Quality Picker",
