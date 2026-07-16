@@ -1,0 +1,13 @@
+name = "Moonrise"
+filename = "Moonrise-NeoForge-0.1.0-beta.15+2eae1b1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9dc6114ad58d74ca7319abc25b031d0ac5bd9919"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7089177
+project-id = 1096335

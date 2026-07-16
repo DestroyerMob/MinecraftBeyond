@@ -1,0 +1,13 @@
+name = "Moonrise Compats"
+filename = "MoonriseCompats-neoforge-0.1.0-beta.15+2eae1b1.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "effb742a3564831a647db29b0d84ad5ce79709f8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7740058
+project-id = 1431540

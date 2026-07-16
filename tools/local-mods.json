@@ -91,6 +91,7 @@
       "repository": "https://github.com/DestroyerMob/MobsStorage.git",
       "branch": "main",
       "sourceFolder": "MobsStorage",
+      "sourceOverride": "minecraft/mod-dev/MobsStorage",
       "modId": "mobsstorage",
       "jarGlob": "mobsstorage-*.jar",
       "pack": {

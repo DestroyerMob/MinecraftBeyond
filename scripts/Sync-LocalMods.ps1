@@ -21,6 +21,7 @@ function Resolve-LocalPath {
 $sourceRootPath = Resolve-LocalPath $SourceRoot
 $configPath = Resolve-LocalPath $Config
 $modsDirPath = Resolve-LocalPath $ModsDir
+$workspaceRootPath = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
 
 if (-not (Test-Path $configPath)) {
     throw "Local mod config not found: $configPath"
@@ -41,7 +42,15 @@ foreach ($mod in $configData.mods) {
         continue
     }
 
-    $sourceDir = Join-Path $sourceRootPath $mod.sourceFolder
+    $sourceDir = if ($mod.sourceOverride) {
+        [System.IO.Path]::GetFullPath((Join-Path $workspaceRootPath ([string]$mod.sourceOverride)))
+    } else {
+        Join-Path $sourceRootPath $mod.sourceFolder
+    }
+
+    if ($mod.sourceOverride) {
+        Write-Host "Using source override for $($mod.name): $sourceDir"
+    }
 
     if (-not (Test-Path $sourceDir)) {
         $missing += [pscustomobject]@{
@@ -53,19 +62,25 @@ foreach ($mod in $configData.mods) {
     }
 
     if ($Build) {
-        $gradlew = Join-Path $sourceDir "gradlew.bat"
-        if (-not (Test-Path $gradlew)) {
-            $gradlew = Join-Path $sourceDir "gradlew"
-        }
-        if (-not (Test-Path $gradlew)) {
+        $gradlewBat = Join-Path $sourceDir "gradlew.bat"
+        $gradlewUnix = Join-Path $sourceDir "gradlew"
+        $wrapperJar = Join-Path $sourceDir "gradle\wrapper\gradle-wrapper.jar"
+        if (-not (Test-Path $gradlewBat) -and -not (Test-Path $gradlewUnix)) {
             throw "No Gradle wrapper found for $($mod.name) at $sourceDir"
+        }
+        if (-not (Test-Path $gradlewBat) -and -not (Test-Path $wrapperJar)) {
+            throw "Gradle wrapper jar not found for $($mod.name) at $wrapperJar"
         }
 
         Write-Host "Building $($mod.name)..."
         if (-not $DryRun) {
             Push-Location $sourceDir
             try {
-                & $gradlew build
+                if (Test-Path $gradlewBat) {
+                    & $gradlewBat build
+                } else {
+                    & java "-Dorg.gradle.appname=gradlew" -classpath $wrapperJar org.gradle.wrapper.GradleWrapperMain build
+                }
                 if ($LASTEXITCODE -ne 0) {
                     throw "Gradle build failed for $($mod.name) with exit code $LASTEXITCODE"
                 }
@@ -85,7 +100,7 @@ foreach ($mod in $configData.mods) {
     }
 
     $jar = Get-ChildItem -Path $libsDir -Filter $mod.jarGlob -File |
-        Where-Object { $_.Name -notmatch "(sources|javadoc|dev|plain)" } |
+        Where-Object { $_.Name -notmatch "-(sources|javadoc|dev|plain)(?:-[^/]+)?\.jar$" } |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
 
