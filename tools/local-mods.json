@@ -89,9 +89,8 @@
     {
       "name": "Mobs Storage",
       "repository": "https://github.com/DestroyerMob/MobsStorage.git",
-      "branch": "main",
+      "branch": "codex/consolidate-mobsstorage",
       "sourceFolder": "MobsStorage",
-      "sourceOverride": "minecraft/mod-dev/MobsStorage",
       "modId": "mobsstorage",
       "jarGlob": "mobsstorage-*.jar",
       "pack": {
@@ -99,7 +98,7 @@
         "filename": "mobsstorage-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Safe visual filters and anchor-limited storage networks with searchable terminals, automation ports, and refills."
+      "notes": "NeoForge 21.1.234. Consolidated storage UI, carry rules, searchable terminals, automation ports, and routing upgrades."
     },
     {
       "name": "Mod Quality Picker",

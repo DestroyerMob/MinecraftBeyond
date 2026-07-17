@@ -90,16 +90,6 @@
       "locked": false,
       "reason": ""
     },
-    "axiom": {
-      "enabled": false,
-      "locked": false,
-      "reason": "selected mod"
-    },
-    "axiomsurvival": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
     "badoptimizations": {
       "enabled": true,
       "locked": false,
@@ -334,11 +324,6 @@
       "enabled": true,
       "locked": false,
       "reason": "Detected from the installed mod catalog."
-    },
-    "com_moulberry_axiomclientapi": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
     },
     "com_moulberry_mixinconstraints": {
       "enabled": false,
@@ -1505,11 +1490,6 @@
       "locked": false,
       "reason": ""
     },
-    "sophisticatedstorage": {
-      "enabled": false,
-      "locked": false,
-      "reason": ""
-    },
     "sound_physics_remastered": {
       "enabled": true,
       "locked": false,
@@ -1721,11 +1701,6 @@
       "reason": ""
     },
     "solcarrot": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "toms_storage": {
       "enabled": true,
       "locked": false,
       "reason": ""

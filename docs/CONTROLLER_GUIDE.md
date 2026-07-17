@@ -9,9 +9,9 @@ Minecraft Beyond uses Controlify as its sole controller implementation. The pack
 3. Connect or wake the controller before opening the Minecraft instance. Hot-plugging is supported, but connecting first gives the cleanest first-run setup.
 4. Complete Controlify's controller identification and calibration screen when prompted.
 
-If Steam Input maps extra buttons or gyro to keyboard or mouse actions, enable **Mixed Input** in the selected controller's Controlify settings. Leave Mixed Input off for an ordinary gamepad-only layout so Minecraft can switch cleanly between controller and keyboard/mouse prompts.
+The pack enables **Mixed Input** for new controller profiles so Steam Input can map extra buttons or gyro to keyboard and mouse actions. Existing controller profiles retain their previous setting; enable Mixed Input in that controller's Controlify settings if it is currently off.
 
-Steam Deck users should play in Gaming Mode. Controlify's enhanced Steam Deck driver is optional and experimental; it requires Decky Loader. Standard SDL gamepad input works without it. The pack reserves the four back paddles, when the enhanced driver exposes them, for backpack, world map, previous knapping target, and next knapping target.
+Steam Deck users should play in Gaming Mode. Controlify 3.0.1 currently disables its enhanced Steam Deck driver because of a SteamOS compatibility break, so back paddles are not exposed as native controller buttons. In Steam Input, map **L4 to F6** and **R4 to F7** for Previous and Next Knapping Target. Standard SDL gamepad input handles the rest of the layout.
 
 ## Pack Controls
 
@@ -35,7 +35,7 @@ The pack's radial menu puts these actions within reach:
 - Better Enchanting vein-mining mode
 - Voice-chat microphone mute
 
-For flint knapping, look at the placed flint with a knapping tool and sneak, then open the radial menu and select **Previous Knapping Target** or **Next Knapping Target**. Mouse players can continue to sneak-scroll. These are standard MTF key mappings, so they can also be rebound directly to any controller button in Controller Settings.
+For flint knapping, look at the placed flint with a knapping tool, open the radial menu, and select **Previous Knapping Target** or **Next Knapping Target**. The dedicated actions do not require sneaking and wait briefly for the radial screen to close before applying. Mouse players can continue to sneak-scroll. These are standard MTF key mappings, so they can also be rebound directly to any controller button in Controller Settings or mapped through Steam Input as F6/F7.
 
 Open **Options → Controls → Controller Settings** to rebind any action. Bindings and calibration are saved separately for each controller, so changing one controller does not disturb another.
 
@@ -45,4 +45,4 @@ Open **Options → Controls → Controller Settings** to rebind any action. Bind
 - **Inputs flicker between mouse and controller:** use a pure Gamepad Steam Input template, or enable Mixed Input if keyboard/mouse emulation is intentional.
 - **Stick drift:** rerun Controlify calibration before raising deadzones manually.
 - **A modded screen will not navigate:** press Back/Select to toggle Controlify's virtual mouse, then use the sticks and face buttons.
-- **Steam Deck controls disappear:** use Gaming Mode. If the optional enhanced driver causes trouble, disable it under Controlify's global settings and use the standard SDL driver.
+- **Steam Deck paddles do nothing:** Controlify 3.0.1 cannot expose them natively. Map the paddles to F6/F7 in Steam Input and make sure Mixed Input is enabled in Controlify.

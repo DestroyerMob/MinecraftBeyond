@@ -5,6 +5,13 @@
 # 128 chunks / 2048 blocks of LOD terrain beyond the normal render distance.
 lodChunkRenderDistanceRadius = 128
 
+[client.advanced.graphics.genericRendering]
+# DH's instanced generic-object path can crash Apple's Metal-backed OpenGL
+# driver when Sodium is present. Terrain LOD rendering is unaffected.
+enableGenericRendering = false
+enableBeaconRendering = false
+enableCloudRendering = false
+
 [common.multiThreading]
 # Matches Distant Horizons' LOW_IMPACT preset on this 8-thread system.
 numberOfThreads = 2

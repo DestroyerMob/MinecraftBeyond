@@ -90,16 +90,6 @@
       "locked": false,
       "reason": ""
     },
-    "axiom": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
-    "axiomsurvival": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "badoptimizations": {
       "enabled": true,
       "locked": false,
@@ -334,11 +324,6 @@
       "enabled": true,
       "locked": false,
       "reason": "Detected from the installed mod catalog."
-    },
-    "com_moulberry_axiomclientapi": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
     },
     "com_moulberry_mixinconstraints": {
       "enabled": true,
@@ -914,6 +899,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "functionalstorage": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Primary high-capacity drawer storage for the pack."
     },
     "furniture": {
       "enabled": true,
@@ -1505,11 +1495,6 @@
       "locked": false,
       "reason": ""
     },
-    "sophisticatedstorage": {
-      "enabled": true,
-      "locked": false,
-      "reason": ""
-    },
     "sound_physics_remastered": {
       "enabled": true,
       "locked": false,
@@ -1569,6 +1554,11 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "titanium": {
+      "enabled": true,
+      "locked": true,
+      "reason": "Required because Functional Storage is enabled."
     },
     "toastcontrol": {
       "enabled": true,

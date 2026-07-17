@@ -32,7 +32,7 @@
       "button_focus_timeout_ticks": 20
     },
     "button_activation_threshold": 0.5,
-    "mixed_input": false,
+    "mixed_input": true,
     "keep_default_bindings": false
   },
   "rumble": {

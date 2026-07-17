@@ -338,5 +338,4 @@ For a playable snapshot:
 
 - The Prism instance currently uses NeoForge 21.1.234.
 - Most local mod repositories target NeoForge 21.1.234.
-- Axiom Survival is a Fabric 1.21.1 Axiom add-on for Sinytra Connector. The pack config enables its survival capture hooks.
 - MoreWeapons must use the `1.21.1-neoforge` branch for this pack.

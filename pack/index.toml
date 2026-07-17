@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "a7b0a97989ecb105a69ee58d2968e3fa01ccb135c30e719a56c4aa481c468cf0"
+hash = "f2cbd2dbf133b8daf728da23209d75e4f657602735a14f5c6086be940412e909"
 
 [[files]]
 file = "config/almostunified/debug.json"
@@ -110,11 +110,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "620379ba670ae87d86bfe5cd70713f2e4853eff9ff72862b717c030d5ddcadf5"
+hash = "62300472078423e249a0d481d517a8b23888e41aee45ac2b51b2e0b1bc2ad6a6"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "f072b13cf1ab17ae9b256bc99764f08897f52221f4d09a2e598484d226ca1c63"
+hash = "43c156908219ae80d640f28098df737263a2d547303fd4f4dca064bbf5a7a152"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -145,12 +145,8 @@ file = "config/tooltipoverhaul/tooltipoverhaul.toml"
 hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
 
 [[files]]
-file = "kubejs/assets/controlify/controllers/default_bind/steam_deck.json"
-hash = "6d9f48f44fcaafe2421f8f614a83639b4dff16cbd0695be3164f236ac09d2070"
-
-[[files]]
 file = "kubejs/assets/controlify/controllers/default_config/default.json"
-hash = "9ca81db72853aed6070a61ac3298097bf1630ca369465831c5c86e288b461332"
+hash = "d1a0ac25ef44f266f6cbca8b0ed4b32c6a7f01553146723eaa066a42bb2b7629"
 
 [[files]]
 file = "kubejs/config/food_unification_groups.json"
@@ -1533,11 +1529,6 @@ hash = "24188587640062796e3aad2eea6d83d12e7dab8a76beaa1513d7e2dec482b096"
 metafile = true
 
 [[files]]
-file = "mods/sophisticated-storage.pw.toml"
-hash = "a5b07d5d9333d3a5bbf649eda66aa5143b230010d27a2c974490d55549fb0d56"
-metafile = true
-
-[[files]]
 file = "mods/sound-physics-remastered.pw.toml"
 hash = "b9d4d42709629f2d52cb9d33bedf298bbea635b53f69946f9ec2735c47dfbd83"
 metafile = true
@@ -1605,11 +1596,6 @@ metafile = true
 [[files]]
 file = "mods/toast-control.pw.toml"
 hash = "29d1e04030fcbdad4ee91eb9bc0b0d6b8907ffe967c9bd0543e8bb7e3dab5282"
-metafile = true
-
-[[files]]
-file = "mods/toms-storage.pw.toml"
-hash = "700c583ec20a3fca340e444e8ce72383b84b623d1272cb34355944ba9c924ee6"
 metafile = true
 
 [[files]]
