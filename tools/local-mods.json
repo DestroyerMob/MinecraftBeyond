@@ -89,7 +89,7 @@
     {
       "name": "Mobs Storage",
       "repository": "https://github.com/DestroyerMob/MobsStorage.git",
-      "branch": "codex/consolidate-mobsstorage",
+      "branch": "main",
       "sourceFolder": "MobsStorage",
       "modId": "mobsstorage",
       "jarGlob": "mobsstorage-*.jar",
@@ -98,7 +98,7 @@
         "filename": "mobsstorage-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Consolidated storage UI, carry rules, searchable terminals, automation ports, and routing upgrades."
+      "notes": "NeoForge 21.1.234. Merged 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades."
     },
     {
       "name": "Mod Quality Picker",
