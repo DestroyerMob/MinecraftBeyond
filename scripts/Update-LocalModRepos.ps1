@@ -69,6 +69,19 @@ function Test-GitBranchExists {
     }
 }
 
+function Normalize-RepositoryUrl {
+    param([string]$Url)
+
+    $normalized = $Url.Trim().Replace("\", "/").TrimEnd("/")
+    if ($normalized.EndsWith(".git")) {
+        $normalized = $normalized.Substring(0, $normalized.Length - 4)
+    }
+    if ($normalized.StartsWith("git@github.com:")) {
+        $normalized = "https://github.com/" + $normalized.Substring("git@github.com:".Length)
+    }
+    return $normalized.ToLowerInvariant()
+}
+
 if (-not (Get-Command "git" -ErrorAction SilentlyContinue)) {
     throw "git is not on PATH."
 }
@@ -92,6 +105,13 @@ foreach ($mod in $configData.mods) {
     if ($null -ne $mod.enabled -and -not [bool]$mod.enabled) {
         Write-Host "Skipping disabled local mod entry: $($mod.name)"
         continue
+    }
+    if ($mod.PSObject.Properties["sourceOverride"]) {
+        throw "$($mod.name) uses forbidden sourceOverride. Local mods must come from their configured repository under the source root."
+    }
+    $sourcePolicy = if ($mod.PSObject.Properties["sourcePolicy"]) { [string]$mod.sourcePolicy } else { "development" }
+    if ($sourcePolicy -notin @("development", "remote-head")) {
+        throw "$($mod.name) has unsupported sourcePolicy '$sourcePolicy'."
     }
 
     $sourceDir = Join-Path $sourceRootPath $mod.sourceFolder
@@ -159,7 +179,20 @@ foreach ($mod in $configData.mods) {
         Invoke-Git -Arguments @("pull", "--ff-only", "origin", $mod.branch) -WorkingDirectory $sourceDir
     }
 
-    $head = if ($DryRun) { "" } else { Invoke-Git -Arguments @("rev-parse", "--short", "HEAD") -WorkingDirectory $sourceDir -CaptureOutput }
+    if (-not $DryRun -and $sourcePolicy -eq "remote-head") {
+        $actualRepository = Invoke-Git -Arguments @("remote", "get-url", "origin") -WorkingDirectory $sourceDir -CaptureOutput
+        if ((Normalize-RepositoryUrl $actualRepository) -ne (Normalize-RepositoryUrl ([string]$mod.repository))) {
+            throw "$($mod.name) origin is '$actualRepository', expected '$($mod.repository)'. Refusing the wrong repository."
+        }
+        $fullHead = Invoke-Git -Arguments @("rev-parse", "HEAD") -WorkingDirectory $sourceDir -CaptureOutput
+        $remoteHead = Invoke-Git -Arguments @("rev-parse", "origin/$($mod.branch)") -WorkingDirectory $sourceDir -CaptureOutput
+        if ($fullHead -ne $remoteHead) {
+            throw "$($mod.name) HEAD $($fullHead.Substring(0, 12)) is not origin/$($mod.branch) $($remoteHead.Substring(0, 12)). Refusing an old or divergent version."
+        }
+        $head = $fullHead.Substring(0, 12)
+    } else {
+        $head = if ($DryRun) { "" } else { Invoke-Git -Arguments @("rev-parse", "--short", "HEAD") -WorkingDirectory $sourceDir -CaptureOutput }
+    }
     $results += [pscustomobject]@{
         Mod = $mod.name
         Action = if ($SkipPull) { "checked" } else { "updated" }

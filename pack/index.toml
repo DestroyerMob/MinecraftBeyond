@@ -161,6 +161,22 @@ file = "kubejs/data/beachparty/neoforge/biome_modifier/add_palm_tree.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
+file = "kubejs/data/caverns_and_chasms/advancement/recipes/decorations/azalea_chest.json"
+hash = "be401dc03f23c87f440daa1341479bdde7668cd68f50e63154572a3d51f3ccfc"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/advancement/recipes/redstone/trapped_azalea_chest.json"
+hash = "448a07cc9e18174d672855027512074476726c5c2da2212cc7e30b51e70c0207"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/recipe/azalea_chest.json"
+hash = "8700eb61f2d4428c32d8e95b1668f1f074e0be14accf3c2244cafee207ff71f5"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/recipe/trapped_azalea_chest.json"
+hash = "5e30d38f41d10699ca378ebfd501a654fcb9ab91e2d87890c8bb38ae1fc17026"
+
+[[files]]
 file = "kubejs/data/crabbersdelight/neoforge/biome_modifier/add_tree_palm.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
@@ -335,6 +351,26 @@ hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 [[files]]
 file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_potatoes.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/block/chests/normal.json"
+hash = "3d141d428436769ad9f6912ed06faeeeff56500b57c43d8f6f1cbc6d5db9ed23"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/block/chests/trapped.json"
+hash = "801000b5aca6b48e28ba937b687d75022722c6632f919f49e2f21039a9502bac"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/item/chests/normal.json"
+hash = "3d141d428436769ad9f6912ed06faeeeff56500b57c43d8f6f1cbc6d5db9ed23"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/item/chests/trapped.json"
+hash = "801000b5aca6b48e28ba937b687d75022722c6632f919f49e2f21039a9502bac"
+
+[[files]]
+file = "kubejs/data/mctb/recipe/azalea_crafting_table.json"
+hash = "b231da183a517042cc03a9c54fef9c9d00e4b7b3670089eccb18bdccfd3fa17a"
 
 [[files]]
 file = "kubejs/data/minecraft_beyond/loot_modifiers/convert_vanilla_tools_after_affixes.json"
@@ -1730,6 +1766,16 @@ metafile = true
 [[files]]
 file = "mods/yungs-extras-neoforge.pw.toml"
 hash = "cd321f6365bc3938e0671450aadcd40c8e03af5cb24d0a545fb07c890b4793ac"
+metafile = true
+
+[[files]]
+file = "mods/ziplines-rezipped.pw.toml"
+hash = "bbeb45b0e8755fe74421c8e02d0461b3ba4afbcaf411c6356bc2a0177d2d1627"
+metafile = true
+
+[[files]]
+file = "mods/zoomlens.pw.toml"
+hash = "3ca7cca2c29962f6698623506966fde1e4b2ea3153743edce5d2728cbd7aa2fd"
 metafile = true
 
 [[files]]

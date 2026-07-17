@@ -356,9 +356,34 @@ def read_local_mods(path: Path = LOCAL_MODS_JSON, *, include_disabled: bool = Fa
     mods = data.get("mods", [])
     if not isinstance(mods, list):
         raise ToolError(f"Expected a mods array in {path}")
+    for mod in mods:
+        name = mod.get("name", mod.get("modId", "local mod"))
+        if "sourceOverride" in mod:
+            raise ToolError(
+                f"{name} uses the forbidden sourceOverride setting. "
+                "Local mods must come from their configured repository under the source root."
+            )
+        source_policy = mod.get("sourcePolicy", "development")
+        if source_policy not in {"development", "remote-head"}:
+            raise ToolError(f"{name} has unsupported sourcePolicy {source_policy!r}")
+        expected_version = mod.get("expectedVersion")
+        if expected_version is not None and (not isinstance(expected_version, str) or not expected_version.strip()):
+            raise ToolError(f"{name} has invalid expectedVersion {expected_version!r}")
     if include_disabled:
         return mods
     return [mod for mod in mods if mod.get("enabled", True)]
+
+
+def selected_local_mods(mods: list[dict], selected: Sequence[str] | None) -> list[dict]:
+    if not selected:
+        return mods
+    requested = set(selected)
+    matches = [mod for mod in mods if mod.get("modId") in requested or mod.get("name") in requested]
+    found = {value for mod in matches for value in (mod.get("modId"), mod.get("name")) if value in requested}
+    missing = requested - found
+    if missing:
+        raise ToolError(f"Unknown local mod selection: {', '.join(sorted(missing))}")
+    return matches
 
 
 def resolve_packwiz(dev_env: dict, explicit: str | None = None) -> Path | None:
@@ -750,11 +775,30 @@ def command_doctor(args: argparse.Namespace) -> int:
     local_mod_checks: list[Check] = []
     local_mods = read_local_mods()
     existing = 0
+    canonical_errors: list[str] = []
     for mod in local_mods:
         source_dir = source_root / mod["sourceFolder"] if source_root else None
-        if source_dir and source_dir.exists():
-            existing += 1
+        if not source_dir or not source_dir.exists():
+            if mod.get("sourcePolicy") == "remote-head":
+                canonical_errors.append(f"{mod['name']} canonical checkout is missing at {source_dir}")
+            continue
+        existing += 1
+        if mod.get("sourcePolicy") == "remote-head":
+            try:
+                verify_remote_head_source(mod, source_dir, fetch=False, dry_run=False)
+            except ToolError as exc:
+                canonical_errors.append(str(exc))
     local_mod_checks.append(Check("local mod sources", "ok" if existing == len(local_mods) else "partial", f"{existing}/{len(local_mods)} present"))
+    remote_head_count = sum(1 for mod in local_mods if mod.get("sourcePolicy") == "remote-head")
+    if remote_head_count:
+        local_mod_checks.append(
+            Check(
+                "canonical sources",
+                "matched" if not canonical_errors else "mismatch",
+                f"{remote_head_count - len(canonical_errors)}/{remote_head_count} at configured remote head"
+                + (f"; {'; '.join(canonical_errors)}" if canonical_errors else ""),
+            )
+        )
 
     all_local_mods = read_local_mods(include_disabled=True)
     release_pinned = 0
@@ -789,7 +833,7 @@ def command_doctor(args: argparse.Namespace) -> int:
             for item in metadata_checks
             if item.status in {"missing", "mismatch"} or (item.required and not item.ok)
         )
-        return 1 if strict_failures or not required_ok else 0
+        return 1 if strict_failures or canonical_errors or not required_ok else 0
 
     return 0
 
@@ -848,6 +892,92 @@ def git(args: Sequence[str], cwd: Path, *, dry_run: bool = False, capture: bool 
 
 def git_optional(args: Sequence[str], cwd: Path) -> subprocess.CompletedProcess[str]:
     return run(["git", *args], cwd=cwd, capture=True, check=False)
+
+
+def normalized_repository_url(value: str) -> str:
+    normalized = value.strip().replace("\\", "/").rstrip("/")
+    if normalized.endswith(".git"):
+        normalized = normalized[:-4]
+    if normalized.startswith("git@github.com:"):
+        normalized = f"https://github.com/{normalized.removeprefix('git@github.com:')}"
+    return normalized.casefold()
+
+
+def verify_remote_head_source(
+    mod: dict,
+    source_dir: Path,
+    *,
+    fetch: bool,
+    dry_run: bool,
+) -> str:
+    """Reject anything except the clean configured checkout at its remote branch head."""
+    if mod.get("sourcePolicy", "development") != "remote-head":
+        return ""
+
+    name = mod["name"]
+    branch = mod["branch"]
+    expected_repository = mod["repository"]
+    git_dir = source_dir / ".git"
+    if not git_dir.exists():
+        raise ToolError(
+            f"{name} requires its canonical Git checkout, but {source_dir} is not a Git repository. "
+            "Delete any copied source tree and run update-local-mods."
+        )
+
+    if dry_run:
+        if fetch:
+            git(["fetch", "origin", branch], source_dir, dry_run=True)
+        print(f"DRY RUN: verify {name} is the clean head of origin/{branch} from {expected_repository}")
+        return f"origin/{branch}"
+
+    repository_root = Path(git(["rev-parse", "--show-toplevel"], source_dir, capture=True)).resolve()
+    if os.path.normcase(str(repository_root)) != os.path.normcase(str(source_dir.resolve())):
+        raise ToolError(
+            f"{name} source path resolves inside a different repository ({repository_root}). "
+            f"The only valid source is the standalone checkout at {source_dir}."
+        )
+
+    actual_repository = git(["remote", "get-url", "origin"], source_dir, capture=True)
+    if normalized_repository_url(actual_repository) != normalized_repository_url(expected_repository):
+        raise ToolError(
+            f"{name} origin is {actual_repository!r}, expected {expected_repository!r}. "
+            "Refusing to build from the wrong repository."
+        )
+
+    current_branch = git(["rev-parse", "--abbrev-ref", "HEAD"], source_dir, capture=True)
+    if current_branch != branch:
+        raise ToolError(
+            f"{name} is on branch {current_branch!r}, expected {branch!r}. "
+            "Run update-local-mods to switch and fast-forward the canonical checkout."
+        )
+
+    dirty = git(["status", "--porcelain"], source_dir, capture=True)
+    if dirty:
+        raise ToolError(
+            f"{name} canonical checkout has uncommitted changes. "
+            "Commit and push them, or discard them, before producing the definitive runtime JAR."
+        )
+
+    if fetch:
+        print(f"Verifying latest {name} revision from origin/{branch}")
+        git(["fetch", "origin", branch], source_dir)
+
+    remote_ref = f"origin/{branch}"
+    remote_result = git_optional(["rev-parse", "--verify", remote_ref], source_dir)
+    if remote_result.returncode != 0:
+        raise ToolError(f"{name} has no {remote_ref} ref. Run update-local-mods while online.")
+
+    head = git(["rev-parse", "HEAD"], source_dir, capture=True)
+    remote_head = remote_result.stdout.strip()
+    if head != remote_head:
+        counts = git_optional(["rev-list", "--left-right", "--count", f"HEAD...{remote_ref}"], source_dir)
+        detail = counts.stdout.strip() if counts.returncode == 0 else "unknown divergence"
+        raise ToolError(
+            f"{name} HEAD {head[:12]} is not the latest {remote_ref} {remote_head[:12]} "
+            f"(ahead/behind counts: {detail}). Run update-local-mods; refusing to build an old or divergent version."
+        )
+
+    return head
 
 
 def git_branch_exists(repository: Path, branch: str, dry_run: bool) -> bool:
@@ -923,7 +1053,7 @@ def command_sync_status(args: argparse.Namespace) -> int:
     assert source_root is not None
 
     repos: list[tuple[str, Path]] = [("Modpack", REPO_ROOT)]
-    for mod in read_local_mods():
+    for mod in selected_local_mods(read_local_mods(), getattr(args, "mod", None)):
         repos.append((mod["name"], source_root / mod["sourceFolder"]))
 
     rows = [git_sync_row(name, path, fetch=args.fetch) for name, path in repos]
@@ -1040,7 +1170,7 @@ def command_update_repos(args: argparse.Namespace) -> int:
         source_root.mkdir(parents=True, exist_ok=True)
 
     rows: list[tuple[str, str, str, str]] = []
-    for mod in read_local_mods():
+    for mod in selected_local_mods(read_local_mods(), getattr(args, "mod", None)):
         source_dir = source_root / mod["sourceFolder"]
         git_dir = source_dir / ".git"
         name = mod["name"]
@@ -1081,7 +1211,8 @@ def command_update_repos(args: argparse.Namespace) -> int:
             print(f"Pulling {name}")
             git(["pull", "--ff-only", "origin", branch], source_dir, dry_run=args.dry_run)
 
-        head = "" if args.dry_run else git(["rev-parse", "--short", "HEAD"], source_dir, capture=True)
+        canonical_head = verify_remote_head_source(mod, source_dir, fetch=False, dry_run=args.dry_run)
+        head = canonical_head[:12] if canonical_head else ("" if args.dry_run else git(["rev-parse", "--short", "HEAD"], source_dir, capture=True))
         rows.append((name, "checked" if args.skip_pull else "updated", branch, head))
 
     print_rows(("Mod", "Action", "Branch", "Head"), rows)
@@ -1138,19 +1269,34 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
     if not args.dry_run:
         mods_dir.mkdir(parents=True, exist_ok=True)
 
-    rows: list[tuple[str, str, str]] = []
+    rows: list[tuple[str, str, str, str]] = []
     missing: list[tuple[str, Path, str]] = []
 
-    for mod in read_local_mods():
+    for mod in selected_local_mods(read_local_mods(), getattr(args, "mod", None)):
         name = mod["name"]
         source_dir = source_root / mod["sourceFolder"]
         if not source_dir.exists():
             missing.append((name, source_dir, f'git clone --branch {mod["branch"]} {mod["repository"]} "{source_dir}"'))
             continue
 
+        source_policy = mod.get("sourcePolicy", "development")
+        if source_policy == "remote-head" and not args.build:
+            raise ToolError(
+                f"{name} cannot sync a previously built artifact. "
+                "Run update-local-mods (or sync-local-mods --build) so the canonical remote head is verified, cleaned, built, and synced atomically."
+            )
+
+        revision = verify_remote_head_source(
+            mod,
+            source_dir,
+            fetch=source_policy == "remote-head",
+            dry_run=args.dry_run,
+        )
+
         if args.build:
             print(f"Building {name}...")
-            run([*gradle_wrapper(source_dir), "build"], cwd=source_dir, dry_run=args.dry_run, env=build_env)
+            build_tasks = ["clean", "build"] if source_policy == "remote-head" else ["build"]
+            run([*gradle_wrapper(source_dir), *build_tasks], cwd=source_dir, dry_run=args.dry_run, env=build_env)
 
         libs_dir = source_dir / "build" / "libs"
         if not libs_dir.exists():
@@ -1173,20 +1319,33 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
                 print(f"WARNING: Would sync {name}, but no runtime jar matching {mod['jarGlob']} exists in {libs_dir}.")
                 continue
             raise ToolError(f"No runtime jar matching {mod['jarGlob']} found for {name} in {libs_dir}.")
+        if source_policy == "remote-head" and len(jars) != 1:
+            raise ToolError(
+                f"Expected exactly one definitive runtime JAR for {name} after a clean build, found {len(jars)} in {libs_dir}."
+            )
 
         jar = jars[0]
+        expected_version = mod.get("expectedVersion")
+        if expected_version:
+            expected_jar_name = f"{mod['modId']}-{expected_version}.jar"
+            if jar.name != expected_jar_name:
+                raise ToolError(
+                    f"{name} built {jar.name}, but the pack requires {expected_jar_name}. "
+                    "Refusing to install a build from the wrong release line."
+                )
         destination = local_mod_sync_destination(mods_dir, mod["modId"])
-        print(f"Syncing {name}: {jar.name} -> {destination}")
+        revision_label = revision[:12] if revision else "development"
+        print(f"Syncing {name} ({revision_label}): {jar.name} -> {destination}")
         if not args.dry_run:
             shutil.copy2(jar, destination)
-        rows.append((name, jar.name, str(destination)))
+        rows.append((name, revision_label, jar.name, str(destination)))
 
     if missing:
         print("\nMissing local mod source folders:")
         print_rows(("Mod", "Path", "Clone"), missing)
     if rows:
         print("\nSynced local mods:")
-        print_rows(("Mod", "Jar", "Destination"), rows)
+        print_rows(("Mod", "Revision", "Jar", "Destination"), rows)
     apply_quality_profile_after_sync(dev_env, mods_dir.parent, dry_run=args.dry_run, skip=args.skip_quality_apply)
     return 0
 
@@ -1203,6 +1362,7 @@ def command_update_local_mods(args: argparse.Namespace) -> int:
     if not args.skip_pull:
         update_args = argparse.Namespace(
             source_root=args.source_root,
+            mod=getattr(args, "mod", None),
             skip_pull=False,
             allow_dirty=args.allow_dirty,
             dry_run=args.dry_run,
@@ -1214,6 +1374,7 @@ def command_update_local_mods(args: argparse.Namespace) -> int:
     sync_args = argparse.Namespace(
         source_root=args.source_root,
         mods_dir=args.mods_dir,
+        mod=getattr(args, "mod", None),
         build=not args.skip_build,
         dry_run=args.dry_run,
         skip_quality_apply=args.skip_quality_apply,
@@ -1936,6 +2097,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     sync_status = subparsers.add_parser("sync-status", help="Show dirty/ahead/behind status for the pack and local mod repos.")
     sync_status.add_argument("--source-root")
+    sync_status.add_argument("--mod", action="append", help="Limit to one local mod name or modId. Can be repeated.")
     sync_status.add_argument("--fetch", action="store_true", help="Fetch remotes before calculating ahead/behind counts.")
     sync_status.add_argument("--strict", action="store_true", help="Exit non-zero unless every repo is clean and synced.")
     sync_status.set_defaults(func=command_sync_status)
@@ -1951,6 +2113,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     update_repos = subparsers.add_parser("update-repos", help="Clone or fast-forward local mod repositories.")
     update_repos.add_argument("--source-root")
+    update_repos.add_argument("--mod", action="append", help="Limit to one local mod name or modId. Can be repeated.")
     update_repos.add_argument("--skip-pull", action="store_true")
     update_repos.add_argument("--allow-dirty", action="store_true")
     update_repos.add_argument("--dry-run", action="store_true")
@@ -1959,6 +2122,7 @@ def build_parser() -> argparse.ArgumentParser:
     sync = subparsers.add_parser("sync-local-mods", help="Copy built local mod jars into the Prism mods folder.")
     sync.add_argument("--source-root")
     sync.add_argument("--mods-dir")
+    sync.add_argument("--mod", action="append", help="Limit to one local mod name or modId. Can be repeated.")
     sync.add_argument("--build", action="store_true")
     sync.add_argument("--skip-quality-apply", action="store_true", help="Do not re-apply the active Mod Quality Picker preset after syncing jars.")
     sync.add_argument("--dry-run", action="store_true")
@@ -1974,6 +2138,7 @@ def build_parser() -> argparse.ArgumentParser:
     update = subparsers.add_parser("update-local-mods", help="Pull, build, and sync local mod jars.")
     update.add_argument("--source-root")
     update.add_argument("--mods-dir")
+    update.add_argument("--mod", action="append", help="Limit to one local mod name or modId. Can be repeated.")
     update.add_argument("--skip-pull", action="store_true")
     update.add_argument("--skip-build", action="store_true")
     update.add_argument("--allow-dirty", action="store_true")

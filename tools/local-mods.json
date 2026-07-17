@@ -91,6 +91,8 @@
       "repository": "https://github.com/DestroyerMob/MobsStorage.git",
       "branch": "main",
       "sourceFolder": "MobsStorage",
+      "sourcePolicy": "remote-head",
+      "expectedVersion": "0.3.0",
       "modId": "mobsstorage",
       "jarGlob": "mobsstorage-*.jar",
       "pack": {
@@ -98,7 +100,7 @@
         "filename": "mobsstorage-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Safe visual filters and anchor-limited storage networks with searchable terminals, automation ports, and refills."
+      "notes": "Definitive source: clean HEAD of origin/main only. NeoForge 21.1.234. Current 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades."
     },
     {
       "name": "Mod Quality Picker",

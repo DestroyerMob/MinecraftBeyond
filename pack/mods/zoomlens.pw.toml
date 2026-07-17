@@ -1,0 +1,13 @@
+name = "ZoomLens | formerly Zoomify!"
+filename = "ZoomLens-neoforge-1.21.1-v1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "6e92a1678382bb85a6b0a2c28072eb172d520553"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7900689
+project-id = 1151584

@@ -1,0 +1,13 @@
+name = "Ziplines: Rezipped!"
+filename = "zipline-neoforge-1.21.1-1.4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1a0ff2fa0583b9842593d6d1969a2808735014b5"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8416776
+project-id = 1454717

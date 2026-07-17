@@ -91,12 +91,12 @@ Every command supports `--help`.
 | `doctor` | Check tools, Java, packwiz metadata, repo state, Prism mods/shaderpacks, and local mod sources. | `--strict`, `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home` |
 | `install-packwiz` | Install packwiz into ignored `tools/bin/` using Go. | `--install-dir`, `--module` |
 | `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home`, `--force` |
-| `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
+| `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--mod`, `--fetch`, `--strict` |
 | `publish-dirty-repos` | Interactively run `git add .`, commit, and push dirty pack/local mod repos after prompting for each commit message. | `--pack-only`, `--local-mods-only`, `--include-disabled`, `--no-push`, `--dry-run` |
-| `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
-| `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
+| `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--mod`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
+| `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. Remote-head mods require `--build` and are verified online first. | `--source-root`, `--mods-dir`, `--mod`, `--build`, `--skip-quality-apply`, `--dry-run` |
 | `apply-quality-profile` | Apply the queued or active Mod Quality Picker profile; used by Prism before launch. | `--instance-root`, `--world-id`, `--dry-run`, `--keep-pending` |
-| `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
+| `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--mod`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
 | `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
 | `capture-instance` | Import Prism-side mod jars, shaderpack metadata, and Mod Quality Picker presets into `pack/`, then refresh packwiz once. | `--profile`, `--include-quality-defaults`, `--skip-mods`, `--skip-shaderpacks`, `--skip-quality-presets`, `--dry-run` |
@@ -128,7 +128,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
-| Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Safe visual storage filters, anchor-limited storage networks, searchable crafting terminals, automation ports, refills, and inventory controls. |
+| Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Current 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |
 | Dev Tools | `DestroyerMob/DevTools` | `main` | Pack-only testing helpers: Lootr chest placement/retargeting/rerolling and opt-in final/raw damage diagnostics. |
 
@@ -214,6 +214,18 @@ Pull the local mod repos, build them, and sync their jars into the local Prism i
 ```
 
 The update script copies jars into `minecraft/mods/`, which is ignored by git, then re-applies the active Mod Quality Picker preset. The pack repo should track metadata and config, not generated jars.
+
+### Definitive Mobs Storage source
+
+Mobs Storage has exactly one valid source: the standalone `DestroyerMob/MobsStorage` checkout in `<sourceRoot>/MobsStorage`, on clean `main`, at the current `origin/main` commit. `tools/local-mods.json` marks it with the `remote-head` source policy and requires the `0.3.0` release line. The build tooling fetches the configured branch, verifies the repository URL, branch, clean worktree, exact remote commit, and expected JAR version, then runs `clean build` and accepts exactly one runtime JAR. It fails closed if any check is wrong or if someone tries to sync an earlier artifact without rebuilding.
+
+Do not place another Mobs Storage source tree under `minecraft/mod-dev`, and do not add a `sourceOverride`. To update or install the mod, always run:
+
+```bash
+./scripts/modpack update-local-mods --mod mobsstorage
+```
+
+The installed filename remains `minecraft/mods/mobsstorage-local.jar`, but the sync output records the exact Git revision used. An offline or stale checkout is rejected instead of producing an ambiguous `0.1.0` build.
 
 When a local mod has a published artifact that both machines should install without building from source, add its direct download URL and hash under that mod's `pack.download` entry in `tools/local-mods.json`, then run:
 
