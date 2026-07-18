@@ -1,6 +1,6 @@
 # Controller Guide
 
-Minecraft Beyond uses Controlify as its sole controller implementation. The pack includes standard menu and inventory navigation, an on-screen keyboard, controller prompts, rumble, per-controller calibration, pack-specific radial-menu defaults, and native focus targets in the pack's most important custom screens.
+Minecraft Beyond uses Beyond Controls, its pack-focused Controlify fork, as its sole controller implementation. The pack includes standard menu and inventory navigation, an on-screen keyboard, controller prompts, rumble, per-controller calibration, prioritized contextual controls, pack-specific radial-menu defaults, and native focus targets in the pack's most important custom screens.
 
 ## Recommended Steam Setup
 
@@ -9,13 +9,13 @@ Minecraft Beyond uses Controlify as its sole controller implementation. The pack
 3. Connect or wake the controller before opening the Minecraft instance. Hot-plugging is supported, but connecting first gives the cleanest first-run setup.
 4. Complete Controlify's controller identification and calibration screen when prompted.
 
-The pack enables **Mixed Input** for new controller profiles so Steam Input can map extra buttons or gyro to keyboard and mouse actions. Existing controller profiles retain their previous setting; enable Mixed Input in that controller's Controlify settings if it is currently off.
+This instance enables Controlify's global **Mixed Input** setting so Steam Input can map extra buttons or gyro to keyboard and mouse actions alongside the native gamepad. Check the global Controlify settings if keyboard-mapped controls stop responding; this setting is not stored per controller.
 
-Steam Deck users should play in Gaming Mode. Controlify 3.0.1 currently disables its enhanced Steam Deck driver because of a SteamOS compatibility break, so back paddles are not exposed as native controller buttons. In Steam Input, map **L4 to F6** and **R4 to F7** for Previous and Next Knapping Target. Standard SDL gamepad input handles the rest of the layout.
+Steam Deck users should play in Gaming Mode. Controlify 3.0.1 currently disables its enhanced Steam Deck driver because of a SteamOS compatibility break, so back paddles are not exposed as native controller buttons and cannot be bound inside Controller Settings. In Steam Input, map **L4 to F6** and **R4 to F7** for Previous and Next Knapping Target. Standard SDL gamepad input handles the rest of the layout, while global Mixed Input accepts those keyboard-mapped paddles.
 
 ## Pack Controls
 
-Controlify retains its familiar default layout:
+Beyond Controls retains Controlify's familiar default layout, then lets a higher-priority pack action temporarily own a shared button when its context applies:
 
 - Left stick moves; right stick looks.
 - South face button jumps; north face button opens inventory.
@@ -36,6 +36,24 @@ The pack's radial menu puts these actions within reach:
 - Voice-chat microphone mute
 
 For flint knapping, look at the placed flint with a knapping tool, open the radial menu, and select **Previous Knapping Target** or **Next Knapping Target**. The dedicated actions do not require sneaking and wait briefly for the radial screen to close before applying. Mouse players can continue to sneak-scroll. These are standard MTF key mappings, so they can also be rebound directly to any controller button in Controller Settings or mapped through Steam Input as F6/F7.
+
+When you are looking at active knapping flint while holding a knapping tool, the shoulder buttons automatically take priority over normal hotbar scrolling: left shoulder selects the previous target and right shoulder selects the next target. Look away and the same buttons immediately return to hotbar control.
+
+Mobs Storage uses right-stick click to sort the inventory section under the cursor. If no slot is under the virtual cursor, it sorts the main player inventory. Outside menus, hold right-stick click to open the inventory action layer:
+
+- Left/right shoulder previews moving the selected hotbar slot through the inventory rows.
+- D-pad up/down previews swapping the whole hotbar with an inventory row.
+- D-pad left/right previews swapping the selected hotbar slot horizontally.
+- Release right-stick click to commit the previewed swap.
+
+Right-stick click continues to crouch while the layer is held; the modifier only takes priority over the second button in a completed chord.
+
+On the single-player world-selection screen, highlight a world and press the north face button (Y on Xbox/Switch-style layouts, Triangle on PlayStation) to toggle its Cherished Worlds favorite state.
+The selected row shows the currently bound controller glyph immediately to the left of its Cherished Worlds star.
+
+JEI and EMI item sidebars and recipe screens use the controller cursor automatically. The D-pad snaps between visible ingredients, the south face button opens recipes/selects, the west face button opens uses/right-clicks, the right stick scrolls, and Back closes the recipe screen. Triggers page EMI sidebars. Inside EMI or JEI recipe screens, bumpers change recipe categories/tabs and triggers change pages within the selected category. Controller glyphs are contextual instead of collected in a bottom legend: slot actions appear as labeled controls beside the selected stack, creative-tab bumpers sit just outside the selected tab row, EMI/JEI page glyphs sit beside their page arrows, and recipe-category bumpers sit beside category controls. On a normal inventory stack, tap performs the inventory action while holding the same button opens Recipes or Uses; the combined hint displays both actions once instead of duplicating EMI controls. Stack hints choose an open side around the item, remain inside the screen, and avoid the final tooltip rectangle. Unlabeled navigation glyphs—including the world-favorite control—have no background; stack actions retain labels and a contrast panel. All contextual hints render on a topmost GUI layer so viewer elements cannot hide them.
+
+These contextual actions have higher priority only while their context or modifier is active, so they do not permanently replace hotbar, chat, drop, or knapping controls.
 
 Better Enchanting exposes **Activate Flash Step** as a dedicated controller-bindable action in addition to its double-forward gesture. It is unbound by default so it does not displace a standard gamepad control. Assign it under Controller Settings or map an extra Steam Input button to it. Vein-miner mode and Ecology's bee-route lock also wait briefly for a radial or controller screen to close, so controller-triggered actions are not lost.
 
@@ -67,6 +85,6 @@ Open **Options → Controls → Controller Settings** to rebind any action. Bind
 3. Open the radial menu and test both knapping directions and Better Enchanting's vein-miner toggle.
 4. Bind **Activate Flash Step** to a spare button and verify it works alongside the double-forward gesture.
 5. Navigate each local-mod screen listed above using only D-pad/stick, confirm, and back.
-6. In Mobs Storage, test terminal searching, network selection and paging, and any inventory action you bind in Controller Settings.
+6. In Mobs Storage, verify right-stick sorting in a container, then test all three hold-right-stick inventory-layer modes outside menus.
 7. Toggle the virtual mouse on a custom item grid, then verify cursor movement, left/right click, shift-click, and scrolling.
 8. Reconnect the controller while the game is open and verify the input prompts recover cleanly.

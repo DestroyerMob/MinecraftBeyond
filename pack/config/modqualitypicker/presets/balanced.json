@@ -1171,14 +1171,14 @@
       "reason": ""
     },
     "moonrise": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
-      "reason": "Chunk loading, generation, saving, and server scheduling optimization."
+      "reason": "Temporarily disabled because the pinned beta build fails world-shutdown thread checks."
     },
     "moonrise_compats": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
-      "reason": "Compatibility patches for the pinned Moonrise build."
+      "reason": "Disabled while Moonrise is disabled."
     },
     "moreculling": {
       "enabled": false,

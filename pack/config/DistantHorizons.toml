@@ -18,7 +18,7 @@ numberOfThreads = 2
 threadRunTimeRatio = 1.0
 
 [common.worldGenerator]
-# Generate lightweight terrain surfaces in the background. Trees and structures
-# resolve normally as vanilla chunks load, avoiding FEATURES-mode worldgen risk.
-enableDistantGeneration = true
+# Build LODs from chunks loaded through normal play. Background terrain
+# generation is disabled to avoid contention during loading and world shutdown.
+enableDistantGeneration = false
 distantGeneratorMode = "SURFACE"
