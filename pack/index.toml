@@ -110,11 +110,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "a04d82e78323d0c834525dc125fa9e56c282829ba0373a16b568086b425c3a2d"
+hash = "0c4f99b568efaed81a658c50f1445c702a4331d114f359e926dae791ae84a518"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "7c1d491614f4609bb9d289e6c34df07380ad911ea52e6b96718d1156f3d88b16"
+hash = "f072b13cf1ab17ae9b256bc99764f08897f52221f4d09a2e598484d226ca1c63"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -840,6 +840,11 @@ hash = "9441e0a305d19725ed73bfe5199263bc1617e7fffc67bd56534ef89a294535ed"
 metafile = true
 
 [[files]]
+file = "mods/cult-of-azazel.pw.toml"
+hash = "0c3dc018645afde3a4a4cc957576adc2229a9234ef5dfa70e7fa82ffaa54395a"
+metafile = true
+
+[[files]]
 file = "mods/cultural-delights.pw.toml"
 hash = "21159e356236e85db39e95d6191e26be6a0a7b1ab1379ae5b2ded987ca68c823"
 metafile = true
@@ -892,6 +897,11 @@ metafile = true
 [[files]]
 file = "mods/eating-animation-forge.pw.toml"
 hash = "36ca501773cbda3b0df3ab3fec5188337fe4f4dd7918dcf0a7fbb5965b1c41c8"
+metafile = true
+
+[[files]]
+file = "mods/elysium-api.pw.toml"
+hash = "32ff99a6c2c2c645487765d642b806438d45829114a1864854e3a4b7189a988b"
 metafile = true
 
 [[files]]
@@ -1060,6 +1070,11 @@ hash = "0b7687a29b0dd4400e6c2db295a81b9543c7275674f8b357f57dc64b9d5f49be"
 metafile = true
 
 [[files]]
+file = "mods/galosphere.pw.toml"
+hash = "6b77815a3e8ff18b077860e775adad5c866dbbe9561b301a4af494aeb751a5ec"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "1e5d37a3fb41e78708215f521e8b3f3a661b2157bd9e15abf4c39c4eb87621ba"
 metafile = true
@@ -1142,6 +1157,16 @@ metafile = true
 [[files]]
 file = "mods/jade.pw.toml"
 hash = "e739b7355ab3cfba2e729f8f0b51eafc3d9c3afb19ee30ac7b311631610c5e66"
+metafile = true
+
+[[files]]
+file = "mods/jadens-nether-expansion-delight.pw.toml"
+hash = "842648cd54f4e6e5f3d41a289221e5c0dcdb13fcd093fc081734d249eb8b9281"
+metafile = true
+
+[[files]]
+file = "mods/jadens-nether-expansion.pw.toml"
+hash = "7de3c7486270c4cc6e2f3be3e32d40549a3b0802ce4161e8ed444b2845120fe7"
 metafile = true
 
 [[files]]
@@ -1642,6 +1667,11 @@ metafile = true
 [[files]]
 file = "mods/toast-control.pw.toml"
 hash = "29d1e04030fcbdad4ee91eb9bc0b0d6b8907ffe967c9bd0543e8bb7e3dab5282"
+metafile = true
+
+[[files]]
+file = "mods/toms-storage.pw.toml"
+hash = "700c583ec20a3fca340e444e8ce72383b84b623d1272cb34355944ba9c924ee6"
 metafile = true
 
 [[files]]

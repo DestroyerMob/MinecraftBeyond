@@ -1,0 +1,13 @@
+name = "Cult of Azazel"
+filename = "cultofazazelneoforge-1.1.4.9a.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ffd5e9518e1fe0240e6acd3de83474aa6781fa1e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8406696
+project-id = 1571005

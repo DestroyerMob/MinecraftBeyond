@@ -90,6 +90,16 @@
       "locked": false,
       "reason": ""
     },
+    "axiom": {
+      "enabled": false,
+      "locked": false,
+      "reason": "selected mod"
+    },
+    "axiomsurvival": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
     "badoptimizations": {
       "enabled": true,
       "locked": false,
@@ -324,6 +334,11 @@
       "enabled": true,
       "locked": false,
       "reason": "Detected from the installed mod catalog."
+    },
+    "com_moulberry_axiomclientapi": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
     },
     "com_moulberry_mixinconstraints": {
       "enabled": false,
@@ -1171,14 +1186,14 @@
       "reason": ""
     },
     "moonrise": {
-      "enabled": false,
+      "enabled": true,
       "locked": false,
-      "reason": "Temporarily disabled because the pinned beta build fails world-shutdown thread checks."
+      "reason": "Chunk loading, generation, saving, and server scheduling optimization."
     },
     "moonrise_compats": {
-      "enabled": false,
+      "enabled": true,
       "locked": false,
-      "reason": "Disabled while Moonrise is disabled."
+      "reason": "Compatibility patches for the pinned Moonrise build."
     },
     "moreculling": {
       "enabled": false,
@@ -1490,6 +1505,11 @@
       "locked": false,
       "reason": ""
     },
+    "sophisticatedstorage": {
+      "enabled": false,
+      "locked": false,
+      "reason": ""
+    },
     "sound_physics_remastered": {
       "enabled": true,
       "locked": false,
@@ -1701,6 +1721,11 @@
       "reason": ""
     },
     "solcarrot": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "toms_storage": {
       "enabled": true,
       "locked": false,
       "reason": ""
@@ -2079,6 +2104,46 @@
       "enabled": true,
       "locked": false,
       "reason": ""
+    },
+    "beyondfood": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "ctm": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "galosphere": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "jadensnetherexpansiondelight": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "lodestone": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "netherexp": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "netherman": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "elysium_api": {
+      "enabled": true,
+      "locked": false,
+      "reason": "Required by an enabled mod."
     }
   },
   "configFiles": [],

@@ -90,6 +90,16 @@
       "locked": false,
       "reason": ""
     },
+    "axiom": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "axiomsurvival": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "badoptimizations": {
       "enabled": true,
       "locked": false,
@@ -324,6 +334,11 @@
       "enabled": true,
       "locked": false,
       "reason": "Detected from the installed mod catalog."
+    },
+    "com_moulberry_axiomclientapi": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     },
     "com_moulberry_mixinconstraints": {
       "enabled": true,
@@ -900,11 +915,6 @@
       "locked": false,
       "reason": ""
     },
-    "functionalstorage": {
-      "enabled": true,
-      "locked": false,
-      "reason": "Primary high-capacity drawer storage for the pack."
-    },
     "furniture": {
       "enabled": true,
       "locked": false,
@@ -1176,14 +1186,14 @@
       "reason": ""
     },
     "moonrise": {
-      "enabled": false,
+      "enabled": true,
       "locked": false,
-      "reason": "Temporarily disabled because the pinned beta build fails world-shutdown thread checks."
+      "reason": "Chunk loading, generation, saving, and server scheduling optimization."
     },
     "moonrise_compats": {
-      "enabled": false,
+      "enabled": true,
       "locked": false,
-      "reason": "Disabled while Moonrise is disabled."
+      "reason": "Compatibility patches for the pinned Moonrise build."
     },
     "moreculling": {
       "enabled": false,
@@ -1495,6 +1505,11 @@
       "locked": false,
       "reason": ""
     },
+    "sophisticatedstorage": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
     "sound_physics_remastered": {
       "enabled": true,
       "locked": false,
@@ -1554,11 +1569,6 @@
       "enabled": true,
       "locked": false,
       "reason": ""
-    },
-    "titanium": {
-      "enabled": true,
-      "locked": true,
-      "reason": "Required because Functional Storage is enabled."
     },
     "toastcontrol": {
       "enabled": true,

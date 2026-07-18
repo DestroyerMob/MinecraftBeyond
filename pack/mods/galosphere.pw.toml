@@ -1,0 +1,13 @@
+name = "Galosphere"
+filename = "Galosphere-1.21.1-1.5.5-NeoForge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f2c3b139c16ba81cdd6f0df2c51313f4fde32950"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8242886
+project-id = 631098
