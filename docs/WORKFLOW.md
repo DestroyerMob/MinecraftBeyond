@@ -6,7 +6,8 @@ This repo should act as the source of truth for the modpack, while each unpublis
 
 - Git and GitHub for the pack repository, branches, pull requests, and syncing between machines.
 - Prism Launcher for local playtesting.
-- Java 21 for Minecraft 1.21.1 and NeoForge development.
+- Java 21 for running Minecraft 1.21.1 and most NeoForge development.
+- JDK 25 on `PATH` for building the current Beyond Controls/Stonecutter toolchain.
 - packwiz for a git-friendly modpack manifest and exports.
 - Python 3 for the cross-platform `scripts/modpack` tooling.
 - Go for installing the repo-local packwiz binary with `scripts/modpack install-packwiz`.
@@ -239,6 +240,8 @@ Existing dirty source checkouts are skipped by default so unfinished work is not
 
 Local mods can be marked with `enabled: false` in `tools/local-mods.json`. Disabled entries remain documented, but local update and sync commands skip them.
 
+Beyond Controls is a local replacement for the packwiz-managed upstream Controlify jar. Its internal mod ID deliberately remains `controlify` for API, resource-pack, config, and addon compatibility. The sync tool builds its 1.21.1 NeoForge target in a temporary Stonecutter source copy, installs it as `controlify-local.jar`, and only then removes other `controlify-*.jar` files. If local syncing is skipped, packwiz continues to provide upstream Controlify as a fallback. Its current Gradle plugins require JDK 25 on `PATH` for this isolated build; Minecraft and the rest of the pack continue to use the configured Java 21 runtime.
+
 Local mod sync also re-applies the active Mod Quality Picker preset after copying jars. Use `--skip-quality-apply` only when you intentionally want to inspect the raw synced jar set before the quality preset renames files.
 
 ## Commit And Push Protocol
@@ -299,7 +302,7 @@ End each work session with:
 On each machine:
 
 1. Clone this pack repo into the Prism `instances` folder, or create a Prism instance that points at this folder.
-2. Install Python 3, Java 21, Git, and Go.
+2. Install Python 3, Java 21, JDK 25, Git, and Go. Keep Java 21 configured as the Minecraft runtime and put JDK 25 on `PATH` for Beyond Controls builds.
 3. Run `./scripts/modpack init-env` and set machine-local paths if the defaults are not right.
 4. Run `./scripts/modpack doctor` or `.\scripts\modpack.ps1 doctor`.
 5. Run `./scripts/modpack install-packwiz` to create `tools/bin/packwiz`.

@@ -663,6 +663,30 @@ def command_doctor(args: argparse.Namespace) -> int:
     else:
         tool_checks.append(Check("java", "missing", "set MINECRAFT_BEYOND_JAVA_HOME or JAVA_HOME", required=True))
 
+    system_build_java = shutil.which("java")
+    required_build_java = max(
+        (
+            int(build.get("minimumJava", 0))
+            for mod in read_local_mods()
+            if isinstance((build := mod.get("build")), dict) and build.get("useSystemJava")
+        ),
+        default=0,
+    )
+    if required_build_java:
+        if system_build_java:
+            system_version = java_version(Path(system_build_java))
+            system_major = java_major(system_version)
+            status = "found" if system_major is not None and system_major >= required_build_java else "warning"
+            detail = f"{system_build_java} ({system_version}); JDK {required_build_java}+ is required for local mod builds"
+            tool_checks.append(Check("local build java", status, detail, required=True))
+        else:
+            tool_checks.append(Check(
+                "local build java",
+                "missing",
+                f"put JDK {required_build_java}+ on PATH for local mod builds",
+                required=True,
+            ))
+
     required_ok = print_checks("Tools", tool_checks) and required_ok
 
     git_checks: list[Check] = []
@@ -1148,38 +1172,99 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
             missing.append((name, source_dir, f'git clone --branch {mod["branch"]} {mod["repository"]} "{source_dir}"'))
             continue
 
-        if args.build:
-            print(f"Building {name}...")
-            run([*gradle_wrapper(source_dir), "build"], cwd=source_dir, dry_run=args.dry_run, env=build_env)
+        temporary_build: tempfile.TemporaryDirectory[str] | None = None
+        artifact_source = source_dir
+        try:
+            build_config = mod.get("build") if isinstance(mod.get("build"), dict) else {}
+            if args.build and build_config.get("type") == "stonecutter-isolated":
+                target = str(build_config["target"])
+                minecraft_version = str(build_config["minecraftVersion"])
+                task = str(build_config.get("task") or "buildAndCollectActive")
+                print(f"Building {name} for {target} in an isolated source copy...")
+                if not args.dry_run:
+                    temporary_build = tempfile.TemporaryDirectory(prefix="minecraft-beyond-local-mod-")
+                    artifact_source = Path(temporary_build.name) / source_dir.name
+                    shutil.copytree(
+                        source_dir,
+                        artifact_source,
+                        ignore=shutil.ignore_patterns(".git", ".gradle", ".idea", "build", "run"),
+                    )
+                    (artifact_source / "versions" / "current").write_text(target, encoding="utf-8")
+                    isolated_env = (
+                        os.environ.copy()
+                        if build_config.get("useSystemJava")
+                        else build_env.copy()
+                    )
+                    isolated_env["CI_SINGLE_BUILD"] = f"{target}:{minecraft_version}"
+                    run(
+                        [*gradle_wrapper(artifact_source), "Refresh active project"],
+                        cwd=artifact_source,
+                        env=isolated_env,
+                    )
+                    run(
+                        [*gradle_wrapper(artifact_source), task],
+                        cwd=artifact_source,
+                        env=isolated_env,
+                    )
+            elif args.build:
+                build_args = build_config.get("args") or ["build"]
+                if not isinstance(build_args, list) or not all(isinstance(arg, str) for arg in build_args):
+                    raise ToolError(f"Invalid build.args for {name}; expected a JSON string array.")
+                print(f"Building {name}...")
+                mod_build_env = os.environ.copy() if build_config.get("useSystemJava") else build_env
+                run([*gradle_wrapper(source_dir), *build_args], cwd=source_dir, dry_run=args.dry_run, env=mod_build_env)
 
-        libs_dir = source_dir / "build" / "libs"
-        if not libs_dir.exists():
-            if args.dry_run:
-                print(f"WARNING: Would sync {name}, but {libs_dir} does not exist.")
-                continue
-            raise ToolError(f"No build/libs folder found for {name}. Run with --build or build the mod first.")
+            artifact_dir = Path(str(mod.get("artifactDir") or "build/libs"))
+            libs_dir = artifact_source / artifact_dir
+            if not libs_dir.exists():
+                if args.dry_run:
+                    print(f"WARNING: Would sync {name}, but {libs_dir} does not exist.")
+                    continue
+                raise ToolError(f"No artifact folder found for {name}: {libs_dir}. Run with --build or build the mod first.")
 
-        jars = sorted(
-            (
-                jar
-                for jar in libs_dir.glob(mod["jarGlob"])
-                if not re.search(r"-(sources|javadoc|dev|plain)(?:-[^/]+)?\.jar$", jar.name)
-            ),
-            key=lambda path: path.stat().st_mtime,
-            reverse=True,
-        )
-        if not jars:
-            if args.dry_run:
-                print(f"WARNING: Would sync {name}, but no runtime jar matching {mod['jarGlob']} exists in {libs_dir}.")
-                continue
-            raise ToolError(f"No runtime jar matching {mod['jarGlob']} found for {name} in {libs_dir}.")
+            jars = sorted(
+                (
+                    jar
+                    for jar in libs_dir.glob(mod["jarGlob"])
+                    if not re.search(r"-(sources|javadoc|dev|plain)(?:-[^/]+)?\.jar$", jar.name)
+                ),
+                key=lambda path: path.stat().st_mtime,
+                reverse=True,
+            )
+            if not jars:
+                if args.dry_run:
+                    print(f"WARNING: Would sync {name}, but no runtime jar matching {mod['jarGlob']} exists in {libs_dir}.")
+                    continue
+                raise ToolError(f"No runtime jar matching {mod['jarGlob']} found for {name} in {libs_dir}.")
 
-        jar = jars[0]
-        destination = local_mod_sync_destination(mods_dir, mod["modId"])
-        print(f"Syncing {name}: {jar.name} -> {destination}")
-        if not args.dry_run:
-            shutil.copy2(jar, destination)
-        rows.append((name, jar.name, str(destination)))
+            jar = jars[0]
+            if temporary_build is not None:
+                persistent_artifacts = source_dir / artifact_dir
+                persistent_artifacts.mkdir(parents=True, exist_ok=True)
+                persistent_jar = persistent_artifacts / jar.name
+                shutil.copy2(jar, persistent_jar)
+                jar = persistent_jar
+
+            destination = local_mod_sync_destination(mods_dir, mod["modId"])
+            print(f"Syncing {name}: {jar.name} -> {destination}")
+            if not args.dry_run:
+                shutil.copy2(jar, destination)
+
+            replace_globs = mod.get("replaceGlobs") or []
+            if not isinstance(replace_globs, list) or not all(isinstance(pattern, str) for pattern in replace_globs):
+                raise ToolError(f"Invalid replaceGlobs for {name}; expected a JSON string array.")
+            for pattern in replace_globs:
+                for replaced in sorted(mods_dir.glob(pattern)):
+                    if replaced == destination or not replaced.is_file():
+                        continue
+                    print(f"Removing replaced {name} jar: {replaced}")
+                    if not args.dry_run:
+                        replaced.unlink()
+
+            rows.append((name, jar.name, str(destination)))
+        finally:
+            if temporary_build is not None:
+                temporary_build.cleanup()
 
     if missing:
         print("\nMissing local mod source folders:")

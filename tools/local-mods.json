@@ -73,6 +73,33 @@
       "notes": "Early development"
     },
     {
+      "name": "Beyond Controls",
+      "repository": "https://github.com/DestroyerMob/BeyondControls.git",
+      "branch": "beyond-controls",
+      "sourceFolder": "BeyondControls",
+      "modId": "controlify",
+      "jarGlob": "controlify-*+1.21.1-neoforge.jar",
+      "artifactDir": "build/finalJars",
+      "build": {
+        "type": "stonecutter-isolated",
+        "target": "1.21.1-neoforge",
+        "minecraftVersion": "1.21.1",
+        "task": "buildAndCollectActive",
+        "useSystemJava": true,
+        "minimumJava": 25
+      },
+      "replaceGlobs": [
+        "controlify-*.jar",
+        "controlify-*.jar.disabled"
+      ],
+      "pack": {
+        "metafile": "mods/controlify.pw.toml",
+        "filename": "controlify-local.jar",
+        "side": "both"
+      },
+      "notes": "LGPL-3.0 Controlify fork. Built with the system JDK 25 in an isolated Stonecutter source copy and installed as the sole controlify implementation."
+    },
+    {
       "name": "Mobs Tool Forging",
       "repository": "https://github.com/DestroyerMob/MobsToolForging.git",
       "branch": "main",
