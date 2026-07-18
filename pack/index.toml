@@ -110,7 +110,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "620379ba670ae87d86bfe5cd70713f2e4853eff9ff72862b717c030d5ddcadf5"
+hash = "50eca50887040c946c1c865cbe8e0aa22cdccab649f707bcab5feaf14181f99a"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -1069,6 +1069,11 @@ hash = "1e5d37a3fb41e78708215f521e8b3f3a661b2157bd9e15abf4c39c4eb87621ba"
 metafile = true
 
 [[files]]
+file = "mods/gemforged.pw.toml"
+hash = "7f40be15da8b49e1021d4acaf30049d69e26d77f8dc2b6ecab20a3ce30de0a06"
+metafile = true
+
+[[files]]
 file = "mods/get-it-together-drops.pw.toml"
 hash = "2b527d9cc1b1b919deae4a829f39c71b447a5012332809ade812971eae06bf7d"
 metafile = true
@@ -1356,6 +1361,11 @@ metafile = true
 [[files]]
 file = "mods/my-nethers-delight.pw.toml"
 hash = "6d2a317fd568932754a3263ad6dda2f55781d5f191d752946335d033e293da34"
+metafile = true
+
+[[files]]
+file = "mods/mythic-upgrades.pw.toml"
+hash = "b85859e5f3a2d0785657dee379898c609d5c38a99fd4e9b914a893f2af24c3d2"
 metafile = true
 
 [[files]]

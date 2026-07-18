@@ -369,6 +369,59 @@ def read_local_mods(path: Path = LOCAL_MODS_JSON, *, include_disabled: bool = Fa
         expected_version = mod.get("expectedVersion")
         if expected_version is not None and (not isinstance(expected_version, str) or not expected_version.strip()):
             raise ToolError(f"{name} has invalid expectedVersion {expected_version!r}")
+        build = mod.get("build")
+        if build is not None:
+            if not isinstance(build, dict):
+                raise ToolError(f"{name} has invalid build configuration {build!r}")
+            tasks = build.get("tasks")
+            if not isinstance(tasks, list) or not tasks or not all(isinstance(task, str) and task.strip() for task in tasks):
+                raise ToolError(f"{name} build.tasks must be a non-empty array of Gradle task names")
+            arguments = build.get("arguments", [])
+            if not isinstance(arguments, list) or not all(
+                isinstance(argument, str) and argument.strip() for argument in arguments
+            ):
+                raise ToolError(f"{name} build.arguments must be an array of Gradle command-line arguments")
+            maven_mirror = build.get("mavenMirror", [])
+            if not isinstance(maven_mirror, list):
+                raise ToolError(f"{name} build.mavenMirror must be an array")
+            for dependency in maven_mirror:
+                if not isinstance(dependency, dict):
+                    raise ToolError(f"{name} has invalid Maven mirror entry {dependency!r}")
+                for key in ("group", "artifact", "version", "url", "sha1"):
+                    value = dependency.get(key)
+                    if not isinstance(value, str) or not value.strip():
+                        raise ToolError(f"{name} Maven mirror entry has invalid {key}: {value!r}")
+                if not re.fullmatch(r"[A-Za-z0-9_.+-]+", dependency["group"]):
+                    raise ToolError(f"{name} Maven mirror entry has invalid group {dependency['group']!r}")
+                if not re.fullmatch(r"[A-Za-z0-9_.+-]+", dependency["artifact"]):
+                    raise ToolError(f"{name} Maven mirror entry has invalid artifact {dependency['artifact']!r}")
+                if not re.fullmatch(r"[A-Za-z0-9_.+-]+", dependency["version"]):
+                    raise ToolError(f"{name} Maven mirror entry has invalid version {dependency['version']!r}")
+                if not re.fullmatch(r"[0-9a-fA-F]{40}", dependency["sha1"]):
+                    raise ToolError(f"{name} Maven mirror entry has invalid SHA-1 {dependency['sha1']!r}")
+            output_dir = build.get("outputDir", "build/libs")
+            if not isinstance(output_dir, str) or not output_dir.strip():
+                raise ToolError(f"{name} has invalid build.outputDir {output_dir!r}")
+            output_path = Path(output_dir)
+            if output_path.is_absolute() or ".." in output_path.parts:
+                raise ToolError(f"{name} has invalid build.outputDir {output_dir!r}")
+            stonecutter_version = build.get("stonecutterVersion")
+            stonecutter_minecraft = build.get("minecraftVersion")
+            if (stonecutter_version is None) != (stonecutter_minecraft is None):
+                raise ToolError(f"{name} build must set both stonecutterVersion and minecraftVersion")
+            if stonecutter_version is not None and (
+                not isinstance(stonecutter_version, str)
+                or not stonecutter_version.strip()
+                or not isinstance(stonecutter_minecraft, str)
+                or not stonecutter_minecraft.strip()
+            ):
+                raise ToolError(f"{name} has invalid Stonecutter build selection")
+            refresh_restored = build.get("refreshRestoredProject", True)
+            if not isinstance(refresh_restored, bool):
+                raise ToolError(f"{name} has invalid build.refreshRestoredProject {refresh_restored!r}")
+            java_version = build.get("javaVersion")
+            if java_version is not None and (not isinstance(java_version, int) or java_version < 21):
+                raise ToolError(f"{name} has invalid build.javaVersion {java_version!r}")
     if include_disabled:
         return mods
     return [mod for mod in mods if mod.get("enabled", True)]
@@ -584,16 +637,42 @@ def restore_active_quality_profile_id(minecraft_dir: Path, profile_id: str | Non
         print(f"Restored Mod Quality Picker activeProfileId = {profile_id}")
 
 
-def build_environment(dev_env: dict) -> dict[str, str]:
+def build_environment(dev_env: dict, required_java_version: int | None = None) -> dict[str, str]:
     env = os.environ.copy()
-    java_home = setting(
-        None,
-        ("MINECRAFT_BEYOND_JAVA_HOME", "JAVA_HOME"),
-        dev_env,
-        "javaHome",
-        None,
-    )
+    if required_java_version is None:
+        java_home = setting(
+            None,
+            ("MINECRAFT_BEYOND_JAVA_HOME", "JAVA_HOME"),
+            dev_env,
+            "javaHome",
+            None,
+        )
+    else:
+        java_home = setting(
+            None,
+            (f"MINECRAFT_BEYOND_JAVA_{required_java_version}_HOME",),
+            dev_env,
+            f"java{required_java_version}Home",
+            None,
+        )
+        if java_home is None:
+            raise ToolError(
+                f"This build requires Java {required_java_version}. Configure java{required_java_version}Home "
+                f"in {DEV_ENV_LOCAL} or set MINECRAFT_BEYOND_JAVA_{required_java_version}_HOME."
+            )
     if java_home:
+        java = java_home / "bin" / ("java.exe" if os.name == "nt" else "java")
+        if not java.is_file():
+            raise ToolError(f"Configured Java home has no runtime at {java}")
+        configured_version = java_version(java)
+        configured_major = java_major(configured_version)
+        if required_java_version is not None and (
+            configured_major is None or configured_major < required_java_version
+        ):
+            raise ToolError(
+                f"Configured java{required_java_version}Home uses Java {configured_version}, "
+                f"but this build requires Java {required_java_version} or newer."
+            )
         env["JAVA_HOME"] = str(java_home)
         env["PATH"] = f"{java_home / 'bin'}{os.pathsep}{env.get('PATH', '')}"
     return env
@@ -1246,6 +1325,136 @@ def gradle_wrapper(source_dir: Path) -> list[str]:
     raise ToolError(f"No Gradle wrapper found in {source_dir}")
 
 
+def stonecutter_minecraft_version(version: str) -> str:
+    match = re.match(r"^(.+)-(?:fabric|neoforge)$", version)
+    if not match:
+        raise ToolError(f"Cannot infer the Minecraft version from Stonecutter selection {version!r}")
+    return match.group(1)
+
+
+def file_sha1(path: Path) -> str:
+    digest = hashlib.sha1()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def prepare_local_maven_mirror(mod: dict, *, dry_run: bool) -> list[str]:
+    dependencies = mod.get("build", {}).get("mavenMirror", [])
+    if not dependencies:
+        return []
+
+    repository = TOOLS_DIR / "bin" / "local-maven"
+    for dependency in dependencies:
+        group = dependency["group"]
+        artifact = dependency["artifact"]
+        version = dependency["version"]
+        expected_sha1 = dependency["sha1"].lower()
+        artifact_dir = repository / Path(*group.split(".")) / artifact / version
+        jar = artifact_dir / f"{artifact}-{version}.jar"
+        pom = artifact_dir / f"{artifact}-{version}.pom"
+
+        if not jar.is_file() or file_sha1(jar) != expected_sha1:
+            download_file(dependency["url"], jar, dry_run=dry_run)
+        if not dry_run:
+            actual_sha1 = file_sha1(jar)
+            if actual_sha1 != expected_sha1:
+                jar.unlink(missing_ok=True)
+                raise ToolError(
+                    f"Downloaded Maven mirror artifact {artifact}:{version} has SHA-1 {actual_sha1}, "
+                    f"expected {expected_sha1}."
+                )
+            pom.parent.mkdir(parents=True, exist_ok=True)
+            pom.write_text(
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+                "<project xmlns=\"http://maven.apache.org/POM/4.0.0\" "
+                "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
+                "xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 "
+                "https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n"
+                "  <modelVersion>4.0.0</modelVersion>\n"
+                f"  <groupId>{group}</groupId>\n"
+                f"  <artifactId>{artifact}</artifactId>\n"
+                f"  <version>{version}</version>\n"
+                "</project>\n",
+                encoding="utf-8",
+            )
+        else:
+            print(f"DRY RUN: write Maven metadata {pom}")
+
+    init_script = TOOLS_DIR / "gradle" / "local-maven.init.gradle"
+    if not init_script.is_file():
+        raise ToolError(f"Local Maven Gradle init script is missing: {init_script}")
+    return ["--init-script", str(init_script), f"-DminecraftBeyond.localMaven={repository}"]
+
+
+def build_local_mod(
+    mod: dict,
+    source_dir: Path,
+    *,
+    source_policy: str,
+    build_env: dict[str, str],
+    dry_run: bool,
+) -> Path:
+    build = mod.get("build", {})
+    tasks = list(build.get("tasks", ["clean", "build"] if source_policy == "remote-head" else ["build"]))
+    arguments = [*prepare_local_maven_mirror(mod, dry_run=dry_run), *build.get("arguments", [])]
+    output_dir = source_dir / build.get("outputDir", "build/libs")
+    stonecutter_version = build.get("stonecutterVersion")
+
+    if not stonecutter_version:
+        run([*gradle_wrapper(source_dir), *arguments, *tasks], cwd=source_dir, dry_run=dry_run, env=build_env)
+        return output_dir
+
+    minecraft_version = build["minecraftVersion"]
+    refresh_restored_project = build.get("refreshRestoredProject", True)
+    current_file = source_dir / "versions" / "current"
+    if not current_file.is_file():
+        raise ToolError(f"{mod['name']} Stonecutter selection file is missing: {current_file}")
+
+    original_bytes = current_file.read_bytes()
+    original_version = original_bytes.decode("utf-8").strip()
+    selected_env = build_env.copy()
+    selected_env["CI_SINGLE_BUILD"] = f"{stonecutter_version}:{minecraft_version}"
+
+    if dry_run:
+        print(f"DRY RUN: select Stonecutter project {stonecutter_version} in {current_file}")
+        run([*gradle_wrapper(source_dir), *arguments, "Refresh active project"], cwd=source_dir, dry_run=True, env=selected_env)
+        run([*gradle_wrapper(source_dir), *arguments, *tasks], cwd=source_dir, dry_run=True, env=selected_env)
+        print(f"DRY RUN: restore Stonecutter project {original_version} in {current_file}")
+        if original_version and refresh_restored_project:
+            restore_env = build_env.copy()
+            restore_env["CI_SINGLE_BUILD"] = f"{original_version}:{stonecutter_minecraft_version(original_version)}"
+            run([*gradle_wrapper(source_dir), *arguments, "Refresh active project"], cwd=source_dir, dry_run=True, env=restore_env)
+        return output_dir
+
+    build_error: Exception | None = None
+    restore_error: Exception | None = None
+    try:
+        current_file.write_text(stonecutter_version, encoding="utf-8")
+        run([*gradle_wrapper(source_dir), *arguments, "Refresh active project"], cwd=source_dir, env=selected_env)
+        run([*gradle_wrapper(source_dir), *arguments, *tasks], cwd=source_dir, env=selected_env)
+    except Exception as exc:
+        build_error = exc
+    finally:
+        current_file.write_bytes(original_bytes)
+        if original_version and refresh_restored_project:
+            try:
+                restore_env = build_env.copy()
+                restore_env["CI_SINGLE_BUILD"] = f"{original_version}:{stonecutter_minecraft_version(original_version)}"
+                run([*gradle_wrapper(source_dir), *arguments, "Refresh active project"], cwd=source_dir, env=restore_env)
+            except Exception as exc:
+                restore_error = exc
+
+    if build_error is not None:
+        if restore_error is not None:
+            raise ToolError(f"{build_error}; restoring the Stonecutter source view also failed: {restore_error}") from build_error
+        raise build_error
+    if restore_error is not None:
+        print(f"WARNING: Built {mod['name']}, but could not refresh the restored Stonecutter source view: {restore_error}")
+    return output_dir
+
+
 def command_sync_local_mods(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
     source_root = setting(
@@ -1264,8 +1473,6 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
     )
     assert source_root is not None
     assert mods_dir is not None
-    build_env = build_environment(dev_env)
-
     if not args.dry_run:
         mods_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1295,10 +1502,17 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
 
         if args.build:
             print(f"Building {name}...")
-            build_tasks = ["clean", "build"] if source_policy == "remote-head" else ["build"]
-            run([*gradle_wrapper(source_dir), *build_tasks], cwd=source_dir, dry_run=args.dry_run, env=build_env)
+            build_env = build_environment(dev_env, mod.get("build", {}).get("javaVersion"))
+            libs_dir = build_local_mod(
+                mod,
+                source_dir,
+                source_policy=source_policy,
+                build_env=build_env,
+                dry_run=args.dry_run,
+            )
+        else:
+            libs_dir = source_dir / mod.get("build", {}).get("outputDir", "build/libs")
 
-        libs_dir = source_dir / "build" / "libs"
         if not libs_dir.exists():
             if args.dry_run:
                 print(f"WARNING: Would sync {name}, but {libs_dir} does not exist.")
@@ -1333,7 +1547,7 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
                     f"{name} built {jar.name}, but the pack requires {expected_jar_name}. "
                     "Refusing to install a build from the wrong release line."
                 )
-        destination = local_mod_sync_destination(mods_dir, mod["modId"])
+        destination = local_mod_sync_destination(mods_dir, mod)
         revision_label = revision[:12] if revision else "development"
         print(f"Syncing {name} ({revision_label}): {jar.name} -> {destination}")
         if not args.dry_run:
@@ -1350,8 +1564,10 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
     return 0
 
 
-def local_mod_sync_destination(mods_dir: Path, mod_id: str) -> Path:
-    enabled = mods_dir / f"{mod_id}-local.jar"
+def local_mod_sync_destination(mods_dir: Path, mod: dict) -> Path:
+    pack = mod.get("pack", {})
+    filename = pack.get("filename", f"{mod['modId']}-local.jar")
+    enabled = mods_dir / filename
     disabled = enabled.with_name(enabled.name + ".disabled")
     if disabled.exists() and not enabled.exists():
         return disabled

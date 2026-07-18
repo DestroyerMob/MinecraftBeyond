@@ -65,7 +65,8 @@ For machine-specific paths, generate the local config and edit it locally:
 - `modsDir`: the Prism mods folder to sync local jars into.
 - `shaderpacksDir`: the Prism shaderpacks folder to import local packwiz shader metadata from.
 - `packwiz`: a repo-local or system packwiz executable.
-- `javaHome`: a Java 21 installation.
+- `javaHome`: the Java 21 installation used by the normal NeoForge builds.
+- `java25Home`: the Java 25 installation used by local mods whose Gradle plugins require it, currently Beyond Controls.
 
 Environment variables override the local config:
 
@@ -74,6 +75,7 @@ Environment variables override the local config:
 - `MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR`
 - `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
 - `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
+- `MINECRAFT_BEYOND_JAVA_25_HOME`
 
 ## Modpack Command Reference
 
@@ -122,9 +124,11 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 | Mod | Repo | Branch | Notes |
 | --- | --- | --- | --- |
+| Beyond Controls | `DestroyerMob/BeyondControls` | `beyond-controls` | Pack-focused Controlify fork built for NeoForge 1.21.1. It is built first with Java 25 and supplies the extended binding API used by Mobs Tool Forging and Mobs Storage. |
 | Ecology | `DestroyerMob/ecology` | `main` | Opt-in bee-colony simulation plus village ecology, households, supplies, construction crews, markets, currencies, and guard integration. Requires Villager Names 8.5+; disabled in Balanced and exposed as experimental Light/Full quality choices. |
 | MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | Great swords, katanas, battle axes, knives, and machetes with Punchy animation metadata and data bridges for Mobs Tool Forging and Better Enchanting. The default branch is old Forge 1.20.1; use this branch for the pack. |
 | Mobs Combat | `DestroyerMob/MobsCombat` | `main` | Server-authoritative posture, guard, timed block, parry, stealth, recovery, dual-wield, Punchy animation, and Jade/Apotheosis inspection support with data-driven entity and weapon profiles. |
+| Beyond Food | local development checkout (`DestroyerMob/BeyondFood` reserved) | `main` | Replaces hunger and natural regeneration with three temporary meal slots, recipe-aware health/recovery profiles, preparation multipliers, extra effects, and a replacement HUD. Every NeoForge food receives an automatic fallback profile; datapacks can tune items, tags, and recipe types. |
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
@@ -136,6 +140,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 - Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
 - MoreWeapons owns bridge data for its Mobs Tool Forging weapon parts and Better Enchanting routes, while Mobs Combat recognizes the shared weapon tags and coordinates dual-wield visuals with Punchy.
+- Beyond Food reads NeoForge food components and loaded recipes instead of depending on any food mod. Farmer's Delight, Croptopia, Pam's HarvestCraft, Farm & Charm, and their add-ons therefore receive baseline behavior automatically, with datapack overrides for balance and special effects.
 - Mobs Tool Forging converts compatible loot equipment after Apotheosis affixes are applied, and the pack removes direct vanilla armour and MoreWeapons recipes so the physical equipment loop remains authoritative.
 - Dev Tools is a development dependency only; its Lootr and damage diagnostics are intended for pack testing, not normal progression.
 - Ecology's player-facing bee systems are documented in [docs/ECOLOGY_BEE_GUIDE.md](docs/ECOLOGY_BEE_GUIDE.md).

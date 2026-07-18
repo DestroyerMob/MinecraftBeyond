@@ -611,7 +611,7 @@
       "reason": ""
     },
     "extragems": {
-      "enabled": true,
+      "enabled": false,
       "locked": false,
       "reason": ""
     },
@@ -2084,6 +2084,26 @@
       "enabled": true,
       "locked": false,
       "reason": "Required because caverns_and_chasms requires it."
+    },
+    "zipline": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "zoomlens": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "gemforged": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
+    },
+    "mythicupgrades": {
+      "enabled": true,
+      "locked": false,
+      "reason": ""
     }
   },
   "configFiles": [],
