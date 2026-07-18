@@ -90,7 +90,7 @@ hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "029ca20f4be7dc2576e66e9aa04e39cdfafb03d4fc53f7a7e2068e14d4f6e308"
+hash = "a654a6931be92d477e3527aed5214d514bc3a40994c7ea70ee1015c54f16fbb9"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"

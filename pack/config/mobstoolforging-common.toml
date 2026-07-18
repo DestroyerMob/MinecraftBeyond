@@ -60,8 +60,8 @@ enablePlantFiberDrops = true
 	replaceVanillaOreSmelting = false
 
 [casting]
-	#Reserved for future molten metal handling. This pass does not implement crucibles.
-	enableCrucible = false
+	#When true, the metallurgy crucible and Foundry Forge are available for datapack-driven metal melting and fluid transfer.
+	enableCrucible = true
 	#Reserved for future casting systems. This pass does not implement casting.
 	enableCasting = false
 	#Reserved for future ingot casting.
