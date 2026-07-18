@@ -1,0 +1,24 @@
+def localMavenPath = System.getProperty("minecraftBeyond.localMaven")
+
+if (localMavenPath) {
+    gradle.afterProject { project, state ->
+        project.configurations.each { configuration ->
+            def mirrored = configuration.dependencies.findAll { dependency ->
+                dependency.group == "maven.modrinth" && dependency.version
+            }.toList()
+
+            mirrored.each { dependency ->
+                def groupPath = dependency.group.replace('.', '/')
+                def artifactDirectory = new File(
+                    localMavenPath,
+                    "${groupPath}${File.separator}${dependency.name}${File.separator}${dependency.version}"
+                )
+                def jar = new File(artifactDirectory, "${dependency.name}-${dependency.version}.jar")
+                if (jar.isFile()) {
+                    configuration.dependencies.remove(dependency)
+                    configuration.dependencies.add(project.dependencies.create(project.files(jar)))
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+name = "Gemforged - Gem Artifacts"
+filename = "gemforged-4.0.1+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d9e68475acf1854f1bdc2f028247b5ab4b0bf0b3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7561983
+project-id = 1346380

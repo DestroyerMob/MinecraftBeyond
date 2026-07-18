@@ -18,11 +18,11 @@ hash = "b4ce4d99b37a679b372fd2d5c34113f0b79adfe67a5b830e4fb5a20f47951278"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "8851472f0a7292f2eaf2a4302c2946ae59820f16472b2c84eee8a67892902c93"
+hash = "03c4d2ce7ef8b48440b47a1740ebe8ebfa7e7095a767ed4fdeb7849cd6df05a3"
 
 [[files]]
 file = "config/almostunified/unification/food.json"
-hash = "2667cead6419b3cf815ed9e1ab6291a2cfefac9d4efee13eb048994f29360d93"
+hash = "34aa25d15b5570c944788e259a96b9e355eb6d7d508aed345dd54e7b30d182a4"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
@@ -74,7 +74,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -110,7 +110,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "482abfb43248b922c4f014caad25755488bc2d716db2ca18ba22de8e7dd9eeda"
+hash = "a04d82e78323d0c834525dc125fa9e56c282829ba0373a16b568086b425c3a2d"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -155,6 +155,22 @@ hash = "4736eaab2fec56458fc7571348c6a7656a3d784e9c4e2681e0feedb2c2386476"
 [[files]]
 file = "kubejs/data/beachparty/neoforge/biome_modifier/add_palm_tree.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/advancement/recipes/decorations/azalea_chest.json"
+hash = "be401dc03f23c87f440daa1341479bdde7668cd68f50e63154572a3d51f3ccfc"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/advancement/recipes/redstone/trapped_azalea_chest.json"
+hash = "448a07cc9e18174d672855027512074476726c5c2da2212cc7e30b51e70c0207"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/recipe/azalea_chest.json"
+hash = "8700eb61f2d4428c32d8e95b1668f1f074e0be14accf3c2244cafee207ff71f5"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/recipe/trapped_azalea_chest.json"
+hash = "5e30d38f41d10699ca378ebfd501a654fcb9ab91e2d87890c8bb38ae1fc17026"
 
 [[files]]
 file = "kubejs/data/crabbersdelight/neoforge/biome_modifier/add_tree_palm.json"
@@ -333,6 +349,26 @@ file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_potatoes.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
+file = "kubejs/data/lieonstudio/tags/block/chests/normal.json"
+hash = "3d141d428436769ad9f6912ed06faeeeff56500b57c43d8f6f1cbc6d5db9ed23"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/block/chests/trapped.json"
+hash = "801000b5aca6b48e28ba937b687d75022722c6632f919f49e2f21039a9502bac"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/item/chests/normal.json"
+hash = "3d141d428436769ad9f6912ed06faeeeff56500b57c43d8f6f1cbc6d5db9ed23"
+
+[[files]]
+file = "kubejs/data/lieonstudio/tags/item/chests/trapped.json"
+hash = "801000b5aca6b48e28ba937b687d75022722c6632f919f49e2f21039a9502bac"
+
+[[files]]
+file = "kubejs/data/mctb/recipe/azalea_crafting_table.json"
+hash = "b231da183a517042cc03a9c54fef9c9d00e4b7b3670089eccb18bdccfd3fa17a"
+
+[[files]]
 file = "kubejs/data/minecraft_beyond/loot_modifiers/convert_vanilla_tools_after_affixes.json"
 hash = "672453e2325b888083ed7cd5349c91acd0166874547d4a95b3409f8ac42161d8"
 
@@ -506,7 +542,7 @@ hash = "3c8cee306014887ff76ee643cafee4f7aa3b9f8b746d90c5b3ef266776499af0"
 
 [[files]]
 file = "kubejs/startup_scripts/food_unification_targets.js"
-hash = "5f9de607449973e0f4dcf7272c4b7f050746bfb9bd80fb29a13f87e43e2168cd"
+hash = "4588a8fa6139de50bd35d61409e38583def110fb2e8eac2ab905adbb4c633781"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -740,7 +776,7 @@ metafile = true
 
 [[files]]
 file = "mods/controlify.pw.toml"
-hash = "5748cac2dc50df99cda6e1cfa97ea91884a6f3a779ed3547a27853f2efc09b53"
+hash = "c929c3b0a8742b974f6f47cf19310aeb605c874466e527ef8ab9f344ebcfa1c4"
 metafile = true
 
 [[files]]
@@ -1026,6 +1062,11 @@ metafile = true
 [[files]]
 file = "mods/geckolib.pw.toml"
 hash = "1e5d37a3fb41e78708215f521e8b3f3a661b2157bd9e15abf4c39c4eb87621ba"
+metafile = true
+
+[[files]]
+file = "mods/gemforged.pw.toml"
+hash = "7f40be15da8b49e1021d4acaf30049d69e26d77f8dc2b6ecab20a3ce30de0a06"
 metafile = true
 
 [[files]]
@@ -1316,6 +1357,11 @@ metafile = true
 [[files]]
 file = "mods/my-nethers-delight.pw.toml"
 hash = "6d2a317fd568932754a3263ad6dda2f55781d5f191d752946335d033e293da34"
+metafile = true
+
+[[files]]
+file = "mods/mythic-upgrades.pw.toml"
+hash = "b85859e5f3a2d0785657dee379898c609d5c38a99fd4e9b914a893f2af24c3d2"
 metafile = true
 
 [[files]]
@@ -1716,6 +1762,16 @@ metafile = true
 [[files]]
 file = "mods/yungs-extras-neoforge.pw.toml"
 hash = "cd321f6365bc3938e0671450aadcd40c8e03af5cb24d0a545fb07c890b4793ac"
+metafile = true
+
+[[files]]
+file = "mods/ziplines-rezipped.pw.toml"
+hash = "bbeb45b0e8755fe74421c8e02d0461b3ba4afbcaf411c6356bc2a0177d2d1627"
+metafile = true
+
+[[files]]
+file = "mods/zoomlens.pw.toml"
+hash = "3ca7cca2c29962f6698623506966fde1e4b2ea3153743edce5d2728cbd7aa2fd"
 metafile = true
 
 [[files]]

@@ -3,6 +3,101 @@
   "neoforgeVersion": "21.1.234",
   "mods": [
     {
+      "name": "Beyond Controls",
+      "repository": "https://github.com/DestroyerMob/BeyondControls.git",
+      "branch": "beyond-controls",
+      "sourceFolder": "BeyondControls",
+      "modId": "controlify",
+      "expectedVersion": "3.0.1+beyond.22+1.21.1-neoforge",
+      "jarGlob": "controlify-*.jar",
+      "build": {
+        "tasks": [
+          "buildAndCollectActive"
+        ],
+        "arguments": [
+          "--max-workers=1",
+          "-Dorg.gradle.internal.http.connectionTimeout=120000",
+          "-Dorg.gradle.internal.http.socketTimeout=120000"
+        ],
+        "mavenMirror": [
+          {
+            "group": "maven.modrinth",
+            "artifact": "fancymenu",
+            "version": "3.2.6-1.21.1-neoforge",
+            "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/YI3ALsGX/fancymenu_neoforge_3.2.6_MC_1.21.1.jar",
+            "sha1": "03267dbb6375ab139b0db0359df3c7a0fe6704aa"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "sodium",
+            "version": "mc1.21.1-0.6.5-neoforge",
+            "url": "https://cdn.modrinth.com/data/AANobbMI/versions/zBRij2cH/sodium-neoforge-0.6.5%2Bmc1.21.1.jar",
+            "sha1": "d3d04d6e8577623a826d3ab69787bf25fe62d5d2"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "reeses-sodium-options",
+            "version": "mc1.21.3-1.8.0+neoforge",
+            "url": "https://cdn.modrinth.com/data/Bh37bMuy/versions/zFB5NVXk/reeses-sodium-options-neoforge-1.8.0%2Bmc1.21.3.jar",
+            "sha1": "1d50569500a3624b573eec3c3664b098e5cb2e35"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "iris",
+            "version": "1.8.1+1.21.1-neoforge",
+            "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/QS9F364b/iris-neoforge-1.8.1%2Bmc1.21.1.jar",
+            "sha1": "26b7a067af1f3cb01510417c89e53f17bc5fc4ed"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "immediatelyfast",
+            "version": "1.2.21+1.21.1-neoforge",
+            "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/e56VUDg2/ImmediatelyFast-NeoForge-1.2.21%2B1.21.1.jar",
+            "sha1": "389cdb5617308761f2aa95664a1aeb9eb72f1e14"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "simple-voice-chat",
+            "version": "neoforge-1.21.1-2.5.22",
+            "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/RY2TYe70/voicechat-neoforge-1.21.1-2.5.22.jar",
+            "sha1": "a20ff1c5bd297b3513fef3f4749db301f91fb12e"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "immediatelyfast",
+            "version": "1.14.0+1.21.11-fabric",
+            "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/1aEOUoaS/ImmediatelyFast-Fabric-1.14.0%2B1.21.11.jar",
+            "sha1": "79576ed505e5dc18165ec3355f9cc1eafcdcda71"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "simple-voice-chat",
+            "version": "fabric-1.21.11-2.6.7",
+            "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/K5zIeqNd/voicechat-fabric-1.21.11-2.6.7.jar",
+            "sha1": "80eac3a15a995a94b2897ac14fd636a226004230"
+          },
+          {
+            "group": "maven.modrinth",
+            "artifact": "fancymenu",
+            "version": "3.7.2-1.21.10-fabric",
+            "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/GxvpyyD4/fancymenu_fabric_3.7.2_MC_1.21.10.jar",
+            "sha1": "9ace369de6fd092b141dbc67be11d3b7f20cff9d"
+          }
+        ],
+        "outputDir": "build/finalJars",
+        "stonecutterVersion": "1.21.1-neoforge",
+        "minecraftVersion": "1.21.1",
+        "refreshRestoredProject": true,
+        "javaVersion": 25
+      },
+      "pack": {
+        "metafile": "mods/controlify.pw.toml",
+        "filename": "controlify-3.0.0+lts+1.21.1-neoforge.jar",
+        "side": "both"
+      },
+      "notes": "Pack-focused Controlify fork. Build first because Mobs Tool Forging and Mobs Storage compile against its extended binding API. The local artifact replaces the packwiz-managed Controlify filename after each metadata sync."
+    },
+    {
       "name": "Ecology",
       "repository": "https://github.com/DestroyerMob/ecology.git",
       "branch": "main",
@@ -45,6 +140,21 @@
       "notes": "NeoForge 21.1.234. Compatibility-first combat posture, guard, and recovery framework."
     },
     {
+      "name": "Beyond Food",
+      "repository": "https://github.com/DestroyerMob/BeyondFood.git",
+      "branch": "main",
+      "sourceFolder": "BeyondFood",
+      "modId": "beyondfood",
+      "expectedVersion": "0.1.0",
+      "jarGlob": "beyondfood-*.jar",
+      "pack": {
+        "metafile": "mods/beyondfood.pw.toml",
+        "filename": "beyondfood-local.jar",
+        "side": "both"
+      },
+      "notes": "NeoForge 21.1.234. Three-slot Valheim-style food system with recipe-aware profiles, temporary health, recovery, and datapack compatibility. The repository URL is reserved for publication; the current source is a local development checkout."
+    },
+    {
       "name": "Better Enchanting",
       "repository": "https://github.com/DestroyerMob/BetterEnchants.git",
       "branch": "main",
@@ -73,33 +183,6 @@
       "notes": "Early development"
     },
     {
-      "name": "Beyond Controls",
-      "repository": "https://github.com/DestroyerMob/BeyondControls.git",
-      "branch": "beyond-controls",
-      "sourceFolder": "BeyondControls",
-      "modId": "controlify",
-      "jarGlob": "controlify-*+1.21.1-neoforge.jar",
-      "artifactDir": "build/finalJars",
-      "build": {
-        "type": "stonecutter-isolated",
-        "target": "1.21.1-neoforge",
-        "minecraftVersion": "1.21.1",
-        "task": "buildAndCollectActive",
-        "useSystemJava": true,
-        "minimumJava": 25
-      },
-      "replaceGlobs": [
-        "controlify-*.jar",
-        "controlify-*.jar.disabled"
-      ],
-      "pack": {
-        "metafile": "mods/controlify.pw.toml",
-        "filename": "controlify-local.jar",
-        "side": "both"
-      },
-      "notes": "LGPL-3.0 Controlify fork. Built with the system JDK 25 in an isolated Stonecutter source copy and installed as the sole controlify implementation."
-    },
-    {
       "name": "Mobs Tool Forging",
       "repository": "https://github.com/DestroyerMob/MobsToolForging.git",
       "branch": "main",
@@ -118,6 +201,8 @@
       "repository": "https://github.com/DestroyerMob/MobsStorage.git",
       "branch": "main",
       "sourceFolder": "MobsStorage",
+      "sourcePolicy": "remote-head",
+      "expectedVersion": "0.3.0",
       "modId": "mobsstorage",
       "jarGlob": "mobsstorage-*.jar",
       "pack": {
@@ -125,7 +210,7 @@
         "filename": "mobsstorage-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Merged 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades."
+      "notes": "Definitive source: clean HEAD of origin/main only. NeoForge 21.1.234. Current 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades."
     },
     {
       "name": "Mod Quality Picker",

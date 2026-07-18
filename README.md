@@ -65,7 +65,8 @@ For machine-specific paths, generate the local config and edit it locally:
 - `modsDir`: the Prism mods folder to sync local jars into.
 - `shaderpacksDir`: the Prism shaderpacks folder to import local packwiz shader metadata from.
 - `packwiz`: a repo-local or system packwiz executable.
-- `javaHome`: a Java 21 installation.
+- `javaHome`: the Java 21 installation used by the normal NeoForge builds.
+- `java25Home`: the Java 25 installation used by local mods whose Gradle plugins require it, currently Beyond Controls.
 
 Environment variables override the local config:
 
@@ -74,6 +75,7 @@ Environment variables override the local config:
 - `MINECRAFT_BEYOND_PRISM_SHADERPACKS_DIR`
 - `MINECRAFT_BEYOND_PACKWIZ` or `PACKWIZ`
 - `MINECRAFT_BEYOND_JAVA_HOME` or `JAVA_HOME`
+- `MINECRAFT_BEYOND_JAVA_25_HOME`
 
 ## Modpack Command Reference
 
@@ -91,12 +93,12 @@ Every command supports `--help`.
 | `doctor` | Check tools, Java, packwiz metadata, repo state, Prism mods/shaderpacks, and local mod sources. | `--strict`, `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home` |
 | `install-packwiz` | Install packwiz into ignored `tools/bin/` using Go. | `--install-dir`, `--module` |
 | `init-env` | Create ignored `tools/dev-env.local.json` for machine-local paths. | `--source-root`, `--mods-dir`, `--shaderpacks-dir`, `--packwiz`, `--java-home`, `--force` |
-| `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--fetch`, `--strict` |
+| `sync-status` | Show dirty/ahead/behind status for the pack repo and configured local mod repos. | `--source-root`, `--mod`, `--fetch`, `--strict` |
 | `publish-dirty-repos` | Interactively run `git add .`, commit, and push dirty pack/local mod repos after prompting for each commit message. | `--pack-only`, `--local-mods-only`, `--include-disabled`, `--no-push`, `--dry-run` |
-| `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
-| `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--build`, `--skip-quality-apply`, `--dry-run` |
+| `update-repos` | Clone missing local mod repos or fast-forward existing checkouts. | `--source-root`, `--mod`, `--skip-pull`, `--allow-dirty`, `--dry-run` |
+| `sync-local-mods` | Copy built local mod jars into the Prism mods folder, then re-apply the active Mod Quality Picker preset. Remote-head mods require `--build` and are verified online first. | `--source-root`, `--mods-dir`, `--mod`, `--build`, `--skip-quality-apply`, `--dry-run` |
 | `apply-quality-profile` | Apply the queued or active Mod Quality Picker profile; used by Prism before launch. | `--instance-root`, `--world-id`, `--dry-run`, `--keep-pending` |
-| `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
+| `update-local-mods` | Pull local mod repos, build them, sync their jars into Prism, then re-apply the active Mod Quality Picker preset. | `--source-root`, `--mods-dir`, `--mod`, `--skip-pull`, `--skip-build`, `--allow-dirty`, `--skip-quality-apply`, `--dry-run` |
 | `write-local-mod-releases` | Write packwiz `.pw.toml` files for local mods that have pinned release downloads in `tools/local-mods.json`. | `--mod`, `--include-disabled`, `--require-all`, `--skip-refresh`, `--dry-run` |
 | `sync-instance` | Apply packwiz metadata to Prism, then pull/build/sync local mod jars in the safe order for a machine. | `--skip-prism`, `--skip-local`, `--skip-pull`, `--skip-build`, `--allow-dirty`, plus update/sync path options |
 | `capture-instance` | Import Prism-side mod jars, shaderpack metadata, and Mod Quality Picker presets into `pack/`, then refresh packwiz once. | `--profile`, `--include-quality-defaults`, `--skip-mods`, `--skip-shaderpacks`, `--skip-quality-presets`, `--dry-run` |
@@ -122,13 +124,15 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 | Mod | Repo | Branch | Notes |
 | --- | --- | --- | --- |
+| Beyond Controls | `DestroyerMob/BeyondControls` | `beyond-controls` | Pack-focused Controlify fork built for NeoForge 1.21.1. It is built first with Java 25 and supplies the extended binding API used by Mobs Tool Forging and Mobs Storage. |
 | Ecology | `DestroyerMob/ecology` | `main` | Opt-in bee-colony simulation plus village ecology, households, supplies, construction crews, markets, currencies, and guard integration. Requires Villager Names 8.5+; disabled in Balanced and exposed as experimental Light/Full quality choices. |
 | MoreWeapons | `DestroyerMob/MoreWeapons` | `1.21.1-neoforge` | Great swords, katanas, battle axes, knives, and machetes with Punchy animation metadata and data bridges for Mobs Tool Forging and Better Enchanting. The default branch is old Forge 1.20.1; use this branch for the pack. |
 | Mobs Combat | `DestroyerMob/MobsCombat` | `main` | Server-authoritative posture, guard, timed block, parry, stealth, recovery, dual-wield, Punchy animation, and Jade/Apotheosis inspection support with data-driven entity and weapon profiles. |
+| Beyond Food | local development checkout (`DestroyerMob/BeyondFood` reserved) | `main` | Replaces hunger and natural regeneration with three temporary meal slots, recipe-aware health/recovery profiles, preparation multipliers, extra effects, and a replacement HUD. Every NeoForge food receives an automatic fallback profile; datapacks can tune items, tags, and recipe types. |
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
 | Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
-| Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Safe visual storage filters, anchor-limited storage networks, searchable crafting terminals, automation ports, refills, and inventory controls. |
+| Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Current 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |
 | Dev Tools | `DestroyerMob/DevTools` | `main` | Pack-only testing helpers: Lootr chest placement/retargeting/rerolling and opt-in final/raw damage diagnostics. |
 
@@ -136,6 +140,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 
 - Better Enchanting includes explicit support for Apotheosis and the Apothic Enchanting module. The pack currently tracks Apotheosis `1.21.1-8.5.4` and Apothic Enchanting `1.21.1-1.5.3`.
 - MoreWeapons owns bridge data for its Mobs Tool Forging weapon parts and Better Enchanting routes, while Mobs Combat recognizes the shared weapon tags and coordinates dual-wield visuals with Punchy.
+- Beyond Food reads NeoForge food components and loaded recipes instead of depending on any food mod. Farmer's Delight, Croptopia, Pam's HarvestCraft, Farm & Charm, and their add-ons therefore receive baseline behavior automatically, with datapack overrides for balance and special effects.
 - Mobs Tool Forging converts compatible loot equipment after Apotheosis affixes are applied, and the pack removes direct vanilla armour and MoreWeapons recipes so the physical equipment loop remains authoritative.
 - Dev Tools is a development dependency only; its Lootr and damage diagnostics are intended for pack testing, not normal progression.
 - Ecology's player-facing bee systems are documented in [docs/ECOLOGY_BEE_GUIDE.md](docs/ECOLOGY_BEE_GUIDE.md).
@@ -214,6 +219,18 @@ Pull the local mod repos, build them, and sync their jars into the local Prism i
 ```
 
 The update script copies jars into `minecraft/mods/`, which is ignored by git, then re-applies the active Mod Quality Picker preset. The pack repo should track metadata and config, not generated jars.
+
+### Definitive Mobs Storage source
+
+Mobs Storage has exactly one valid source: the standalone `DestroyerMob/MobsStorage` checkout in `<sourceRoot>/MobsStorage`, on clean `main`, at the current `origin/main` commit. `tools/local-mods.json` marks it with the `remote-head` source policy and requires the `0.3.0` release line. The build tooling fetches the configured branch, verifies the repository URL, branch, clean worktree, exact remote commit, and expected JAR version, then runs `clean build` and accepts exactly one runtime JAR. It fails closed if any check is wrong or if someone tries to sync an earlier artifact without rebuilding.
+
+Do not place another Mobs Storage source tree under `minecraft/mod-dev`, and do not add a `sourceOverride`. To update or install the mod, always run:
+
+```bash
+./scripts/modpack update-local-mods --mod mobsstorage
+```
+
+The installed filename remains `minecraft/mods/mobsstorage-local.jar`, but the sync output records the exact Git revision used. An offline or stale checkout is rejected instead of producing an ambiguous `0.1.0` build.
 
 When a local mod has a published artifact that both machines should install without building from source, add its direct download URL and hash under that mod's `pack.download` entry in `tools/local-mods.json`, then run:
 
