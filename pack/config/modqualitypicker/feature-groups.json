@@ -71,6 +71,47 @@
         }
       }
     },
+    "distant_horizons": {
+      "id": "distant_horizons",
+      "displayName": "Distant Horizons",
+      "description": "Controls long-distance LOD terrain. Disable it on lower-end devices to reduce memory, CPU, GPU, and background database work.",
+      "sortOrder": 15,
+      "scope": "INSTANCE",
+      "playerAdjustable": true,
+      "defaultChoice": "off",
+      "choices": {
+        "off": {
+          "id": "off",
+          "displayName": "Off",
+          "description": "Completely disables Distant Horizons for maximum stability and performance.",
+          "mods": {
+            "distanthorizons": {
+              "enabled": false,
+              "locked": true,
+              "reason": "Distant Horizons is disabled by this device quality choice."
+            }
+          },
+          "configFiles": [],
+          "applyRequirement": "RESTART",
+          "experimental": false
+        },
+        "on": {
+          "id": "on",
+          "displayName": "On",
+          "description": "Enables long-distance LOD terrain for devices with sufficient performance headroom.",
+          "mods": {
+            "distanthorizons": {
+              "enabled": true,
+              "locked": false,
+              "reason": "Distant Horizons is enabled by this device quality choice."
+            }
+          },
+          "configFiles": [],
+          "applyRequirement": "RESTART",
+          "experimental": false
+        }
+      }
+    },
     "world_generation": {
       "id": "world_generation",
       "displayName": "World Generation",

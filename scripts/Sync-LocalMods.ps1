@@ -460,7 +460,26 @@ foreach ($mod in $configData.mods) {
     Write-Host "Syncing $($mod.name) ($revisionLabel): $($jar.Name) -> $destination"
 
     if (-not $DryRun) {
-        Copy-Item -LiteralPath $jar.FullName -Destination $destination -Force
+        $temporaryDestination = "$destination.$([Guid]::NewGuid().ToString('N')).tmp"
+        try {
+            Copy-Item -LiteralPath $jar.FullName -Destination $temporaryDestination
+            Move-Item -LiteralPath $temporaryDestination -Destination $destination -Force
+        } finally {
+            if (Test-Path -LiteralPath $temporaryDestination -PathType Leaf) {
+                Remove-Item -LiteralPath $temporaryDestination -Force
+            }
+        }
+    }
+
+    $legacyDestination = Join-Path $modsDirPath "$($mod.modId)-local.jar"
+    foreach ($legacyPath in @($legacyDestination, "$legacyDestination.disabled")) {
+        if ($legacyPath -eq $destination -or -not (Test-Path -LiteralPath $legacyPath -PathType Leaf)) {
+            continue
+        }
+        Write-Host "Removing legacy local mod jar: $legacyPath"
+        if (-not $DryRun) {
+            Remove-Item -LiteralPath $legacyPath -Force
+        }
     }
 
     $synced += [pscustomobject]@{

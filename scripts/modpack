@@ -2,4 +2,12 @@
 set -euo pipefail
 
 script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+
+# Python.org macOS installs can be present without their optional certificate
+# bundle. Fall back to macOS's maintained system CA bundle while preserving an
+# explicitly configured SSL_CERT_FILE.
+if [[ -z "${SSL_CERT_FILE:-}" && "$(uname -s)" == "Darwin" && -f /etc/ssl/cert.pem ]]; then
+    export SSL_CERT_FILE=/etc/ssl/cert.pem
+fi
+
 exec python3 "$script_dir/../tools/modpack.py" "$@"

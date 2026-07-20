@@ -18,11 +18,11 @@ hash = "b4ce4d99b37a679b372fd2d5c34113f0b79adfe67a5b830e4fb5a20f47951278"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "03c4d2ce7ef8b48440b47a1740ebe8ebfa7e7095a767ed4fdeb7849cd6df05a3"
+hash = "8851472f0a7292f2eaf2a4302c2946ae59820f16472b2c84eee8a67892902c93"
 
 [[files]]
 file = "config/almostunified/unification/food.json"
-hash = "34aa25d15b5570c944788e259a96b9e355eb6d7d508aed345dd54e7b30d182a4"
+hash = "2667cead6419b3cf815ed9e1ab6291a2cfefac9d4efee13eb048994f29360d93"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
@@ -74,7 +74,7 @@ hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
 file = "config/iris.properties"
-hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
+hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -90,7 +90,7 @@ hash = "f3711fcd660201bc9cc413f04aa76d828a46e6721ab98448b3d4e9bf76ee1934"
 
 [[files]]
 file = "config/mobstoolforging-common.toml"
-hash = "a654a6931be92d477e3527aed5214d514bc3a40994c7ea70ee1015c54f16fbb9"
+hash = "8c2a07dbca8336b51640f8a1b6a40150291bc539de9142f86e7fb54c3557d2b7"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
@@ -98,7 +98,7 @@ hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
 
 [[files]]
 file = "config/modqualitypicker/feature-groups.json"
-hash = "cc4804292f05fbac6b770c1756eb41b049f5487e43b89cf445c0503b84949adf"
+hash = "6c6a9094f1df84f68a22499f220177c49617c56f4796bc36ed337d871965ce39"
 
 [[files]]
 file = "config/modqualitypicker/features/ecology/light/ecology-common.toml"
@@ -110,11 +110,11 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "0c4f99b568efaed81a658c50f1445c702a4331d114f359e926dae791ae84a518"
+hash = "df74bccbc18995b3725f0d3276853dd953861fbf3185d346e7229a9905a2f27f"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "f072b13cf1ab17ae9b256bc99764f08897f52221f4d09a2e598484d226ca1c63"
+hash = "c172920855017bf9bdca33aa85f398eeac4243552e4a8f0ac7f4a8b6126c7d40"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -542,7 +542,7 @@ hash = "3c8cee306014887ff76ee643cafee4f7aa3b9f8b746d90c5b3ef266776499af0"
 
 [[files]]
 file = "kubejs/startup_scripts/food_unification_targets.js"
-hash = "4588a8fa6139de50bd35d61409e38583def110fb2e8eac2ab905adbb4c633781"
+hash = "5f9de607449973e0f4dcf7272c4b7f050746bfb9bd80fb29a13f87e43e2168cd"
 
 [[files]]
 file = "mods/accessories.pw.toml"

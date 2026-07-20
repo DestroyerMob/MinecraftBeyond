@@ -2150,6 +2150,7 @@
   "options": {},
   "featureChoices": {
     "ecology": "off",
+    "distant_horizons": "off",
     "world_generation": "combined"
   }
 }

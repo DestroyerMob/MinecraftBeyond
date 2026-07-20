@@ -171,6 +171,25 @@ def download_file(url: str, destination: Path, *, dry_run: bool = False) -> None
         raise ToolError(f"Failed to download {url}: {exc}") from exc
 
 
+def atomic_copy2(source: Path, destination: Path) -> None:
+    """Copy metadata and replace destination without exposing a partial file."""
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            dir=destination.parent,
+            prefix=f".{destination.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            temporary = Path(handle.name)
+        shutil.copy2(source, temporary)
+        temporary.replace(destination)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
+
+
 def find_free_local_port() -> int:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind(("127.0.0.1", 0))
@@ -1575,7 +1594,15 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
         revision_label = revision[:12] if revision else "development"
         print(f"Syncing {name} ({revision_label}): {jar.name} -> {destination}")
         if not args.dry_run:
-            shutil.copy2(jar, destination)
+            atomic_copy2(jar, destination)
+
+        legacy_destination = mods_dir / f"{mod['modId']}-local.jar"
+        for legacy_path in (legacy_destination, legacy_destination.with_name(legacy_destination.name + ".disabled")):
+            if legacy_path == destination or not legacy_path.exists():
+                continue
+            print(f"Removing legacy local mod jar: {legacy_path}")
+            if not args.dry_run:
+                legacy_path.unlink()
         rows.append((name, revision_label, jar.name, str(destination)))
 
     if missing:

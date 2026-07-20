@@ -1685,6 +1685,7 @@
   "options": {},
   "featureChoices": {
     "ecology": "max",
+    "distant_horizons": "on",
     "world_generation": "combined"
   }
 }

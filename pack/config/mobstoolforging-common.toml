@@ -62,12 +62,12 @@ enablePlantFiberDrops = true
 [casting]
 	#When true, the metallurgy crucible and Foundry Forge are available for datapack-driven metal melting and fluid transfer.
 	enableCrucible = true
-	#Reserved for future casting systems. This pass does not implement casting.
-	enableCasting = false
-	#Reserved for future ingot casting.
-	enableIngotCasting = false
-	#Reserved for future block casting.
-	enableBlockCasting = false
+	#Enables foundry drains, faucets, casting tables, and casting basins.
+	enableCasting = true
+	#Enables casting ingots on the Casting Table.
+	enableIngotCasting = true
+	#Enables casting storage blocks in the Casting Basin.
+	enableBlockCasting = true
 	#Reserved for future rough cast tool heads that still need finishing.
 	enableToolHeadCasting = false
 

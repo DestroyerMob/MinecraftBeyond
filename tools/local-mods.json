@@ -141,18 +141,18 @@
     },
     {
       "name": "Beyond Food",
-      "repository": "https://github.com/DestroyerMob/BeyondFood.git",
+      "repository": "https://github.com/DestroyerMob/BeyondFoods.git",
       "branch": "main",
       "sourceFolder": "BeyondFood",
       "modId": "beyondfood",
-      "expectedVersion": "0.1.0",
+      "expectedVersion": "0.3.0",
       "jarGlob": "beyondfood-*.jar",
       "pack": {
         "metafile": "mods/beyondfood.pw.toml",
         "filename": "beyondfood-local.jar",
         "side": "both"
       },
-      "notes": "NeoForge 21.1.234. Three-slot Valheim-style food system with recipe-aware profiles, temporary health, recovery, and datapack compatibility. The repository URL is reserved for publication; the current source is a local development checkout."
+      "notes": "NeoForge 21.1.234. Three-slot Valheim-style food system with recipe-aware profiles, temporary health, recovery, and datapack compatibility."
     },
     {
       "name": "Better Enchanting",
