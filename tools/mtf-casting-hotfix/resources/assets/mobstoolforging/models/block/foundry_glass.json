@@ -1,0 +1,14 @@
+{
+  "loader": "fusion:model",
+  "type": "connecting",
+  "render_type": "minecraft:translucent",
+  "ambientocclusion": false,
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mobstoolforging:block/foundry_glass_connected",
+    "particle": "mobstoolforging:block/foundry_glass"
+  },
+  "connections": {
+    "type": "is_same_block"
+  }
+}

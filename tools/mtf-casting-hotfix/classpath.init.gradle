@@ -1,0 +1,11 @@
+allprojects {
+    afterEvaluate { evaluatedProject ->
+        if (evaluatedProject == rootProject) {
+            tasks.register('printMainCompileClasspath') {
+                doLast {
+                    println sourceSets.main.compileClasspath.asPath
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "render_type": "minecraft:translucent",
+  "ambientocclusion": false,
+  "textures": {
+    "all": "mobstoolforging:block/foundry_glass",
+    "particle": "mobstoolforging:block/foundry_glass"
+  }
+}
