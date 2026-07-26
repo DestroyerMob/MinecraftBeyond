@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "igleelib:lavium",
+  "traits": [
+    "mobstoolforging:nether_forged"
+  ]
+}

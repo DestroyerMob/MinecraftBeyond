@@ -1,0 +1,15 @@
+{
+  "slot": "any",
+  "material": "mythicupgrades:jade",
+  "traits": [
+    "minecraft_beyond:nimble"
+  ],
+  "durability_multiplier": 0.9,
+  "mining_speed_multiplier": 1.15,
+  "attack_damage_bonus": 0.0,
+  "attack_speed_bonus": 0.35,
+  "fire_resistant": false,
+  "affinities": [
+    "mobstoolforging:enchant_control"
+  ]
+}

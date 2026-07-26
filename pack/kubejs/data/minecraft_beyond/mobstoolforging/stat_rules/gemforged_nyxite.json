@@ -1,0 +1,15 @@
+{
+  "slot": "any",
+  "material": "gemforged:nyxite",
+  "traits": [
+    "minecraft_beyond:umbral"
+  ],
+  "durability_multiplier": 0.9,
+  "mining_speed_multiplier": 1.05,
+  "attack_damage_bonus": 0.45,
+  "attack_speed_bonus": 0.15,
+  "fire_resistant": false,
+  "affinities": [
+    "mobstoolforging:silence"
+  ]
+}

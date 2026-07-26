@@ -1,0 +1,24 @@
+{
+  "category": "metal",
+  "display_item": "galosphere:palladium_ingot",
+  "items": [
+    "galosphere:palladium_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.galosphere.palladium",
+  "tier": {
+    "base": "iron",
+    "max_damage": 420,
+    "mining_speed": 6.5,
+    "attack_damage_bonus": 1.5,
+    "enchantment_value": 14,
+    "repair_tag": "c:ingots/palladium"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:ingots/palladium"
+  ],
+  "minimum_forge_heat": "low"
+}

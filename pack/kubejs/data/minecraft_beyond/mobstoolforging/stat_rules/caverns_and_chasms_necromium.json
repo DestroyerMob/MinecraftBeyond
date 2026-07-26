@@ -1,0 +1,15 @@
+{
+  "slot": "any",
+  "material": "caverns_and_chasms:necromium",
+  "traits": [
+    "minecraft_beyond:maledictive"
+  ],
+  "durability_multiplier": 1.1,
+  "mining_speed_multiplier": 1.0,
+  "attack_damage_bonus": 0.4,
+  "attack_speed_bonus": 0.0,
+  "fire_resistant": false,
+  "affinities": [
+    "mobstoolforging:sculk"
+  ]
+}

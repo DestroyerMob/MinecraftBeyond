@@ -1,0 +1,12 @@
+{
+  "slot": "any",
+  "material": "mythicupgrades:aquamarine",
+  "traits": [
+    "minecraft_beyond:frostbound"
+  ],
+  "durability_multiplier": 1.05,
+  "mining_speed_multiplier": 1.08,
+  "attack_damage_bonus": 0.0,
+  "attack_speed_bonus": 0.0,
+  "fire_resistant": false
+}

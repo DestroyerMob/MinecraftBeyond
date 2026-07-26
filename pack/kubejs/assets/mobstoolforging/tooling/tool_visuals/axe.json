@@ -1,0 +1,42 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/axe/handle",
+      "large_template": "mobstoolforging:tool_templates/axe/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/axe/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/axe/large_axe_head",
+      "material_from": "headMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/axe/axe_head_part",
+      "slot": "axe_head",
+      "template": "mobstoolforging:tool_templates/axe/axe_head",
+      "texture_pattern": "source/tool_parts/{material}/{material}_axe_head_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/axe/axe_head",
+      "z": 2
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/axe/large_axe_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "axe_treatment",
+      "template": "mobstoolforging:tool_templates/axe/axe_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_axe_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/axe/axe_treatment",
+      "z": 4
+    }
+  ]
+}

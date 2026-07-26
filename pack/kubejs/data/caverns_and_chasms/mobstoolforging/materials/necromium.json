@@ -1,0 +1,25 @@
+{
+  "category": "metal",
+  "display_item": "caverns_and_chasms:necromium_ingot",
+  "items": [
+    "caverns_and_chasms:necromium_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.caverns_and_chasms.necromium",
+  "tier": {
+    "base": "netherite",
+    "max_damage": 2031,
+    "mining_speed": 9.0,
+    "attack_damage_bonus": 3.0,
+    "enchantment_value": 15,
+    "incorrect_blocks_tag": "caverns_and_chasms:incorrect_for_necromium_tool",
+    "repair_tag": "c:ingots/necromium"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:ingots/necromium"
+  ],
+  "minimum_forge_heat": "high"
+}

@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "galosphere:lumiere_shard",
+  "items": [
+    "galosphere:lumiere_shard"
+  ],
+  "translation_key": "material.minecraft_beyond.galosphere.lumiere",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 700,
+    "mining_speed": 7.2,
+    "attack_damage_bonus": 2.0,
+    "enchantment_value": 20,
+    "repair_tag": "c:gems/lumiere"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/lumiere"
+  ]
+}

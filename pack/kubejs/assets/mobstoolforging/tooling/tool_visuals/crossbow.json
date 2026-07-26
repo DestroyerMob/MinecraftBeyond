@@ -1,0 +1,39 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 16,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "optional": false,
+      "part_template": "mobstoolforging:item/crossbow_body_part",
+      "slot": "crossbow_body",
+      "template": "mobstoolforging:item/crossbow_body",
+      "tool_template": "mobstoolforging:item/crossbow_body",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "material_from": "headMaterial",
+      "optional": false,
+      "part_template": "mobstoolforging:item/crossbow_limbs",
+      "slot": "crossbow_limbs",
+      "template": "mobstoolforging:item/crossbow_limbs",
+      "texture_pattern": "source/tool_parts/{material}/{material}_crossbow_limbs_{usage}",
+      "tool_template": "mobstoolforging:item/crossbow_limbs",
+      "z": 2
+    },
+    {
+      "emissive_allowed": false,
+      "material_from": "guardMaterial",
+      "optional": false,
+      "part_template": "mobstoolforging:item/string_crossbow_string_standby",
+      "slot": "crossbow_string",
+      "template": "mobstoolforging:item/string_crossbow_string_standby",
+      "tool_template": "mobstoolforging:item/string_crossbow_string_standby",
+      "z": 3,
+      "texture_pattern": "source/tool_parts/{material}/{material}_crossbow_string_{usage}"
+    }
+  ]
+}

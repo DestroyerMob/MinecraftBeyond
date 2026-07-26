@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "mythicupgrades:ametrine",
+  "items": [
+    "mythicupgrades:ametrine"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.ametrine",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 1400,
+    "mining_speed": 8.0,
+    "attack_damage_bonus": 2.75,
+    "enchantment_value": 26,
+    "repair_tag": "c:gems/ametrine"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/ametrine"
+  ]
+}

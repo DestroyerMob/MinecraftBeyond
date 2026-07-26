@@ -1,0 +1,8 @@
+{
+  "slot": "any",
+  "material": "igleelib:modium",
+  "traits": [
+    "mobstoolforging:adamant"
+  ],
+  "fire_resistant": true
+}

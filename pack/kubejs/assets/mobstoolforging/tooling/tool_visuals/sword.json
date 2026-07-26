@@ -1,0 +1,54 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/sword/handle",
+      "large_template": "mobstoolforging:tool_templates/sword/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/sword/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/sword/large_sword_blade",
+      "material_from": "headMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/sword/sword_blade_part",
+      "slot": "sword_blade",
+      "template": "mobstoolforging:tool_templates/sword/sword_blade",
+      "texture_pattern": "source/tool_parts/{material}/{material}_sword_blade_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/sword/sword_blade",
+      "z": 2
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/sword/large_guard",
+      "material_from": "guardMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/sword/guard_part",
+      "slot": "guard",
+      "template": "mobstoolforging:tool_templates/sword/guard",
+      "texture_pattern": "source/tool_parts/{material}/{material}_guard_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/sword/guard",
+      "z": 3
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/sword/large_sword_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "sword_treatment",
+      "template": "mobstoolforging:tool_templates/sword/sword_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_sword_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/sword/sword_treatment",
+      "z": 4
+    }
+  ]
+}

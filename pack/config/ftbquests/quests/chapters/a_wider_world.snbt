@@ -1,0 +1,175 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "a_wider_world",
+	group: "4D6334874DFACC06",
+	icon: {
+		id: "naturescompass:naturescompass",
+	},
+	id: "5425E51CE525F7A1",
+	order_index: 4,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			icon: {
+				id: "minecraft:filled_map",
+			},
+			id: "1F14FC7280902195",
+			rewards: [{
+				count: 8,
+				id: "34169CD24631A0EC",
+				item: {"count":1,"id":"minecraft:paper"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "1FC814F556B4D829",
+					item: {"count":1,"id":"minecraft:filled_map"},
+					type: "item",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["1F14FC7280902195"],
+			icon: {
+				id: "naturescompass:naturescompass",
+			},
+			id: "7670E2E7F33C754E",
+			rewards: [{
+				count: 4,
+				id: "04081AFBA43FEE0B",
+				item: {"count":1,"id":"minecraft:cooked_beef"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "776A9F802139F902",
+					item: {"count":1,"id":"naturescompass:naturescompass"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["7670E2E7F33C754E"],
+			icon: {
+				id: "minecraft:spore_blossom",
+			},
+			id: "5312D8FFD3DE907E",
+			rewards: [{
+				count: 16,
+				id: "785EA91BCE168F3A",
+				item: {"count":1,"id":"minecraft:torch"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					biome: "yungscavebiomes:lost_caves",
+					id: "5A131FAFCEEC91A7",
+					type: "biome",
+				},
+			],
+			x: 8.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["1F14FC7280902195"],
+			icon: {
+				id: "minecraft:chiseled_stone_bricks",
+			},
+			id: "3F1751CAB9B8E624",
+			rewards: [{
+				count: 16,
+				id: "44DA852BC56AF292",
+				item: {"count":1,"id":"minecraft:torch"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "05E327AA133C9DC3",
+					structure: "betterdungeons:small_dungeon",
+					type: "structure",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["3F1751CAB9B8E624"],
+			icon: {
+				id: "lootr:lootr_chest",
+			},
+			id: "2A641594CAA15D23",
+			rewards: [{
+				count: 2,
+				id: "03AFF7ADA4138BCA",
+				item: {"count":1,"id":"minecraft:emerald"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "lootr:1chest",
+					criterion: "",
+					id: "6F6EB0048270CF72",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["3F1751CAB9B8E624"],
+			icon: {
+				id: "minecraft:brush",
+			},
+			id: "09AD9DE1182585B3",
+			rewards: [{
+				count: 8,
+				id: "562BE5CD20F56B42",
+				item: {"count":1,"id":"minecraft:clay_ball"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "minecraft:adventure/salvage_sherd",
+					criterion: "",
+					id: "0DBD70E4AB44B91D",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["1F14FC7280902195"],
+			icon: {
+				id: "exposure:camera",
+			},
+			id: "0EE834C5E241F3FE",
+			rewards: [{
+				count: 2,
+				id: "78A2246C166EB56C",
+				item: {"count":1,"id":"minecraft:glow_ink_sac"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					advancement: "exposure:adventure/exposure",
+					criterion: "",
+					id: "0F799DCA0A3A936A",
+					type: "advancement",
+				},
+			],
+			x: 4.0d,
+			y: 3.0d,
+		},
+	],
+}

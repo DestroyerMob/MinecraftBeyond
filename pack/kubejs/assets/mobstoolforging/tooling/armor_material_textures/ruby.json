@@ -1,0 +1,14 @@
+{
+  "material": "mobstoolforging:ruby",
+  "texture": "mythicupgrades:item/ruby",
+  "item_textures": {
+    "helmet": "mythicupgrades:item/ruby_helmet",
+    "chestplate": "mythicupgrades:item/ruby_chestplate",
+    "leggings": "mythicupgrades:item/ruby_leggings",
+    "boots": "mythicupgrades:item/ruby_boots"
+  },
+  "worn_textures": {
+    "layer_1": "mythicupgrades:textures/models/armor/ruby_layer_1.png",
+    "layer_2": "mythicupgrades:textures/models/armor/ruby_layer_2.png"
+  }
+}

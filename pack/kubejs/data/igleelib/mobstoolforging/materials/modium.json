@@ -1,0 +1,21 @@
+{
+  "category": "metal",
+  "display_item": "igleelib:modium_ingot",
+  "items": [
+    "igleelib:modium_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.igleelib.modium",
+  "tier": {
+    "base": "netherite",
+    "max_damage": 2200,
+    "mining_speed": 9.0,
+    "attack_damage_bonus": 4.0,
+    "enchantment_value": 12,
+    "repair_item": "igleelib:modium_ingot"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "minimum_forge_heat": "high"
+}

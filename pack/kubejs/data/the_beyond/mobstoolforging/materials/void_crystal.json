@@ -1,0 +1,24 @@
+{
+  "category": "gem",
+  "display_item": "the_beyond:void_crystal",
+  "items": [
+    "the_beyond:void_crystal"
+  ],
+  "translation_key": "material.minecraft_beyond.the_beyond.void_crystal",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 1350,
+    "mining_speed": 8.2,
+    "attack_damage_bonus": 2.8,
+    "enchantment_value": 24,
+    "repair_tag": "c:gems/void_crystal"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/void_crystal"
+  ],
+  "required_lapidary_abrasive_tier": "diamond"
+}

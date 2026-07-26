@@ -1,0 +1,8 @@
+{
+  "slot": "any",
+  "material": "igleelib:derium",
+  "traits": [
+    "mobstoolforging:work_hardened"
+  ],
+  "fire_resistant": true
+}

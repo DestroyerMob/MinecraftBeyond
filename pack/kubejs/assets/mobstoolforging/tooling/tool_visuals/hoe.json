@@ -1,0 +1,42 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/hoe/handle",
+      "large_template": "mobstoolforging:tool_templates/hoe/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/hoe/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/hoe/large_hoe_head",
+      "material_from": "headMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/hoe/hoe_head_part",
+      "slot": "hoe_head",
+      "template": "mobstoolforging:tool_templates/hoe/hoe_head",
+      "texture_pattern": "source/tool_parts/{material}/{material}_hoe_head_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/hoe/hoe_head",
+      "z": 2
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/hoe/large_hoe_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "hoe_treatment",
+      "template": "mobstoolforging:tool_templates/hoe/hoe_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_hoe_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/hoe/hoe_treatment",
+      "z": 4
+    }
+  ]
+}

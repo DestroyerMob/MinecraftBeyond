@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "gemforged:phoenixtone",
+  "traits": [
+    "mobstoolforging:kindled"
+  ]
+}

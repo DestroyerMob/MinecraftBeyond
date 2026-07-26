@@ -1,0 +1,42 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/pickaxe/handle",
+      "large_template": "mobstoolforging:tool_templates/pickaxe/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/pickaxe/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/pickaxe/large_pickaxe_head",
+      "material_from": "headMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/pickaxe/pickaxe_head_part",
+      "slot": "pickaxe_head",
+      "template": "mobstoolforging:tool_templates/pickaxe/pickaxe_head",
+      "texture_pattern": "source/tool_parts/{material}/{material}_pickaxe_head_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/pickaxe/pickaxe_head",
+      "z": 2
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/pickaxe/large_pickaxe_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "pickaxe_treatment",
+      "template": "mobstoolforging:tool_templates/pickaxe/pickaxe_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_pickaxe_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/pickaxe/pickaxe_treatment",
+      "z": 4
+    }
+  ]
+}

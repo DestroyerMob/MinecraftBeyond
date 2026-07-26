@@ -17,10 +17,12 @@ Current target:
 - **Progression:** Mobs Tool Forging replaces direct equipment recipes with physical knapping, pattern making, heating, forging, lapidary work, leatherworking, modular assembly, and repair.
 - **Combat and equipment:** MoreWeapons supplies additional weapon families, Mobs Combat adds posture/guard/parry/stealth/dual-wield systems, and Better Enchanting makes enchantment selection essence- and tag-driven.
 - **Living world:** Ecology remains an experimental future pillar for advanced apiculture and settlement systems. It is disabled by the recommended Balanced preset because of its performance cost, while the player-facing quality menu exposes Light and Full opt-in modes. Worldgen, structure, creature, farming, food, and furniture mods broaden exploration and everyday survival in the meantime.
-- **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, sculk experience tools, and small magical discoveries.
+- **Magic and building:** Auric adds potion utility, imbuing, camouflage, builder storage, and small magical discoveries.
 - **Presentation and scalability:** shader, sound, animation, UI, controller, map, performance, and quality-profile tooling let the same pack target different machines and play styles.
 
 Controller-first play, including Steam and Steam Deck setup, pack radial-menu actions, and troubleshooting, is documented in [docs/CONTROLLER_GUIDE.md](docs/CONTROLLER_GUIDE.md).
+
+The FTB Quests field guide teaches the pack through nine focused, mostly parallel chapters. Its 62 quests ask for detectable items, actions, or discoveries; each gives an intentional item reward, and the Ender Dragon remains a doorway rather than a finish line. Its design and deterministic generation workflow are documented in [docs/QUEST_BOOK.md](docs/QUEST_BOOK.md).
 
 This is an internal playtesting pack rather than a finished public release. Local mod balance, art, compatibility, and distribution packaging are still evolving.
 
@@ -31,6 +33,7 @@ This is an internal playtesting pack rather than a finished public release. Loca
 - Mod Quality Picker presets and composable feature groups are bundled under `pack/config/modqualitypicker/` and indexed by packwiz like quests/configs.
 - `tools/local-mods.json` records unpublished local mods, their expected branches/jar names, and optional release download pins for packwiz metadata.
 - `tools/modpack.py` is the cross-platform workspace command used by macOS, Linux, and Windows.
+- `tools/generate_ftb_quests.py` is the source of truth for the generated FTB Quests book under `pack/config/ftbquests/quests/`.
 - `modqualitypicker-local.jar` is self-contained: the same jar supplies the in-game menu and the Java pre-launch applier used by Prism.
 - `tools/dev-env.example.json` is the template for optional machine-local paths.
 - `scripts/` contains portable wrappers plus the original PowerShell helpers.
@@ -130,7 +133,7 @@ The tools prefer an explicitly configured `packwiz`, then `tools/bin/packwiz(.ex
 | Mobs Combat | `DestroyerMob/MobsCombat` | `main` | Server-authoritative posture, guard, timed block, parry, stealth, recovery, dual-wield, Punchy animation, and Jade/Apotheosis inspection support with data-driven entity and weapon profiles. |
 | Beyond Food | `DestroyerMob/BeyondFoods` | `main` | Replaces hunger and natural regeneration with three temporary meal slots, recipe-aware health/recovery profiles, preparation multipliers, extra effects, and a replacement HUD. Every NeoForge food receives an automatic fallback profile; datapacks can tune items, tags, and recipe types. |
 | Better Enchanting | `DestroyerMob/BetterEnchants` | `main` | Deterministic essence-, book-, item-, and tag-driven enchanting with custom enchantments, datapack limits/fusions, a JEI enchantment guide, modular-tool routing, and Apothic Enchanting support. |
-| Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, sculk XP bottles, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
+| Auric | `DestroyerMob/Auric` | `main` | Potion cauldrons and candles, item imbuing, camouflage and palette tools, Sword in Stone shrines, and Jade potion-cauldron diagnostics. |
 | Mobs Tool Forging | `DestroyerMob/MobsToolForging` | `main` | Physical modular tool and armour progression covering knapping, patterns, heat, forging, gem shells, leatherworking, drying, assembly, repair, workmanship quality, layered visuals, JEI, and Jade. |
 | Mobs Storage | `DestroyerMob/MobsStorage` | `main` | Current 0.3.x storage UI, carry rules, bundle selection, searchable terminals, automation ports, and routing upgrades. |
 | Mod Quality Picker | `DestroyerMob/ModQualityPicker` | `main` | Working per-profile mod/config selection loop with in-game editing, world mismatch handling, dependency validation, Prism pre-launch application, config baselines/diffs, and pack export. |

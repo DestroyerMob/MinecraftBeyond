@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "galosphere:opal",
+  "items": [
+    "galosphere:opal"
+  ],
+  "translation_key": "material.minecraft_beyond.galosphere.opal",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 600,
+    "mining_speed": 6.8,
+    "attack_damage_bonus": 1.8,
+    "enchantment_value": 24,
+    "repair_tag": "c:gems/opal"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/opal"
+  ]
+}

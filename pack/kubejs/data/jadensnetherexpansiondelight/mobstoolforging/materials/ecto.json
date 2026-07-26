@@ -1,0 +1,24 @@
+{
+  "category": "metal",
+  "display_item": "jadensnetherexpansiondelight:ecto_ingot",
+  "items": [
+    "jadensnetherexpansiondelight:ecto_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.jadensnetherexpansiondelight.ecto",
+  "tier": {
+    "base": "netherite",
+    "max_damage": 2031,
+    "mining_speed": 9.0,
+    "attack_damage_bonus": 4.0,
+    "enchantment_value": 15,
+    "repair_tag": "c:ingots/ecto"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:ingots/ecto"
+  ],
+  "minimum_forge_heat": "high"
+}

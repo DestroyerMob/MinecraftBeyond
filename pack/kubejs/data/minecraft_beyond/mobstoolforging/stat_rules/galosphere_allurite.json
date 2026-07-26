@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "galosphere:allurite",
+  "traits": [
+    "mobstoolforging:resonant"
+  ]
+}

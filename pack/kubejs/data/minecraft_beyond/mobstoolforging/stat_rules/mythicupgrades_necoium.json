@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "mythicupgrades:necoium",
+  "traits": [
+    "mobstoolforging:reinforced"
+  ]
+}

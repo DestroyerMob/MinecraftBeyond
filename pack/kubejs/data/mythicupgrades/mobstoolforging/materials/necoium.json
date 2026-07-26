@@ -1,0 +1,24 @@
+{
+  "category": "metal",
+  "display_item": "mythicupgrades:necoium_ingot",
+  "items": [
+    "mythicupgrades:necoium_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.necoium",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 675,
+    "mining_speed": 7.5,
+    "attack_damage_bonus": 2.3,
+    "enchantment_value": 15,
+    "repair_tag": "c:ingots/necoium"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:ingots/necoium"
+  ],
+  "minimum_forge_heat": "high"
+}

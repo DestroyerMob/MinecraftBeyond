@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "caverns_and_chasms:zirconia",
+  "items": [
+    "caverns_and_chasms:zirconia"
+  ],
+  "translation_key": "material.minecraft_beyond.caverns_and_chasms.zirconia",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 800,
+    "mining_speed": 7.2,
+    "attack_damage_bonus": 2.2,
+    "enchantment_value": 25,
+    "repair_tag": "c:gems/zirconia"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/zirconia"
+  ]
+}

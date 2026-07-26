@@ -1,0 +1,8 @@
+{
+  "trait": "minecraft_beyond:radiant",
+  "target_effect": {
+    "effect": "minecraft:glowing",
+    "duration": 200
+  },
+  "reveal_same_type_radius": 8
+}

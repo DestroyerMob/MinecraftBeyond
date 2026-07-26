@@ -1,0 +1,6 @@
+{
+  "translation_key": "tooltip.minecraft_beyond.trait.vital_edge",
+  "description_translation_key": "tooltip.minecraft_beyond.trait.vital_edge.desc",
+  "color": "blue",
+  "category": "edge"
+}

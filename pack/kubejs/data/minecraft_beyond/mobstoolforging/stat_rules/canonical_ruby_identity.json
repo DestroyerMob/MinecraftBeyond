@@ -1,0 +1,7 @@
+{
+  "slot": "head",
+  "material": "mobstoolforging:ruby",
+  "traits": [
+    "minecraft_beyond:sanguine"
+  ]
+}

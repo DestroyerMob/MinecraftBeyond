@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "gemforged:solarium",
+  "traits": [
+    "mobstoolforging:forceful"
+  ]
+}

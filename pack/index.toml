@@ -73,6 +73,54 @@ file = "config/ftbessentials.snbt"
 hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
 
 [[files]]
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "ff411898af3148350fefbcf7a2cc61c130dd830d5b4eda352fae6ad30e6a3934"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/a_wider_world.snbt"
+hash = "05e429257a5abab7b1612137c5bd3493019f13fd6fef4c9153a6bd1a9f6f3122"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/beyond_the_dragon.snbt"
+hash = "8ec334a124b562a13a7fffb1fcb7b3132e5f5eed91ce9decbac335a1f418ef82"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/essence_and_practical_magic.snbt"
+hash = "b329c09e36434086cf6165f6f16019799f605051d8686730be7a5c1f67ba94b7"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/fight_with_intent.snbt"
+hash = "32f99d684907672abedfc08fdae31efb9c66587a4775dfc00c6727841165208d"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/hands_before_tools.snbt"
+hash = "53290f1d9580fd4fc823139d8f45916977a60eca3ed2be866c3df1774994caa4"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/meals_not_hunger.snbt"
+hash = "2e43623360e772505557f3d8def85ab238ed86cb23ddef09a9fbf07e733f2772"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/storage_and_logistics.snbt"
+hash = "aff7f351d2f6fce9ad91bbad1305a9c34cca8bebecaf16d10df4811133a4460b"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/the_dragon_is_a_door.snbt"
+hash = "06b41b827a17f5368406c48f7444e88430afb3095bb298aa3c8d32ec8497d747"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/the_workshop.snbt"
+hash = "33a08305afbc8338f0c17acdad4656a23b88d585c2e448b37fa27cc3f67919b2"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "224245c5ea8ee2e7a1cb10a049206d0d33d52bd319b750a54d6facd227458cc7"
+
+[[files]]
+file = "config/ftbquests/quests/lang/en_us.snbt"
+hash = "442bea41a032c854fe0215bab0db5486950835ee974febc51246e67a98af0656"
+
+[[files]]
 file = "config/iris.properties"
 hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
 
@@ -82,7 +130,7 @@ hash = "4ea4bb82524e474e5a54e512528859afafb712bd7621a88c9f27c56f78656928"
 
 [[files]]
 file = "config/mobscombat-common.toml"
-hash = "6d16df049ed6ad148d8c60d66a7c5093a517b38b0c323079c4cda9dbf5d57f30"
+hash = "aa86fac8dac64f42a82d1821727ce92cf634cb5a12df00da73e4dd3b172e74cc"
 
 [[files]]
 file = "config/mobsmoreweapons-common.toml"
@@ -145,8 +193,816 @@ file = "config/tooltipoverhaul/tooltipoverhaul.toml"
 hash = "41298dd74c0d24bcc62b0790bda9ab183bcd55740c561a63f0f79437076a8f4a"
 
 [[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_axe_head_part.png"
+hash = "8033f37d921a78bda455404c8df7166a06fa1f89e719d95786195e7c663d1dc5"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_axe_head_tool.png"
+hash = "3dcb6484ec3bcfafa22f3d1512ccabc03a8893cf2e8cece295727bd897e408d5"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_crossbow_limbs_part.png"
+hash = "b02d5c148a8ab27ff2a93a3526bc96ed7526d4402a56f60d2d6c59f4a244f479"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_crossbow_limbs_tool.png"
+hash = "f953c37d067269b44c51e4cf3cdb179222295f5de18871e0b15fbc7b347aab79"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_guard_part.png"
+hash = "7eedb380d711ab63649b58b15b9b08443190205ce0d72accfd7b93702feede7a"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_guard_tool.png"
+hash = "d454c08e366d7061d1aaa539a686b8b1700cc0394128d45dd9795352a9e858e4"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_hoe_head_part.png"
+hash = "62ba771071c86f4d5a82c4108792e3b52dc2777a4ab6c3af084c9c9bc8de0e32"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_hoe_head_tool.png"
+hash = "dec59d403761f904260503cd1dc379f0327160a5947c88ff9c5dd5deaf401e86"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_mattock_tool_axe_tool.png"
+hash = "4bd56a8bd11f86bf6291c45dce764866c92ec1a260b2c89181c4fc7051835359"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_mattock_tool_hoe_tool.png"
+hash = "0d19b996fcbc18be276a4ec076d3cfeb59a442b6fd1d8e81e367747c1cc0dfaf"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_pickaxe_head_part.png"
+hash = "6e56b384d0881c867c2dbc10d8acb7146052a65abefb9cb22053753ba617fcd6"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_pickaxe_head_tool.png"
+hash = "cb6e10cba9cd37be0efb9a79e8b8b1759936347fe60afce1310c53d68b36db53"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_shovel_head_part.png"
+hash = "b74b4f4719621ebf9d8d5dd19a8442e74142b11fce0f4115da4dd92b285545a7"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_shovel_head_tool.png"
+hash = "32e7e2102392af7c25ca185342ea7e4ae1ff17f7ae22b40e2afbc2e9a095f497"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_sword_blade_part.png"
+hash = "5bae2e81c0759d410f4532cf8d165a5a25d878e950d09fdb8ffab663796279e3"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/necromium/necromium_sword_blade_tool.png"
+hash = "db65d4d6079b7475917749cc360d5e5e5b0556a42f34217bfd57cdc758bc9051"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_axe_head_part.png"
+hash = "a1c054b58634cbd10d76ca92801b26190cdcbb828e3f2e52cf42e5641cf96d0e"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_axe_head_tool.png"
+hash = "60b730079c4e90470b5ea92803c382e169fe8214e446310657785f79343310e7"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_crossbow_limbs_part.png"
+hash = "6392b1326b98187f68565d35e83c95cf9848b4d587ebafef1a9d6d79750de2ae"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_crossbow_limbs_tool.png"
+hash = "a60de12585e2c0a6a6e03e6fd104d8979acbe560e3f1fcab57c887252d8dbe1d"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_guard_part.png"
+hash = "0fb103cc5083e783a0d80d9b6c6d1022107e87a6e6bea56324be784abaddaab3"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_guard_tool.png"
+hash = "b9cf44cb031ccfa39c5efb2fcae3af4dc4f284952400422fb41dcf5961d8a355"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_hoe_head_part.png"
+hash = "0d501e51ab64ca33baebf982eccee8104358bcf6e22ee171994efe33b7fa0f2c"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_hoe_head_tool.png"
+hash = "9162d82675985e0988579c31b2a09d246cd559d5b59cd6264da3722a900ad03c"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_mattock_tool_axe_tool.png"
+hash = "58334b3d45d7b106dabaad0897c60bae71252ba93809ea9c4bd3a01b4b0e848c"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_mattock_tool_hoe_tool.png"
+hash = "8c5acf2cc22efd0ee4d3db1d1388424c31ee1228ec3b437cf1b55b41e57f7a35"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_pickaxe_head_part.png"
+hash = "fae0830aa6073eb2ddb398de2d35b7abf82a25e034225c1af8c983020442cf87"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_pickaxe_head_tool.png"
+hash = "6ba460ee95ee6b99641f766b568590bf6e0912e7e9398ec4c6d39847f95961d7"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_shovel_head_part.png"
+hash = "c5184d1162a3b3433adf33508b24ae1c9a5d3db68e769598bd13e28a42cabbbb"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_shovel_head_tool.png"
+hash = "8990dc348b2c83808c8606e7c9a76a68d0e6a6e7afe88ec233547eebb6f80a7f"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_sword_blade_part.png"
+hash = "d7625d1b8fc41256ebea5d6f9e63b6a2392f7d8a09079a8b84ab0b79a7817f83"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/textures/source/tool_parts/silver/silver_sword_blade_tool.png"
+hash = "b7caa356cba3567766442d49ec9da6ae65a2be23af66471703aaa6d4f87dddaa"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/tooling/material_visuals/necromium.json"
+hash = "ca7694f5666a6c9e596eea2e5aa1b88927efc3f4cb91e6aca688e2ffef8d877d"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/tooling/material_visuals/silver.json"
+hash = "8f0cf9658791fb2c43ad93df6b33909a15c1268e79d587d6ebbaa9baa1839922"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/tooling/material_visuals/spinel.json"
+hash = "4e5cd55f1923fa26d830dc01ded12b3c74644db6c11229931d29bbaeee716ec6"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/tooling/material_visuals/turquoise.json"
+hash = "2f9aab1a31a5696118f80f65887ae0a9450cd2b3f1ac6a3e994a6f15eb2ff9b7"
+
+[[files]]
+file = "kubejs/assets/caverns_and_chasms/tooling/material_visuals/zirconia.json"
+hash = "537f74754bd5944673d01e4b637d43da9b3ab5f009f470948791654c5a451b0b"
+
+[[files]]
 file = "kubejs/assets/controlify/controllers/default_config/default.json"
 hash = "d981f52638861eb6cc0144d96eb47694e8e52fb17cad86ddcea8054b6c43011a"
+
+[[files]]
+file = "kubejs/assets/galosphere/tooling/material_visuals/allurite.json"
+hash = "10bc0e5a60b652f9b57035cea3eefb37c5278258f381c101a291b0b9f857882f"
+
+[[files]]
+file = "kubejs/assets/galosphere/tooling/material_visuals/lumiere.json"
+hash = "a736819fe131463b7aace785ffbe50b33012a155eafaf77162e3c07b206b372d"
+
+[[files]]
+file = "kubejs/assets/galosphere/tooling/material_visuals/opal.json"
+hash = "a8e3985bcd0c80b21f884ee8b3ad39a1409de3dbe921eef6f605d5d94e40da9e"
+
+[[files]]
+file = "kubejs/assets/galosphere/tooling/material_visuals/palladium.json"
+hash = "d27f7ea3d3e3cdb9a44cfeb3382e41da35489514167546a537c60c374113bba1"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/bloodstone.json"
+hash = "b1253a4355265d752152a1c5cb90b320a4bf0a38f6c834629d2a0ac001691bc8"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/gravitium.json"
+hash = "ed4149f0544f1c1ac825d221c8a24303acfb149f828ed48e9d4f0a2779fa28de"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/nyxite.json"
+hash = "66617b937d915fb567a526d7df66019d98736210f2a44c04b70d8dccfff23892"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/phoenixtone.json"
+hash = "7a70507c4d01be3a94d341703d1d6a714f283ad6dacba5428e51e9de0e677cee"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/prismyte.json"
+hash = "1f92ea40255e7857e20ec88126dd714025635dda967882397a3de78443d2794b"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/solarium.json"
+hash = "1ef1f1f57ad45f73e4f39005dcf98326044a051b48bf98d762638f4a6e6756d8"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/venomyte.json"
+hash = "043bd95ba936e825150c405574e0acdcb6f4809c2d13f76076c076ab928adff9"
+
+[[files]]
+file = "kubejs/assets/gemforged/tooling/material_visuals/verdantite.json"
+hash = "c533307a2ca35b757d9e7248dcbd0b433cdca66f6c77bb18f8e58a5cd3961bb7"
+
+[[files]]
+file = "kubejs/assets/igleelib/tooling/material_visuals/blazum.json"
+hash = "aff75f419447903bcf2d40017c13cf13b5fbd91905bf37258e777b9b608f1d37"
+
+[[files]]
+file = "kubejs/assets/igleelib/tooling/material_visuals/derium.json"
+hash = "d14cac7213cf9012dcc391f7b9bccfa6307e84d654a8ffaaf26e248259e1c9ea"
+
+[[files]]
+file = "kubejs/assets/igleelib/tooling/material_visuals/lavium.json"
+hash = "ba5542660ec6e9e73d41da20b76edcb2a5eb5ec539563a2a898451dbe066a28f"
+
+[[files]]
+file = "kubejs/assets/igleelib/tooling/material_visuals/modium.json"
+hash = "996e3490fb1bc57176c93f1a0c6f9ec3dee3f539de93586266e5d5da6858f4af"
+
+[[files]]
+file = "kubejs/assets/jadensnetherexpansiondelight/tooling/material_visuals/ecto.json"
+hash = "9ce4fa9732b67553949e736d571be8ead052977532c34987f281e07c9169c417"
+
+[[files]]
+file = "kubejs/assets/minecraft_beyond/lang/en_us.json"
+hash = "acb583f0667f2fbdf3bbd5bd89e58cf599d74d5edfbd7bd77fc18e9dc2ea3acd"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/patchouli_books/forgemasters_guide/en_us/entries/materials/gems.json"
+hash = "40a289b0f9f01c0b4c93c87333bbfd2ce159371a2d39287ed5a4c7124c5585d8"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/patchouli_books/forgemasters_guide/en_us/entries/materials/metals.json"
+hash = "ee274dc1e39dba12ef1ee382b91258c2777d7a51cd708e05947ab550f27bf9fb"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_axe_head_part.png"
+hash = "0788caa69cf2ec19e4381d73d633c8880dfe7f74aee6206deab807c4117ad747"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_axe_head_tool.png"
+hash = "bd2f59c860a6f940ad758e22b751d13b7971603de5505016eea7c2ece2604d45"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_crossbow_limbs_part.png"
+hash = "9fe09538529f89bfe0dd1da60c6ec41457b6ab5e4f2e708f947f30b92e9a1823"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_crossbow_limbs_tool.png"
+hash = "6e9d6b8385f3149457619aacb5c0d9c3061b06f8f88afce3935b23a4726f8840"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_guard_part.png"
+hash = "429902e76aca95e8ea3456da1c24d83f6daf0096453a9d3d87bb50407be8e58f"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_guard_tool.png"
+hash = "cfe40dcfc11e532dcdc578bdf167890b9b45574295736fd95739f8584cff8cf5"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_hoe_head_part.png"
+hash = "999a2d3e15e85b13911abdd4d0f8fd5f294117293fa9ee76510216a402d3d8aa"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_hoe_head_tool.png"
+hash = "457805606409590a99e7e3e009ab1e0625a6fe892a213686b7002fd1ceb118e8"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_mattock_tool_axe_tool.png"
+hash = "2408a1f717bcda2ef77074e17db2abcb22c6b016c047f921b6d6d25d76c9efac"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_mattock_tool_hoe_tool.png"
+hash = "2178583bb491c02865ca978369c552102c5885a627112d5de0c1ea5016958643"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_pickaxe_head_part.png"
+hash = "d91c9afc83999149922752979fed150e50a7195f50186dc66afc42d6570ac2d8"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_pickaxe_head_tool.png"
+hash = "24d2215fbcb8fecca5139ad04d8717e69413d0938306d56a798e37cb5d58e5dd"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_shovel_head_part.png"
+hash = "8d217843ce609b498bdf9e153762ec1959aaea7d3613b81a8b4639ab71a11c3a"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_shovel_head_tool.png"
+hash = "39aebe3dce98554a213a2f8374a08f79d333fb2855a4e548f7a9eb3316485c5c"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_sword_blade_part.png"
+hash = "2372f7e1419d9e7b3299dba618245f15c986388c3ded9789e537d8d0f978a71b"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/ruby/ruby_sword_blade_tool.png"
+hash = "0e6e6588c309442b019cb904648a2809a04b21e2e246659182d0498b4707dad6"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_axe_head_part.png"
+hash = "1fc807224cd60e65f4fefe95b1da99362747ace924ccebf61edd13263dcd34df"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_axe_head_tool.png"
+hash = "8ec3d8a868975b0cbfe9be6339c39161b562a911bd8f365ffc5c01f094556799"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_crossbow_limbs_part.png"
+hash = "c674df6eddba9ba4d4b2ee203e2301ff8f6b5c5ecb5c291e47e969cfe6b137f0"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_crossbow_limbs_tool.png"
+hash = "fc05015b5936c660cf14539271e4142fcb42139f72292d2d0e4197ed06a51ca4"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_guard_part.png"
+hash = "9c55c2b2841206029be674c703b00d3ff8fe8595cc940dac974c9807261f6e34"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_guard_tool.png"
+hash = "93457baf594784d735e63b3a6dc465f2511a55e1b3bfeeed62ea603877d16173"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_hoe_head_part.png"
+hash = "34a7754f48477754fc5a4542602fe543aebf3377d3eb01da5ab7065779527718"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_hoe_head_tool.png"
+hash = "9e53ce5709f5d2620c1895f29eddfafb8cb97571f9c0a25b5adeab3e760a69f4"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_mattock_tool_axe_tool.png"
+hash = "e22b900dca4e71bcf80d62f08f13179adc9d943f0fc58a95c32e37f9123a1308"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_mattock_tool_hoe_tool.png"
+hash = "2a84995a00e33f12a6c5e701fa3f0ad02bf303b8e10a8a10b7cd7347552a7d6f"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_pickaxe_head_part.png"
+hash = "44f71a1328e649f588818a95a44d0dae92296d77d410699ed4265932e886bf52"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_pickaxe_head_tool.png"
+hash = "57535f550a2cb11632d4d1c8f539bebee681178e22176cf5a8deb5d029d50795"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_shovel_head_part.png"
+hash = "27261ed546636fb67ef81dc1658a7a4ade98422eb454e90f8150184abfa1a5a3"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_shovel_head_tool.png"
+hash = "75b4d7ab6523855f4f43581f44e6c13cc5c6cc188f7e12a9f24bb5ccce031eab"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_sword_blade_part.png"
+hash = "90f2330bd2c1bcce39a88e6d82764801ebbfaf6dc184b53a44387b3a048744ef"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/sapphire/sapphire_sword_blade_tool.png"
+hash = "8e3047a63ab4c6bca1979c0a923cbfc411bf7f73da95d5358c127d785f8a166d"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_axe_head_part.png"
+hash = "6da5d220374debba63c124d555c0bd2e48df5e17ace44c95fa45e1b8b6a47602"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_axe_head_tool.png"
+hash = "3f6b272ab9aa5b92ffaada2a928628e8330912cff0499a37ff77a85b2e51b9f5"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_crossbow_limbs_part.png"
+hash = "60174cbb9b33c1e6d91e8abeafcda35f82c5fd91113900153635e26899ca3c70"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_crossbow_limbs_tool.png"
+hash = "a98b7b5dda31208230e27a18b72adfa7fe5f80a96e1d326e038ab564c1570ce7"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_guard_part.png"
+hash = "c939eb9311e0773b1eba9bb5c97b326f6cc52785f27a67591d47d5c2734fd251"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_guard_tool.png"
+hash = "e3c6c4d54c1be887b910e3c6f5a995fe00d2377b64c969a9f4c43cdf41af793c"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_hoe_head_part.png"
+hash = "9772015cd9abf7332a1ff1cdae4aaef59a3923bdef848284abedbc7ecd4bbd25"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_hoe_head_tool.png"
+hash = "cf06e486f2e4d5c8aa44222f7f052e982dca0fcf6ba62e05a5aa77671f4dca36"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_mattock_tool_axe_tool.png"
+hash = "28494924ec1d5dcf5ab10c9f6e1fe359965d86c481a60b0e0dfaa4f7688ab167"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_mattock_tool_hoe_tool.png"
+hash = "cc97a7086d565f2a6fca17d26cc7a62355d214d070b713c47efea8011c592071"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_pickaxe_head_part.png"
+hash = "edfbcb428c59b18606230073fd550a617aab1af162984f45307831b1fd06ed3c"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_pickaxe_head_tool.png"
+hash = "1778d1859fbbe0096f30f9e318a26ef3c131bced6782e24c67099a3c1671022b"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_shovel_head_part.png"
+hash = "57f07c814b1fe58bf0122fdac3ec82e64766752619d1fa6fcb3a869d97a37410"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_shovel_head_tool.png"
+hash = "ee82cc3bf4ab1dfdfab3d167d67323e2faf13b364fca1e69be8aeda47dc0f5cd"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_sword_blade_part.png"
+hash = "f144ccf06c658978b9143e54ea6b740341932df16dff1007d1f742c20d007a73"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/textures/source/tool_parts/topaz/topaz_sword_blade_tool.png"
+hash = "425a65c30ac39ca0553a888001f417cb188046fd21196ead1210330a39980832"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/armor_material_textures/ruby.json"
+hash = "a16873c53b5bd2b55ba1984c16d88cbfd3646af47a0deb03b52ac6bdc31b3dc3"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/armor_material_textures/sapphire.json"
+hash = "b87af6dc9a4eafd7710c00c4904d03ecd8122708ded46f8510a57f1a37ca7bd6"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/armor_material_textures/topaz.json"
+hash = "d249dfa9e1c887e1e2f08bff56aa70085e541dc76484045dd905dd2a4b3279b2"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/axe.json"
+hash = "381e1aa9fb64de408602f333053038d78f3a41ffda5cbfcefd22ff15d007474d"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/crossbow.json"
+hash = "f34719223de2acfcb3835f1bd2f9e6bd8e15d8b1b5cc0842bc15392068f14029"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/hoe.json"
+hash = "5bdd09dd83b44974e2d0b5e732f3dde9969847ce1611cfb71021302c8f270297"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/mattock.json"
+hash = "781bda779054d88166100dbf1d1f3f1f9218e52d0476a1cd70ba575677511773"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/pickaxe.json"
+hash = "6df427dcf17aee8aa166f36e79a2407d098ac302da4ba4e7770d143b8f4b3c3d"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/shovel.json"
+hash = "6d1e60ee27146c20174af659d9c1bef01a7da31da240f885cd492eb372171e90"
+
+[[files]]
+file = "kubejs/assets/mobstoolforging/tooling/tool_visuals/sword.json"
+hash = "84cf2216ef6bcd0f115f533e2cc8714e002f6b78cf3591cfbc169da210fd4697"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_axe_head_part.png"
+hash = "c5ca8b9725efc4a1b5df5a475023ed05af6af36c9aa6692a8424b4ea15e0b058"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_axe_head_tool.png"
+hash = "b89cff9bce37aada6b4dee9686b50c147eed67b3958fc057e5dacb642671fb22"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_crossbow_limbs_part.png"
+hash = "4814984aea80260f34c491f843f4e8b2f50593ee3000ef549df0424e88503b21"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_crossbow_limbs_tool.png"
+hash = "8eb05e2dcfa819626cdb49f5a06cf81f48e78d6bc9dd9d3e0d89dd3633858a37"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_guard_part.png"
+hash = "f53f30150d983b1def61954c2956f72c19777f19a539dfc8f2827bb2e650c3c9"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_guard_tool.png"
+hash = "6a3be3ace8bc45bdad718c4f8696a98e70e6bef0f13938d56621a0ae1a715489"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_hoe_head_part.png"
+hash = "e501c305bc04b88d150f61e47b4bc60fed89bb90725109d731d5dcc58f452c9e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_hoe_head_tool.png"
+hash = "281fb654af070810aa8b9a3ec46c47549253a38980ed56cae38dca904975a4d6"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_mattock_tool_axe_tool.png"
+hash = "fb89f94790e9c69aa863ac44922323fc601969f7b0078a671f0596dc921fe5d3"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_mattock_tool_hoe_tool.png"
+hash = "f28f94de850223c80ea4a2ab9dbd856860a55e1fc55f84e75e2d6ef09a13c1e5"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_pickaxe_head_part.png"
+hash = "b12e6e4efee5e42cfda9b9450231f0c916466c6a461ed14dadcc8bb6e6433dbd"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_pickaxe_head_tool.png"
+hash = "a08609d79e4f7d9239a97e9c12e3e505fa91c4081dc5a6f363fc52765da03a4c"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_shovel_head_part.png"
+hash = "f564a62a8dd5e14c73c62cdcea1575f38f4544808422ade770d50db885f463ed"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_shovel_head_tool.png"
+hash = "278502f3646248920506252a3668966cccde2cc0b93817ea147cecc65bae4077"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_sword_blade_part.png"
+hash = "f7e1f12cc18200f1e42a65dc91a9595ae4daf7382514b9f351f5ac6209d1c3d6"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/ametrine/ametrine_sword_blade_tool.png"
+hash = "9f849ef23af20b2718215c5446dd6f9e2089c6729f31eec3465a8ed403840f8e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_axe_head_part.png"
+hash = "068d6e1c50316c7df1e228fb86722e2bb91582a2e7d601ccdcff68044e3d4149"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_axe_head_tool.png"
+hash = "9bb4b255d6b5a267aa89e23f7db6f5e8139f8cc8577bf2799667a2eb988fa164"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_crossbow_limbs_part.png"
+hash = "7c2391e0eb9f25074d3ecef68ade236afc67120c9c68c188f29655f1da46623e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_crossbow_limbs_tool.png"
+hash = "70330732f9556d17d861c350300f0e0c85424db61068c376b0598bd42bb9cf3b"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_guard_part.png"
+hash = "608d751cdc355805ec98f89a882ae42b9746b7d6e62b33e6ad0a86dc808d1572"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_guard_tool.png"
+hash = "a807bae934908b670ad59808d6130802cc45ba9b46d061c1c17937536eb74fea"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_hoe_head_part.png"
+hash = "5375c453767431e2007a2ee5e46d868dca6a1e3c877a8bef419713db67968081"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_hoe_head_tool.png"
+hash = "cbc1475949d5d1aa14eb850e9a76971b2497f1a0888a9020b4ce0ca192491908"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_mattock_tool_axe_tool.png"
+hash = "2e0e24e5d1ccca94b32eefcef58cb6f4e43c0e6e8f0c0a3ab2dce201c39d28e4"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_mattock_tool_hoe_tool.png"
+hash = "ee284838d9e65b9e08852a0ead3b2d21584d7bebcd8413715a9bddfa5ab9e257"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_pickaxe_head_part.png"
+hash = "bc43b83ff82c793d47dc3ee3d1b158552406508fb3b6df9c93dacdfe47fb20f1"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_pickaxe_head_tool.png"
+hash = "aea975ab6a6985d2b80de3e42afa61d5eb5ee04c3035164cf16666b692bfb867"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_shovel_head_part.png"
+hash = "c816bbee72fb1b22dd868b26a3c51dc03967e2ada24d8061d018e594777cd229"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_shovel_head_tool.png"
+hash = "798a2cdda15944419b51b9a21bdff55e297713e9af62588a6cecfe245e281775"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_sword_blade_part.png"
+hash = "81a3f0c796e4d902a8407cc87c42ad313cc6b8ee1567d23a00486365a308b12a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/aquamarine/aquamarine_sword_blade_tool.png"
+hash = "d23082b022aebcb266e48dadd1f8b99dbff0cb6d8d514867a5fe5b3dd5f3130e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_axe_head_part.png"
+hash = "2f2944f54213a7b09323f4734970bd9c34e06c552b051ebea28ca0a9811316a1"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_axe_head_tool.png"
+hash = "4a232604ce8b2695f9f25763c2e55647925eb67847f1b84c214115c92d11a6a7"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_crossbow_limbs_part.png"
+hash = "51d22c159c44a3c3e9d4e832d69655229d067ae2bc1ef845558046b6e754313e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_crossbow_limbs_tool.png"
+hash = "5915841e023d49418138283e2df86e6f6e1bc514483ccd5a6fc17063e0c88b12"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_guard_part.png"
+hash = "ad3fe065735622958700d17a42d9a85ef0db3604b127c255abd23d3b99ed75c4"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_guard_tool.png"
+hash = "0767d5d4c7a39a646ad1690f797278a76a3f68e07b31dc66b3c9659380a1e486"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_hoe_head_part.png"
+hash = "af013152efeedbe31b528e32ccd19753b91013d706525284f1923e665b13fc51"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_hoe_head_tool.png"
+hash = "3cb04ecfa02365a7d111aae9406db2c66f949e8e1d9f94e0de88b987919d1bca"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_mattock_tool_axe_tool.png"
+hash = "21f9b20cc79c751fd979ab148bad3c65bbc9ee248b3e1c4e615f5c679bb0a963"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_mattock_tool_hoe_tool.png"
+hash = "a2bab8d100ebda9ac129584e38f6a23401bb71899bef5ecceabe38e05f4bd487"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_pickaxe_head_part.png"
+hash = "101bd62d3950a80efded37122a0bcd2c118bca83fe1fa792bd4be7e2d5ac6456"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_pickaxe_head_tool.png"
+hash = "b58f9b7d35b4a4d52dc6f482c2207be7caa7c4328e3f2f0147a6cb7e82f52b4a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_shovel_head_part.png"
+hash = "7e89119828f7dfa162ed1955c8bef450cbcaf6b4a36709183cea8f4c4bb55103"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_shovel_head_tool.png"
+hash = "469db6da9ee536b56e087a741ee0510e72789c20972e475bc2f7591713c1e1dd"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_sword_blade_part.png"
+hash = "0c86c505022ab4df48d4315153851620f4fcccd7bf2688f4c4c4c3a97b87938e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/citrine/citrine_sword_blade_tool.png"
+hash = "045620cb7dbba993d048df58874ae858c5328992a1a15cbb86d2447fdbb926cc"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_axe_head_part.png"
+hash = "57ae14c8d4487f91f395c7ddfe45a9f39b7c5ac3d0a656fde03fa9621c386ce6"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_axe_head_tool.png"
+hash = "dd291a83a83220e02284228695ec8db2435b6e67710956ba036da63ea592044f"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_crossbow_limbs_part.png"
+hash = "890450e89e88d74b115d5740b33aaced8a41e57e156746a02b83e63cc6195b2a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_crossbow_limbs_tool.png"
+hash = "8a7ae045a1194ff76775536e5b4d66bd39ad78ab952ba26b13868931d501f35a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_guard_part.png"
+hash = "3abe9337826257052b06d60f853ab584ec10f147ba649a5f35acb9eab4256aec"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_guard_tool.png"
+hash = "f7103a2ab511059aa6549ae822278c437654fa0fd3f98f6359d21a33b1ff10a3"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_hoe_head_part.png"
+hash = "b1c29c3bd3fa2b069fe675461e7b88f47c67f63ec2abb1717999f0fa56039a7c"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_hoe_head_tool.png"
+hash = "8d27320f74b72cb4363526c899609664ec8f39c0e0db9253a1cf7e1685e24c40"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_mattock_tool_axe_tool.png"
+hash = "a687e2564469f671bcfea3a4378395b8876a1c62a0aec09c25e6faa7f5d1ea4e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_mattock_tool_hoe_tool.png"
+hash = "4e50df73cb039cff17cba14da11a57976dda2861ca3f71ee24967ffc0312e9ae"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_pickaxe_head_part.png"
+hash = "80d449fd67ab71baa69a12ab8985e367e34230390819ced4cd8e60eae72927c5"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_pickaxe_head_tool.png"
+hash = "c986db67b8542348c0a2a6b059cd45aefe6e803644493c513e26bfaa6dc7c555"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_shovel_head_part.png"
+hash = "33e792c53e46c990a549397f1a87e558be516b09f60425b7d492b574ca2d3c7c"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_shovel_head_tool.png"
+hash = "7db16f0831c1c860f24f00ae47b7c90722f7dd4ba4a229d777e31ccf5bfd387a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_sword_blade_part.png"
+hash = "869ed4b454b7b492f5e7c5bfd34812a97ac952b90d531e4c2104ed765b80a3b2"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/jade/jade_sword_blade_tool.png"
+hash = "8431dc1fbfa9c9b502de7d4e5ec13f565c552e7bce3e9df5eb1bd9231d1db441"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_axe_head_part.png"
+hash = "939002bb4e566bd3a6e39534c560a965776cc8346911acf517cc79bd98b56bde"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_axe_head_tool.png"
+hash = "63c75b0a4ee3ed9c54f96dea6dcbdaecd1ecf148056000509f728311ce9fd0c4"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_crossbow_limbs_part.png"
+hash = "ee9563d2b266a33c55e80219181b60bbb52751d352340db5626f7d5fa840456b"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_crossbow_limbs_tool.png"
+hash = "d4f27473f17788c63f3657d3abf92f86bb3054b5d5145da8b1a019bd04ee0b1f"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_guard_part.png"
+hash = "eac3b0f517c2af1f47a65f556320dec9d816861b19fd86769793eb1a35a9bb65"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_guard_tool.png"
+hash = "cfc8382d91323ebb3d0fbcda6c5f4e29b33dfd026e41adef5b5e13962bee066d"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_hoe_head_part.png"
+hash = "43492ddbe006edc1be2d22ff5a0ccd98167904ba6d30b5e557293c46c1799e98"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_hoe_head_tool.png"
+hash = "7e2a3fe44fd49e445ed219607a0afe99f7d9524f325633c5f1482bc2b1b09368"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_mattock_tool_axe_tool.png"
+hash = "0fc1ba50d1daa751dc057e046310b3068c847a6f3dbfcfb2504be5b50b8ffdb9"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_mattock_tool_hoe_tool.png"
+hash = "04ee25cbda61890b91fd256872829c7d9a70287fe0525ee37e985148684dfa40"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_pickaxe_head_part.png"
+hash = "e806d95ac389fe87b39ef3a51e3539a9dae7c552b4c6f6ebf5ff86f25f94c041"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_pickaxe_head_tool.png"
+hash = "b1bb6f2bfab70e7c522d89cb30b00e9fe3ffbb56493efaaea007438c68fe7eca"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_shovel_head_part.png"
+hash = "c8872372b8c1c44aaf6f97175707db99d178dd760a045426112dd0310656090e"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_shovel_head_tool.png"
+hash = "1e57c7386691961579077699aa7bf6cbb1877fcfe0d9cf025ecb7bfbc18fa107"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_sword_blade_part.png"
+hash = "7540b88c92a53ed1123b83bbcc74534523afbe46bdf581078a6ff4cc9f79aca1"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/textures/source/tool_parts/peridot/peridot_sword_blade_tool.png"
+hash = "242e1cceb5aa349ecaf0e47dd7e1c705e640f7e416ad8f7fb04c470c24653c35"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/ametrine.json"
+hash = "a23b12d59939842a1bd7c43c02b1806a1e6b524652d3d3787a31f53a15cf1c97"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/aquamarine.json"
+hash = "4c1328187eadeccc04af037b8ecf833c53cbf6c9745e274a39593f5f958caf43"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/citrine.json"
+hash = "4ad2a320e0d337e8a8b36071edf9176fb17b382310dd8a63906ec677eb802313"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/jade.json"
+hash = "279bf2a5cc6b209ea0965c3e8b4cc990291aec43932c38a919a55e23bee9e374"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/necoium.json"
+hash = "7bf94de0565bcf5b5c478c94802e82f6adfed42c9212be4c69cb2bcd82c7cb6a"
+
+[[files]]
+file = "kubejs/assets/mythicupgrades/tooling/material_visuals/peridot.json"
+hash = "a634c243da32f25fb15220ff198941a76f9a1fcd8195cd19bb98bbee10e23beb"
+
+[[files]]
+file = "kubejs/assets/the_beyond/tooling/material_visuals/void_crystal.json"
+hash = "8a568f2fa04660dd79218f09e0da5b6b3819e155efd95b8334d3fab045c4495c"
 
 [[files]]
 file = "kubejs/config/food_unification_groups.json"
@@ -157,12 +1013,144 @@ file = "kubejs/data/beachparty/neoforge/biome_modifier/add_palm_tree.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
+file = "kubejs/data/c/tags/item/gems/allurite.json"
+hash = "c7b8696329d016ce9f81b39ea8048fa9d4fb9f4d4958189fade4df1619fc8a7f"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/ametrine.json"
+hash = "7d00edb75a2fe572e5670d2a66fb9114b19a42cff8da79677e2a6229f39d2b84"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/aquamarine.json"
+hash = "8426f070445f799ffb6c4c84188500e92effdcc5ceb8bbc25fc21d7f544242f6"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/bloodstone.json"
+hash = "003e3bbcd17c4e018922b5aef14900f13697310d704c42574229845b4a663350"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/citrine.json"
+hash = "c1142d164b7fd903dcb5a35f4763e61579538eaf87ccc75b596d8480ec2e70b4"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/gravitium.json"
+hash = "8918c37d7e37a92ecbde325f5e50b90bac173f10d7c0df245e50abbfa458d21b"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/jade.json"
+hash = "c32fc53ed9a4136f3575d6bd45687d4a53c857f2cc9f148e7ac14bbbcceb5949"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/lumiere.json"
+hash = "f2911ca489c446fd02a9d1822b1922bce42d01b97b59e5b2a23f7722dea1e616"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/nyxite.json"
+hash = "5caa890bab5b14a8b9ef63ada831a97147491fe6ef549e6f5653c813fcec53bd"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/opal.json"
+hash = "54b05d4959ed2de4c3e398d042320d0b253993099903b05e3be516dd12f25108"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/peridot.json"
+hash = "24523b645e9c193a131991429741f6378ecfc5b8c11ba8db6d2d65bfe64caff8"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/phoenixtone.json"
+hash = "8c1e33140c1f07a95f9618eab8ab933d0452c5425c3313c0d02fcddfe89f480a"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/prismyte.json"
+hash = "6b9430d4628ef31ec3ad630a9a3ccd2a069247680736fc0a297b1dd8f6f7a00f"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/ruby.json"
+hash = "126c09278f09721286efd7ebea3929428bc62c5a4f86da2c294fc4d880f26710"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/sapphire.json"
+hash = "4f6f39c2aed5b1bc67034426f7b5fd6dfcc79572cfa34248cc2e35ab545f0e01"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/solarium.json"
+hash = "32836daf9802443e37b3572769e9decb41e137a30fa70a01855058038c53e669"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/spinel.json"
+hash = "b36b63a974e1540378ce2d4bab241bddba4cd6847a4701219e4ec7ae6d538f88"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/topaz.json"
+hash = "ec75f69859c11d884afbda40400ea7d305d085e5c4d49465bc17c8056e727197"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/turquoise.json"
+hash = "c3f0ac09b62bbb472c7c814d4a64bd1d6e5b8e895708edd1e08feddcb92d8cf4"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/venomyte.json"
+hash = "c06607835fc66bde21f91627c38cc79f51e5e450200e8e6a485ac7032446d319"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/verdantite.json"
+hash = "0cfe608eded76ba359572facdefb26f6c6fccd0d36b6068b779422a6d146625c"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/void_crystal.json"
+hash = "9c48593ac34c50eace811b870ed90e1031c65e3be82c9118c413a75eb9bf46c7"
+
+[[files]]
+file = "kubejs/data/c/tags/item/gems/zirconia.json"
+hash = "cf457563f00f927bf071a00fdc3c2c0b83d162afbede49d2c8ec597564f28ffa"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/ecto.json"
+hash = "7690021467b1a3eb50f540d8f51aa074dc144a03958ac805a5254080fc5297a4"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/necoium.json"
+hash = "d5bfe7bf5a79aa73019a904130351aa4d27015690e8602b203ce93db47f6c311"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/necromium.json"
+hash = "f8089f3a710804c755d1e6bc2238395754425970a2b01ffa02351977b5d77dfb"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/palladium.json"
+hash = "a4c819ad8ff558b12cb149a41c74a748b8293ffc8380368bd796f5380a83e7a6"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/silver.json"
+hash = "9262003d6c4f542438f37ff31b8ca67c03d8348d2d64e2be71547ff36f9fe9e0"
+
+[[files]]
 file = "kubejs/data/caverns_and_chasms/advancement/recipes/decorations/azalea_chest.json"
 hash = "be401dc03f23c87f440daa1341479bdde7668cd68f50e63154572a3d51f3ccfc"
 
 [[files]]
 file = "kubejs/data/caverns_and_chasms/advancement/recipes/redstone/trapped_azalea_chest.json"
 hash = "448a07cc9e18174d672855027512074476726c5c2da2212cc7e30b51e70c0207"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/mobstoolforging/materials/necromium.json"
+hash = "9f50b90208ddb69a434b9dcac1c86f1fa2a93d4617244b946b0ae1fc0cc9231b"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/mobstoolforging/materials/silver.json"
+hash = "a11d6b2b07ca239ae1151154a7ea79417596ae7444962dab78cc3dbd221bb370"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/mobstoolforging/materials/spinel.json"
+hash = "4d584f59425c5ec3210d15e92c6218fb59f75f7100299a3d19f9c4f1500dea6a"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/mobstoolforging/materials/turquoise.json"
+hash = "b2d5ccf67ded4d252b7c4109fe2f0a051954dc61d7091af21a4f04cb29d12269"
+
+[[files]]
+file = "kubejs/data/caverns_and_chasms/mobstoolforging/materials/zirconia.json"
+hash = "a2a41b939023789f824c94ea80665a1622481a3fb7961bcb25d25054fe514d01"
 
 [[files]]
 file = "kubejs/data/caverns_and_chasms/recipe/azalea_chest.json"
@@ -306,11 +1294,11 @@ hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
 file = "kubejs/data/ecology/tags/item/village_currency/ruby.json"
-hash = "70286259eaa1b7a4040832247f96965dc3a7fd0602f3e9b7e6a776399783acd5"
+hash = "1587592910c490b5a4c71a9717829cf4742a08beb25666736bd66c0d465b7bde"
 
 [[files]]
 file = "kubejs/data/ecology/tags/item/village_currency/sapphire.json"
-hash = "fc79ebb3fa3d6f1f50599fdf77e94abba282c613ed96feb4694ad781d609206d"
+hash = "7029f0a635e05cf0e69e9d14af621d52fd4026de614d5c230b3b1f0e75c348ae"
 
 [[files]]
 file = "kubejs/data/farm_and_charm/neoforge/biome_modifier/add_wild_beetroots.json"
@@ -349,6 +1337,74 @@ file = "kubejs/data/farmersdelight/neoforge/biome_modifier/wild_potatoes.json"
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
+file = "kubejs/data/galosphere/mobstoolforging/materials/allurite.json"
+hash = "f3f7fe66a73a60189be27feb8770787167cab3e645134c8c0ce711c12132d987"
+
+[[files]]
+file = "kubejs/data/galosphere/mobstoolforging/materials/lumiere.json"
+hash = "58b165a93dcc69316ef54aa5e27faf298b9d83fc5596ebacb7230f91389c190e"
+
+[[files]]
+file = "kubejs/data/galosphere/mobstoolforging/materials/opal.json"
+hash = "84ccdd2ff46c6036aea2e3c37c7af21acdd07c1a2988070e874c19796c391ed3"
+
+[[files]]
+file = "kubejs/data/galosphere/mobstoolforging/materials/palladium.json"
+hash = "c2eaab3955cca8d5adc09d50ab0e53605a8c6a5533fc9fceae3ffc0e0be80c07"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/bloodstone.json"
+hash = "b9f492a330ab71ce67ca3e24ddba8a0ac9f02eb6bcb26185483b00fed60dd094"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/gravitium.json"
+hash = "477387b6da9e070bad61432f6c1aa5f3362fddf2a9ce3e1d3d29d072b0deb38e"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/nyxite.json"
+hash = "fb61e8f4978b504cf45f30114094f635b25b00409af15125861b2042b3d4a341"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/phoenixtone.json"
+hash = "391e4b8d43618f4de97ef5ec30865a2dcc9194753fd9ed3b29a03802e4036e18"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/prismyte.json"
+hash = "9c40cba018092b504a1707ced7bc6d3426ea6c03b71a38183c7ca0ec2eb18b25"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/solarium.json"
+hash = "307d4dda4c8316767d1891e4bcdc368ab639a583843b21b29be48d4b947fa995"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/venomyte.json"
+hash = "3017db2187b2dcd85fa378c0b5c901ca20d4ae82b6ce680cc44e10e9f083e2bc"
+
+[[files]]
+file = "kubejs/data/gemforged/mobstoolforging/materials/verdantite.json"
+hash = "bcd0ab1f79489a2f6058d2f4d1924b21cdfef0fef6b88b66365a56fae8a70d0e"
+
+[[files]]
+file = "kubejs/data/igleelib/mobstoolforging/materials/blazum.json"
+hash = "ca26f118410f0f738c8fc2da86be39ee857a9687cf5bdb5f8ed2e5f4e9736837"
+
+[[files]]
+file = "kubejs/data/igleelib/mobstoolforging/materials/derium.json"
+hash = "7299dd69ab12916649009505ad9e7c9e7cddb59fdeb2dc3e6fc12ab3e9f93f0b"
+
+[[files]]
+file = "kubejs/data/igleelib/mobstoolforging/materials/lavium.json"
+hash = "38deb851edc655a31638aff78fdf253c1f66e9296d01ba5c51f4ebebdc7fb26c"
+
+[[files]]
+file = "kubejs/data/igleelib/mobstoolforging/materials/modium.json"
+hash = "f491a6e895d3d9f26dbaac828a8fca858f9bda220d1c022cfe830ad02fda3e0d"
+
+[[files]]
+file = "kubejs/data/jadensnetherexpansiondelight/mobstoolforging/materials/ecto.json"
+hash = "17cff7c8b2ede3fe50263815ea5178eee1da4a5a1a4ca9884d162e1a14b9cf8d"
+
+[[files]]
 file = "kubejs/data/lieonstudio/tags/block/chests/normal.json"
 hash = "3d141d428436769ad9f6912ed06faeeeff56500b57c43d8f6f1cbc6d5db9ed23"
 
@@ -378,7 +1434,247 @@ hash = "9b5752ec9c9ff9ff9fe02a631ddc6367675241c24489c279b0a5ebe824e05b30"
 
 [[files]]
 file = "kubejs/data/minecraft_beyond/loot_table/injected/mineshaft_forging_supplies.json"
-hash = "d83c766d816df9c3f1364085890cf3c97f1d358a4f7dad716dd3e958b019dd18"
+hash = "096e0fc1a9d46510058617e90b9d2a8b7e842d3ac3e30c4fdd9a7304f2b65f00"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/canonical_ruby_identity.json"
+hash = "ca5108c53e7922a2019168455407a198e23c3df33337322822aba56bbfadbcf1"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/canonical_sapphire_identity.json"
+hash = "49ce45efdf2cb63b1dfbadd333c2c866490a050a1250d7ee4763c72169029c11"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/canonical_topaz_identity.json"
+hash = "dc8355d9dd79e09572ac76a861acb57561b8d2a30d28d29b45cd8aadab95205f"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/caverns_and_chasms_necromium.json"
+hash = "726609273b854a7b60b15325665e3b3c9b4c0e79bcf3de3666ef87bce22a1f2a"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/caverns_and_chasms_silver.json"
+hash = "ab94cf97c04e26432ba556901620f4df5722e2c85c39faceaa6d4e9b660d6208"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/caverns_and_chasms_spinel.json"
+hash = "4f0791608d03b7172956057c275b9ebc9135ba0c29eb398c85896426a643eff9"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/caverns_and_chasms_turquoise.json"
+hash = "a2c9c0b3024c30245654c029e4a4148159cf78c064fffb0b25fab2d75d500e08"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/caverns_and_chasms_zirconia.json"
+hash = "4df1382ce5c79ca034114e56cfd5119a8527532d52dcd188b18a213122de7002"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/galosphere_allurite.json"
+hash = "125e472e8e4e51660f253a6dd0153e4bf81db7e1c60dcec9b8bc705b284baf0c"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/galosphere_lumiere.json"
+hash = "9bd1e33e6ce88b3bde91f978ead4afe6d6723489abc56740b38ac2b161e9be4b"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/galosphere_opal.json"
+hash = "4aa7b300f0db728b70b761107072542675f28686b9806c724e0d37d4611e7074"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/galosphere_palladium.json"
+hash = "c49b1ff252bd5efe843648a1a313d99d28f1dbce1429d25f4db9d7138fd9e16f"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_bloodstone.json"
+hash = "1b950bcdc22c45ffa69c7d5358fae61c6cb55193b03a34a2521182311d98ca2f"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_gravitium.json"
+hash = "9628e681ad88d5b76cd25cbb05efdd5e62c332c27e1c4c57e79bd24652796424"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_nyxite.json"
+hash = "f04fdc741659cb3335f7f3be381fb6d4aa29df10988d2f5eb4fc56f356e4c46e"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_phoenixtone.json"
+hash = "93ba9ab9fcbcf6bb89e3b9f60524226570562ded385c31cc9f587fb99f928271"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_prismyte.json"
+hash = "15c9355e60e2e9afaedeade6bb471a3f4fc96ac3e2e7de77b0fa76e9a337c917"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_solarium.json"
+hash = "740878d21504e9bfa50479b1af048eeb25cd431632a5546e3a6e57fb942833ab"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_venomyte.json"
+hash = "6b5e10f5f1713d0abc277db2c6f45c21664132a2d0306067fd51ad1e017702be"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/gemforged_verdantite.json"
+hash = "c4bcba8798aa3e8a4cd2fbbde6e7e714c2c8d0e4479e7da5181d022fdc202def"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/igleelib_blazum.json"
+hash = "ce5d1626dd927622e3d782252a1b712a4c0ad3a930ad4b6dd813f0278849b5b9"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/igleelib_derium.json"
+hash = "9359b789dd487de98432557a2558580a366ce25b5e39a6f42717fed5769ec75e"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/igleelib_lavium.json"
+hash = "6279ee167182a59e6199a7a90baa2d0d81dbfed663167c286adeda3dbab749dd"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/igleelib_modium.json"
+hash = "707b537a446ad84bb3ec47ff145f1a059031dc856494f52c900e92569c1ed2e7"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/jadensnetherexpansiondelight_ecto.json"
+hash = "dd526c7e901a639cd348de58d515790af5658a847b4c3a5bf2543ce5cbbda97d"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_ametrine.json"
+hash = "cfe2a4cd03cee1b9a57b9cdc51f39ff0089a4995ed7ac43f64a0a0995e951618"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_aquamarine.json"
+hash = "bdfcfe9be7f217d394e0ee777fb1f32b7ca68853c67371eef5710e993f2dbb52"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_citrine.json"
+hash = "4c6b6216079d8ee8fb0d3a376cb6afa21708031e1bc392ee1f6cfda77188132f"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_jade.json"
+hash = "f15d89921234f2277724d8ec03d8c7f514c468e6431a9d897bf7de6ea4447003"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_necoium.json"
+hash = "7a052f09aba87f4e447e3c243bd8f80c83f332a7355c191cb01ca0329655ab85"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/mythicupgrades_peridot.json"
+hash = "84f7c7ae5c7a09aaa80a4e7acf0a67ba4e998e28c999418dd84a10d7b8743fc3"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/stat_rules/the_beyond_void_crystal.json"
+hash = "f63df873ea6265b4150f1b42f82be0594dfc3334833e3917345bafd63ab79be3"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/frostbound.json"
+hash = "f9d56a254f22a434f794ab7391957349ef026c1cb43688131cedd498eae62f5b"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/gravitic.json"
+hash = "529c039a12942667a566fe5bfe267521f3119c1023cbb305a942e1d08ae89c3d"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/maledictive.json"
+hash = "17ac4ac496a5d1b2f097bcac091b583844a48d978fb7e94f0806b91802cd9ca4"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/nimble.json"
+hash = "ed6cb2d055ee4a5d3d11b73765d34a129e3ad45a6726f4a4904f97d665c25bb2"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/radiant.json"
+hash = "67625832cc5069714b2ec130596679ae73765e2054012ba2fed38cdad7b75d00"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/sanguine.json"
+hash = "bed180396551e63af23e36142e5c98c84c27ea89c3dff4c23ac39cddac910318"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/silvered.json"
+hash = "90387340adbe4aa1c7b5ff13066fdb56243bb9338aa7ca7bc928e863bb93b7e1"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/umbral.json"
+hash = "02cb45f67aa9ad69c4ebca8e109b91a987c67e972a8972bb710dc7afd2b210fe"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/venomous.json"
+hash = "dd53990de09d55172b8e7baf572d6834491488f2a77512169e358aa2fdc6556b"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/vital_edge.json"
+hash = "e5835396f7fdc3bdc33c0b9591a509775822d00b13983a0e640f601edae13125"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/trait_behaviors/voltaic.json"
+hash = "0ed723aea2eb83765ea2f3c29b7f958594f89d5823bf5c73c2c09ddb6d0737a1"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/frostbound.json"
+hash = "189d7e7c24be4aaeae1bc836c806f07dd2b816603b4ad0092dc66d2e33c17da1"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/gravitic.json"
+hash = "b8469fc80a002e36f7135b9d3c22c49ec8615f7f633064b0638cad81b5c90457"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/maledictive.json"
+hash = "333431fa1d5655155f6df9e379cfbf4087d12eda4be50180ca72e25dacb9ea8c"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/nimble.json"
+hash = "925e92ec0774c41798380582b07f01ce4d75364be2bf25703d0c11199c39d717"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/radiant.json"
+hash = "51a28d3e08d2befd0c102aea1c68aff34bccdd9d6a637ccdfa13b5e6278e6d2c"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/sanguine.json"
+hash = "8a6a0420687a054bd88427027ffb0126de72941480c1a70fcc00708d596424fd"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/silvered.json"
+hash = "81719cabefc5b3f76b94510c4366675ce335eadd99b39245695f04b0422532bc"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/umbral.json"
+hash = "376b2e3eed7fdd4c5efb503e329b57e65e417bf89fdfbb3e31e8b2179431ff80"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/venomous.json"
+hash = "66379b2ba6983f85a55e30c267bf384a71f836b27924c030b7275d74299347d4"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/vital_edge.json"
+hash = "9e6856e3b784d310b25d09936d99d950a45d18a06df4bc01074dbfa5caf8911d"
+
+[[files]]
+file = "kubejs/data/minecraft_beyond/mobstoolforging/traits/voltaic.json"
+hash = "10f038e681cc5b5b835b4246087aaae0d28b297a941ed0697263299c86a78945"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/ametrine.json"
+hash = "16fa0797317dfa0f7576f790a43bf242da270fc4b72b8c76cd5461be5776aa0a"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/aquamarine.json"
+hash = "1d7f628fecb59a3e0474261857c1f095a5d8b093b2fa22510c93d4a95df4617c"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/citrine.json"
+hash = "275286739f0e9e941abb2a6e1939d7bde00c0f043585e78a0aef021160271fb0"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/jade.json"
+hash = "6a5581eccbe6cf2a3ecd47368147bd0e9451b3934e8b9a94aa54601e548031bf"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/necoium.json"
+hash = "abbdf7d00e6f1bb19e12f1f5060164bd571ec03a42ead0428db54efde782d9b2"
+
+[[files]]
+file = "kubejs/data/mythicupgrades/mobstoolforging/materials/peridot.json"
+hash = "e9aa97b0359d9d2e866a79327b987d5075fe254e058cd0002b66d41dc43fceec"
 
 [[files]]
 file = "kubejs/data/neoforge/loot_modifiers/global_loot_modifiers.json"
@@ -511,6 +1807,10 @@ hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 [[files]]
 file = "kubejs/data/spawn/tags/worldgen/biome/mob_spawns/hamster_spawns.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/the_beyond/mobstoolforging/materials/void_crystal.json"
+hash = "7a8a5080ee5019cb2bbfb6bb663d4436ec90a0899331878a1de319a90ceb86bb"
 
 [[files]]
 file = "kubejs/data/vinery/neoforge/biome_modifier/add_apple_tree.json"

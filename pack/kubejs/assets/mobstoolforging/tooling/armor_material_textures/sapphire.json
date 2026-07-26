@@ -1,0 +1,14 @@
+{
+  "material": "mobstoolforging:sapphire",
+  "texture": "mythicupgrades:item/sapphire",
+  "item_textures": {
+    "helmet": "mythicupgrades:item/sapphire_helmet",
+    "chestplate": "mythicupgrades:item/sapphire_chestplate",
+    "leggings": "mythicupgrades:item/sapphire_leggings",
+    "boots": "mythicupgrades:item/sapphire_boots"
+  },
+  "worn_textures": {
+    "layer_1": "mythicupgrades:textures/models/armor/sapphire_layer_1.png",
+    "layer_2": "mythicupgrades:textures/models/armor/sapphire_layer_2.png"
+  }
+}

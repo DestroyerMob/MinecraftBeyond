@@ -1,0 +1,17 @@
+{
+  "type": "mobstoolforging:material_visual",
+  "family": "metal",
+  "palette": {
+    "63": "0xFF181815",
+    "102": "0xFF252520",
+    "140": "0xFF33342D",
+    "178": "0xFF47483E",
+    "216": "0xFF8D8E87",
+    "255": "0xFFCBCCC9"
+  },
+  "texture_noise": "fine_scratches",
+  "fallbacks": [
+    "metal"
+  ],
+  "emissive": false
+}

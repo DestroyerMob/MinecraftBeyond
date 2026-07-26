@@ -1,0 +1,12 @@
+{
+  "slot": "any",
+  "material": "gemforged:bloodstone",
+  "traits": [
+    "minecraft_beyond:sanguine"
+  ],
+  "durability_multiplier": 0.9,
+  "mining_speed_multiplier": 1.0,
+  "attack_damage_bonus": 0.6,
+  "attack_speed_bonus": 0.0,
+  "fire_resistant": false
+}

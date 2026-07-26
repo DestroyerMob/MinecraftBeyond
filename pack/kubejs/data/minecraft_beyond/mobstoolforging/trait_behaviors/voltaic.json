@@ -1,0 +1,6 @@
+{
+  "trait": "minecraft_beyond:voltaic",
+  "chain_damage": 1.0,
+  "chain_radius": 5,
+  "chain_targets": 2
+}

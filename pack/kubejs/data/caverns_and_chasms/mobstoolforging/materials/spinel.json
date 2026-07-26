@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "caverns_and_chasms:spinel",
+  "items": [
+    "caverns_and_chasms:spinel"
+  ],
+  "translation_key": "material.minecraft_beyond.caverns_and_chasms.spinel",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 650,
+    "mining_speed": 7.2,
+    "attack_damage_bonus": 2.6,
+    "enchantment_value": 16,
+    "repair_tag": "c:gems/spinel"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/spinel"
+  ]
+}

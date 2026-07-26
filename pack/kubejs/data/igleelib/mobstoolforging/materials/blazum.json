@@ -1,0 +1,21 @@
+{
+  "category": "metal",
+  "display_item": "igleelib:blazum_ingot",
+  "items": [
+    "igleelib:blazum_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.igleelib.blazum",
+  "tier": {
+    "base": "netherite",
+    "max_damage": 1800,
+    "mining_speed": 10.0,
+    "attack_damage_bonus": 3.5,
+    "enchantment_value": 18,
+    "repair_item": "igleelib:blazum_ingot"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "minimum_forge_heat": "high"
+}

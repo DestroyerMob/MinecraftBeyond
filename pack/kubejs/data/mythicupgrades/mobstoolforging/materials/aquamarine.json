@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "mythicupgrades:aquamarine",
+  "items": [
+    "mythicupgrades:aquamarine"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.aquamarine",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 1000,
+    "mining_speed": 7.2,
+    "attack_damage_bonus": 2.3,
+    "enchantment_value": 20,
+    "repair_tag": "c:gems/aquamarine"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/aquamarine"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "extragems:ruby"
+    "#c:gems/ruby"
   ]
 }

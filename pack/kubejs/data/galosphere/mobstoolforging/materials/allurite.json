@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "galosphere:allurite_shard",
+  "items": [
+    "galosphere:allurite_shard"
+  ],
+  "translation_key": "material.minecraft_beyond.galosphere.allurite",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 600,
+    "mining_speed": 7.0,
+    "attack_damage_bonus": 2.0,
+    "enchantment_value": 24,
+    "repair_tag": "c:gems/allurite"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/allurite"
+  ]
+}

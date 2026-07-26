@@ -1,0 +1,54 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/mattock/handle",
+      "large_template": "mobstoolforging:tool_templates/mattock/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/mattock/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/mattock/large_mattock_tool_axe",
+      "material_from": "headMaterial",
+      "optional": false,
+      "part_template": "mobstoolforging:tool_templates/mattock/mattock_tool_axe_part",
+      "slot": "mattock_tool_axe",
+      "template": "mobstoolforging:tool_templates/mattock/mattock_tool_axe",
+      "texture_pattern": "source/tool_parts/{material}/{material}_mattock_tool_axe_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/mattock/mattock_tool_axe",
+      "z": 2
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/mattock/large_mattock_tool_hoe",
+      "material_from": "guardMaterial",
+      "optional": false,
+      "part_template": "mobstoolforging:tool_templates/mattock/mattock_tool_hoe_part",
+      "slot": "mattock_tool_hoe",
+      "template": "mobstoolforging:tool_templates/mattock/mattock_tool_hoe",
+      "texture_pattern": "source/tool_parts/{material}/{material}_mattock_tool_hoe_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/mattock/mattock_tool_hoe",
+      "z": 2
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/mattock/large_mattock_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "mattock_treatment",
+      "template": "mobstoolforging:tool_templates/mattock/mattock_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_mattock_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/mattock/mattock_treatment",
+      "z": 4
+    }
+  ]
+}

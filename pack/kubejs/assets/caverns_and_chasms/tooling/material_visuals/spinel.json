@@ -1,0 +1,17 @@
+{
+  "type": "mobstoolforging:material_visual",
+  "family": "gem",
+  "palette": {
+    "63": "0xFF3D2534",
+    "102": "0xFF5D394F",
+    "140": "0xFF814E6D",
+    "178": "0xFFB36D98",
+    "216": "0xFFD0A4BF",
+    "255": "0xFFEAD6E2"
+  },
+  "texture_noise": "facets",
+  "fallbacks": [
+    "gem"
+  ],
+  "emissive": false
+}

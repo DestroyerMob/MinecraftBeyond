@@ -1,0 +1,129 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "storage_and_logistics",
+	group: "309C10D4A2495A17",
+	icon: {
+		id: "mobsstorage:network_wand",
+	},
+	id: "44FC7D68583940C7",
+	order_index: 6,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			icon: {
+				id: "mobsstorage:storage_label",
+			},
+			id: "1DAF3EDBD23F1985",
+			rewards: [{
+				count: 4,
+				id: "48FA6A5D1581237A",
+				item: {"count":1,"id":"minecraft:item_frame"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					count: 4L,
+					id: "3430E952339528BD",
+					item: {"count":1,"id":"mobsstorage:storage_label"},
+					type: "item",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["1DAF3EDBD23F1985"],
+			icon: {
+				id: "mobsstorage:network_wand",
+			},
+			id: "3FC4220E17940BD2",
+			rewards: [{
+				count: 8,
+				id: "3F4C4928A0AA4124",
+				item: {"count":1,"id":"minecraft:redstone"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "0AC4E68B4A25F764",
+					item: {"count":1,"id":"mobsstorage:network_wand"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["3FC4220E17940BD2"],
+			icon: {
+				id: "mobsstorage:network_interface",
+			},
+			id: "152284C56B2D9AF4",
+			rewards: [{
+				count: 4,
+				id: "6E2A818196B39D3D",
+				item: {"count":1,"id":"minecraft:iron_ingot"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "30C9CBEFDBFCEC1D",
+					item: {"count":1,"id":"mobsstorage:network_interface"},
+					type: "item",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["152284C56B2D9AF4"],
+			icon: {
+				id: "mobsstorage:network_input",
+			},
+			id: "3FDD276E71EB11CE",
+			rewards: [{
+				count: 2,
+				id: "7C5F970436997D7F",
+				item: {"count":1,"id":"minecraft:hopper"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "59725A1A62B06DE2",
+					item: {"count":1,"id":"mobsstorage:network_input"},
+					type: "item",
+				},
+			],
+			x: 12.0d,
+			y: -1.5d,
+		},
+		{
+			dependencies: ["152284C56B2D9AF4"],
+			icon: {
+				id: "mobsstorage:network_output",
+			},
+			id: "7A32674C01CB0544",
+			rewards: [{
+				count: 4,
+				id: "68F377377920588D",
+				item: {"count":1,"id":"minecraft:chest"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "60D84C032A3544BB",
+					item: {"count":1,"id":"mobsstorage:network_output"},
+					type: "item",
+				},
+			],
+			x: 12.0d,
+			y: 1.5d,
+		},
+	],
+}

@@ -1,0 +1,9 @@
+{
+  "trait": "minecraft_beyond:maledictive",
+  "target_effect": {
+    "effect": "minecraft:slowness",
+    "duration": 50
+  },
+  "damage_bonus_if_target_has_effect": "minecraft:slowness",
+  "conditional_damage_bonus": 0.75
+}
