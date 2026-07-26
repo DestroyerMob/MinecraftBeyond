@@ -1,0 +1,42 @@
+{
+  "type": "mobstoolforging:tool_visual",
+  "canvas": 16,
+  "large_canvas": 32,
+  "large_in_hand": false,
+  "layers": [
+    {
+      "emissive_allowed": false,
+      "handle_strategy": "default_handle",
+      "handle_template": "mobstoolforging:tool_templates/shovel/handle",
+      "large_template": "mobstoolforging:tool_templates/shovel/large_handle",
+      "material_from": "handleMaterial",
+      "optional": true,
+      "slot": "handle",
+      "template": "mobstoolforging:tool_templates/shovel/handle",
+      "z": 1
+    },
+    {
+      "emissive_allowed": false,
+      "large_template": "mobstoolforging:tool_templates/shovel/large_shovel_head",
+      "material_from": "headMaterial",
+      "optional": true,
+      "part_template": "mobstoolforging:tool_templates/shovel/shovel_head_part",
+      "slot": "shovel_head",
+      "template": "mobstoolforging:tool_templates/shovel/shovel_head",
+      "texture_pattern": "source/tool_parts/{material}/{material}_shovel_head_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/shovel/shovel_head",
+      "z": 2
+    },
+    {
+      "emissive_allowed": true,
+      "large_template": "mobstoolforging:tool_templates/shovel/large_shovel_treatment",
+      "material_from": "treatment",
+      "optional": true,
+      "slot": "shovel_treatment",
+      "template": "mobstoolforging:tool_templates/shovel/shovel_treatment",
+      "texture_pattern": "source/tool_parts/{material}/{material}_shovel_treatment_{usage}",
+      "tool_template": "mobstoolforging:tool_templates/shovel/shovel_treatment",
+      "z": 4
+    }
+  ]
+}

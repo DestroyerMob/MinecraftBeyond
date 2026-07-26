@@ -1,0 +1,7 @@
+{
+  "slot": "head",
+  "material": "mobstoolforging:sapphire",
+  "traits": [
+    "minecraft_beyond:vital_edge"
+  ]
+}

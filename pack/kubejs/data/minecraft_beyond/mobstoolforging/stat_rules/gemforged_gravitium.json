@@ -1,0 +1,12 @@
+{
+  "slot": "any",
+  "material": "gemforged:gravitium",
+  "traits": [
+    "minecraft_beyond:gravitic"
+  ],
+  "durability_multiplier": 1.15,
+  "mining_speed_multiplier": 1.0,
+  "attack_damage_bonus": 0.75,
+  "attack_speed_bonus": -0.2,
+  "fire_resistant": false
+}

@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "mythicupgrades:jade",
+  "items": [
+    "mythicupgrades:jade"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.jade",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 1100,
+    "mining_speed": 7.7,
+    "attack_damage_bonus": 2.1,
+    "enchantment_value": 22,
+    "repair_tag": "c:gems/jade"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/jade"
+  ]
+}

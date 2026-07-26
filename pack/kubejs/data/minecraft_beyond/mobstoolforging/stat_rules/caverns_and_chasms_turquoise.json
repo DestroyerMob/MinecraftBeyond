@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "caverns_and_chasms:turquoise",
+  "traits": [
+    "mobstoolforging:fortunate"
+  ]
+}

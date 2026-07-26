@@ -1,0 +1,303 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "beyond_the_dragon",
+	group: "4D6334874DFACC06",
+	icon: {
+		id: "the_beyond:live_flame",
+	},
+	id: "651B1C7032500D2D",
+	order_index: 8,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			dependencies: ["654749E3BBC09E42"],
+			icon: {
+				id: "minecraft:ender_pearl",
+			},
+			id: "76A9444CB198CD7C",
+			rewards: [{
+				count: 8,
+				id: "3CDB391CF8388E61",
+				item: {"count":1,"id":"minecraft:chorus_fruit"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 2.0d,
+			tasks: [
+				{
+					advancement: "minecraft:end/enter_end_gateway",
+					criterion: "",
+					id: "6960445C151319DC",
+					type: "advancement",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["76A9444CB198CD7C"],
+			icon: {
+				id: "minecraft:soul_torch",
+			},
+			id: "35BFE06545FD18A7",
+			rewards: [{
+				count: 16,
+				id: "07E6251D60C293AB",
+				item: {"count":1,"id":"minecraft:soul_torch"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/befriend_lantern",
+					criterion: "",
+					id: "6A5E8A9F48ADC9D3",
+					type: "advancement",
+				},
+			],
+			x: 4.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["35BFE06545FD18A7"],
+			icon: {
+				id: "the_beyond:live_flame",
+			},
+			id: "54AA5FE8CBFD494D",
+			rewards: [{
+				count: 4,
+				id: "2EAD88FA5E82CF7E",
+				item: {"count":1,"id":"minecraft:end_rod"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/ectoplasmic_ignition",
+					criterion: "",
+					id: "3516DFC442389EA3",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["54AA5FE8CBFD494D"],
+			icon: {
+				id: "the_beyond:bonfire",
+			},
+			id: "2CC925C8E8965410",
+			rewards: [{
+				count: 4,
+				id: "5F00028FE98654EA",
+				item: {"count":1,"id":"minecraft:blaze_powder"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/pass_the_torch",
+					criterion: "",
+					id: "0FACD8E5E241C1D9",
+					type: "advancement",
+				},
+			],
+			x: 12.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["2CC925C8E8965410"],
+			icon: {
+				id: "the_beyond:totem_of_respite",
+			},
+			id: "3131B5CBDD2CFC0E",
+			rewards: [{
+				count: 16,
+				id: "673A49E6E59F81A6",
+				item: {"count":1,"id":"minecraft:chorus_fruit"},
+				type: "item",
+			}],
+			shape: "pentagon",
+			size: 1.5d,
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/defying_the_void",
+					criterion: "",
+					id: "5494CA578940060A",
+					type: "advancement",
+				},
+			],
+			x: 16.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["76A9444CB198CD7C"],
+			icon: {
+				id: "the_beyond:enadrake_flare",
+			},
+			id: "1972046F72CFC7F0",
+			rewards: [{
+				count: 8,
+				id: "7F076E3B7BAFFBE2",
+				item: {"count":1,"id":"minecraft:emerald"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/gift_enadrake",
+					criterion: "",
+					id: "69EA7CB95FE6D26A",
+					type: "advancement",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["1972046F72CFC7F0"],
+			icon: {
+				id: "the_beyond:refuge",
+			},
+			id: "24AEF53CEB433C4B",
+			rewards: [{
+				count: 16,
+				id: "38F2055EBD64F4E0",
+				item: {"count":1,"id":"minecraft:bone_meal"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/complete_refuge",
+					criterion: "",
+					id: "7E0275F5C8DB6ED8",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["76A9444CB198CD7C"],
+			icon: {
+				id: "the_beyond:memory_remembrance",
+			},
+			id: "17F9BA15168F4AA0",
+			rewards: [{
+				count: 4,
+				id: "73B526F277721F76",
+				item: {"count":1,"id":"minecraft:book"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/offering_remembered",
+					criterion: "",
+					id: "6E3EC7B61A36AA17",
+					type: "advancement",
+				},
+			],
+			x: 4.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["17F9BA15168F4AA0"],
+			icon: {
+				id: "the_beyond:mount_remembrance",
+			},
+			id: "68F5EB4E5EEEDEDE",
+			rewards: [{
+				count: 8,
+				id: "10A6F7B28A90F9FC",
+				item: {"count":1,"id":"minecraft:ender_pearl"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/sacred_passage",
+					criterion: "",
+					id: "38252E9F616B4468",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["68F5EB4E5EEEDEDE"],
+			icon: {
+				id: "the_beyond:beads_remembrance",
+			},
+			id: "7B7BDFBA89AF8E74",
+			rewards: [{
+				count: 2,
+				id: "1DFA35567D1F4575",
+				item: {"count":1,"id":"minecraft:echo_shard"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/memories_returned",
+					criterion: "",
+					id: "54AEBF9500874898",
+					type: "advancement",
+				},
+			],
+			x: 12.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["7B7BDFBA89AF8E74"],
+			icon: {
+				id: "the_beyond:pathfinder_boots",
+			},
+			id: "6275F11C426264C9",
+			rewards: [{
+				count: 16,
+				id: "0758ABCF336A38B4",
+				item: {"count":1,"id":"minecraft:firework_rocket"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/so_below",
+					criterion: "",
+					id: "177C12AA3440C499",
+					type: "advancement",
+				},
+			],
+			x: 16.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["6275F11C426264C9"],
+			icon: {
+				id: "the_beyond:auroracite",
+			},
+			id: "4FA0891A06522BF4",
+			rewards: [{
+				count: 2,
+				id: "2FDF5DC2D5AD7233",
+				item: {"count":1,"id":"minecraft:dragon_breath"},
+				type: "item",
+			}],
+			shape: "pentagon",
+			size: 2.0d,
+			tasks: [
+				{
+					advancement: "the_beyond:the_beyond/as_above",
+					criterion: "",
+					id: "4780C3885AA15ECA",
+					type: "advancement",
+				},
+			],
+			x: 20.0d,
+			y: 3.0d,
+		},
+	],
+}

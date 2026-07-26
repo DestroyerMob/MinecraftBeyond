@@ -1,0 +1,294 @@
+{
+  "name": "Gems",
+  "icon": "minecraft:diamond",
+  "category": "mobstoolforging:materials",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:diamond",
+      "title": "Diamond",
+      "text": "Diamond brings precision as much as hardness. Its Adamant trait improves suitable work and cuts through part of an enemy's protection."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Adamant",
+      "text": "Adamant speeds up blocks the tool is meant to mine and lets attacks ignore part of the target's armour.$(p)$(bold)Suitable blocks:$() 75% faster$(br)$(bold)Armour ignored:$() 30%"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:emerald",
+      "title": "Emerald",
+      "text": "Emerald favours a forge master who values what the work yields. Its Fortunate trait improves the level used for Fortune and Looting."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Fortunate",
+      "text": "Fortunate changes the effective level used when drops are calculated.$(p)$(bold)Fortune and Looting:$() 2 levels higher$(br)$(bold)No enchantment installed:$() Behaves as Level II$(br)$(bold)Normal level cap:$() May be exceeded"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:amethyst_shard",
+      "title": "Amethyst",
+      "text": "Amethyst resonates with magic already held by the finished equipment. Its Resonant trait strengthens one existing enchantment."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Resonant",
+      "text": "Resonant strengthens one enchantment already on the item.$(p)$(bold)Target:$() Highest-level non-curse enchantment$(br)$(bold)Effective level:$() 2 levels higher$(br)$(bold)Unenchanted item:$() No effect"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:ruby",
+      "title": "Ruby",
+      "text": "Ruby is an aggressive gem whose two traits favour committed combat and decisive work."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ruby Traits",
+      "text": "$(bold)Keen$()$(br)Improves suitable-block mining and physical damage.$(p)$(bold)Sanguine$()$(br)Heals from damage dealt, up to one heart per hit."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:sapphire",
+      "title": "Sapphire",
+      "text": "Sapphire rewards control under difficult conditions. Its two traits keep work steady and turn danger into power."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sapphire Traits",
+      "text": "$(bold)Focused$()$(br)Removes the mining penalties for being underwater or airborne.$(p)$(bold)Vital Edge$()$(br)Adds more damage as the wielder loses health, reaching its strongest point near death."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:topaz",
+      "title": "Topaz",
+      "text": "Topaz trades longevity for force and crowd control. Its two traits suit a wielder who wants immediate impact."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Topaz Traits",
+      "text": "$(bold)Forceful$()$(br)Harder hits and faster mining, but faster durability loss.$(p)$(bold)Voltaic$()$(br)Arcs damage to as many as two nearby enemies."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "galosphere:allurite_shard",
+      "title": "Allurite",
+      "text": "$(bold)Resonant$() — Treats the strongest installed non-curse enchantment as two levels higher; it has no effect on an unenchanted item.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Allurite Profile",
+      "text": "$(bold)Durability:$() 600 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2$(br)$(bold)Enchantability:$() 24"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:ametrine",
+      "title": "Ametrine",
+      "text": "$(bold)Resonant$() — Treats the strongest installed non-curse enchantment as two levels higher; it has no effect on an unenchanted item.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ametrine Profile",
+      "text": "$(bold)Durability:$() 1,400 uses$(br)$(bold)Mining speed:$() 8$(br)$(bold)Head damage bonus:$() +2.75$(br)$(bold)Enchantability:$() 26"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:aquamarine",
+      "title": "Aquamarine",
+      "text": "$(bold)Frostbound$() — Winter clings to the edge, slowing and freezing whatever it strikes.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Aquamarine Profile",
+      "text": "$(bold)Durability:$() 1,000 uses$(br)$(bold)Mining speed:$() 7.2$(br)$(bold)Head damage bonus:$() +2.3$(br)$(bold)Enchantability:$() 20"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:bloodstone",
+      "title": "Bloodstone",
+      "text": "$(bold)Sanguine$() — The weapon drinks a little of the harm it deals and returns it as health.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bloodstone Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:citrine",
+      "title": "Citrine",
+      "text": "$(bold)Voltaic$() — A quick, hungry current leaps from a struck foe to two nearby enemies.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Citrine Profile",
+      "text": "$(bold)Durability:$() 850 uses$(br)$(bold)Mining speed:$() 7.8$(br)$(bold)Head damage bonus:$() +2.2$(br)$(bold)Enchantability:$() 20"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:gravitium",
+      "title": "Gravitium",
+      "text": "$(bold)Gravitic$() — Dense force throws struck creatures back and briefly lifts their footing.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Gravitium Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:jade",
+      "title": "Jade",
+      "text": "$(bold)Nimble$() — A light, lively build lends its wielder a burst of speed after a hit.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Jade Profile",
+      "text": "$(bold)Durability:$() 1,100 uses$(br)$(bold)Mining speed:$() 7.7$(br)$(bold)Head damage bonus:$() +2.1$(br)$(bold)Enchantability:$() 22"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "galosphere:lumiere_shard",
+      "title": "Lumiere",
+      "text": "$(bold)Radiant$() — A revealing strike outlines the victim and nearby creatures of its kind.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lumiere Profile",
+      "text": "$(bold)Durability:$() 700 uses$(br)$(bold)Mining speed:$() 7.2$(br)$(bold)Head damage bonus:$() +2$(br)$(bold)Enchantability:$() 20"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:nyxite",
+      "title": "Nyxite",
+      "text": "$(bold)Umbral$() — The shadowed edge hits harder while its wielder moves with care.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Nyxite Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "galosphere:opal",
+      "title": "Opal",
+      "text": "$(bold)Fortunate$() — Treats Fortune and Looting as two levels higher, even when neither enchantment is installed.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Opal Profile",
+      "text": "$(bold)Durability:$() 600 uses$(br)$(bold)Mining speed:$() 6.8$(br)$(bold)Head damage bonus:$() +1.8$(br)$(bold)Enchantability:$() 24"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:peridot",
+      "title": "Peridot",
+      "text": "$(bold)Venomous$() — A predatory edge leaves poison working behind every clean hit.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Peridot Profile",
+      "text": "$(bold)Durability:$() 925 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.3$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:phoenixtone",
+      "title": "Phoenixtone",
+      "text": "$(bold)Kindled$() — Fireproof work that smelts eligible drops and ignites struck foes.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Phoenixtone Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:prismyte",
+      "title": "Prismyte",
+      "text": "$(bold)Voltaic$() — A quick, hungry current leaps from a struck foe to two nearby enemies.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Prismyte Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:solarium",
+      "title": "Solarium",
+      "text": "$(bold)Forceful$() — Makes suitable-block mining and physical attacks stronger, but consumes durability faster.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Solarium Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "caverns_and_chasms:spinel",
+      "title": "Spinel",
+      "text": "$(bold)Forceful$() — Makes suitable-block mining and physical attacks stronger, but consumes durability faster.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Spinel Profile",
+      "text": "$(bold)Durability:$() 650 uses$(br)$(bold)Mining speed:$() 7.2$(br)$(bold)Head damage bonus:$() +2.6$(br)$(bold)Enchantability:$() 16"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "caverns_and_chasms:turquoise",
+      "title": "Turquoise",
+      "text": "$(bold)Fortunate$() — Treats Fortune and Looting as two levels higher, even when neither enchantment is installed.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Turquoise Profile",
+      "text": "$(bold)Durability:$() 1,050 uses$(br)$(bold)Mining speed:$() 7.2$(br)$(bold)Head damage bonus:$() +2$(br)$(bold)Enchantability:$() 22"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:venomyte",
+      "title": "Venomyte",
+      "text": "$(bold)Venomous$() — A predatory edge leaves poison working behind every clean hit.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Venomyte Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "gemforged:verdantite",
+      "title": "Verdantite",
+      "text": "$(bold)Steady$() — Makes mining and attacks faster, and increases the amount restored by each repair item.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Verdantite Profile",
+      "text": "$(bold)Durability:$() 900 uses$(br)$(bold)Mining speed:$() 7$(br)$(bold)Head damage bonus:$() +2.25$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "the_beyond:void_crystal",
+      "title": "Void Crystal",
+      "text": "$(bold)Gravitic$() — Dense force throws struck creatures back and briefly lifts their footing.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Void Crystal Profile",
+      "text": "$(bold)Durability:$() 1,350 uses$(br)$(bold)Mining speed:$() 8.2$(br)$(bold)Head damage bonus:$() +2.8$(br)$(bold)Enchantability:$() 24"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "caverns_and_chasms:zirconia",
+      "title": "Zirconia",
+      "text": "$(bold)Steady$() — Makes mining and attacks faster, and increases the amount restored by each repair item.$(p)This material is used as a gem coating."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Zirconia Profile",
+      "text": "$(bold)Durability:$() 800 uses$(br)$(bold)Mining speed:$() 7.2$(br)$(bold)Head damage bonus:$() +2.2$(br)$(bold)Enchantability:$() 25"
+    }
+  ]
+}

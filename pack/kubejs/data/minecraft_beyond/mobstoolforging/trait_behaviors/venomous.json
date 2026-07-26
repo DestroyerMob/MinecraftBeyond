@@ -1,0 +1,7 @@
+{
+  "trait": "minecraft_beyond:venomous",
+  "target_effect": {
+    "effect": "minecraft:poison",
+    "duration": 60
+  }
+}

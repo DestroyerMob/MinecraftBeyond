@@ -1,0 +1,15 @@
+{
+  "slot": "any",
+  "material": "gemforged:prismyte",
+  "traits": [
+    "minecraft_beyond:voltaic"
+  ],
+  "durability_multiplier": 0.9,
+  "mining_speed_multiplier": 1.12,
+  "attack_damage_bonus": 0.0,
+  "attack_speed_bonus": 0.2,
+  "fire_resistant": false,
+  "affinities": [
+    "mobstoolforging:resonance"
+  ]
+}

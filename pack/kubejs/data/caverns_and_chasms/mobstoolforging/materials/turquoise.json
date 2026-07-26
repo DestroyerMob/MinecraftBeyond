@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "caverns_and_chasms:turquoise",
+  "items": [
+    "caverns_and_chasms:turquoise"
+  ],
+  "translation_key": "material.minecraft_beyond.caverns_and_chasms.turquoise",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 1050,
+    "mining_speed": 7.2,
+    "attack_damage_bonus": 2.0,
+    "enchantment_value": 22,
+    "repair_tag": "c:gems/turquoise"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/turquoise"
+  ]
+}

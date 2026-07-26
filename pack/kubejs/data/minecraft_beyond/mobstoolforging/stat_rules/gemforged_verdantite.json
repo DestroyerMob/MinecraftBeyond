@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "gemforged:verdantite",
+  "traits": [
+    "mobstoolforging:steady"
+  ]
+}

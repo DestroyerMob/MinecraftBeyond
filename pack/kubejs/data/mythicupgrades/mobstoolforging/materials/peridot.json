@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "mythicupgrades:peridot",
+  "items": [
+    "mythicupgrades:peridot"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.peridot",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 925,
+    "mining_speed": 7.0,
+    "attack_damage_bonus": 2.3,
+    "enchantment_value": 18,
+    "repair_tag": "c:gems/peridot"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/peridot"
+  ]
+}

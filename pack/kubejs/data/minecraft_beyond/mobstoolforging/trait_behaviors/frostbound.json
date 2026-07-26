@@ -1,0 +1,8 @@
+{
+  "trait": "minecraft_beyond:frostbound",
+  "target_effect": {
+    "effect": "minecraft:slowness",
+    "duration": 40
+  },
+  "freeze_ticks": 100
+}

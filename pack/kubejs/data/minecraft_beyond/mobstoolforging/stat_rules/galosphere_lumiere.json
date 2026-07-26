@@ -1,0 +1,15 @@
+{
+  "slot": "any",
+  "material": "galosphere:lumiere",
+  "traits": [
+    "minecraft_beyond:radiant"
+  ],
+  "durability_multiplier": 0.95,
+  "mining_speed_multiplier": 1.1,
+  "attack_damage_bonus": 0.0,
+  "attack_speed_bonus": 0.1,
+  "fire_resistant": false,
+  "affinities": [
+    "mobstoolforging:resonance"
+  ]
+}

@@ -1,0 +1,291 @@
+{
+	file.0000000000000001.title: "&b&lMinecraft Beyond&r",
+	chapter_group.3E32B4EF985F569C.title: "&b&lStart Here",
+	chapter_group.309C10D4A2495A17.title: "&6&lPack Pillars",
+	chapter_group.0E011EE3608807C7.title: "&a&lLife on the Road",
+	chapter_group.4D6334874DFACC06.title: "&d&lBeyond the Horizon",
+	chapter.5F27485DBE08FC20.title: "&6Hands Before Tools",
+	chapter.5F27485DBE08FC20.chapter_subtitle: [
+		"Flint becomes a tool; a tool becomes a workshop",
+	],
+	quest.1EBB51FD72DE1CDE.title: "Flint Remembers a Shape",
+	quest.1EBB51FD72DE1CDE.quest_desc: [
+		"Work an ordinary piece of flint until a pickaxe head emerges.",
+	],
+	quest.1D911112EE467A43.title: "Give Every Part a Place",
+	quest.1D911112EE467A43.quest_desc: [
+		"The Toolmaker's Station is where loose pieces finally become useful.",
+	],
+	quest.4F7EDFD7B9B35089.title: "Your First Proper Tool",
+	quest.4F7EDFD7B9B35089.quest_desc: [
+		"Fit the flint head to a handle. The stone age is brief, but it matters.",
+	],
+	quest.0729510D7A77D79D.title: "A Hammer With Ambition",
+	quest.0729510D7A77D79D.quest_desc: [
+		"This is more than a striking tool. It is the key to the workshop ahead.",
+	],
+	quest.7499A217E3717C7A.title: "Teach Wood to Remember",
+	quest.7499A217E3717C7A.quest_desc: [
+		"Build a Pattern Creation Station and turn blank boards into repeatable ideas.",
+	],
+	quest.107533D15C427CE9.title: "Plan the Blade",
+	quest.107533D15C427CE9.quest_desc: [
+		"Commit a sword blade to wood before committing metal to the fire.",
+	],
+	quest.4FB56C2876BA8D9C.title: "Wake the Stone",
+	quest.4FB56C2876BA8D9C.quest_desc: [
+		"Raise a Crude Anvil from the ground. Your workshop now has a heartbeat.",
+	],
+	chapter.3F4D1899155C0A8F.title: "&6A Working Forge",
+	chapter.3F4D1899155C0A8F.chapter_subtitle: [
+		"Shape, fit, improve, and finally cast",
+	],
+	quest.67DFAC8DCD70D70A.title: "Metal Takes an Edge",
+	quest.67DFAC8DCD70D70A.quest_desc: [
+		"Heat and hammer a sword blade from the pattern you prepared.",
+	],
+	quest.61DC05AA049A3952.title: "Fit for a Fight",
+	quest.61DC05AA049A3952.quest_desc: [
+		"Bring blade, guard, and handle together. The result should feel entirely yours.",
+	],
+	quest.4C596F78D85A9BB0.title: "Outgrow the Crude Anvil",
+	quest.4C596F78D85A9BB0.quest_desc: [
+		"Raise a Smithing Anvil and give ironwork the foundation it deserves.",
+	],
+	quest.6B57D0F09FF3B9B9.title: "Hold the Heat",
+	quest.6B57D0F09FF3B9B9.quest_desc: [
+		"A Heating Forge keeps difficult work hot long enough to finish it properly.",
+	],
+	quest.553F90A30E194566.title: "A Diamond Skin",
+	quest.553F90A30E194566.quest_desc: [
+		"Coat an iron sword blade with diamond while the metal is hot.",
+	],
+	quest.612BFA280404AD81.title: "The Other Half of Armour",
+	quest.612BFA280404AD81.quest_desc: [
+		"Metal protects the hard points. A Leather Station prepares everything between them.",
+	],
+	quest.6D4A0EF636C89E22.title: "Made to Fit",
+	quest.6D4A0EF636C89E22.quest_desc: [
+		"Assemble a modular chestplate from pieces you prepared yourself.",
+	],
+	quest.68D6229C2E7BEBD3.title: "Build Around the Flame",
+	quest.68D6229C2E7BEBD3.quest_desc: [
+		"Complete a working foundry. The guidebook has the shape; you supply the scale.",
+	],
+	quest.6D0101628AE2B29B.title: "A Shape Worth Keeping",
+	quest.6D0101628AE2B29B.quest_desc: [
+		"Make a reusable gold cast from a finished tool part.",
+	],
+	quest.1F1556E500461435.title: "Two Metals, One Answer",
+	quest.1F1556E500461435.quest_desc: [
+		"Let copper and tin leave the foundry as bronze.",
+	],
+	quest.2A40AD401627C351.title: "Iron, Reconsidered",
+	quest.2A40AD401627C351.quest_desc: [
+		"Add carbon, control the heat, and cast your first steel ingot.",
+	],
+	quest.67AB13BAF8070B69.title: "The Foundry's Measure",
+	quest.67AB13BAF8070B69.quest_desc: [
+		"Carry netherite and a reusable cast together. The whole chain is now yours.",
+	],
+	chapter.73B3914BBC7EDED2.title: "&cFight With Intent",
+	chapter.73B3914BBC7EDED2.chapter_subtitle: [
+		"Control space, guard, and distance",
+	],
+	quest.0A6D66FE481F1AED.title: "Control the Pace",
+	quest.0A6D66FE481F1AED.quest_desc: [
+		"Five zombies are enough to learn when to press and when to recover.",
+	],
+	quest.31508E0D7535AC47.title: "Spend the Shield, Not Yourself",
+	quest.31508E0D7535AC47.quest_desc: [
+		"Block a serious hit. Guard is a resource, not permission to stand still.",
+	],
+	quest.4D23B663C7C5CB9B.title: "Choose the Distance",
+	quest.4D23B663C7C5CB9B.quest_desc: [
+		"Assemble an iron spear and make enemies fight on your terms.",
+	],
+	quest.2AB826BB6E187EFC.title: "Not Far Enough",
+	quest.2AB826BB6E187EFC.quest_desc: [
+		"A skeleton fifty blocks away still thinks it is safe. Correct it.",
+	],
+	chapter.63C3DF24412B2B9D.title: "&aMeals, Not Hunger",
+	chapter.63C3DF24412B2B9D.chapter_subtitle: [
+		"Prepare food worth carrying",
+	],
+	quest.0D2BA05370BF5D37.title: "Use the Whole Harvest",
+	quest.0D2BA05370BF5D37.quest_desc: [
+		"Put a Cutting Board to work and discover what careful preparation leaves behind.",
+	],
+	quest.6892B44B51F636A9.title: "Dinner Has a Memory",
+	quest.6892B44B51F636A9.quest_desc: [
+		"Cook beef stew. A proper meal should stay with you after the bowl is empty.",
+	],
+	chapter.5425E51CE525F7A1.title: "&dA Wider World",
+	chapter.5425E51CE525F7A1.chapter_subtitle: [
+		"Leave a trail, then follow curiosity",
+	],
+	quest.1F14FC7280902195.title: "Leave a Trail Home",
+	quest.1F14FC7280902195.quest_desc: [
+		"Fill a map before familiar ground disappears behind the horizon.",
+	],
+	quest.7670E2E7F33C754E.title: "Ask the Landscape",
+	quest.7670E2E7F33C754E.quest_desc: [
+		"Craft a Nature's Compass and let a named biome become a direction.",
+	],
+	quest.5312D8FFD3DE907E.title: "Where Stone Blooms",
+	quest.5312D8FFD3DE907E.quest_desc: [
+		"Find the Lost Caves and the strange life growing beneath the overworld.",
+	],
+	quest.3F1751CAB9B8E624.title: "A Door Below",
+	quest.3F1751CAB9B8E624.quest_desc: [
+		"Cross the threshold of a small dungeon and meet what the surface forgot.",
+	],
+	quest.2A641594CAA15D23.title: "A Share of Your Own",
+	quest.2A641594CAA15D23.quest_desc: [
+		"Open a Lootr chest. Its contents belong to you without costing another traveller.",
+	],
+	quest.09AD9DE1182585B3.title: "Stories in the Dust",
+	quest.09AD9DE1182585B3.quest_desc: [
+		"Brush a pottery sherd from suspicious ground and carry one old story forward.",
+	],
+	quest.0EE834C5E241F3FE.title: "Bring Back Proof",
+	quest.0EE834C5E241F3FE.quest_desc: [
+		"Take a photograph of something the road would otherwise keep.",
+	],
+	chapter.0684D527BD8AB47B.title: "&5Essence \\& Practical Magic",
+	chapter.0684D527BD8AB47B.chapter_subtitle: [
+		"Make strange forces answer useful questions",
+	],
+	quest.367EDB281B8CD6B4.title: "Tune In",
+	quest.367EDB281B8CD6B4.quest_desc: [
+		"Craft an Attunement Focus. Enchanting becomes clearer when you can hear its choices.",
+	],
+	quest.3E4F62E03FBD0725.title: "What Matter Leaves Behind",
+	quest.3E4F62E03FBD0725.quest_desc: [
+		"Build an Arcane Crucible and draw useful nature from ordinary things.",
+	],
+	quest.467D1C9266951491.title: "The Shape of Strength",
+	quest.467D1C9266951491.quest_desc: [
+		"Distil Essence of Force. The other essences are yours to discover.",
+	],
+	quest.207C19D4AD990AFC.title: "Enchant With Intent",
+	quest.207C19D4AD990AFC.quest_desc: [
+		"Use essence to choose an enchantment instead of accepting a roll of the dice.",
+	],
+	quest.70B41F29272AFBD4.title: "Refine What Is Written",
+	quest.70B41F29272AFBD4.quest_desc: [
+		"Build an Attunement Pedestal and push one existing enchantment further.",
+	],
+	quest.475D49DB726596E5.title: "Magic Beyond the Bottle",
+	quest.475D49DB726596E5.quest_desc: [
+		"Raise an Imbuing Table and carry potion effects into lasting objects.",
+	],
+	quest.25762B917706430A.title: "Temper It Against Fire",
+	quest.25762B917706430A.quest_desc: [
+		"Imbue a sword blade with Fire Resistance before giving it a handle.",
+	],
+	quest.0B5DF28491AA0883.title: "A Blade That Waited",
+	quest.0B5DF28491AA0883.quest_desc: [
+		"Find a Forgotten Blade Shrine. Some weapons prefer to choose their owner.",
+	],
+	chapter.44FC7D68583940C7.title: "&6Storage \\& Logistics",
+	chapter.44FC7D68583940C7.chapter_subtitle: [
+		"Name the network, then give items a path",
+	],
+	quest.1DAF3EDBD23F1985.title: "Name What You Keep",
+	quest.1DAF3EDBD23F1985.quest_desc: [
+		"Make four Storage Labels. A network begins with containers it can recognise.",
+	],
+	quest.3FC4220E17940BD2.title: "Draw the Connections",
+	quest.3FC4220E17940BD2.quest_desc: [
+		"Craft a Network Wand and turn separate containers into one system.",
+	],
+	quest.152284C56B2D9AF4.title: "One Window, Every Chest",
+	quest.152284C56B2D9AF4.quest_desc: [
+		"Build a Network Interface and search the whole system from one place.",
+	],
+	quest.3FDD276E71EB11CE.title: "Send the Work Home",
+	quest.3FDD276E71EB11CE.quest_desc: [
+		"Add a Network Input so machines can place finished work into storage.",
+	],
+	quest.7A32674C01CB0544.title: "Let the Workshop Reach In",
+	quest.7A32674C01CB0544.quest_desc: [
+		"Add a Network Output so machines can draw ingredients from storage.",
+	],
+	chapter.78C3AC1134FFE1DD.title: "&5The Dragon Is a Door",
+	chapter.78C3AC1134FFE1DD.chapter_subtitle: [
+		"The old ending opens the next journey",
+	],
+	quest.7053A6BD560CE745.title: "The Road Runs Through Fire",
+	quest.7053A6BD560CE745.quest_desc: [
+		"Enter the Nether and leave yourself a way back.",
+	],
+	quest.6AF866344A33A4C6.title: "Let the Eye Lead",
+	quest.6AF866344A33A4C6.quest_desc: [
+		"Follow an Eye of Ender until the earth gives up its stronghold.",
+	],
+	quest.01AB84E17CAB48E1.title: "Borrow a Passage",
+	quest.01AB84E17CAB48E1.quest_desc: [
+		"Find a Portable Hole in the stronghold and remember that its doorway never lasts.",
+	],
+	quest.6D61984E0A9AF6ED.title: "A Sky Without a Horizon",
+	quest.6D61984E0A9AF6ED.quest_desc: [
+		"Step through prepared. The other side has nowhere forgiving to fall.",
+	],
+	quest.654749E3BBC09E42.title: "Break the Silence",
+	quest.654749E3BBC09E42.quest_desc: [
+		"The dragon has ruled an empty sky long enough.",
+	],
+	chapter.651B1C7032500D2D.title: "&dBeyond the Dragon",
+	chapter.651B1C7032500D2D.chapter_subtitle: [
+		"The outer islands are not an epilogue",
+	],
+	quest.76A9444CB198CD7C.title: "The Story Continues",
+	quest.76A9444CB198CD7C.quest_desc: [
+		"Cross the gateway. Stranger islands, unfamiliar lives, and unfinished stories wait outside.",
+	],
+	quest.35BFE06545FD18A7.title: "A Light With Opinions",
+	quest.35BFE06545FD18A7.quest_desc: [
+		"Offer a soul torch to a Lantern and see whether it trusts you.",
+	],
+	quest.54AA5FE8CBFD494D.title: "Fire That Lives",
+	quest.54AA5FE8CBFD494D.quest_desc: [
+		"Feed ectoplasm to a lit bonfire and carry away something alive.",
+	],
+	quest.2CC925C8E8965410.title: "Carry the Flame",
+	quest.2CC925C8E8965410.quest_desc: [
+		"Take a Live Flame somewhere new and wake a cold bonfire.",
+	],
+	quest.3131B5CBDD2CFC0E.title: "One More Chance",
+	quest.3131B5CBDD2CFC0E.quest_desc: [
+		"Hold a Totem of Respite when death comes and keep what was yours.",
+	],
+	quest.1972046F72CFC7F0.title: "A Gift, Freely Given",
+	quest.1972046F72CFC7F0.quest_desc: [
+		"Offer an Enadrake something from your hand and see where generosity leads.",
+	],
+	quest.24AEF53CEB433C4B.title: "Roots of Refuge",
+	quest.24AEF53CEB433C4B.quest_desc: [
+		"Raise a Refuge near an Enadrake village and let its inhabitants awaken it.",
+	],
+	quest.17F9BA15168F4AA0.title: "Something Worth Remembering",
+	quest.17F9BA15168F4AA0.quest_desc: [
+		"Carry a remembrance to an Abyssal Nomad. Some gifts open stranger roads.",
+	],
+	quest.68F5EB4E5EEEDEDE.title: "Trust the Journey",
+	quest.68F5EB4E5EEEDEDE.quest_desc: [
+		"When the Nomad sits, climb aboard and let it choose the road.",
+	],
+	quest.7B7BDFBA89AF8E74.title: "The Fountain Remembers",
+	quest.7B7BDFBA89AF8E74.quest_desc: [
+		"Return five remembrances to a fountain and watch the pieces gather.",
+	],
+	quest.6275F11C426264C9.title: "Walk the Auroracite",
+	quest.6275F11C426264C9.quest_desc: [
+		"Let Pathfinder Boots turn Auroracite into a road beneath your feet.",
+	],
+	quest.4FA0891A06522BF4.title: "Ride the Storm",
+	quest.4FA0891A06522BF4.quest_desc: [
+		"Soar through a migration storm and meet the End on its own terms.",
+	],
+}

@@ -1,0 +1,110 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "fight_with_intent",
+	group: "309C10D4A2495A17",
+	icon: {
+		id: "minecraft:shield",
+	},
+	id: "73B3914BBC7EDED2",
+	order_index: 2,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			dependencies: ["4F7EDFD7B9B35089"],
+			icon: {
+				id: "minecraft:iron_sword",
+			},
+			id: "0A6D66FE481F1AED",
+			rewards: [{
+				count: 4,
+				id: "766EFFAD56546C1B",
+				item: {"count":1,"id":"minecraft:cooked_beef"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					entity: "minecraft:zombie",
+					id: "07B6F18A18F98709",
+					value: 5L,
+					type: "kill",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["4F7EDFD7B9B35089"],
+			icon: {
+				id: "minecraft:shield",
+			},
+			id: "31508E0D7535AC47",
+			rewards: [{
+				count: 2,
+				id: "2934A0882EB62320",
+				item: {"count":1,"id":"minecraft:iron_ingot"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "20C924FE6E91B73E",
+					stat: "minecraft:damage_blocked_by_shield",
+					value: 10,
+					type: "stat",
+				},
+			],
+			x: 0.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["0A6D66FE481F1AED"],
+			icon: {
+				id: "mobsmoreweapons:iron_spear",
+			},
+			id: "4D23B663C7C5CB9B",
+			rewards: [{
+				count: 6,
+				id: "42ECD6484F1D890F",
+				item: {"count":1,"id":"minecraft:string"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "34CFE53C50974931",
+					item: {"count":1,"id":"mobsmoreweapons:iron_spear"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["0A6D66FE481F1AED"],
+			icon: {
+				id: "minecraft:bow",
+			},
+			id: "2AB826BB6E187EFC",
+			rewards: [{
+				count: 32,
+				id: "760FAC2990E93C51",
+				item: {"count":1,"id":"minecraft:arrow"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "minecraft:adventure/sniper_duel",
+					criterion: "",
+					id: "16731C4B9B15CE33",
+					type: "advancement",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+	],
+}

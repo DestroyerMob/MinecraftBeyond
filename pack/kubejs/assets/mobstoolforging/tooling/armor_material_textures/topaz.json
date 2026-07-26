@@ -1,0 +1,14 @@
+{
+  "material": "mobstoolforging:topaz",
+  "texture": "mythicupgrades:item/topaz",
+  "item_textures": {
+    "helmet": "mythicupgrades:item/topaz_helmet",
+    "chestplate": "mythicupgrades:item/topaz_chestplate",
+    "leggings": "mythicupgrades:item/topaz_leggings",
+    "boots": "mythicupgrades:item/topaz_boots"
+  },
+  "worn_textures": {
+    "layer_1": "mythicupgrades:textures/models/armor/topaz_layer_1.png",
+    "layer_2": "mythicupgrades:textures/models/armor/topaz_layer_2.png"
+  }
+}

@@ -1,0 +1,131 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "the_dragon_is_a_door",
+	group: "4D6334874DFACC06",
+	icon: {
+		id: "minecraft:dragon_head",
+	},
+	id: "78C3AC1134FFE1DD",
+	order_index: 7,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			icon: {
+				id: "minecraft:obsidian",
+			},
+			id: "7053A6BD560CE745",
+			rewards: [{
+				count: 2,
+				id: "03E4E765022DEB95",
+				item: {"count":1,"id":"minecraft:golden_apple"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					dimension: "minecraft:the_nether",
+					id: "5DBD8F1878DDDF61",
+					type: "dimension",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["7053A6BD560CE745"],
+			icon: {
+				id: "minecraft:ender_eye",
+			},
+			id: "6AF866344A33A4C6",
+			rewards: [{
+				count: 4,
+				id: "4B05431541A882FB",
+				item: {"count":1,"id":"minecraft:ender_pearl"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					advancement: "minecraft:story/follow_ender_eye",
+					criterion: "",
+					id: "472669CC16EFCCD2",
+					type: "advancement",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["6AF866344A33A4C6"],
+			icon: {
+				id: "portablehole:portable_hole",
+			},
+			id: "01AB84E17CAB48E1",
+			rewards: [{
+				count: 8,
+				id: "5A494E540AAA2F96",
+				item: {"count":1,"id":"minecraft:golden_carrot"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "1256A09E2920430D",
+					item: {"count":1,"id":"portablehole:portable_hole"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: 3.0d,
+		},
+		{
+			dependencies: ["6AF866344A33A4C6"],
+			icon: {
+				id: "minecraft:end_stone",
+			},
+			id: "6D61984E0A9AF6ED",
+			rewards: [{
+				count: 8,
+				id: "3FB5148326515775",
+				item: {"count":1,"id":"minecraft:ender_pearl"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					dimension: "minecraft:the_end",
+					id: "60755B35CD3BBDB5",
+					type: "dimension",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["6D61984E0A9AF6ED"],
+			icon: {
+				id: "minecraft:dragon_head",
+			},
+			id: "654749E3BBC09E42",
+			rewards: [{
+				id: "6DC5A3842D810734",
+				item: {"count":1,"id":"minecraft:dragon_head"},
+				type: "item",
+			}],
+			shape: "pentagon",
+			size: 2.0d,
+			tasks: [
+				{
+					advancement: "minecraft:end/kill_dragon",
+					criterion: "",
+					id: "5B08B0615B44B55C",
+					type: "advancement",
+				},
+			],
+			x: 12.0d,
+			y: 0.0d,
+		},
+	],
+}

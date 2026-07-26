@@ -1,0 +1,7 @@
+{
+  "slot": "head",
+  "material": "mobstoolforging:topaz",
+  "traits": [
+    "minecraft_beyond:voltaic"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "trait": "minecraft_beyond:sanguine",
+  "lifesteal_fraction": 0.08,
+  "lifesteal_cap": 2.0
+}

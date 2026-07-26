@@ -1,0 +1,21 @@
+{
+  "category": "metal",
+  "display_item": "igleelib:derium_ingot",
+  "items": [
+    "igleelib:derium_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.igleelib.derium",
+  "tier": {
+    "base": "netherite",
+    "max_damage": 3000,
+    "mining_speed": 7.5,
+    "attack_damage_bonus": 3.5,
+    "enchantment_value": 10,
+    "repair_item": "igleelib:derium_ingot"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "minimum_forge_heat": "high"
+}

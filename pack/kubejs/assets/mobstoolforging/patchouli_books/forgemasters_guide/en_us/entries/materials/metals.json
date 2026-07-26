@@ -1,0 +1,151 @@
+{
+  "name": "Metals",
+  "icon": "minecraft:iron_ingot",
+  "category": "mobstoolforging:materials",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:iron_ingot",
+      "title": "Iron",
+      "text": "A dependable workshop metal. Iron's Reinforced trait is about avoiding wear and making each repair item count."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Reinforced",
+      "text": "Reinforced makes most uses cost no durability. When repair is needed, one matching repair item restores half of the whole durability bar.$(p)$(bold)Wear ignored:$() 75% of uses$(br)$(bold)Repair item:$() Restores 50% of maximum durability"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:copper_ingot",
+      "title": "Copper",
+      "text": "Copper rewards equipment that remains in service as it wears. Its Work-Hardened trait moves through stronger brackets as durability falls."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Work-Hardened",
+      "text": "Copper begins at normal strength. As remaining durability falls, mining speed and physical damage switch to the matching bracket. Only one bracket applies; these bonuses do not stack.$(p)$(bold)75% or more remaining:$() Normal$(br)$(bold)50–75%:$() 25% stronger$(br)$(bold)25–50%:$() 50% stronger$(br)$(bold)Below 25%:$() 2× strength"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:gold_ingot",
+      "title": "Gold",
+      "text": "Soft but receptive, gold is chosen for what it lets an enchanter do next. Its Gilded trait works with Better Enchanting."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Gilded",
+      "text": "Gilded does not create experience or improve the tool directly. With Better Enchanting, each gold component opens one additional point of enchantment capacity."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:netherite_ingot",
+      "title": "Netherite",
+      "text": "Netherite turns a finished piece into something built for the harshest work. Its Nether-Forged trait combines resilience, force, and fireproofing."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Nether-Forged",
+      "text": "Nether-Forged equipment cannot burn.$(p)$(bold)Maximum durability:$() 2× normal$(br)$(bold)Physical base damage:$() 30% higher$(br)$(bold)Eligible tool heads:$() Diamond harvest tier"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "igleelib:blazum_ingot",
+      "title": "Blazum",
+      "text": "$(bold)Kindled$() — Fireproof work that smelts eligible drops and ignites struck foes.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Blazum Profile",
+      "text": "$(bold)Durability:$() 1,800 uses$(br)$(bold)Mining speed:$() 10$(br)$(bold)Head damage bonus:$() +3.5$(br)$(bold)Enchantability:$() 18"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "igleelib:derium_ingot",
+      "title": "Derium",
+      "text": "$(bold)Work-Hardened$() — Mining speed and physical damage switch to stronger, non-stacking brackets as remaining durability falls.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Derium Profile",
+      "text": "$(bold)Durability:$() 3,000 uses$(br)$(bold)Mining speed:$() 7.5$(br)$(bold)Head damage bonus:$() +3.5$(br)$(bold)Enchantability:$() 10"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "jadensnetherexpansiondelight:ecto_ingot",
+      "title": "Ecto",
+      "text": "$(bold)Radiant$() — A revealing strike outlines the victim and nearby creatures of its kind.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ecto Profile",
+      "text": "$(bold)Durability:$() 2,031 uses$(br)$(bold)Mining speed:$() 9$(br)$(bold)Head damage bonus:$() +4$(br)$(bold)Enchantability:$() 15"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "igleelib:lavium_ingot",
+      "title": "Lavium",
+      "text": "$(bold)Nether-Forged$() — Cannot burn, doubles maximum durability, raises physical base damage, and grants diamond harvest tier.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Lavium Profile",
+      "text": "$(bold)Durability:$() 2,031 uses$(br)$(bold)Mining speed:$() 9$(br)$(bold)Head damage bonus:$() +4$(br)$(bold)Enchantability:$() 15"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "igleelib:modium_ingot",
+      "title": "Modium",
+      "text": "$(bold)Adamant$() — Mines suitable blocks faster and lets attacks ignore part of the target's armour.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Modium Profile",
+      "text": "$(bold)Durability:$() 2,200 uses$(br)$(bold)Mining speed:$() 9$(br)$(bold)Head damage bonus:$() +4$(br)$(bold)Enchantability:$() 12"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythicupgrades:necoium_ingot",
+      "title": "Necoium",
+      "text": "$(bold)Reinforced$() — Makes most actions cost no durability and lets one repair item restore half of the durability bar.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Necoium Profile",
+      "text": "$(bold)Durability:$() 675 uses$(br)$(bold)Mining speed:$() 7.5$(br)$(bold)Head damage bonus:$() +2.3$(br)$(bold)Enchantability:$() 15"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "caverns_and_chasms:necromium_ingot",
+      "title": "Necromium",
+      "text": "$(bold)Maledictive$() — A curse-tempered blow slows its victim; the next one punishes the afflicted.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Necromium Profile",
+      "text": "$(bold)Durability:$() 2,031 uses$(br)$(bold)Mining speed:$() 9$(br)$(bold)Head damage bonus:$() +3$(br)$(bold)Enchantability:$() 15"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "galosphere:palladium_ingot",
+      "title": "Palladium",
+      "text": "$(bold)Forceful$() — Makes suitable-block mining and physical attacks stronger, but consumes durability faster.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Palladium Profile",
+      "text": "$(bold)Durability:$() 420 uses$(br)$(bold)Mining speed:$() 6.5$(br)$(bold)Head damage bonus:$() +1.5$(br)$(bold)Enchantability:$() 14"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "caverns_and_chasms:silver_ingot",
+      "title": "Silver",
+      "text": "$(bold)Silvered$() — A brilliant edge cuts especially deep into undead creatures.$(p)This material is forged as metal."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Silver Profile",
+      "text": "$(bold)Durability:$() 157 uses$(br)$(bold)Mining speed:$() 9$(br)$(bold)Head damage bonus:$() +1$(br)$(bold)Enchantability:$() 18"
+    }
+  ]
+}

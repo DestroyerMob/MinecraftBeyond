@@ -1,0 +1,7 @@
+{
+  "slot": "any",
+  "material": "galosphere:palladium",
+  "traits": [
+    "mobstoolforging:forceful"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "trait": "minecraft_beyond:gravitic",
+  "knockback": 0.35,
+  "vertical_lift": 0.12
+}

@@ -1,0 +1,176 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "hands_before_tools",
+	group: "3E32B4EF985F569C",
+	icon: {
+		id: "mobstoolforging:toolmakers_bench",
+	},
+	id: "5F27485DBE08FC20",
+	order_index: 0,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			icon: {
+				id: "mobstoolforging:pickaxe_head",
+			},
+			id: "1EBB51FD72DE1CDE",
+			rewards: [{
+				id: "49DBBB96C32BDE0A",
+				item: {"count":1,"id":"patchouli:guide_book","components":{"patchouli:book":"mobstoolforging:forgemasters_guide"}},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "52AC7F97EF7ECD3E",
+					item: {"count":1,"id":"mobstoolforging:pickaxe_head","components":{"mobstoolforging:tool_part":{"part_type":"pickaxe_head","material_id":"mobstoolforging:flint"}}},
+					match_components: "fuzzy",
+					type: "item",
+				},
+			],
+			x: 0.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["1EBB51FD72DE1CDE"],
+			icon: {
+				id: "mobstoolforging:toolmakers_bench",
+			},
+			id: "1D911112EE467A43",
+			rewards: [{
+				count: 8,
+				id: "3AD964DFB5FCA152",
+				item: {"count":1,"id":"minecraft:stick"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "730F90BE2AC156E7",
+					item: {"count":1,"id":"mobstoolforging:toolmakers_bench"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["1D911112EE467A43"],
+			icon: {
+				id: "mobstoolforging:pickaxe",
+			},
+			id: "4F7EDFD7B9B35089",
+			rewards: [{
+				count: 16,
+				id: "1B60A8DE307FC3B7",
+				item: {"count":1,"id":"minecraft:torch"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "74008667C45A1792",
+					item: {"count":1,"id":"mobstoolforging:pickaxe"},
+					type: "item",
+				},
+			],
+			x: 8.0d,
+			y: 0.0d,
+		},
+		{
+			dependencies: ["4F7EDFD7B9B35089"],
+			icon: {
+				id: "mobstoolforging:smithing_hammer",
+			},
+			id: "0729510D7A77D79D",
+			rewards: [{
+				count: 8,
+				id: "2ABCE7C717F1C84C",
+				item: {"count":1,"id":"minecraft:charcoal"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "6C0C3B75C5434CEA",
+					item: {"count":1,"id":"mobstoolforging:smithing_hammer"},
+					type: "item",
+				},
+			],
+			x: 12.0d,
+			y: -1.5d,
+		},
+		{
+			dependencies: ["4F7EDFD7B9B35089"],
+			icon: {
+				id: "mobstoolforging:pattern_creation_station",
+			},
+			id: "7499A217E3717C7A",
+			rewards: [{
+				count: 8,
+				id: "36782BF74CAC48BC",
+				item: {"count":1,"id":"minecraft:oak_planks"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "77FA67501EEAA8B9",
+					item: {"count":1,"id":"mobstoolforging:pattern_creation_station"},
+					type: "item",
+				},
+			],
+			x: 12.0d,
+			y: 1.5d,
+		},
+		{
+			dependencies: ["7499A217E3717C7A"],
+			icon: {
+				id: "mobstoolforging:sword_blade_pattern",
+			},
+			id: "107533D15C427CE9",
+			rewards: [{
+				count: 3,
+				id: "56DFBF285CDCC9CE",
+				item: {"count":1,"id":"minecraft:raw_iron"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "692CF070BBEEDB9C",
+					item: {"count":1,"id":"mobstoolforging:sword_blade_pattern"},
+					type: "item",
+				},
+			],
+			x: 16.0d,
+			y: 1.5d,
+		},
+		{
+			dependencies: ["0729510D7A77D79D", "107533D15C427CE9"],
+			icon: {
+				id: "mobstoolforging:crude_anvil",
+			},
+			id: "4FB56C2876BA8D9C",
+			rewards: [{
+				count: 8,
+				id: "52A31F9884B776F6",
+				item: {"count":1,"id":"minecraft:coal"},
+				type: "item",
+			}],
+			shape: "rsquare",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "2AF4A9AF9E459BB3",
+					observation_type: "block",
+					timer: 20L,
+					to_observe: "mobstoolforging:crude_anvil",
+					type: "observation",
+				},
+			],
+			x: 20.0d,
+			y: 0.0d,
+		},
+	],
+}

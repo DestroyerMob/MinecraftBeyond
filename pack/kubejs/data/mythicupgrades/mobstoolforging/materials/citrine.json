@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "mythicupgrades:citrine",
+  "items": [
+    "mythicupgrades:citrine"
+  ],
+  "translation_key": "material.minecraft_beyond.mythicupgrades.citrine",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 850,
+    "mining_speed": 7.8,
+    "attack_damage_bonus": 2.2,
+    "enchantment_value": 20,
+    "repair_tag": "c:gems/citrine"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/citrine"
+  ]
+}

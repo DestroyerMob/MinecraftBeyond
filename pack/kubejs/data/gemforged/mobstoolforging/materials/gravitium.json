@@ -1,0 +1,23 @@
+{
+  "category": "gem",
+  "display_item": "gemforged:gravitium",
+  "items": [
+    "gemforged:gravitium"
+  ],
+  "translation_key": "material.minecraft_beyond.gemforged.gravitium",
+  "tier": {
+    "base": "diamond",
+    "max_damage": 900,
+    "mining_speed": 7.0,
+    "attack_damage_bonus": 2.25,
+    "enchantment_value": 18,
+    "repair_tag": "c:gems/gravitium"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:gems/gravitium"
+  ]
+}

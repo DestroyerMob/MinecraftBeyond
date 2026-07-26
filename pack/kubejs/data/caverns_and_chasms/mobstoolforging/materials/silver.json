@@ -1,0 +1,25 @@
+{
+  "category": "metal",
+  "display_item": "caverns_and_chasms:silver_ingot",
+  "items": [
+    "caverns_and_chasms:silver_ingot"
+  ],
+  "translation_key": "material.minecraft_beyond.caverns_and_chasms.silver",
+  "tier": {
+    "base": "iron",
+    "max_damage": 157,
+    "mining_speed": 9.0,
+    "attack_damage_bonus": 1.0,
+    "enchantment_value": 18,
+    "incorrect_blocks_tag": "caverns_and_chasms:incorrect_for_silver_tool",
+    "repair_tag": "c:ingots/silver"
+  },
+  "visual_slots": [
+    "headMaterial",
+    "guardMaterial"
+  ],
+  "tags": [
+    "c:ingots/silver"
+  ],
+  "minimum_forge_heat": "low"
+}

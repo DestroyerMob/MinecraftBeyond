@@ -1,0 +1,201 @@
+{
+	default_hide_dependency_lines: false,
+	default_quest_shape: "circle",
+	filename: "essence_and_practical_magic",
+	group: "309C10D4A2495A17",
+	icon: {
+		id: "betterenchanting:attunement_focus",
+	},
+	id: "0684D527BD8AB47B",
+	order_index: 5,
+	progression_mode: "flexible",
+	quest_links: [ ],
+	quests: [
+		{
+			icon: {
+				id: "betterenchanting:attunement_focus",
+			},
+			id: "367EDB281B8CD6B4",
+			rewards: [{
+				count: 4,
+				id: "64A0F463CDA5EF63",
+				item: {"count":1,"id":"minecraft:amethyst_shard"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "00C69817CF4FD6A8",
+					item: {"count":1,"id":"betterenchanting:attunement_focus"},
+					type: "item",
+				},
+			],
+			x: 0.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["367EDB281B8CD6B4"],
+			icon: {
+				id: "betterenchanting:arcane_crucible",
+			},
+			id: "3E4F62E03FBD0725",
+			rewards: [{
+				count: 3,
+				id: "4D688ECB8C4D30D4",
+				item: {"count":1,"id":"minecraft:glass_bottle"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "35663AF4A7F88E8E",
+					item: {"count":1,"id":"betterenchanting:arcane_crucible"},
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["3E4F62E03FBD0725"],
+			icon: {
+				id: "betterenchanting:physical_essence",
+			},
+			id: "467D1C9266951491",
+			rewards: [{
+				count: 8,
+				id: "6BE65461D06A1DD3",
+				item: {"count":1,"id":"minecraft:lapis_lazuli"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "346BF8C597D2A393",
+					item: {"count":1,"id":"betterenchanting:physical_essence"},
+					type: "item",
+				},
+			],
+			x: 8.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["467D1C9266951491"],
+			icon: {
+				id: "minecraft:enchanting_table",
+			},
+			id: "207C19D4AD990AFC",
+			rewards: [{
+				count: 2,
+				id: "081CB80C736E7A2F",
+				item: {"count":1,"id":"minecraft:bookshelf"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "237BBA5A41F01648",
+					stat: "minecraft:enchant_item",
+					value: 1,
+					type: "stat",
+				},
+			],
+			x: 12.0d,
+			y: -3.0d,
+		},
+		{
+			dependencies: ["207C19D4AD990AFC"],
+			icon: {
+				id: "betterenchanting:attunement_pedestal",
+			},
+			id: "70B41F29272AFBD4",
+			rewards: [{
+				count: 8,
+				id: "5A3D892E7A50301D",
+				item: {"count":1,"id":"minecraft:lapis_lazuli"},
+				type: "item",
+			}],
+			tasks: [
+				{
+					id: "36368F12A33EBB3D",
+					item: {"count":1,"id":"betterenchanting:attunement_pedestal"},
+					type: "item",
+				},
+			],
+			x: 16.0d,
+			y: -3.0d,
+		},
+		{
+			icon: {
+				id: "auric:imbuing_table",
+			},
+			id: "475D49DB726596E5",
+			rewards: [{
+				count: 6,
+				id: "7FB040EECEFFCFBD",
+				item: {"count":1,"id":"minecraft:glass_bottle"},
+				type: "item",
+			}],
+			shape: "hexagon",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "3D08CFA7DFEB2AC1",
+					observation_type: "block",
+					timer: 20L,
+					to_observe: "auric:imbuing_table",
+					type: "observation",
+				},
+			],
+			x: 0.0d,
+			y: 1.5d,
+		},
+		{
+			dependencies: ["475D49DB726596E5", "67DFAC8DCD70D70A"],
+			icon: {
+				id: "mobstoolforging:sword_blade",
+			},
+			id: "25762B917706430A",
+			rewards: [{
+				count: 2,
+				id: "07B2BF18033C3B3E",
+				item: {"count":1,"id":"minecraft:magma_cream"},
+				type: "item",
+			}],
+			shape: "diamond",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "4B91AA524E2772F8",
+					item: {"count":1,"id":"mobstoolforging:sword_blade","components":{"auric:imbue":{"effect":"minecraft:fire_resistance","source_level":1}}},
+					match_components: "fuzzy",
+					type: "item",
+				},
+			],
+			x: 4.0d,
+			y: 1.5d,
+		},
+		{
+			icon: {
+				id: "auric:sword_in_stone",
+			},
+			id: "0B5DF28491AA0883",
+			rewards: [{
+				id: "41EAEEF8BA8FD0D3",
+				item: {"count":1,"id":"minecraft:golden_apple"},
+				type: "item",
+			}],
+			shape: "pentagon",
+			size: 1.5d,
+			tasks: [
+				{
+					id: "34180C9651C469D7",
+					structure: "auric:forgotten_blade_shrine",
+					type: "structure",
+				},
+			],
+			x: 0.0d,
+			y: 4.5d,
+		},
+	],
+}

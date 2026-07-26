@@ -1,0 +1,7 @@
+{
+  "trait": "minecraft_beyond:nimble",
+  "attacker_effect": {
+    "effect": "minecraft:speed",
+    "duration": 40
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "mobstoolforging:material_visual",
+  "family": "crystal",
+  "palette": {
+    "63": "0xFF444649",
+    "102": "0xFF686B70",
+    "140": "0xFF90949C",
+    "178": "0xFFC8CED8",
+    "216": "0xFFDDE1E7",
+    "255": "0xFFF0F1F4"
+  },
+  "texture_noise": "facets",
+  "fallbacks": [
+    "crystal"
+  ],
+  "emissive": false
+}
