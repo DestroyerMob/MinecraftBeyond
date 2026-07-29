@@ -18,11 +18,11 @@ hash = "b4ce4d99b37a679b372fd2d5c34113f0b79adfe67a5b830e4fb5a20f47951278"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "8851472f0a7292f2eaf2a4302c2946ae59820f16472b2c84eee8a67892902c93"
+hash = "03c4d2ce7ef8b48440b47a1740ebe8ebfa7e7095a767ed4fdeb7849cd6df05a3"
 
 [[files]]
 file = "config/almostunified/unification/food.json"
-hash = "2667cead6419b3cf815ed9e1ab6291a2cfefac9d4efee13eb048994f29360d93"
+hash = "34aa25d15b5570c944788e259a96b9e355eb6d7d508aed345dd54e7b30d182a4"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
@@ -94,7 +94,7 @@ hash = "32f99d684907672abedfc08fdae31efb9c66587a4775dfc00c6727841165208d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/hands_before_tools.snbt"
-hash = "53290f1d9580fd4fc823139d8f45916977a60eca3ed2be866c3df1774994caa4"
+hash = "7041dfb0bcefa824c10b67154964b1edf98db7e993ca449db2d3607abe5fae55"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/meals_not_hunger.snbt"
@@ -110,7 +110,7 @@ hash = "06b41b827a17f5368406c48f7444e88430afb3095bb298aa3c8d32ec8497d747"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_workshop.snbt"
-hash = "33a08305afbc8338f0c17acdad4656a23b88d585c2e448b37fa27cc3f67919b2"
+hash = "ca4593c921aa9640e29ae602c7e0fd73576d483e97dd332aba5da0c6f0dbff2c"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -122,7 +122,7 @@ hash = "442bea41a032c854fe0215bab0db5486950835ee974febc51246e67a98af0656"
 
 [[files]]
 file = "config/iris.properties"
-hash = "2ba5084ba176c0d450efa0d1d06ff340627d7c190b8aaf81b721eba8f524ff9f"
+hash = "948e3dc1505328b77e3d6e7fd3a2e750e203f670c123da71d67acf1dadc06e1d"
 
 [[files]]
 file = "config/itemborders.toml"
@@ -146,7 +146,7 @@ hash = "07091915b5985a2c9b1ada8b59889e79cf2757f3509cf7ccbafccaa6137df47d"
 
 [[files]]
 file = "config/modqualitypicker/feature-groups.json"
-hash = "d52268893336941809682947ccd664fb8109dc2c65164c7723378ef104183029"
+hash = "39f9cab91538217d5dd9a810d6651edefbd08f7f0a83cd0cc8b167e09ae02fe5"
 
 [[files]]
 file = "config/modqualitypicker/features/ecology/light/ecology-common.toml"
@@ -158,15 +158,19 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/launcher/modqualitypicker-bootstrap.jar"
-hash = "04a01f3589af517b285db9b1eaede3026a2a31c12152ee137a5f030916359abc"
+hash = "eafd4f4cd01fbddede318be182b56a28ea4f6b93aa807580e630c587b039c386"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "1bf9bee226347225e2044c03de5c5e421acfd8133500a8670d542843cce4b080"
+hash = "a20133b5383abdd381b2430471e665b801275fa1513719519aa35b56eff9f90f"
+
+[[files]]
+file = "config/modqualitypicker/presets/balanced/config/apothic_spawners.cfg.diff"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
-hash = "c172920855017bf9bdca33aa85f398eeac4243552e4a8f0ac7f4a8b6126c7d40"
+hash = "34dbe7b55670ff653de4beb20006150a00755f8d734dc2adc1c345fdab77f224"
 
 [[files]]
 file = "config/pamhc2crops.toml"
@@ -1846,7 +1850,7 @@ hash = "3c8cee306014887ff76ee643cafee4f7aa3b9f8b746d90c5b3ef266776499af0"
 
 [[files]]
 file = "kubejs/startup_scripts/food_unification_targets.js"
-hash = "5f9de607449973e0f4dcf7272c4b7f050746bfb9bd80fb29a13f87e43e2168cd"
+hash = "4588a8fa6139de50bd35d61409e38583def110fb2e8eac2ab905adbb4c633781"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -2660,7 +2664,7 @@ metafile = true
 
 [[files]]
 file = "mods/modqualitypicker-local.jar"
-hash = "04a01f3589af517b285db9b1eaede3026a2a31c12152ee137a5f030916359abc"
+hash = "eafd4f4cd01fbddede318be182b56a28ea4f6b93aa807580e630c587b039c386"
 
 [[files]]
 file = "mods/moonrise-compats.pw.toml"
@@ -2855,6 +2859,11 @@ metafile = true
 [[files]]
 file = "mods/rhino.pw.toml"
 hash = "2e8064e6ac6f707d6df65ee2738279ec31802ef70514584bb8c8a8ed2010f5f6"
+metafile = true
+
+[[files]]
+file = "mods/roadweaver.pw.toml"
+hash = "6086c278af2ed6b27a848001e7fca228d640b179f1edf275f0ac387e80951c8a"
 metafile = true
 
 [[files]]

@@ -8,1677 +8,2012 @@
     "accessories": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "advancementplaques": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "aiimprovements": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "almostunified": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "alpinewhispers": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "alternate_current": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "ambientsounds": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "amendments": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "apotheosis": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "apothic_attributes": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "apothic_enchanting": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "apothic_spawners": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "appleskin": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "architectury": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "attributefix": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "auric": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "autochefsdelight": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "axiom": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "axiomsurvival": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "badoptimizations": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "baguettelib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bakery": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "balm": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bcc": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "beachparty": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betteradvancedtooltips": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betteradvancements": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bettercaves": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterdeserttemples": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterdungeons": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterenchanting": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterf3": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterfortresses": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterjungletemples": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bettermineshafts": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betteroceanmonuments": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterstrongholds": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "betterwitchhuts": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "biolith": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bloomingnature": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "bookshelf": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "brewery": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "brewinandchewin": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "bridgingmod": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "caelus": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "camping": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "candlelight": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "charmofundying": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "chat_heads": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "chatanimation": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cherishedworlds": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "chunky": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "cleanswing": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cloth_config": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "clumps": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "codechickenlib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "collective": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson-annotations": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson-core": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson-databind": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson_annotations": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson_core": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_core_jackson_databind": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_dataformat_jackson-dataformat-toml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_fasterxml_jackson_dataformat_jackson_dataformat_toml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_github_llamalad7_mixinextras": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "com_moulberry_axiomclientapi": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "com_moulberry_mixinconstraints": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "comforts": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "commongroovylibrary": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "computercraft": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "conditional_mixin": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "configured": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "connectivity": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "connector": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "continuity": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "controlify": {
       "enabled": true,
       "locked": false,
-      "reason": "Primary controller implementation for gamepad, Steam, and Steam Deck play."
+      "reason": "Primary controller implementation for gamepad, Steam, and Steam Deck play.",
+      "configFiles": []
     },
     "controlling": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cookingforblockheads": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cornexpansion": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "coroutil": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "corpse": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "corpsecurioscompat": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cosmeticarmorreworked": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "crabbersdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "craftingtweaks": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "creativecore": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "crittersandcompanions": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "cubes_without_borders": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "culturaldelights": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "cupboard": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "curios": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "delightlib": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame-compile": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame-core": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame-groovy": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame_compile": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame_core": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "dev_lukebemish_opensesame_opensesame_groovy": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "devtools": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "distanthorizons": {
       "enabled": true,
       "locked": false,
-      "reason": "Extends visible terrain using level-of-detail rendering beyond the normal render distance."
+      "reason": "Extends visible terrain using level-of-detail rendering beyond the normal render distance.",
+      "configFiles": []
     },
     "doapi": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "doubledoors": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "dragonfight": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "dummmmmmy": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "durabilitytooltip": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "dynamic_fps": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "easynametags": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "eatinganimation": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ecology": {
       "enabled": true,
       "locked": false,
-      "reason": "Full Ecology simulation is selected by the Max preset."
+      "reason": "Full Ecology simulation is selected by the Max preset.",
+      "configFiles": []
     },
     "elytraslot": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "emi": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "emi_letsdo_compat": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "enchdesc": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "enderstorage": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ends_delight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "entityculling": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "euphoria_patcher": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "everycomp": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "expandeddelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "exposure": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "extragems": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "extremesoundmuffler": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_api": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_api_base": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_api_lookup_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_biome_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_block_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_block_view_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_blockrenderlayer_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_client_tags_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_command_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_content_registries_v0": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_convention_tags_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_convention_tags_v2": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_data_attachment_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_data_generation_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_entity_events_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_events_interaction_v0": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_game_rule_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_gametest_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_item_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_item_group_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_key_binding_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_lifecycle_events_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_loot_api_v2": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_loot_api_v3": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_message_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_model_loading_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_networking_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_object_builder_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_particles_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_recipe_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_registry_sync_v0": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_renderer_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_renderer_indigo": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_rendering_data_attachment_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_rendering_fluids_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_rendering_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_resource_conditions_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_resource_loader_v0": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_screen_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_screen_handler_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_sound_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_transfer_api_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fabric_transitive_access_wideners_v1": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fallingleaves": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "farm_and_charm": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "farmersdelight": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "farmersknives": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fastipping": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fastleafdecay": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fastpaintings": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fastsuite": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ferritecore": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "forgified_fabric_api": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "framework": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ftbchunks": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ftbessentials": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ftblibrary": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ftbquests": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ftbteams": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "furniture": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fusion": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "fzzy_config": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "geckolib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "getittogetherdrops": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "gml": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "greenhouseconfig": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "greenhouseconfig_night_config": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "greenhouseconfig_toml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "groovybundler": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "guardvillagers": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "handcrafted": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "hearth_and_timber": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "herbalbrews": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "highlighter": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "iceberg": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "immediatelyfast": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "immersiveui": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "inventorysorter": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "iris": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "itemborders": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "jade": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "jadeaddons": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "jearchaeology": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "jei": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "jeresources": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "justenoughbreeding": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "justenoughprofessions": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "kotlinforforge": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "ksyxis": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "kubejs": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "kuma_api": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lattice": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "letsdocompat": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lilis_lucky_lures": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lilis_pottery": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lithium": {
       "enabled": true,
       "locked": false,
-      "reason": "General server and game-logic performance optimization."
+      "reason": "General server and game-logic performance optimization.",
+      "configFiles": []
     },
     "lithostitched": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lmft": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lootintegrations": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lootintegrations_yungs": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "lootr": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "maxhealthfix": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "meadow": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "minecraft": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "mixinextras": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "mobscombat": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "mobsstorage": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "mobsmoreweapons": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "mobstoolforging": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "modelfix": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "modernfix": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "modqualitypicker": {
       "enabled": true,
       "locked": true,
-      "reason": "Required to manage quality presets."
+      "reason": "Required to manage quality presets.",
+      "configFiles": []
     },
     "moonlight": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "moonrise": {
       "enabled": true,
       "locked": false,
-      "reason": "Chunk loading, generation, saving, and server scheduling optimization."
+      "reason": "Chunk loading, generation, saving, and server scheduling optimization.",
+      "configFiles": []
     },
     "moonrise_compats": {
       "enabled": true,
       "locked": false,
-      "reason": "Compatibility patches for the pinned Moonrise build."
+      "reason": "Compatibility patches for the pinned Moonrise build.",
+      "configFiles": []
     },
     "moreculling": {
       "enabled": false,
       "locked": false,
-      "reason": "Disabled because its collision-shape cache is incompatible with Moonrise."
+      "reason": "Disabled because its collision-shape cache is incompatible with Moonrise.",
+      "configFiles": []
     },
     "moredelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "mousetweaks": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "mr_farmers_cuttingregionsunexplored": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "mynethersdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "naturalist": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "naturescompass": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "neoforge": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "netherportalfix": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "oceansdelight": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "octolib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "org_apache_groovy_groovy": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-contracts": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-datetime": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-dateutil": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-ginq": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-json": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-macro": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-macro-library": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-nio": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-templates": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-toml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-typecheckers": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy-xml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_contracts": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_datetime": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_dateutil": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_ginq": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_json": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_macro": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_macro_library": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_nio": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_templates": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_toml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_typecheckers": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "org_apache_groovy_groovy_xml": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "overflowingbars": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "owo": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "particle_core": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "particlerain": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "particular": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "patchouli": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "pickupnotifier": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "placebo": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "playeranimator": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "polymorph": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "prickle": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "prism": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "punchy": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "puzzleslib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "refurbished_furniture": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "regions_unexplored": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "resourcefulconfig": {
       "enabled": true,
       "locked": false,
-      "reason": "Required by Structure Layout Optimizer."
+      "reason": "Required by Structure Layout Optimizer.",
+      "configFiles": []
     },
     "resourcefullib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "rhino": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "sablecompanion": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "searchables": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "servercore": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "simplehats": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "sodium": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "sophisticatedbackpacks": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "sophisticatedcore": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "sophisticatedstorage": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "sound_physics_remastered": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "spark": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "spawn": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "spectrelib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "supermartijn642configlib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "structure_layout_optimizer": {
       "enabled": true,
       "locked": false,
-      "reason": "Optimizes jigsaw and NBT structure generation."
+      "reason": "Optimizes jigsaw and NBT structure generation.",
+      "configFiles": []
     },
     "supplementaries": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "tectonic": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "terrablender": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "terraform": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "terralith": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "tipsmod": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "toastcontrol": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "toofast": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "tooltipoverhaul": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "transition": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "trashslot": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "trender": {
       "enabled": true,
       "locked": false,
-      "reason": "Detected from the installed mod catalog."
+      "reason": "Detected from the installed mod catalog.",
+      "configFiles": []
     },
     "villagernames": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "vinery": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "visualworkbench": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "voicechat": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "voicechat_api": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "watut": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "wildernature": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "xaerolib": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "xaerominimap": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "xaeroworldmap": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yeetusexperimentus": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yet_another_config_lib_v3": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yungsapi": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yungsbridges": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yungscavebiomes": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     },
     "yungsextras": {
       "enabled": true,
       "locked": false,
-      "reason": ""
+      "reason": "",
+      "configFiles": []
     }
   },
   "configFiles": [],

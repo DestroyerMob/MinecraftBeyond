@@ -163,10 +163,8 @@
 			tasks: [
 				{
 					id: "2AF4A9AF9E459BB3",
-					observation_type: "block",
-					timer: 20L,
-					to_observe: "mobstoolforging:crude_anvil",
-					type: "observation",
+					item: {"count":1,"id":"mobstoolforging:crude_anvil"},
+					type: "item",
 				},
 			],
 			x: 20.0d,

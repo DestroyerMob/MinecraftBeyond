@@ -277,7 +277,7 @@ CHAPTERS: tuple[Chapter, ...] = (
                 "Wake the Stone",
                 "Raise a Crude Anvil from the ground. Your workshop now has a heartbeat.",
                 "mobstoolforging:crude_anvil",
-                observe("block", "mobstoolforging:crude_anvil"),
+                item("mobstoolforging:crude_anvil"),
                 prize("minecraft:coal", 8),
                 parents=("smithing_hammer", "first_pattern"),
                 col=10,
@@ -324,7 +324,7 @@ CHAPTERS: tuple[Chapter, ...] = (
                 "Outgrow the Crude Anvil",
                 "Raise a Smithing Anvil and give ironwork the foundation it deserves.",
                 "mobstoolforging:tool_forge",
-                observe("block", "mobstoolforging:tool_forge"),
+                item("mobstoolforging:tool_forge"),
                 prize("minecraft:iron_ingot", 2),
                 parents=("assemble_metal_tool",),
                 col=4,
@@ -1515,7 +1515,7 @@ def write_files(root: Path, files: dict[Path, str]) -> None:
     for relative, content in files.items():
         destination = root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(content, encoding="utf-8")
+        destination.write_text(content, encoding="utf-8", newline="\n")
 
 
 def check_files(root: Path, files: dict[Path, str]) -> None:

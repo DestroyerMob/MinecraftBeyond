@@ -74,10 +74,8 @@
 			tasks: [
 				{
 					id: "3AFF459DA0560EFE",
-					observation_type: "block",
-					timer: 20L,
-					to_observe: "mobstoolforging:tool_forge",
-					type: "observation",
+					item: {"count":1,"id":"mobstoolforging:tool_forge"},
+					type: "item",
 				},
 			],
 			x: 8.0d,
