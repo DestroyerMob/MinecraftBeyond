@@ -142,11 +142,11 @@ hash = "8c2a07dbca8336b51640f8a1b6a40150291bc539de9142f86e7fb54c3557d2b7"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
-hash = "4b7898b795115938c1a505207c7fd3f87d1b871612a20567096d4810545e9ab1"
+hash = "f763a84cc7b6a53191d13115256eb4aac6d9c687385b30fcbad6fd8b46e3bfc8"
 
 [[files]]
 file = "config/modqualitypicker/feature-groups.json"
-hash = "6c6a9094f1df84f68a22499f220177c49617c56f4796bc36ed337d871965ce39"
+hash = "d52268893336941809682947ccd664fb8109dc2c65164c7723378ef104183029"
 
 [[files]]
 file = "config/modqualitypicker/features/ecology/light/ecology-common.toml"
@@ -157,8 +157,12 @@ file = "config/modqualitypicker/features/ecology/max/ecology-common.toml"
 hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
+file = "config/modqualitypicker/launcher/modqualitypicker-bootstrap.jar"
+hash = "11c25101fe95609d16a08be6a118edac4bae2b514da04adf04a8d23caf748cd6"
+
+[[files]]
 file = "config/modqualitypicker/presets/balanced.json"
-hash = "df74bccbc18995b3725f0d3276853dd953861fbf3185d346e7229a9905a2f27f"
+hash = "1bf9bee226347225e2044c03de5c5e421acfd8133500a8670d542843cce4b080"
 
 [[files]]
 file = "config/modqualitypicker/presets/max.json"
@@ -2315,6 +2319,11 @@ hash = "83e60a73e109258def123fbcab5cf606857f36feca621a4c40c9d7c10b285bca"
 metafile = true
 
 [[files]]
+file = "mods/featurify.pw.toml"
+hash = "c18f0e3a65e90ecb4e9c87b8aaa081078a42ccb80ecc05280949b067981b0e6f"
+metafile = true
+
+[[files]]
 file = "mods/ferritecore.pw.toml"
 hash = "dff824171060c79b327a4880c2f0546c727a041a489ef3af643ec2dcd9cd0c48"
 metafile = true
@@ -2650,6 +2659,10 @@ hash = "a58c1322f0d21a88b3a42627374f045fe34a0385ef6630ec516b77d73438accc"
 metafile = true
 
 [[files]]
+file = "mods/modqualitypicker-local.jar"
+hash = "11c25101fe95609d16a08be6a118edac4bae2b514da04adf04a8d23caf748cd6"
+
+[[files]]
 file = "mods/moonrise-compats.pw.toml"
 hash = "5842a22e0ab775c99d6530c592481d5047a05b56bfc0eb6c29901667035b6ff5"
 metafile = true
@@ -2915,8 +2928,8 @@ hash = "c4910628e777aaa2e863f8d5b45cfcadc24e5faff1459a739d5be03d2d9285cd"
 metafile = true
 
 [[files]]
-file = "mods/spice-of-life-carrot-edition.pw.toml"
-hash = "e520ad446364dff7dd50896108a96140f3f5598b72003dade5b17308fa9ef2a9"
+file = "mods/starcatcher.pw.toml"
+hash = "14bd8d81dd8e2e313586273fd5b160ec0c3e33152b9a62af72c89c73284b4848"
 metafile = true
 
 [[files]]

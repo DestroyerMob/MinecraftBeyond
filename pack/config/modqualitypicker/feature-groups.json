@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "groups": {
     "ecology": {
       "id": "ecology",
@@ -18,7 +18,8 @@
             "ecology": {
               "enabled": false,
               "locked": true,
-              "reason": "Ecology is disabled by this feature choice."
+              "reason": "Ecology is disabled by this feature choice.",
+              "configFiles": []
             }
           },
           "configFiles": [],
@@ -33,7 +34,8 @@
             "ecology": {
               "enabled": true,
               "locked": false,
-              "reason": "Ecology light simulation is selected."
+              "reason": "Ecology light simulation is selected.",
+              "configFiles": []
             }
           },
           "configFiles": [
@@ -41,7 +43,8 @@
               "path": "config/ecology-common.toml",
               "mode": "MERGE_TOML",
               "presetFile": "features/ecology/light/ecology-common.toml",
-              "sha256": ""
+              "sha256": "",
+              "presetSha256": ""
             }
           ],
           "applyRequirement": "RESTART",
@@ -55,7 +58,8 @@
             "ecology": {
               "enabled": true,
               "locked": false,
-              "reason": "Ecology full simulation is selected."
+              "reason": "Ecology full simulation is selected.",
+              "configFiles": []
             }
           },
           "configFiles": [
@@ -63,7 +67,8 @@
               "path": "config/ecology-common.toml",
               "mode": "MERGE_TOML",
               "presetFile": "features/ecology/max/ecology-common.toml",
-              "sha256": ""
+              "sha256": "",
+              "presetSha256": ""
             }
           ],
           "applyRequirement": "RESTART",
@@ -88,7 +93,8 @@
             "distanthorizons": {
               "enabled": false,
               "locked": true,
-              "reason": "Distant Horizons is disabled by this device quality choice."
+              "reason": "Distant Horizons is disabled by this device quality choice.",
+              "configFiles": []
             }
           },
           "configFiles": [],
@@ -103,7 +109,8 @@
             "distanthorizons": {
               "enabled": true,
               "locked": false,
-              "reason": "Distant Horizons is enabled by this device quality choice."
+              "reason": "Distant Horizons is enabled by this device quality choice.",
+              "configFiles": []
             }
           },
           "configFiles": [],
@@ -126,8 +133,8 @@
           "displayName": "Vanilla",
           "description": "Uses the pack's base world generation without Terralith or Tectonic.",
           "mods": {
-            "terralith": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected." },
-            "tectonic": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected." }
+            "terralith": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected.", "configFiles": [] },
+            "tectonic": { "enabled": false, "locked": true, "reason": "Vanilla world generation is selected.", "configFiles": [] }
           },
           "configFiles": [],
           "applyRequirement": "NEW_WORLD",
@@ -138,8 +145,8 @@
           "displayName": "Terralith",
           "description": "Enables Terralith biomes with vanilla terrain shaping.",
           "mods": {
-            "terralith": { "enabled": true, "locked": false, "reason": "Terralith world generation is selected." },
-            "tectonic": { "enabled": false, "locked": true, "reason": "Terralith-only world generation is selected." }
+            "terralith": { "enabled": true, "locked": false, "reason": "Terralith world generation is selected.", "configFiles": [] },
+            "tectonic": { "enabled": false, "locked": true, "reason": "Terralith-only world generation is selected.", "configFiles": [] }
           },
           "configFiles": [],
           "applyRequirement": "NEW_WORLD",
@@ -150,8 +157,8 @@
           "displayName": "Tectonic",
           "description": "Enables Tectonic terrain shaping without Terralith biomes.",
           "mods": {
-            "terralith": { "enabled": false, "locked": true, "reason": "Tectonic-only world generation is selected." },
-            "tectonic": { "enabled": true, "locked": false, "reason": "Tectonic world generation is selected." }
+            "terralith": { "enabled": false, "locked": true, "reason": "Tectonic-only world generation is selected.", "configFiles": [] },
+            "tectonic": { "enabled": true, "locked": false, "reason": "Tectonic world generation is selected.", "configFiles": [] }
           },
           "configFiles": [],
           "applyRequirement": "NEW_WORLD",
@@ -162,8 +169,8 @@
           "displayName": "Terralith + Tectonic",
           "description": "Uses the pack's maximum terrain set: Terralith biomes with Tectonic terrain shaping.",
           "mods": {
-            "terralith": { "enabled": true, "locked": false, "reason": "Combined world generation is selected." },
-            "tectonic": { "enabled": true, "locked": false, "reason": "Combined world generation is selected." }
+            "terralith": { "enabled": true, "locked": false, "reason": "Combined world generation is selected.", "configFiles": [] },
+            "tectonic": { "enabled": true, "locked": false, "reason": "Combined world generation is selected.", "configFiles": [] }
           },
           "configFiles": [],
           "applyRequirement": "NEW_WORLD",

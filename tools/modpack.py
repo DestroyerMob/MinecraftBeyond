@@ -16,9 +16,10 @@ import sys
 import tempfile
 import time
 import urllib.request
+from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import BinaryIO, Iterable, Iterator, Sequence
 
 try:
     import tomllib
@@ -188,6 +189,116 @@ def atomic_copy2(source: Path, destination: Path) -> None:
     finally:
         if temporary is not None and temporary.exists():
             temporary.unlink()
+
+
+def quality_bootstrap_jar_path(mods_dir: Path) -> Path:
+    """Return the stable pre-launch bootstrap path for the Minecraft directory."""
+    return mods_dir.parent / "config" / "modqualitypicker" / "launcher" / "modqualitypicker-bootstrap.jar"
+
+
+def packed_quality_jar_paths() -> tuple[Path, Path]:
+    """Return the two pack-managed copies required on a clean installation."""
+    return (
+        PACK_DIR / "mods" / "modqualitypicker-local.jar",
+        PACK_DIR
+        / "config"
+        / "modqualitypicker"
+        / "launcher"
+        / "modqualitypicker-bootstrap.jar",
+    )
+
+
+RELEASED_ENVIRONMENT_STATES = {"RESTORED", "ROLLED_BACK", "SUPERSEDED", "CANCELLED"}
+MAX_ENVIRONMENT_STATE_BYTES = 8 * 1024 * 1024
+
+
+def assert_server_environment_released(minecraft_dir: Path) -> None:
+    """Fail closed before maintenance can mutate a Stage 1-owned instance."""
+    profile_root = minecraft_dir / "config" / "modqualitypicker"
+    environment_root = profile_root / "server-environments"
+    active_path = environment_root / "state" / "active-environment.json"
+    intent_path = environment_root / "state" / "intents" / "current.json"
+
+    for path in (profile_root, environment_root, active_path.parent, intent_path.parent):
+        if path.is_symlink():
+            raise ToolError(f"Unsafe Mod Quality Picker state path is a symbolic link: {path}")
+    if active_path.exists() or active_path.is_symlink():
+        raise ToolError(
+            "A Mod Quality Picker server environment is active. Restore it before syncing pack files."
+        )
+    if not intent_path.exists() and not intent_path.is_symlink():
+        return
+    if intent_path.is_symlink() or not intent_path.is_file():
+        raise ToolError(f"Unsafe server-environment intent file: {intent_path}")
+    if intent_path.stat().st_size > MAX_ENVIRONMENT_STATE_BYTES:
+        raise ToolError(f"Server-environment intent is too large: {intent_path}")
+    try:
+        intent = json.loads(intent_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        raise ToolError(f"Unreadable server-environment intent; refusing maintenance: {exc}") from exc
+    state = intent.get("state") if isinstance(intent, dict) else None
+    if state not in RELEASED_ENVIRONMENT_STATES:
+        raise ToolError(
+            f"Mod Quality Picker server-environment intent {state or 'UNKNOWN'} owns this instance. "
+            "Restore or recover it before syncing pack files."
+        )
+
+
+@contextmanager
+def server_environment_maintenance_lock(minecraft_dir: Path) -> Iterator[None]:
+    """Share the same OS lock file as Mod Quality Picker's Java lifecycle."""
+    profile_root = minecraft_dir / "config" / "modqualitypicker"
+    profile_root.mkdir(parents=True, exist_ok=True)
+    if profile_root.is_symlink():
+        raise ToolError(f"Unsafe Mod Quality Picker profile path: {profile_root}")
+    lock_path = profile_root / "apply.lock"
+    if lock_path.is_symlink():
+        raise ToolError(f"Unsafe Mod Quality Picker lock path: {lock_path}")
+
+    handle: BinaryIO = lock_path.open("a+b")
+    try:
+        if os.name == "nt":
+            import msvcrt
+
+            handle.seek(0, os.SEEK_END)
+            if handle.tell() == 0:
+                handle.write(b"\0")
+                handle.flush()
+            handle.seek(0)
+            try:
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            except OSError as exc:
+                raise ToolError(
+                    "Another Mod Quality Picker apply or environment operation is running."
+                ) from exc
+        else:
+            import fcntl
+
+            try:
+                # Java FileChannel.tryLock uses POSIX record locks on Unix.
+                # lockf/F_SETLK interoperates with it; flock does not on Linux.
+                fcntl.lockf(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except OSError as exc:
+                raise ToolError(
+                    "Another Mod Quality Picker apply or environment operation is running."
+                ) from exc
+
+        assert_server_environment_released(minecraft_dir)
+        yield
+    finally:
+        try:
+            if os.name == "nt":
+                import msvcrt
+
+                handle.seek(0)
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+
+                fcntl.lockf(handle.fileno(), fcntl.LOCK_UN)
+        except OSError:
+            pass
+        handle.close()
 
 
 def find_free_local_port() -> int:
@@ -861,23 +972,56 @@ def command_doctor(args: argparse.Namespace) -> int:
         for item in files
         if item.get("file", "").startswith("mods/") and is_local_runtime_jar(item.get("file", ""))
     ]
+    allowed_indexed_local_jars = {"mods/modqualitypicker-local.jar"}
+    unexpected_indexed_local_jars = sorted(
+        set(indexed_local_runtime_jars) - allowed_indexed_local_jars
+    )
     metadata_checks.append(
         Check(
             "indexed local jars",
-            "ok" if not indexed_local_runtime_jars else "mismatch",
-            f"{len(indexed_local_runtime_jars)} runtime jar(s) indexed",
+            "ok" if not unexpected_indexed_local_jars else "mismatch",
+            f"{len(indexed_local_runtime_jars)} indexed; "
+            f"{len(unexpected_indexed_local_jars)} unexpected",
         )
     )
+
+    quality_mod, quality_helper = packed_quality_jar_paths()
+    indexed_names = {item.get("file", "") for item in files}
+    quality_relative = {
+        quality_mod.relative_to(PACK_DIR).as_posix(),
+        quality_helper.relative_to(PACK_DIR).as_posix(),
+    }
+    quality_ready = (
+        quality_relative.issubset(indexed_names)
+        and quality_mod.is_file()
+        and not quality_mod.is_symlink()
+        and quality_helper.is_file()
+        and not quality_helper.is_symlink()
+        and sha256(quality_mod) == sha256(quality_helper)
+    )
+    metadata_checks.append(Check(
+        "Stage 1 bootstrap",
+        "matched" if quality_ready else "mismatch",
+        "mod/helper present, indexed, and byte-identical" if quality_ready
+        else "run sync-local-mods --mod modqualitypicker",
+        required=True,
+    ))
 
     if git_found:
         tracked_result = git_optional(["ls-files", "minecraft/mods/*-local.jar", "pack/mods/*-local.jar"], REPO_ROOT)
         tracked_local_runtime_jars = tracked_result.stdout.strip().splitlines() if tracked_result.returncode == 0 else []
         tracked_existing_local_runtime_jars = [path for path in tracked_local_runtime_jars if (REPO_ROOT / path).exists()]
+        unexpected_tracked_local_jars = [
+            path
+            for path in tracked_existing_local_runtime_jars
+            if path != "pack/mods/modqualitypicker-local.jar"
+        ]
         metadata_checks.append(
             Check(
                 "tracked local jars",
-                "ok" if not tracked_existing_local_runtime_jars else "mismatch",
-                f"{len(tracked_existing_local_runtime_jars)} tracked, {len(tracked_local_runtime_jars) - len(tracked_existing_local_runtime_jars)} pending removal",
+                "ok" if not unexpected_tracked_local_jars else "mismatch",
+                f"{len(tracked_existing_local_runtime_jars)} tracked; "
+                f"{len(unexpected_tracked_local_jars)} unexpected",
             )
         )
 
@@ -1500,6 +1644,56 @@ def build_local_mod(
 
 def command_sync_local_mods(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
+    mods_dir = setting(
+        args.mods_dir,
+        ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
+        dev_env,
+        "modsDir",
+        DEFAULT_PRISM_MODS_DIR,
+    )
+    assert mods_dir is not None
+    minecraft_dir = mods_dir.parent
+    selected = selected_local_mods(read_local_mods(), getattr(args, "mod", None))
+    stages_quality_distribution = any(
+        mod.get("modId") == "modqualitypicker" for mod in selected
+    )
+    packwiz = None
+    if stages_quality_distribution and not args.dry_run:
+        packwiz = resolve_packwiz(dev_env, None)
+        if not packwiz:
+            raise ToolError(
+                "packwiz is required when syncing Mod Quality Picker so the "
+                "clean-install helper hashes can be refreshed before completion."
+            )
+    original_skip_quality_apply = args.skip_quality_apply
+    locked_args = argparse.Namespace(**vars(args))
+    locked_args.skip_quality_apply = True
+
+    if args.dry_run:
+        assert_server_environment_released(minecraft_dir)
+        result = _command_sync_local_mods_locked(locked_args)
+    else:
+        with server_environment_maintenance_lock(minecraft_dir):
+            result = _command_sync_local_mods_locked(locked_args)
+
+    if stages_quality_distribution:
+        if args.dry_run:
+            print(f"DRY RUN: ({PACK_DIR}) packwiz refresh")
+        else:
+            assert packwiz is not None
+            run([packwiz, "refresh"], cwd=PACK_DIR)
+
+    apply_quality_profile_after_sync(
+        dev_env,
+        minecraft_dir,
+        dry_run=args.dry_run,
+        skip=original_skip_quality_apply,
+    )
+    return result
+
+
+def _command_sync_local_mods_locked(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
     source_root = setting(
         args.source_root,
         ("MINECRAFT_MOD_SOURCE_ROOT",),
@@ -1595,6 +1789,20 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
         print(f"Syncing {name} ({revision_label}): {jar.name} -> {destination}")
         if not args.dry_run:
             atomic_copy2(jar, destination)
+        if mod["modId"] == "modqualitypicker":
+            bootstrap_destination = quality_bootstrap_jar_path(mods_dir)
+            print(f"Syncing {name} pre-launch bootstrap: {jar.name} -> {bootstrap_destination}")
+            if not args.dry_run:
+                # Copy from the installed artifact so the stable bootstrap is
+                # byte-for-byte identical to the jar selected for this sync.
+                atomic_copy2(destination, bootstrap_destination)
+            for packed_destination in packed_quality_jar_paths():
+                print(
+                    f"Staging {name} clean-install artifact: "
+                    f"{jar.name} -> {packed_destination}"
+                )
+                if not args.dry_run:
+                    atomic_copy2(destination, packed_destination)
 
         legacy_destination = mods_dir / f"{mod['modId']}-local.jar"
         for legacy_path in (legacy_destination, legacy_destination.with_name(legacy_destination.name + ".disabled")):
@@ -1611,7 +1819,6 @@ def command_sync_local_mods(args: argparse.Namespace) -> int:
     if rows:
         print("\nSynced local mods:")
         print_rows(("Mod", "Revision", "Jar", "Destination"), rows)
-    apply_quality_profile_after_sync(dev_env, mods_dir.parent, dry_run=args.dry_run, skip=args.skip_quality_apply)
     return 0
 
 
@@ -2114,6 +2321,42 @@ def command_sync_quality_presets(args: argparse.Namespace) -> int:
 
 def command_update_prism_mods(args: argparse.Namespace) -> int:
     dev_env = load_dev_env()
+    prism_mods = setting(
+        args.mods_dir,
+        ("MINECRAFT_BEYOND_PRISM_MODS_DIR",),
+        dev_env,
+        "modsDir",
+        DEFAULT_PRISM_MODS_DIR,
+    )
+    minecraft_dir = (
+        expand_path(args.minecraft_dir)
+        if args.minecraft_dir
+        else (prism_mods.parent if prism_mods else None)
+    )
+    if minecraft_dir is None:
+        raise ToolError("Could not resolve the Prism minecraft directory.")
+
+    original_skip_quality_apply = args.skip_quality_apply
+    locked_args = argparse.Namespace(**vars(args))
+    locked_args.skip_quality_apply = True
+    if args.dry_run:
+        assert_server_environment_released(minecraft_dir)
+        result = _command_update_prism_mods_locked(locked_args)
+    else:
+        with server_environment_maintenance_lock(minecraft_dir):
+            result = _command_update_prism_mods_locked(locked_args)
+
+    apply_quality_profile_after_sync(
+        dev_env,
+        minecraft_dir,
+        dry_run=args.dry_run,
+        skip=original_skip_quality_apply,
+    )
+    return result
+
+
+def _command_update_prism_mods_locked(args: argparse.Namespace) -> int:
+    dev_env = load_dev_env()
     packwiz = resolve_packwiz(dev_env, args.packwiz)
     if not packwiz:
         raise ToolError("packwiz was not found. Run install-packwiz or set MINECRAFT_BEYOND_PACKWIZ.")
@@ -2180,7 +2423,6 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
         print(f"DRY RUN: ({pack_dir}) {packwiz} serve --port {port}")
         print(f"DRY RUN: ({minecraft_dir}) {' '.join(str(part) for part in installer_command)}")
         restore_active_quality_profile_id(minecraft_dir, preserved_quality_profile_id, dry_run=True)
-        apply_quality_profile_after_sync(dev_env, minecraft_dir, dry_run=True, skip=args.skip_quality_apply)
         return 0
 
     minecraft_dir.mkdir(parents=True, exist_ok=True)
@@ -2208,7 +2450,6 @@ def command_update_prism_mods(args: argparse.Namespace) -> int:
 
     print("Prism pack files updated from packwiz metadata.")
     restore_active_quality_profile_id(minecraft_dir, preserved_quality_profile_id, dry_run=False)
-    apply_quality_profile_after_sync(dev_env, minecraft_dir, dry_run=False, skip=args.skip_quality_apply)
     return 0
 
 
@@ -2240,6 +2481,18 @@ def command_verify_fresh_install(args: argparse.Namespace) -> int:
             duplicate_targets.append((relative, previous, metafile))
         else:
             managed_targets[relative] = metafile
+    if tomllib is None:
+        raise ToolError("Python 3.11+ is required to inspect the Packwiz index")
+    try:
+        index_data = tomllib.loads((pack_dir / "index.toml").read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise ToolError(f"Could not read Packwiz index for fresh-install verification: {exc}") from exc
+    for entry in index_data.get("files", []):
+        if not isinstance(entry, dict) or entry.get("metafile"):
+            continue
+        file_name = entry.get("file")
+        if isinstance(file_name, str) and file_name:
+            managed_targets.setdefault(Path(file_name), pack_dir / "index.toml")
     if duplicate_targets:
         details = "\n".join(
             f"  - {target}: {first.relative_to(pack_dir)} and {second.relative_to(pack_dir)}"
@@ -2278,6 +2531,58 @@ def command_verify_fresh_install(args: argparse.Namespace) -> int:
                 remainder = f"\n  ... and {len(missing) - 20} more" if len(missing) > 20 else ""
                 raise ToolError(
                     f"Fresh install completed with {len(missing)} missing managed file(s):\n{shown}{remainder}"
+                )
+
+            quality_mod = minecraft_dir / "mods" / "modqualitypicker-local.jar"
+            quality_helper = quality_bootstrap_jar_path(minecraft_dir / "mods")
+            for required in (quality_mod, quality_helper):
+                if required.is_symlink() or not required.is_file():
+                    raise ToolError(
+                        f"Fresh install is missing a safe Mod Quality Picker artifact: {required}"
+                    )
+            if sha256(quality_mod) != sha256(quality_helper):
+                raise ToolError(
+                    "Fresh-install Mod Quality Picker mod and stable pre-launch helper differ"
+                )
+
+            (minecraft_dir / "instance.cfg").write_text(
+                "[General]\n"
+                "JoinServerOnLaunch=false\n"
+                "OverrideCommands=true\n"
+                'PreLaunchCommand="$INST_JAVA" -jar '
+                '"$INST_MC_DIR/config/modqualitypicker/launcher/'
+                'modqualitypicker-bootstrap.jar" gate --instance-root '
+                '"$INST_DIR" --launcher prism --instance-id "$INST_ID"\n',
+                encoding="utf-8",
+            )
+            dev_env = load_dev_env()
+            java = resolve_java(dev_env, args.java_home)
+            if not java:
+                raise ToolError("Java is required for the fresh-install idle-gate check")
+            gate = run(
+                [
+                    java,
+                    "-jar",
+                    quality_helper,
+                    "gate",
+                    "--instance-root",
+                    minecraft_dir,
+                    "--launcher",
+                    "prism",
+                    "--instance-id",
+                    minecraft_dir.name,
+                ],
+                cwd=minecraft_dir,
+                capture=True,
+                check=False,
+            )
+            if gate.returncode != 0:
+                detail = "\n".join(
+                    part.strip() for part in (gate.stdout, gate.stderr) if part.strip()
+                )
+                raise ToolError(
+                    "Fresh-install Mod Quality Picker idle gate failed"
+                    + (f":\n{detail}" if detail else "")
                 )
             print(f"Fresh install verified: {len(managed_targets)} managed client file(s) are present.")
         succeeded = True
@@ -2395,7 +2700,10 @@ def build_parser() -> argparse.ArgumentParser:
     sync.add_argument("--dry-run", action="store_true")
     sync.set_defaults(func=command_sync_local_mods)
 
-    apply_quality = subparsers.add_parser("apply-quality-profile", help="Apply the queued or active Mod Quality Picker profile before launch.")
+    apply_quality = subparsers.add_parser(
+        "apply-quality-profile",
+        help="Manually apply the queued or active Mod Quality Picker profile.",
+    )
     apply_quality.add_argument("--instance-root", help="Prism instance root or minecraft directory. Defaults to this repository.")
     apply_quality.add_argument("--world-id", default="", help="Apply this world's config diff layer.")
     apply_quality.add_argument("--dry-run", action="store_true")

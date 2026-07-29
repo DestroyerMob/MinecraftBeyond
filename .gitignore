@@ -10,6 +10,8 @@
 /tools/dev-env.local.json
 *.jar
 /pack/mods/*.jar
+!/pack/mods/modqualitypicker-local.jar
+!/pack/config/modqualitypicker/launcher/modqualitypicker-bootstrap.jar
 *.mrpack
 *.zip
 

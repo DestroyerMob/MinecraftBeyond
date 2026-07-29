@@ -2,6 +2,8 @@
 activeProfileId = "balanced"
 #Allows players to make local enabled/disabled mod choices in addition to pack developer presets.
 allowPlayerModOverrides = true
+#Exposes preset authoring, config capture, and pack export controls. Leave disabled in player-facing releases.
+enableDeveloperTools = false
 #Writes the currently loaded mod snapshot to config/modqualitypicker/active-selection.json after startup.
 writeLaunchSnapshot = true
 #Checks a world's saved quality profile before the world is opened.
@@ -10,6 +12,8 @@ enableWorldLoadPrompt = true
 exitAfterQueuingWorldProfile = false
 #Preset export destination relative to the game directory. For this Prism workspace, ../pack/config/modqualitypicker points at the pack root.
 packExportRoot = "../pack/config/modqualitypicker"
+#Dedicated/integrated server endpoint whose signed environment descriptor should be advertised and enforced. Leave blank on clients and unmanaged servers.
+serverEnvironmentEndpoint = ""
 #How the world-open flow should react when the world profile does not match the current launch.
 #Allowed Values: PROMPT, ALLOW_CURRENT, REQUIRE_WORLD_PROFILE
 worldMismatchPolicy = "PROMPT"

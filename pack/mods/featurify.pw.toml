@@ -1,0 +1,13 @@
+name = "Featurify - Feature Control"
+filename = "featurify-neoforge-1.0.4+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c51ceb77dd4836ab5e98dfdc408b91438a67d134"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8345064
+project-id = 1569688

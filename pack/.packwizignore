@@ -1,1 +1,2 @@
 mods/*-local.jar
+!mods/modqualitypicker-local.jar

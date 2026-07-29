@@ -83,7 +83,12 @@ Status meanings:
 
 - Commit pack metadata, configs, scripts, docs, and Prism instance metadata.
 - Do not commit downloaded mod jars, generated runtime files, logs, worlds, screenshots, or local cache folders.
-- Do not commit `minecraft/mods/*-local.jar` or `pack/mods/*-local.jar`; local jars are either rebuilt per machine or represented by packwiz release metadata.
+- Do not commit `minecraft/mods/*-local.jar` or ordinary
+  `pack/mods/*-local.jar`; local jars are rebuilt per machine or represented by
+  release metadata. The deliberate exception is Mod Quality Picker: its
+  byte-identical mod and stable pre-launch helper are bundled until equivalent
+  pinned release metadata exists, because the mandatory gate must work before
+  the first Minecraft launch.
 - Do not commit `tools/bin/`; recreate packwiz locally with `scripts/modpack install-packwiz`.
 - Do not commit `tools/dev-env.local.json`; it is for per-machine paths and tool locations.
 - Keep unpublished mod source outside this repo, normally in a folder such as `$HOME\Documents\minecraft-mod-sources`.
@@ -193,7 +198,12 @@ Use two lanes:
 1. Development lane: clone or pull each mod repo locally, build with its Gradle wrapper, then sync the built jar into `minecraft/mods/` with `scripts/modpack update-local-mods`.
 2. Distribution lane: once a local mod has a usable test build, publish it as a GitHub Release or package artifact, then add that URL to packwiz. This keeps the pack reproducible on both machines without committing jars.
 
-Avoid committing unpublished jars directly to the pack repo. If a build needs to be shared between machines without rebuilding, publish a real artifact and pin its URL plus hash in metadata.
+Avoid committing unpublished jars directly to the pack repo. If a build needs
+to be shared between machines without rebuilding, publish a real artifact and
+pin its URL plus hash in metadata. Mod Quality Picker is the narrow bootstrap
+exception: `sync-local-mods --mod modqualitypicker` stages both required copies
+and refreshes packwiz so a clean install cannot inherit a gate command without
+its helper.
 
 ### Release Metadata For Local Mods
 
