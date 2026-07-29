@@ -142,7 +142,7 @@ hash = "8c2a07dbca8336b51640f8a1b6a40150291bc539de9142f86e7fb54c3557d2b7"
 
 [[files]]
 file = "config/modqualitypicker-common.toml"
-hash = "f763a84cc7b6a53191d13115256eb4aac6d9c687385b30fcbad6fd8b46e3bfc8"
+hash = "07091915b5985a2c9b1ada8b59889e79cf2757f3509cf7ccbafccaa6137df47d"
 
 [[files]]
 file = "config/modqualitypicker/feature-groups.json"
@@ -158,7 +158,7 @@ hash = "a654c6de6650a79e795053b529a4158c4f319992814bab50bd8bf3f779bc6b25"
 
 [[files]]
 file = "config/modqualitypicker/launcher/modqualitypicker-bootstrap.jar"
-hash = "11c25101fe95609d16a08be6a118edac4bae2b514da04adf04a8d23caf748cd6"
+hash = "04a01f3589af517b285db9b1eaede3026a2a31c12152ee137a5f030916359abc"
 
 [[files]]
 file = "config/modqualitypicker/presets/balanced.json"
@@ -2660,7 +2660,7 @@ metafile = true
 
 [[files]]
 file = "mods/modqualitypicker-local.jar"
-hash = "11c25101fe95609d16a08be6a118edac4bae2b514da04adf04a8d23caf748cd6"
+hash = "04a01f3589af517b285db9b1eaede3026a2a31c12152ee137a5f030916359abc"
 
 [[files]]
 file = "mods/moonrise-compats.pw.toml"

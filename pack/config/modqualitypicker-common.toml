@@ -2,8 +2,8 @@
 activeProfileId = "balanced"
 #Allows players to make local enabled/disabled mod choices in addition to pack developer presets.
 allowPlayerModOverrides = true
-#Exposes preset authoring, config capture, and pack export controls. Leave disabled in player-facing releases.
-enableDeveloperTools = false
+#Shows the profile/config editor and related pack-authoring controls. Disable only for locked-down player releases.
+enableDeveloperTools = true
 #Writes the currently loaded mod snapshot to config/modqualitypicker/active-selection.json after startup.
 writeLaunchSnapshot = true
 #Checks a world's saved quality profile before the world is opened.
