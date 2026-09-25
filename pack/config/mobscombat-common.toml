@@ -8,7 +8,7 @@
 	# Warning duration before a standard melee, bow, or generic ranged attack.
 	# Default: 10
 	# Range: 0 ~ 72000
-	attack_warning_ticks = 10
+	attack_warning_ticks = 30
 	# Whether bow-wielding skeleton variants are prevented from strafing while attacking.
 	disable_skeleton_strafing = true
 	# Skeleton bow cooldown at point-blank range. It scales back to the vanilla cooldown at maximum bow range.
